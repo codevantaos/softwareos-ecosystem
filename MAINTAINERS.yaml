@@ -1,0 +1,89 @@
+version: 1
+repo:
+  name: softwareecosystem
+  default_team: triage
+
+teams:
+  - id: triage
+    display_name: "Triage / Default Owner"
+    members: ["maintainer-triage"]
+    routing:
+      labels: ["triage"]
+      keywords: []
+      paths: []
+    sla:
+      first_response_hours: 12
+      review_hours: 72
+    escalation:
+      oncall: ["maintainer-triage"]
+      fallback_team: triage
+
+  - id: frontend
+    display_name: "Frontend (React/UX/UI)"
+    members: ["maintainer-frontend-1", "maintainer-frontend-2"]
+    routing:
+      labels: ["frontend", "ui", "ux", "design"]
+      keywords: ["react", "tsx", "css", "ui", "ux"]
+      paths: ["web/**", "frontend/**", "**/*.tsx", "**/*.css"]
+    sla:
+      first_response_hours: 24
+      review_hours: 72
+    escalation:
+      oncall: ["maintainer-frontend-1"]
+      fallback_team: triage
+
+  - id: backend
+    display_name: "Backend (API/DB)"
+    members: ["maintainer-backend-1"]
+    routing:
+      labels: ["backend", "api", "database"]
+      keywords: ["api", "golang", "go", "db", "database", "sql"]
+      paths: ["api/**", "backend/**", "**/*.go", "**/*.py"]
+    sla:
+      first_response_hours: 24
+      review_hours: 72
+    escalation:
+      oncall: ["maintainer-backend-1"]
+      fallback_team: triage
+
+  - id: docs
+    display_name: "Docs / Writing"
+    members: ["maintainer-docs"]
+    routing:
+      labels: ["docs", "documentation"]
+      keywords: ["doc", "docs", "documentation", "readme", "guide", "tutorial"]
+      paths: ["docs/**", "**/*.md"]
+    sla:
+      first_response_hours: 24
+      review_hours: 72
+    escalation:
+      oncall: ["maintainer-docs"]
+      fallback_team: triage
+
+  - id: security
+    display_name: "Security / Supply Chain"
+    members: ["maintainer-security"]
+    routing:
+      labels: ["security"]
+      keywords: ["cve", "vuln", "漏洞", "security", "exploit"]
+      paths: ["security/**", ".github/workflows/**"]
+    sla:
+      first_response_hours: 6
+      review_hours: 24
+    escalation:
+      oncall: ["maintainer-security"]
+      fallback_team: triage
+
+  - id: infra-devops
+    display_name: "Infra / DevOps"
+    members: ["maintainer-devops"]
+    routing:
+      labels: ["infra", "devops", "ci", "cd"]
+      keywords: ["docker", "kubernetes", "helm", "argocd", "ci", "cd", "pipeline"]
+      paths: [".github/**", "infra/**", "charts/**"]
+    sla:
+      first_response_hours: 12
+      review_hours: 48
+    escalation:
+      oncall: ["maintainer-devops"]
+      fallback_team: triage

@@ -1,0 +1,63 @@
+name: autoassign-preview
+
+on:
+  issues:
+    types: [opened, labeled, edited]
+  pull_request_target:
+    types: [opened, labeled, edited, synchronize]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: autoassign-preview-${{ github.event_name }}-${{ github.event.issue.number || github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Generate decision evidence (preview only)
+        env:
+          MAINTAINERS_PATH: MAINTAINERS.yaml
+          RULES_PATH: routing-rules.yaml
+          CODEOWNERS_PATH: CODEOWNERS
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: |
+          python tools/autoassign-preview/autoassign_preview.py
+
+      - name: Upload evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: autoassign-evidence-${{ github.run_id }}
+          path: autoassign.evidence.json
+
+      - name: Comment evidence summary
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'PY'
+          import json, os, sys, subprocess
+          ev=json.load(open("autoassign.evidence.json","r",encoding="utf-8"))
+          team=ev["decision"]["team_id"]
+          assignees=", ".join(ev["decision"]["assignees"])
+          trace=ev["trace_id"]
+          body=f"AutoAssign Preview\n- trace_id: {trace}\n- team: {team}\n- assignees (preview): {assignees}\n\n(Artifact: autoassign.evidence.json)"
+          repo=os.environ["GITHUB_REPOSITORY"]
+          num=ev["input"]["number"]
+          subprocess.check_call(["gh","api",f"repos/{repo}/issues/{num}/comments","-f",f"body={body}"])
+          PY

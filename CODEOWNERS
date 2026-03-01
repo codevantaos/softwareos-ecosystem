@@ -1,0 +1,27 @@
+# Default: all changes have a responsible owner (triage)
+*                         @codevantaeco/triage
+
+# Frontend
+/web/                     @codevantaeco/frontend
+/frontend/                @codevantaeco/frontend
+**/*.tsx                  @codevantaeco/frontend
+**/*.css                  @codevantaeco/frontend
+
+# Backend
+/api/                     @codevantaeco/backend
+/backend/                 @codevantaeco/backend
+**/*.go                   @codevantaeco/backend
+**/*.py                   @codevantaeco/backend
+
+# Docs
+/docs/                    @codevantaeco/docs
+**/*.md                   @codevantaeco/docs
+
+# Security / Supply Chain
+/security/                @codevantaeco/security
+/.github/workflows/       @codevantaeco/security
+
+# Infra / DevOps
+/.github/                 @codevantaeco/infra-devops
+/infra/                   @codevantaeco/infra-devops
+/charts/                  @codevantaeco/infra-devops

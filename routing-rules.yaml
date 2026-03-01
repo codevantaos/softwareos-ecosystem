@@ -1,0 +1,68 @@
+version: 1
+settings:
+  max_assignees: 2
+  mode: preview
+  ignore_if_assigned: true
+  allow_reassign: false
+
+rules:
+  - id: security-by-label
+    priority: 10
+    when:
+      any_labels: ["security"]
+    route:
+      team_id: security
+      strategy: oncall_only
+
+  - id: security-by-keyword
+    priority: 20
+    when:
+      any_keywords: ["cve", "vuln", "漏洞", "security", "exploit"]
+    route:
+      team_id: security
+      strategy: oncall_only
+
+  - id: infra-by-label
+    priority: 30
+    when:
+      any_labels: ["infra", "devops", "ci", "cd"]
+    route:
+      team_id: infra-devops
+
+  - id: docs-by-label
+    priority: 40
+    when:
+      any_labels: ["docs", "documentation"]
+    route:
+      team_id: docs
+
+  - id: frontend-by-files
+    priority: 100
+    when:
+      event: pull_request
+      any_files: ["web/**", "frontend/**", "**/*.tsx", "**/*.css"]
+    route:
+      team_id: frontend
+
+  - id: backend-by-files
+    priority: 110
+    when:
+      event: pull_request
+      any_files: ["api/**", "backend/**", "**/*.go", "**/*.py"]
+    route:
+      team_id: backend
+
+  - id: docs-by-files
+    priority: 120
+    when:
+      event: pull_request
+      any_files: ["docs/**", "**/*.md"]
+    route:
+      team_id: docs
+
+  - id: default-fallback
+    priority: 1000
+    when:
+      always: true
+    route:
+      team_id: triage

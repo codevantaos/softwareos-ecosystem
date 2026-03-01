@@ -1,0 +1,74 @@
+name: governance-verify
+
+on:
+  pull_request:
+    paths:
+      - "MAINTAINERS.yaml"
+      - "CODEOWNERS"
+      - "routing-rules.yaml"
+      - ".github/workflows/**"
+      - "tools/autoassign-preview/**"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Semantic verify (hard gate)
+        run: |
+          python - <<'PY'
+          import yaml, sys, re
+          from pathlib import Path
+
+          def die(m): 
+            print("GATE_ERROR:", m, file=sys.stderr)
+            raise SystemExit(2)
+
+          m = yaml.safe_load(Path("MAINTAINERS.yaml").read_text(encoding="utf-8"))
+          r = yaml.safe_load(Path("routing-rules.yaml").read_text(encoding="utf-8"))
+          co = Path("CODEOWNERS").read_text(encoding="utf-8")
+
+          teams = {t["id"] for t in (m.get("teams") or [])}
+          if not teams:
+            die("MAINTAINERS.teams empty")
+          if m.get("repo",{}).get("default_team") not in teams:
+            die("MAINTAINERS.repo.default_team not in teams")
+
+          rules = r.get("rules") or []
+          if not rules:
+            die("routing-rules.rules empty")
+
+          defaults = [i for i,x in enumerate(rules) if (x.get("when") or {}).get("always") is True]
+          if len(defaults) != 1:
+            die("routing-rules must have exactly one default (when.always=true)")
+          if defaults[0] != len(rules)-1:
+            die("default rule must be last")
+
+          prios = [int(x["priority"]) for x in rules]
+          if prios != sorted(prios):
+            die("priority must be sorted ascending")
+
+          for x in rules:
+            tid = (x.get("route") or {}).get("team_id")
+            if tid not in teams:
+              die(f"rule references unknown team_id: {tid}")
+
+          if not re.search(r"^\*\s+@codevantaeco/triage\s*$", co, flags=re.M):
+            die("CODEOWNERS must include: * @codevantaeco/triage")
+
+          print("GATE_OK")
+          PY
