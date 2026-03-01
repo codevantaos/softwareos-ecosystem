@@ -1,0 +1,52 @@
+name: argocd-health
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check ArgoCD application health
+        env:
+          ARGOCD_SERVER: ${{ secrets.ARGOCD_SERVER }}
+          ARGOCD_TOKEN: ${{ secrets.ARGOCD_TOKEN }}
+          ARGOCD_APP: ${{ secrets.ARGOCD_APP }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -z "${ARGOCD_SERVER}" ] || [ -z "${ARGOCD_TOKEN}" ] || [ -z "${ARGOCD_APP}" ]; then
+            echo "ArgoCD secrets missing; skip"; exit 0
+          fi
+
+          curl -fsSL \
+            -H "Authorization: Bearer ${ARGOCD_TOKEN}" \
+            -H "Accept: application/json" \
+            "${ARGOCD_SERVER}/api/v1/applications/${ARGOCD_APP}" \
+            | tee argocd.app.json
+
+          health=$(python - <<'PY'
+          import json
+          d=json.load(open("argocd.app.json","r",encoding="utf-8"))
+          print((d.get("status",{}).get("health",{}) or {}).get("status","Unknown"))
+          PY
+          )
+
+          sync=$(python - <<'PY'
+          import json
+          d=json.load(open("argocd.app.json","r",encoding="utf-8"))
+          print((d.get("status",{}).get("sync",{}) or {}).get("status","Unknown"))
+          PY
+          )
+
+          echo "health=${health} sync=${sync}"
+
+          if [ -n "${SLACK_WEBHOOK_URL}" ]; then
+            curl -fsSL -X POST -H 'Content-type: application/json' \
+              --data "{&quot;text&quot;:&quot;[ArgoCD] app=${ARGOCD_APP} health=${health} sync=${sync}&quot;}" \
+              "${SLACK_WEBHOOK_URL}"
+          fi
