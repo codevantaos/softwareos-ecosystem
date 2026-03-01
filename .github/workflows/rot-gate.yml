@@ -1,0 +1,49 @@
+name: Root-of-Trust Gate
+
+on:
+  pull_request:
+    branches: [ main, softwareecosystem-dev ]
+  push:
+    branches: [ main, softwareecosystem-dev ]
+
+permissions:
+  contents: read
+
+jobs:
+  rot-gate:
+    name: RoT Gate Enforcement
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install pyyaml
+      
+      - name: Run RoT Indexer
+        run: |
+          python3 scripts/rot_indexer.py
+      
+      - name: Run RoT Gate
+        run: |
+          chmod +x scripts/rot_gate.sh
+          ./scripts/rot_gate.sh
+        env:
+          GITHUB_BASE_REF: ${{ github.base_ref }}
+      
+      - name: Upload index as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: root-index
+          path: architecture/root-index.json
+          retention-days: 30

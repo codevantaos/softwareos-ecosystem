@@ -1,0 +1,143 @@
+name: Root-of-Trust Evidence Generation
+
+on:
+  push:
+    branches: [ main, softwareecosystem-dev ]
+  workflow_run:
+    workflows: [ "Root-of-Trust Gate" ]
+    types: [ completed ]
+    branches: [ main, softwareecosystem-dev ]
+
+permissions:
+  contents: read
+
+jobs:
+  generate-evidence:
+    name: Generate Evidence Chain
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install pyyaml
+      
+      - name: Generate Root Index
+        run: |
+          python3 scripts/rot_indexer.py
+      
+      - name: Calculate Index Digest
+        id: digest
+        run: |
+          DIGEST=$(python3 -c "import hashlib; print(hashlib.sha3_512(open('architecture/root-index.json','rb').read()).hexdigest())")
+          echo "digest=${DIGEST}" >> $GITHUB_OUTPUT
+          echo "Index digest: ${DIGEST}"
+      
+      - name: Generate Evidence Summary
+        run: |
+          cat > evidence-summary.json <<EOF
+          {
+            "apiVersion": "platform.rot/v1",
+            "kind": "EvidenceSummary",
+            "metadata": {
+              "generatedAt": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
+              "runId": "${{ github.run_id }}",
+              "runNumber": "${{ github.run_number }}",
+              "commit": "${{ github.sha }}",
+              "branch": "${{ github.ref_name }}"
+            },
+            "spec": {
+              "indexDigest": "${{ steps.digest.outputs.digest }}",
+              "indexFile": "architecture/root-index.json",
+              "totalFiles": $(python3 -c "import json; print(json.load(open('architecture/root-index.json'))['metadata']['totalFiles'])"),
+              "generator": "rot_indexer.py",
+              "workflow": "rot-evidence.yml"
+            }
+          }
+          EOF
+      
+      - name: Append to Evidence Chain
+        run: |
+          mkdir -p governance
+          EVIDENCE_FILE="governance/evidence-chain.json"
+          
+          # Create evidence chain if not exists
+          if [[ ! -f "${EVIDENCE_FILE}" ]]; then
+            cat > "${EVIDENCE_FILE}" <<EOF
+          {
+            "apiVersion": "platform.rot/v1",
+            "kind": "EvidenceChain",
+            "metadata": {
+              "createdAt": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+            },
+            "spec": {
+              "entries": []
+            }
+          }
+          EOF
+          fi
+          
+          # Append new evidence entry
+          python3 <<'PYEOF'
+          import json
+          from datetime import datetime, timezone
+          
+          evidence_file = "governance/evidence-chain.json"
+          summary_file = "evidence-summary.json"
+          
+          with open(evidence_file, 'r') as f:
+              chain = json.load(f)
+          
+          with open(summary_file, 'r') as f:
+              summary = json.load(f)
+          
+          entry = {
+              "timestamp": datetime.now(timezone.utc).isoformat(),
+              "runId": summary["metadata"]["runId"],
+              "commit": summary["metadata"]["commit"],
+              "branch": summary["metadata"]["branch"],
+              "indexDigest": summary["spec"]["indexDigest"],
+              "totalFiles": summary["spec"]["totalFiles"]
+          }
+          
+          chain["spec"]["entries"].append(entry)
+          
+          with open(evidence_file, 'w') as f:
+              json.dump(chain, f, indent=2)
+          PYEOF
+      
+      - name: Upload Evidence Bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidence-bundle-${{ github.run_id }}
+          path: |
+            architecture/root-index.json
+            governance/evidence-chain.json
+            evidence-summary.json
+          retention-days: 30
+      
+      - name: Create Snapshot
+        run: |
+          SNAPSHOT_DIR="snapshots/$(date -u +"%Y%m%dT%H%M%SZ")"
+          mkdir -p "${SNAPSHOT_DIR}"
+          
+          cp architecture/root-index.json "${SNAPSHOT_DIR}/"
+          cp governance/evidence-chain.json "${SNAPSHOT_DIR}/"
+          cp evidence-summary.json "${SNAPSHOT_DIR}/"
+          
+          # Create checksums
+          cd "${SNAPSHOT_DIR}"
+          for file in *.json; do
+            python3 -c "import hashlib; print(hashlib.sha3_512(open('${file}','rb').read()).hexdigest())" > "${file}.sha3-512"
+          done

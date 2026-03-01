@@ -1,0 +1,159 @@
+{
+  "apiVersion": "platform.rot/v1",
+  "kind": "RootIndex",
+  "metadata": {
+    "generatedAt": "2026-03-01T17:08:13.936233+00:00",
+    "generator": "rot_indexer.py",
+    "totalFiles": 18,
+    "version": "1.0.0"
+  },
+  "spec": {
+    "entries": [
+      {
+        "algorithm": "sha3-512",
+        "digest": "336a39a1735877dcc51872428d69b545da72e0146c7d72c713e88137912d533bb13d46edbfd3b27fd44c74fcd0b88e42cb9ee2defff293a469ed4b9256fd064d",
+        "id": "MAINTAINERS.yaml",
+        "lastModified": "2026-03-01T17:04:58.363285+00:00",
+        "path": "MAINTAINERS.yaml",
+        "size": 2475
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "716a805b46f542a4b344a33b6792958df63591d7a2973e23205848b6a0b2baf5644acd264b9e4f54e20f90e30efd252db9c5a3a5e274c4537e810960c0404834",
+        "id": "Makefile",
+        "lastModified": "2026-03-01T17:07:46.511293+00:00",
+        "path": "Makefile",
+        "size": 2741
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "8512f8e021873ae8b9e48df04d7af6f268c752c751a4d7113e77260f866941bc9a3050d29412613401dfdc78c8e6f6ecb3169b83d84e7f50355dd99aed88e6af",
+        "id": "docs:auto-assignment.md",
+        "lastModified": "2026-03-01T17:04:58.363285+00:00",
+        "path": "docs/auto-assignment.md",
+        "size": 6132
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "36d1471aca4852a5929afd510f8ee8059770f7879c7682127476b4fc7574dc94c4b5e59caa2f28606ece2ee7f2e85f20a5c8012b74763472fd5e2dda4bbaa28c",
+        "id": "routing-rules.yaml",
+        "lastModified": "2026-03-01T17:04:58.363285+00:00",
+        "path": "routing-rules.yaml",
+        "size": 1330
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "9d2b3a2ba270e76252889d4fcd7fb9caa8fc43bbd04b9c45aaaaab1d2ed6e3e4da81e7e7b4aad33c759437110cd05107074add476bd8739b9104059e4cc4d4b3",
+        "id": "scripts:bootstrap.sh",
+        "lastModified": "2026-03-01T17:06:53.451291+00:00",
+        "path": "scripts/bootstrap.sh",
+        "size": 6456
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "95493ad4d57453ba416705f48a3f3fb11b715082d96923185115867d8ff6b353f58b7d4bc203f94564c7228e3ee90ef182790538a9bef06906057ce763f39481",
+        "id": "scripts:install-deps.sh",
+        "lastModified": "2026-03-01T17:07:27.063292+00:00",
+        "path": "scripts/install-deps.sh",
+        "size": 5981
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "96ac0450073bae7bdf3bb9b24acaea41052e51b901f04ae2e6baabd35a93fc38098c6fa070f9f416016d7348e75f772188ca49b54ca9c7a004a68786d5b94525",
+        "id": "scripts:migrate-configs.sh",
+        "lastModified": "2026-03-01T17:07:38.551293+00:00",
+        "path": "scripts/migrate-configs.sh",
+        "size": 6261
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "68b1c831245e3d000dcf3fc758d78eb89ab884597783274bb26d45e830f435cb9474d0c40074944226a8f58b4960343fc64a1cbfc0df34520ec5b1b552b11073",
+        "id": "scripts:quick-verify.sh",
+        "lastModified": "2026-03-01T17:07:22.227292+00:00",
+        "path": "scripts/quick-verify.sh",
+        "size": 3859
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "1096c47c110853873850800b049bb2090dfc7d0fa04d40370f80fec0e43b51b5e989b6bb925c1ec55808d1d674275ed8176872e77b784556e3a514a5086509d8",
+        "id": "scripts:rollback.sh",
+        "lastModified": "2026-03-01T17:07:41.711293+00:00",
+        "path": "scripts/rollback.sh",
+        "size": 3863
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "1662348fe266ba46638697dc7b3ed43bfc339bd73bb309b00f44a7ff8e0671ff77a4f80ab8f9e7a60de8ad0960fc8da3a48d25b7165ad7e7ee2d2ef3e9c1f9ec",
+        "id": "scripts:rot_gate.sh",
+        "lastModified": "2026-03-01T17:06:42.907290+00:00",
+        "path": "scripts/rot_gate.sh",
+        "size": 3598
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "3d09c31395d5b8b99732a5b8f7225067e4eeb32a2687f63815a578b7ea6978ed0c132c3363459fe261fa9ac5fca5740d22b53bc80df1bff5a297f4c95c424085",
+        "id": "scripts:rot_indexer.py",
+        "lastModified": "2026-03-01T17:06:39.319290+00:00",
+        "path": "scripts/rot_indexer.py",
+        "size": 4413
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "58e74076ea548336a4bea1d65d821e71d8da9fb5295b78dd94bf04caad43a7d9ee71505fa080c81179bdab27a304b855607f9949d2720c6e725d911f7a1a50af",
+        "id": "scripts:start-min.sh",
+        "lastModified": "2026-03-01T17:07:19.051292+00:00",
+        "path": "scripts/start-min.sh",
+        "size": 2628
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "9c7fe8aaf7263b881c57e91714a0496b74d5182a065764267484c38b139f4c3fc5484ec7365f447e4c0ee63ef077f4592aff322a7633c32b2931608ba4543542",
+        "id": "scripts:upgrade-deps.sh",
+        "lastModified": "2026-03-01T17:07:34.487293+00:00",
+        "path": "scripts/upgrade-deps.sh",
+        "size": 5305
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "9f63a9d1fe769eb1bd1274d923f716285333c7b0857d0e52d488a5b6a6c2bbf52f46ac6910bd61c8c51dd23a1a1b762461214a6739a7cc812fa10055c3d35668",
+        "id": "tools:autoassign-preview:autoassign_enforce.py",
+        "lastModified": "2026-03-01T17:04:58.363285+00:00",
+        "path": "tools/autoassign-preview/autoassign_enforce.py",
+        "size": 10968
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "d40bdc38863cbe28ab4d5e54a2cbc637c5aa1d2e91cc266dda5fa5c6f619e6654d5e457f34d5a759b03e1761332b5c22d69a1ca09d4cfc05bb6485776158904f",
+        "id": "tools:autoassign-preview:autoassign_preview.py",
+        "lastModified": "2026-03-01T17:04:58.363285+00:00",
+        "path": "tools/autoassign-preview/autoassign_preview.py",
+        "size": 6243
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "27b921b52f37bd7792c71acac2362fa431e6eca9fb068a2733b27bec789bba9de1137ee57620162b3ce37265fd6fdcad1d528f4516b4c9f9db5c9554cb539716",
+        "id": "tools:autoassign-preview:escalate.py",
+        "lastModified": "2026-03-01T17:04:58.363285+00:00",
+        "path": "tools/autoassign-preview/escalate.py",
+        "size": 3304
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "df07f32d81c02a70d988620fc35af231a73aa0117a08a560fc0022b59d8e6c7ee4adba88e77c7f2929f24a7e059de008c9485b6161cc26aa93d3ecd0f534013b",
+        "id": "tools:autoassign-preview:github_exec.py",
+        "lastModified": "2026-03-01T17:04:58.363285+00:00",
+        "path": "tools/autoassign-preview/github_exec.py",
+        "size": 2396
+      },
+      {
+        "algorithm": "sha3-512",
+        "digest": "5d5cea6e7ea974fd39b4771756990a41c6b38eb6da6a7d208c9ce3e6d32a962ff3dc79b321dc824463f88c4fbebf821ab4e9c40a376599c4c29cbf39d2b7b881",
+        "id": "tools:autoassign-preview:retry_degraded.py",
+        "lastModified": "2026-03-01T17:04:58.363285+00:00",
+        "path": "tools/autoassign-preview/retry_degraded.py",
+        "size": 3017
+      }
+    ],
+    "root": "/workspace/softwareecosystem"
+  }
+}

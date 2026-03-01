@@ -1,0 +1,1586 @@
+{
+  "timestamp": "2026-03-01T17:08:15Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "3d901637-01df-4793-b891-5d5803811441",
+  "correlationId": "84134908-074d-457e-b0be-4f6832aa2a01",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:15Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "audit directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "d6498867-25aa-4a9c-85f6-f04e493e4d28",
+  "correlationId": "d69f761b-fe2f-4590-8c3b-9538f3bbd3da",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:15Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "scripts directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "cb346403-2911-4408-b35f-57478daccd0b",
+  "correlationId": "1cb82820-80bd-40e9-9f4e-fe9a1ba9e616",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:15Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "governance directory",
+  "result": "failure",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "0022bf20-083f-49a2-acd8-8db7a33476db",
+  "correlationId": "6b2fc17f-5f5b-44f8-9586-12fa68ec3762",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:43Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "a298495c-6356-46a4-8292-6892abe38a03",
+  "correlationId": "50bdb0a7-d774-43da-9245-ede288f78e83",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:43Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "audit directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "844abfaa-0c1c-404f-8a17-dadf281af917",
+  "correlationId": "e45b6d7e-86a6-404d-a9e5-2e47748a57ca",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:43Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "scripts directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "5433e123-623c-489e-8a91-9075e912ebd4",
+  "correlationId": "5badb848-5dd5-4e35-853b-defc51f9ff03",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:43Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "governance directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "9e3e4a42-0b5e-4251-b4bd-1ed661526e1c",
+  "correlationId": "3880f3f4-3a1a-46dd-b673-74d9caaed62a",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:43Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_indexer.py",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "cdf4934f-daa6-40d9-8a36-7661ed98f00b",
+  "correlationId": "d2874225-a82f-4267-935b-6422770de563",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:43Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_gate.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "7a091a8f-39c6-4ae0-8955-08fb1c627eff",
+  "correlationId": "dd1679c9-6e98-428d-893b-0d1b9ebe38dc",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:43Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "bootstrap.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "640acfd0-222a-492b-9e7f-e71d6f7f57cb",
+  "correlationId": "9aa565c2-48ad-42dd-956b-eafee598aede",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:43Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "start-min.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "8061b253-901a-4f17-9ecd-5eab3ded3f56",
+  "correlationId": "c8592bf4-d6b0-4119-9b43-1e8d464331a7",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:43Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": ".env file",
+  "result": "failure",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "74a600b4-143f-4775-bdb0-d2b4406569f6",
+  "correlationId": "946d45a2-1adc-4633-bd77-c8dd2f43c567",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:48Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "7cedda63-87ca-4e91-a45d-2851308ae1a3",
+  "correlationId": "5912b3e3-2a23-41ef-a493-4e3a8b598eab",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:48Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "audit directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "970b528c-eb55-4175-9df9-5ca7da63b0f0",
+  "correlationId": "f2d69e49-55b1-47af-a26c-4ba01283db50",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:48Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "scripts directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "058c53cb-c764-4c9d-8af0-ea4783a34c91",
+  "correlationId": "25c47758-d895-412f-a159-ef5011beaa74",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:48Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "governance directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "2c90aa19-b770-40ad-b447-a047777a36f4",
+  "correlationId": "8277109d-894a-43ba-aac0-09538e1d061c",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:48Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_indexer.py",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "6b556111-d185-4b48-806d-6fc86b188d4a",
+  "correlationId": "2032278f-5781-4ead-a48e-b5244f0122f6",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:48Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_gate.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "e0066762-ccbe-4604-ad24-b8cbea5bfe0a",
+  "correlationId": "1a8c3ccf-7e9a-4b00-bdc1-5b2378ffbd2a",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:48Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "bootstrap.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "bb382b7a-a577-4faf-81bc-84eddeddbc38",
+  "correlationId": "0a205bf1-1633-4623-ba9f-f42c4122301c",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:48Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "start-min.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "2ac955c9-4f86-4b64-9b03-11ed2685e836",
+  "correlationId": "cea7e0b5-2e19-43ec-a688-d3880212abe0",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:48Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": ".env file",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "81060032-a703-48e7-831b-dce079573fe1",
+  "correlationId": "eac8255c-cd21-49a2-a556-7426703654a4",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:48Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Python 3",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "96fdb6f9-38cb-4d5c-a7b0-1a311fdd199a",
+  "correlationId": "113876ba-4542-40a4-bd6a-047cdc1d9cbf",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:48Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Git",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "0997e437-5e82-4cc7-9c54-f05ceca046df",
+  "correlationId": "f507fa03-a878-4866-a447-ec2350e56ac2",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:48Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json is valid JSON",
+  "result": "failure",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "61a4951d-c614-4e5e-825f-48d19091e55f",
+  "correlationId": "f4d8c887-f78f-4804-8e1a-c36cf4fe4e56",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:54Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "80c37f6c-db49-4296-a1c8-9fa3c8a74265",
+  "correlationId": "4b02887d-bb26-4233-a4a0-f53c632c0bef",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:55Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "audit directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "f79fbc85-a391-4087-9c79-5a8253d957c3",
+  "correlationId": "715950e1-3cf5-4a22-b346-246d857db65e",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:55Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "scripts directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "474a12d8-2aba-4d59-af0d-c5c30eeb92dd",
+  "correlationId": "1e491102-8d48-48e2-978b-360cf95a46c0",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:55Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "governance directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "667a88ce-794e-4f53-9d99-3b5ba598bb44",
+  "correlationId": "ff327b16-5fef-44a3-96ce-6dcb9b090781",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:55Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_indexer.py",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "a6f61925-4479-4fa4-8cbd-65977c08d7e6",
+  "correlationId": "1514b00c-1847-4ebf-a62a-868384109ebe",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:55Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_gate.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "ccd1cedd-0850-42c1-8f30-c2b34d7b49f2",
+  "correlationId": "95415c66-05f6-40c3-b75f-4a1ad9ea89da",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:55Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "bootstrap.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "4a7c9a9f-2fd1-427a-a4af-bd1812d5f657",
+  "correlationId": "ded83401-846f-43b5-bd03-260bab893238",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:55Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "start-min.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "7cf557b3-4cd6-43fa-b392-70c7212bf0e4",
+  "correlationId": "af601c2e-1a10-473a-8a48-bfc4f25e27e4",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:55Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": ".env file",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "25321ae1-a30d-4fe3-8d69-ebe49cd08ac2",
+  "correlationId": "94f1fe33-44df-45e6-a480-7c293ec69cc4",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:55Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Python 3",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "befb4a68-3b4c-4fa6-8ff4-b266e6bd8f31",
+  "correlationId": "bae2fdd5-c4ea-4b5e-b141-011cbc651675",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:55Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Git",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "e6a33ce8-0471-4654-bfc9-8cd89311532b",
+  "correlationId": "3461be20-6b6c-4696-8ba4-d33ddd7b8880",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:08:55Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json is valid JSON",
+  "result": "failure",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "4fbe30e5-ade8-43db-bd8a-73f722b6641d",
+  "correlationId": "6f128638-2cda-4719-b54a-b2f37619837b",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:01Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "34e1f6a6-647e-4ba4-a80c-888231f3a5d7",
+  "correlationId": "abab8972-c911-46d5-812c-f4ff5d049e41",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:01Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "audit directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "1423c6d0-5a0b-4695-9032-1bec9aee24cd",
+  "correlationId": "cbf7c5a7-b469-4f7a-baf0-3c6727af7a64",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:01Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "scripts directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "b8a25079-3d44-4104-a069-2d85e5e5aa4c",
+  "correlationId": "48379c12-8786-4f96-93c8-462337ea8fd9",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:01Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "governance directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "8a6205a2-a9a4-4c5f-88ec-4110bd47f9b5",
+  "correlationId": "f233cd20-cc5c-4dcc-a184-81a2bc015f88",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:01Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_indexer.py",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "48a50e04-467a-4e54-9cc2-cfd18da24fdc",
+  "correlationId": "48a1a0d2-2584-408a-b55b-7512e766e307",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:01Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_gate.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "4f7abc51-bc4f-4d93-9e7c-70a5f9952562",
+  "correlationId": "4fbde677-c122-4822-aef3-8a27b8d6d2d8",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:01Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "bootstrap.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "9cced6a2-14fe-4820-a4e0-953b8ecf7e0e",
+  "correlationId": "3d766bf3-dc87-4769-94e2-4199839ccb17",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:02Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "start-min.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "25b45db7-285e-4958-87d3-0cc1fcc2f2ba",
+  "correlationId": "0938b1a6-e087-4ba0-a4f8-5f21deea1822",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:02Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": ".env file",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "b454acfd-129e-4ddc-a87d-abe832084bb4",
+  "correlationId": "4854ea80-706b-4aa8-8197-3ff84975b92f",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:02Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Python 3",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "385ead50-fa55-4505-8600-20a353f56662",
+  "correlationId": "915ffb1b-6b22-4337-b079-1730b3e13db7",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:02Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Git",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "a2b7a678-ba8f-4869-a162-1f21bd6617fb",
+  "correlationId": "cc46ecd3-4b64-4c0c-a9eb-50c3ce625eb9",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:02Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json is valid JSON",
+  "result": "failure",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "cd4aad37-ee93-49c3-a7af-1a424cb7e28d",
+  "correlationId": "67a24e8d-ac47-4803-b87b-4d0d4e1d2cd6",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "0787df9a-2d39-4616-9c8f-7cda2c8786d9",
+  "correlationId": "43c67962-9c96-40de-99fd-d45e1356e936",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "audit directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "8ef4d1d1-381f-488f-8750-1326119a0eae",
+  "correlationId": "18660e9a-9b53-4c76-8337-47185ff2fa8b",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "scripts directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "ae4eb7f8-0272-4b4c-979b-f95cd739c038",
+  "correlationId": "bbdfc668-ae55-4407-bad7-323d111ff638",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "governance directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "6606a856-4cfe-47b8-b4ef-23d32a8c5c64",
+  "correlationId": "bfd99bba-5146-4110-b726-14a6cc1b96b3",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_indexer.py",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "88d0b920-6c6d-4fce-a054-e6985d06459b",
+  "correlationId": "b0459a40-a270-451b-bca8-4c3d177c436b",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_gate.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "c5a657f6-6c88-4ff9-8149-99b0d23be4ab",
+  "correlationId": "9304a309-882d-421d-8cc9-0bc4a6720492",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "bootstrap.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "396fa55d-5b4e-4bd7-86c6-4d5e58a5e6aa",
+  "correlationId": "83612d75-7484-4f51-8b49-c97d1bdd193d",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "start-min.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "0118c7ee-c6f4-426d-bc14-f62c9a3ee3cf",
+  "correlationId": "a0b26976-175d-4e51-a2e7-f9a6bacfaf9a",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": ".env file",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "9cb0c240-0a92-4aea-92d6-c9a4a99f3f23",
+  "correlationId": "15f3da52-eabc-4a45-a31f-ac4c1cd2239d",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Python 3",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "4f248c06-b614-4217-9359-93b279598eb8",
+  "correlationId": "9507594d-5c98-4aeb-91fc-7d447c32a00d",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Git",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "4b6effe3-7ca4-411a-824a-ad30241e3652",
+  "correlationId": "43081401-6764-4cca-b260-08d6040617e1",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json is valid JSON",
+  "result": "failure",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "86c3a94c-8ba1-4499-8116-77ae46dd69f9",
+  "correlationId": "75db34a2-c4c8-473e-9dcf-584b8b4e48f3",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:08Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "6850dbf7-ddf6-46f3-a30b-b6cc2f11c96d",
+  "correlationId": "a14cab8d-4639-4e93-b458-ac5b2155f1ec",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:08Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "audit directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "f3bfb6af-4c2a-45bc-a039-cfc48f7f81ab",
+  "correlationId": "bf90112f-d1b6-42d7-9476-ba57e3a2384d",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:08Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "scripts directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "d9a9fb6f-fb65-4e05-8e6e-75bac5569c6e",
+  "correlationId": "2b53a3ea-47df-4c7b-917f-60fc7ac919c0",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:08Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "governance directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "8ef5c1bd-7a93-40ea-b010-18f10692671f",
+  "correlationId": "31c88d86-e92f-4eb0-bd4c-92e48d7c2e36",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:08Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_indexer.py",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "a3b91b82-9b85-44a4-ae7f-f531d05f3dd2",
+  "correlationId": "6e639dc2-a45a-43da-946e-f4f626fb18ca",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:08Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_gate.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "e49bf0bc-a89c-4dde-afb3-d436ee5685bf",
+  "correlationId": "65b3b21e-0bb4-4e84-b0b3-34a5f2fce844",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:09Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "bootstrap.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "e99e4ab8-6dc5-4743-a5cc-60da9578ddce",
+  "correlationId": "cd868e05-cc60-4a24-a0b4-74a80d85be27",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:09Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "start-min.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "de69ce70-2353-4f02-a8ab-76a05025c4e6",
+  "correlationId": "c52d41ab-76c2-4f03-8e02-cd935039e750",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:09Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": ".env file",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "07f0473a-e8a6-418f-83e1-dfd9905ff2a5",
+  "correlationId": "20771df1-7c2c-40d8-851c-d2af9412a25b",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:09Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Python 3",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "edb47a1b-5eb3-4d05-8f8f-cac5cccab80a",
+  "correlationId": "830d4e32-5a56-48ec-b239-4e42bc14b56f",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:09Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Git",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "1b32a335-fdcc-4cf4-8065-56699a019106",
+  "correlationId": "0a46438f-9833-4eb3-91d8-0adcf5cbbbea",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:09Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json is valid JSON",
+  "result": "failure",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "2e8962a0-ec33-4e6a-b534-fc253b94a6a6",
+  "correlationId": "a4eef383-ca78-4e67-9152-5937962eba89",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:38Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "e85fbffe-c4c2-4803-b09f-83dc26fb8485",
+  "correlationId": "894e8321-86b1-44ff-bb5b-140e565107a7",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:38Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "audit directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "1ad2ddc6-d1b9-481f-ab7e-dfd551eef9a1",
+  "correlationId": "dc08c976-0654-44f9-993a-8bae1262c8dc",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:38Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "scripts directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "1ebb2bad-133b-40d4-8105-779abeb2d105",
+  "correlationId": "fff3367d-d06e-4b85-a5a5-b9539611f107",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:39Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "governance directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "0a29ab15-86fd-4353-99f6-c456a8e448df",
+  "correlationId": "4ca2c63b-e589-4d61-b828-9b5d374a5661",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:39Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_indexer.py",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "b7d6b555-79fe-4deb-96c7-c58f1ffa6028",
+  "correlationId": "1e58889a-9ec0-4ba8-ac07-c8c5f8271e88",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:39Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_gate.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "94c036e6-c91f-400f-83dd-125a0f689ec1",
+  "correlationId": "765ebe3d-5ef4-4058-8768-72a4e44e8e49",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:39Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "bootstrap.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "c38a5797-21b2-45ca-a76f-ab996478d830",
+  "correlationId": "abb5132f-8277-4ad1-a063-af8a24e4f7f0",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:39Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "start-min.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "dd8f16fe-7c47-4fd0-a69b-e9a23b5a43a6",
+  "correlationId": "f1fd19e9-69b3-4214-a281-9fca54696ff1",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:39Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": ".env file",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "162245fd-6e0a-4c57-99af-b2e27fe1ab6d",
+  "correlationId": "69ff5cb0-3fb6-42d9-a1cd-b9a5f4145eff",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:39Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Python 3",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "855eb0fb-50a1-48f7-bbd1-404c16d82fc8",
+  "correlationId": "864fd3ab-7328-4aee-88d1-8242da1e686d",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:39Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Git",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "1271e2ae-afb9-40af-8f39-2ac4a26a99ba",
+  "correlationId": "3ea01c50-eaf4-4e86-803b-e3d2fe49f107",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:39Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json is valid JSON",
+  "result": "failure",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "00acdf1e-9569-4d85-870e-62ff099d0d20",
+  "correlationId": "3b828d40-f523-4963-871e-4d928c3eb593",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:47Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "39bf2adc-8d06-4e67-92e2-d56ce23ba4fa",
+  "correlationId": "50bbaf55-4073-4248-aa29-598d33b6f759",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:47Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "audit directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "a1836895-210c-420e-b954-762bfe8e8115",
+  "correlationId": "098814ce-d2d2-425a-88c0-6603d6ec7c60",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:47Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "scripts directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "c3d96c26-016c-4c75-83c6-2c47f02b8fcd",
+  "correlationId": "cb0c3413-3649-4ed2-96ff-c4870b25c983",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:47Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "governance directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "043720d2-8204-4f3b-93e8-1561333c9506",
+  "correlationId": "ed6bd8f7-06c4-4190-935b-dd9caa41de2a",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:47Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_indexer.py",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "6309a42d-b2a8-40f0-bc40-33adf72502f0",
+  "correlationId": "1d954ac3-c345-4c53-bd6e-8236d9a2d91c",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:47Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_gate.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "1d85bb5d-5adf-4c15-aea1-add516c684ad",
+  "correlationId": "df647b03-f910-4ecb-85a9-fdb2c21a4750",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:47Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "bootstrap.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "e09a4c46-8c8a-46a9-bdd4-7a894ba2644a",
+  "correlationId": "16aaf723-663f-41fa-a8d4-3e5996993131",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:47Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "start-min.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "292f04fe-395f-4c64-bbae-850b679e7b8d",
+  "correlationId": "0e08b241-77a2-4faf-97a9-efa04f6a288e",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:47Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": ".env file",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "4a931e8a-ed47-460c-ae2d-c34a415c5070",
+  "correlationId": "bca2e77b-cd05-44a9-964c-852246912e24",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:47Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Python 3",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "672be4dc-1ac8-4781-9404-41573ccdda22",
+  "correlationId": "5a4ca80b-f219-4d6b-9d79-56aa7387f9b5",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:47Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Git",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "e8a4f228-8de5-4c92-82a6-abb2de33b5d9",
+  "correlationId": "ec961945-bce3-46c1-ad6e-249fa84091cf",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:09:47Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json is valid JSON",
+  "result": "failure",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "2a9bd1cf-f95d-45d6-b250-83a1893bc609",
+  "correlationId": "596fff86-c44c-477a-8c13-4fca80843d57",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:03Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "ee4d786d-34d3-42f9-96ee-54caf1bc1e9d",
+  "correlationId": "044e47f1-69be-40d4-ba45-023c6142ef6d",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:03Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "audit directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "2336a377-70c3-47c9-aefb-c9fa0ef65a40",
+  "correlationId": "f4b643e7-6ef2-4a83-9bc6-8bbf4a395c6a",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:03Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "scripts directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "65a16122-bb7b-4fd8-9cfa-74008dd1dd31",
+  "correlationId": "7ac59078-25aa-428a-adb6-9192a070b18a",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "governance directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "ee8c798e-1ad3-4ac0-8361-0f3d78cadfeb",
+  "correlationId": "ab652836-cd82-40b3-bed5-743070e220c8",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_indexer.py",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "770e7c59-192a-4bcc-952e-74b7709b9137",
+  "correlationId": "234954c4-9ab6-450f-9894-38ee7e14e2b4",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_gate.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "19f3d780-bb5f-4f67-92f0-398ca058589a",
+  "correlationId": "ae244333-8145-4566-a330-2de78a823d54",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "bootstrap.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "5d490e87-459e-4d3a-8ef1-e62192870d8d",
+  "correlationId": "c9bf613d-ef92-456b-b09d-2140d71fc9cc",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "start-min.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "b4084cde-df82-4273-8b3a-32f0ccc674ad",
+  "correlationId": "d992a128-ec80-4dbd-81c4-35d1797f237f",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": ".env file",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "2877864d-1015-4e9a-84fb-5bb4945c4d2f",
+  "correlationId": "7dfe9d7f-dc72-4187-8e42-c52ba66e447b",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Python 3",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "78714dcf-4f04-4dcf-a0d7-4c10e955a0dd",
+  "correlationId": "022e135c-506c-45c4-9017-02a7505ab502",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Git",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "66b89d6b-a0c4-45c1-a93e-6d594cc39638",
+  "correlationId": "6eda7782-c2ff-49c4-8bb9-dafa4451593c",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:04Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json is valid JSON",
+  "result": "failure",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "217b3382-1c43-4609-b9d1-cf8e868e2f05",
+  "correlationId": "ba959a0b-00e3-4312-a019-0f6ec3282d02",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:34Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "f7a0aa38-beab-4dc3-bbe7-6459471cfd78",
+  "correlationId": "adddcf2d-7d1b-4cda-b3b1-4f16541a5afb",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:34Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "audit directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "f1798bf3-8238-4d29-9da7-bfc4868bf05b",
+  "correlationId": "6fd0cb2a-440b-4348-adf2-9a26458e7e5c",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:34Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "scripts directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "f8de4047-0fb3-447e-a4c8-4803d8caea83",
+  "correlationId": "8877d13c-f2e6-4481-8f2b-822694ffc57a",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:34Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "governance directory",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "a9c09387-5a42-470d-847f-fab4aa3ca5f5",
+  "correlationId": "ed8dc16b-38c0-409f-a3b3-85f590c38da9",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:34Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_indexer.py",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "7030d2a7-2b20-49af-8a67-a9b06b621b53",
+  "correlationId": "f129efc8-c7ef-47c1-8d81-0192b8b82b12",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:34Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "rot_gate.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "b1abc773-8b4b-4af7-857c-44b321085c94",
+  "correlationId": "34a143e6-6fac-4c87-9590-4d58750ca787",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:34Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "bootstrap.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "c0132f32-b129-4f62-a7b3-4814197d08c3",
+  "correlationId": "1a219027-7ba3-42c8-ae59-eb0d7ba374d5",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:34Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "start-min.sh",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "81039398-740e-4a74-a6a4-5c0a6797bf01",
+  "correlationId": "210b0d77-0c5e-4342-8411-40017abd3431",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:34Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": ".env file",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "ce37955a-2d8d-46b4-acde-32338b5dbd96",
+  "correlationId": "67dc14c0-0bbb-4bc8-a160-63f6537edced",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:34Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Python 3",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "4e7c04e2-606b-4a06-9ca7-b13ad73bfee0",
+  "correlationId": "44780598-7508-4183-a417-7c11f52f8d87",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:34Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "Git",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "9d16ff6f-407a-4ba8-94b5-81025a2e506e",
+  "correlationId": "fb18e022-3aa9-4680-aee4-e5720b195223",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:34Z",
+  "actor": "quick-verify",
+  "action": "verify",
+  "resource": "root-index.json is valid JSON",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "1d39ff9d-f2c5-4f11-b4a1-c3108f4a08a8",
+  "correlationId": "eb20be21-f451-4e60-8039-095f8ec8804f",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
+{
+  "timestamp": "2026-03-01T17:11:35Z",
+  "actor": "quick-verify",
+  "action": "verify_complete",
+  "resource": "quick-verify",
+  "result": "success",
+  "hash": "",
+  "version": "1.0.0",
+  "requestId": "8946ff3d-80ac-4886-92ea-98ad3f43f904",
+  "correlationId": "bb33572c-68f4-4f6c-83e4-fc598ae86b77",
+  "ip": "unknown",
+  "userAgent": "quick-verify.sh"
+}
