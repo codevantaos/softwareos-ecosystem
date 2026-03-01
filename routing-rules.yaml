@@ -1,7 +1,7 @@
 version: 1
 settings:
   max_assignees: 2
-  mode: preview
+  mode: enforce
   ignore_if_assigned: true
   allow_reassign: false
 

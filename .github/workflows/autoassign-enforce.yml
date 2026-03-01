@@ -1,0 +1,80 @@
+name: autoassign-enforce
+
+on:
+  issues:
+    types: [opened, labeled, edited]
+  pull_request_target:
+    types: [opened, labeled, edited, synchronize]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
+concurrency:
+  group: autoassign-enforce-${{ github.event_name }}-${{ github.event.issue.number || github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  enforce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Enforce (writes only when mode=enforce)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAINTAINERS_PATH: MAINTAINERS.yaml
+          RULES_PATH: routing-rules.yaml
+          CODEOWNERS_PATH: CODEOWNERS
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python tools/autoassign-preview/autoassign_enforce.py
+
+      - name: Upload evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: autoassign-evidence-${{ github.run_id }}
+          path: autoassign.evidence.json
+
+      - name: Comment result (evidence + mode)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'PY'
+          import json, os, subprocess
+          ev=json.load(open("autoassign.evidence.json","r",encoding="utf-8"))
+          repo=os.environ["GITHUB_REPOSITORY"]
+          num=ev["input"]["number"]
+          team=ev["decision"]["team_id"]
+          assignees=", ".join(ev["decision"]["assignees"])
+          trace=ev["trace_id"]
+          body=f"AutoAssign Enforce\n- trace_id: {trace}\n- team: {team}\n- assignees: {assignees}\n- event: {ev['input']['event']}\n- files: {len(ev['input'].get('changed_files') or [])}\n\n(Artifact: autoassign.evidence.json)"
+          subprocess.check_call(["gh","api",f"repos/{repo}/issues/{num}/comments","-f",f"body={body}"])
+          PY
+
+      - name: Slack notify (optional)
+        if: always()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -z "${SLACK_WEBHOOK_URL}" ]; then exit 0; fi
+          python - <<'PY'
+          import json, os, urllib.request
+          ev=json.load(open("autoassign.evidence.json","r",encoding="utf-8"))
+          msg=f"[AutoAssign] team={ev['decision']['team_id']} assignees={','.join(ev['decision']['assignees'])} trace={ev['trace_id']}"
+          data={"text": msg}
+          req=urllib.request.Request(os.environ["SLACK_WEBHOOK_URL"], data=json.dumps(data).encode("utf-8"), headers={"Content-Type":"application/json"}, method="POST")
+          urllib.request.urlopen(req, timeout=15).read()
+          PY
