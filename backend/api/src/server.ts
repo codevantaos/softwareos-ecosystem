@@ -61,10 +61,10 @@ setupWebSocket(io, logger);
 // ─── Start ───
 httpServer.listen(config.port, () => {
   logger.info({
-    msg: "eco-base API started",
+    msg: "softwareos-base API started",
     port: config.port,
     env: config.nodeEnv,
-    uri: `eco-base://backend/api/server`,
+    uri: `softwareos-base://backend/api/server`,
   });
 });
 

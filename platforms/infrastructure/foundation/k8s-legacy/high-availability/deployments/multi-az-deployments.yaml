@@ -4,21 +4,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/machine-native-ops
-    eco-base/urn: urn:eco-base:k8s:core:deployment:machine-native-ops:sha256-57697a405d4bb1ca13338410ae862d3405693c1aee2035ac5f7373c7feb0856c
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/machine-native-ops
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:machine-native-ops:sha256-57697a405d4bb1ca13338410ae862d3405693c1aee2035ac5f7373c7feb0856c
   labels:
     app.kubernetes.io/component: application
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     tier: backend
   name: machine-native-ops
   namespace: platform-03
@@ -30,8 +30,8 @@ spec:
   labels:
     app.kubernetes.io/component: application
     app.kubernetes.io/name: machine-native-ops
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     spec:
       affinity:
         nodeAffinity:
@@ -185,21 +185,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/machine-native-ops-api
-    eco-base/urn: urn:eco-base:k8s:core:deployment:machine-native-ops-api:sha256-78d7be7fb36a5d992c8908fd62e80e8428d30c0fde829bb88c61eb7d31e1e9b1
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/machine-native-ops-api
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:machine-native-ops-api:sha256-78d7be7fb36a5d992c8908fd62e80e8428d30c0fde829bb88c61eb7d31e1e9b1
   labels:
     app.kubernetes.io/component: api
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops-api
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     tier: backend
   name: machine-native-ops-api
   namespace: platform-03
@@ -211,8 +211,8 @@ spec:
   labels:
     app.kubernetes.io/component: api
     app.kubernetes.io/name: machine-native-ops-api
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     spec:
       affinity:
         nodeAffinity:
@@ -327,21 +327,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/machine-native-ops-worker
-    eco-base/urn: urn:eco-base:k8s:core:deployment:machine-native-ops-worker:sha256-8367ad752874e9a331351ee4e427c6b3ba2691048e8ced7fe63d0d5f351c6b00
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/machine-native-ops-worker
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:machine-native-ops-worker:sha256-8367ad752874e9a331351ee4e427c6b3ba2691048e8ced7fe63d0d5f351c6b00
   labels:
     app.kubernetes.io/component: worker
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops-worker
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     tier: backend
     type: background
   name: machine-native-ops-worker
@@ -350,8 +350,8 @@ spec:
   labels:
     app.kubernetes.io/component: worker
     app.kubernetes.io/name: machine-native-ops-worker
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     spec:
       affinity:
         nodeAffinity:

@@ -37,8 +37,8 @@ def _make_valid_qyaml():
     doc = {
         "document_metadata": {
             "unique_id": str(uid),
-            "uri": f"eco-base://test/unit/{uid}",
-            "urn": f"urn:eco-base:test:unit:{uid}",
+            "uri": f"softwareos-base://test/unit/{uid}",
+            "urn": f"urn:softwareos-base:test:unit:{uid}",
             "target_system": "gke-production",
             "schema_version": "v1",
             "generated_by": "yaml-toolkit-v1",
@@ -50,7 +50,7 @@ def _make_valid_qyaml():
             "lifecycle_policy": "active",
         },
         "registry_binding": {
-            "service_endpoint": "http://test.eco-base.svc.cluster.local",
+            "service_endpoint": "http://test.softwareos-base.svc.cluster.local",
             "health_check_path": "/health",
         },
         "vector_alignment_map": {
@@ -72,8 +72,8 @@ class TestValidateQyaml:
         doc = {
             "document_metadata": {
                 "unique_id": str(uuid.uuid1()),
-                "uri": "eco-base://test",
-                "urn": "urn:eco-base:test",
+                "uri": "softwareos-base://test",
+                "urn": "urn:softwareos-base:test",
                 "target_system": "gke",
                 "schema_version": "v1",
                 "generated_by": "test",
@@ -103,7 +103,7 @@ class TestValidateQyaml:
             "document_metadata": {
                 "unique_id": str(uuid.uuid1()),
                 "uri": "http://wrong-prefix",
-                "urn": "urn:eco-base:test",
+                "urn": "urn:softwareos-base:test",
                 "target_system": "gke",
                 "schema_version": "v1",
                 "generated_by": "test",
@@ -121,7 +121,7 @@ class TestValidateQyaml:
         doc = {
             "document_metadata": {
                 "unique_id": str(uuid.uuid1()),
-                "uri": "eco-base://test",
+                "uri": "softwareos-base://test",
                 "urn": "wrong:prefix:test",
                 "target_system": "gke",
                 "schema_version": "v1",
@@ -140,8 +140,8 @@ class TestValidateQyaml:
         doc = {
             "document_metadata": {
                 "unique_id": "not-a-uuid",
-                "uri": "eco-base://test",
-                "urn": "urn:eco-base:test",
+                "uri": "softwareos-base://test",
+                "urn": "urn:softwareos-base:test",
                 "target_system": "gke",
                 "schema_version": "v1",
                 "generated_by": "test",
@@ -159,8 +159,8 @@ class TestValidateQyaml:
         doc = {
             "document_metadata": {
                 "unique_id": str(uuid.uuid4()),
-                "uri": "eco-base://test",
-                "urn": "urn:eco-base:test",
+                "uri": "softwareos-base://test",
+                "urn": "urn:softwareos-base:test",
                 "target_system": "gke",
                 "schema_version": "v1",
                 "generated_by": "test",
@@ -195,8 +195,8 @@ class TestValidateQyaml:
         doc = {
             "document_metadata": {
                 "unique_id": str(uuid.uuid1()),
-                "uri": "eco-base://test",
-                "urn": "urn:eco-base:test",
+                "uri": "softwareos-base://test",
+                "urn": "urn:softwareos-base:test",
                 "target_system": "gke",
                 "schema_version": "v1",
                 "generated_by": "test",
@@ -213,7 +213,7 @@ class TestValidateQyaml:
 
 class TestStampGovernance:
     def test_stamp_has_all_blocks(self, engine):
-        stamp = engine.stamp_governance("test-svc", "eco-base", "Deployment")
+        stamp = engine.stamp_governance("test-svc", "softwareos-base", "Deployment")
         assert "document_metadata" in stamp
         assert "governance_info" in stamp
         assert "registry_binding" in stamp
@@ -226,11 +226,11 @@ class TestStampGovernance:
 
     def test_stamp_uri_format(self, engine):
         stamp = engine.stamp_governance("test-svc", "ns1", "Service")
-        assert stamp["document_metadata"]["uri"] == "eco-base://k8s/ns1/service/test-svc"
+        assert stamp["document_metadata"]["uri"] == "softwareos-base://k8s/ns1/service/test-svc"
 
     def test_stamp_urn_format(self, engine):
         stamp = engine.stamp_governance("test-svc", "ns1", "Service")
-        assert stamp["document_metadata"]["urn"].startswith("urn:eco-base:k8s:ns1:service:test-svc:")
+        assert stamp["document_metadata"]["urn"].startswith("urn:softwareos-base:k8s:ns1:service:test-svc:")
 
     def test_stamp_roundtrip_validate(self, engine):
         stamp = engine.stamp_governance("roundtrip-svc")
@@ -270,7 +270,7 @@ class TestAuditLog:
     def test_audit_has_uri(self, engine):
         engine.resolve_engine("test")
         log = engine.get_audit_log()
-        assert log[-1]["uri"].startswith("eco-base://governance/audit/")
+        assert log[-1]["uri"].startswith("softwareos-base://governance/audit/")
 
 
 class TestAuditPersistence:

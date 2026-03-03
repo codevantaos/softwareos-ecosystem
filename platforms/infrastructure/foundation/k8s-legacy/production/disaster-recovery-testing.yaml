@@ -17,12 +17,12 @@ data:
     chaos_test\"\n      notify_before: true\n      notification_lead_time: 3600s \
     \ # 1 hour\n\n# Chaos Engineering Practices\nchaos_engineering:\n  enabled: true\n\
     \  \n  experiments:\n    pod_failure:\n      enabled: true\n      probability:\
-    \ 0.05\n      max_pods_to_kill: 1\n      exclude_labels:\neco-base/part-of: eco-base\n\
-    eco-base/governance: aligned\n        - \"app=postgresql\"\n        - \"app=redis-master\"\
+    \ 0.05\n      max_pods_to_kill: 1\n      exclude_labels:\nsoftwareos-base/part-of: softwareos-base\n\
+    softwareos-base/governance: aligned\n        - \"app=postgresql\"\n        - \"app=redis-master\"\
     \n      notification: true\n      auto_rollback: true\n    \n    network_latency:\n\
     \      enabled: true\n      probability: 0.03\n      min_latency: 100ms\n    \
-    \  max_latency: 500ms\n      duration: 60s\n      exclude_labels:\neco-base/part-of:\
-    \ eco-base\neco-base/governance: aligned\n        - \"app=postgresql\"\n     \
+    \  max_latency: 500ms\n      duration: 60s\n      exclude_labels:\nsoftwareos-base/part-of:\
+    \ softwareos-base\nsoftwareos-base/governance: aligned\n        - \"app=postgresql\"\n     \
     \   - \"app=redis-master\"\n    \n    network_partition:\n      enabled: true\n\
     \      probability: 0.01\n      duration: 30s\n      max_partitions: 2\n     \
     \ notification: true\n      auto_recovery: true\n    \n    resource_exhaustion:\n\
@@ -125,21 +125,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/disaster-recovery-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:disaster-recovery-config:sha256-f00d6f1da448bfb5dea1a7b042ee7fb280f77dfa1877a82dbb2f67dfc8402ecf
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/disaster-recovery-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:disaster-recovery-config:sha256-f00d6f1da448bfb5dea1a7b042ee7fb280f77dfa1877a82dbb2f67dfc8402ecf
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: disaster-recovery
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
   name: disaster-recovery-config
   namespace: production

@@ -15,8 +15,8 @@ metadata:
   name: gl-quantum-alert-correlation
   namespace: monitoring
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     gl-version: v10.0.0
     tier: quantum-observability
 spec:
@@ -44,8 +44,8 @@ spec:
           severity: critical
           message: "Service {{ $labels.service }} is experiencing degradation"
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             affected_service: "{{ $labels.service }}"
             degradation_type: "combined_error_latency_cache"
             
@@ -70,8 +70,8 @@ spec:
           severity: critical
           message: "Deployment {{ $labels.deployment }} in namespace {{ $labels.namespace }} failed"
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             deployment_name: "{{ $labels.deployment }}"
             namespace: "{{ $labels.namespace }}"
             failure_type: "combined_deployment_pod_failure"
@@ -97,8 +97,8 @@ spec:
           severity: critical
           message: "Multiple security events detected requiring immediate attention"
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             incident_type: "combined_vulnerability_access_violation"
             requires_immediate_action: true
             
@@ -123,8 +123,8 @@ spec:
           severity: critical
           message: "Node {{ $labels.node }} is experiencing resource exhaustion"
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             node_name: "{{ $labels.node }}"
             exhaustion_type: "combined_cpu_memory_disk"
             requires_immediate_action: true
@@ -278,8 +278,8 @@ spec:
           - Logs: https://loki.gl-quantum.machinenativeops.com
           
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           auto-created: "true"
           correlation-enabled: "true"
           

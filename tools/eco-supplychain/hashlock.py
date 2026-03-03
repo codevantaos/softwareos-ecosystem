@@ -31,9 +31,9 @@ EXCLUDE_TOP_LEVEL_FIELDS = {
 }
 
 URN_RE = re.compile(
-    r"^urn:eco-base:k8s:[a-z0-9-]+:[a-z0-9-]+:[a-z0-9-]+:sha256-[0-9a-f]{64}$"
+    r"^urn:softwareos-base:k8s:[a-z0-9-]+:[a-z0-9-]+:[a-z0-9-]+:sha256-[0-9a-f]{64}$"
 )
-URI_RE = re.compile(r"^eco-base://k8s/[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+$")
+URI_RE = re.compile(r"^softwareos-base://k8s/[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+$")
 
 def sha256_hex(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
@@ -53,12 +53,12 @@ def canonicalize_k8s(obj: dict) -> dict:
     # remove noisy metadata
     for k in EXCLUDE_METADATA_FIELDS:
         meta.pop(k, None)
-    # remove eco-base/urn and eco-base/uri from annotations to avoid circular dependency
+    # remove softwareos-base/urn and softwareos-base/uri from annotations to avoid circular dependency
     # (these annotations contain the content hash itself, so they must be excluded
     # from hash computation to prevent infinite update loops)
     ann = meta.get("annotations") or {}
-    ann.pop("eco-base/urn", None)
-    ann.pop("eco-base/uri", None)
+    ann.pop("softwareos-base/urn", None)
+    ann.pop("softwareos-base/uri", None)
     if ann:
         meta["annotations"] = ann
     elif "annotations" in meta:
@@ -167,17 +167,17 @@ def ensure_annotations(obj: dict):
     return obj
 
 def build_uri(platform: str, component: str, resource_name: str) -> str:
-    return f"eco-base://k8s/{platform}/{component}/{resource_name}"
+    return f"softwareos-base://k8s/{platform}/{component}/{resource_name}"
 
 def build_urn(platform: str, component: str, resource_name: str, content_hash: str) -> str:
-    return f"urn:eco-base:k8s:{platform}:{component}:{resource_name}:sha256-{content_hash}"
+    return f"urn:softwareos-base:k8s:{platform}:{component}:{resource_name}:sha256-{content_hash}"
 
 def governed(obj: dict) -> bool:
     return isinstance(obj, dict) and obj.get("kind") in GOVERNED_KINDS and obj.get("metadata", {}).get("name")
 
 def get_platform_label(obj: dict) -> str:
     labels = (obj.get("metadata") or {}).get("labels") or {}
-    return str(labels.get("eco-base/platform") or "").strip()
+    return str(labels.get("softwareos-base/platform") or "").strip()
 
 def main():
     ap = argparse.ArgumentParser()
@@ -214,7 +214,7 @@ def main():
                 if any(x in fpath for x in ["k8s/argocd", "k8s/circleci", "monitoring", "ingress", "infrastructure"]):
                     platform = "core"
                 else:
-                    print(f"[ECO-HASHLOCK-WARN] {fpath}: {kind}/{name}: missing label eco-base/platform, defaulting to core")
+                    print(f"[ECO-HASHLOCK-WARN] {fpath}: {kind}/{name}: missing label softwareos-base/platform, defaulting to core")
                     platform = "core"
 
             # 計算 content hash（在回寫 URN/URI 前）
@@ -227,23 +227,23 @@ def main():
             ensure_annotations(doc)
             ann = doc["metadata"]["annotations"]
 
-            existing_urn = str(ann.get("eco-base/urn") or "").strip()
-            existing_uri = str(ann.get("eco-base/uri") or "").strip()
+            existing_urn = str(ann.get("softwareos-base/urn") or "").strip()
+            existing_uri = str(ann.get("softwareos-base/uri") or "").strip()
 
             if args.mode == "update":
                 if existing_uri != computed_uri:
-                    ann["eco-base/uri"] = computed_uri
+                    ann["softwareos-base/uri"] = computed_uri
                     file_changed = True
 
                 if existing_urn != computed_urn:
-                    ann["eco-base/urn"] = computed_urn
+                    ann["softwareos-base/urn"] = computed_urn
                     file_changed = True
 
             else:  # verify
                 if existing_uri != computed_uri:
-                    failures.append(f"[ECO-HASHLOCK-FAIL] {fpath}: {kind}/{name}: eco-base/uri drift\n  expected: {computed_uri}\n  actual:   {existing_uri or '<missing>'}")
+                    failures.append(f"[ECO-HASHLOCK-FAIL] {fpath}: {kind}/{name}: softwareos-base/uri drift\n  expected: {computed_uri}\n  actual:   {existing_uri or '<missing>'}")
                 if existing_urn != computed_urn:
-                    failures.append(f"[ECO-HASHLOCK-FAIL] {fpath}: {kind}/{name}: eco-base/urn drift\n  expected: {computed_urn}\n  actual:   {existing_urn or '<missing>'}")
+                    failures.append(f"[ECO-HASHLOCK-FAIL] {fpath}: {kind}/{name}: softwareos-base/urn drift\n  expected: {computed_urn}\n  actual:   {existing_urn or '<missing>'}")
 
             hashlock_entries.append({
                 "apiVersion": api_version,

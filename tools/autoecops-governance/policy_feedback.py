@@ -27,7 +27,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-REPO = os.environ.get("GITHUB_REPOSITORY", "indestructibleorg/eco-base")
+REPO = os.environ.get("GITHUB_REPOSITORY", "indestructibleorg/softwareos-base")
 ARTIFACTS_DIR = Path(os.environ.get("ARTIFACTS_DIR", "artifacts"))
 AUDIT_DIR = ARTIFACTS_DIR / "audit"
 POLICY_FILE = Path("policy/ai_bot_review.rego")

@@ -18,8 +18,8 @@ metadata:
   name: machine-native-ops-ha-pdb
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: failover
     type: pdb
 spec:
@@ -37,8 +37,8 @@ metadata:
   name: critical-priority
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: failover
     type: priority
 value: 1000000
@@ -53,8 +53,8 @@ metadata:
   name: high-priority
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: failover
     type: priority
 value: 500000
@@ -69,8 +69,8 @@ metadata:
   name: normal-priority
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: failover
     type: priority
 value: 0
@@ -85,8 +85,8 @@ metadata:
   name: machine-native-ops-hpa
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: machine-native-ops
     app.kubernetes.io/component: scaling
 spec:
@@ -144,8 +144,8 @@ metadata:
   name: machine-native-ops-api-hpa
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: machine-native-ops-api
     app.kubernetes.io/component: scaling
 spec:
@@ -192,8 +192,8 @@ metadata:
   name: machine-native-ops-vpa
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: machine-native-ops
     app.kubernetes.io/component: scaling
 spec:
@@ -235,8 +235,8 @@ metadata:
   name: zone-failure-config
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: failover
     type: config
 data:
@@ -285,8 +285,8 @@ metadata:
   name: zone-failover-controller
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: zone-failover-controller
     app.kubernetes.io/component: failover
     type: controller
@@ -300,8 +300,8 @@ spec:
   template:
     
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         app.kubernetes.io/name: zone-failover-controller
         app.kubernetes.io/component: failover
         type: controller

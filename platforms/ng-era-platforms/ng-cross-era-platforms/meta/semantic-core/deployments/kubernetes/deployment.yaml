@@ -3,21 +3,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/gl-spec-core
-    eco-base/urn: urn:eco-base:k8s:core:deployment:gl-spec-core:sha256-5005eab389e0382e622562f7b80702cc96e516d43d33d4730fa2493cd8b94468
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/gl-spec-core
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:gl-spec-core:sha256-5005eab389e0382e622562f7b80702cc96e516d43d33d4730fa2493cd8b94468
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: spec-core
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     gl.governance/layer: L1
     gl.platform/semantic.core: 'true'
     gl.semantic/component-type: semantic-engine
@@ -32,8 +32,8 @@ spec:
     prometheus.io/scrape: 'true'
   labels:
     app.kubernetes.io/name: spec-core
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     gl.platform/semantic.core: 'true'
     spec:
       affinity:

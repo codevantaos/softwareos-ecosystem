@@ -39,7 +39,7 @@
     "memory_hub_url": {
       "type": "string",
       "format": "uri",
-      "default": "http://memory-hub.eco-base.svc.cluster.local:8080",
+      "default": "http://codevantaos-memory.softwareos-base.svc.cluster.local:8080",
       "description": "Memory Hub service URL for RAG retrieval"
     },
     "commit_message": {

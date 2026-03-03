@@ -118,7 +118,7 @@ MachineNativeOps implements the minimum necessary standard:
 - Perform periodic technical and non-technical evaluations of security safeguards
 
 #### 3.1.9 Business Associate Contracts and Other Arrangements
-- Ensure business associates comply with HIPAA requirements through written contracts or arrangements
+- Ensure business associates comply with HIPAA requirements through written softwareos-contracts or arrangements
 
 ### 3.2 Physical Safeguards
 

@@ -61,9 +61,9 @@
 | `GCP_ZONE` | `asia-east1-a` | Default GCP zone |
 | `CLUSTER_NAME_STAGING` | `eco-staging` | Staging cluster name |
 | `CLUSTER_NAME_PRODUCTION` | `eco-production` | Production cluster name |
-| `DOCKER_REGISTRY` | `asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base` | Artifact Registry URI |
+| `DOCKER_REGISTRY` | `asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base` | Artifact Registry URI |
 | `KUBERNETES_NAMESPACE_STAGING` | `eco-staging` | Staging namespace |
-| `KUBERNETES_NAMESPACE_PRODUCTION` | `eco-base` | Production namespace |
+| `KUBERNETES_NAMESPACE_PRODUCTION` | `softwareos-base` | Production namespace |
 | `MONITORING_NAMESPACE` | `monitoring` | Monitoring namespace |
 
 ---
@@ -77,10 +77,10 @@
 
 | Field | Value |
 |-------|-------|
-| Application name | eco-base Production |
-| Homepage URL | https://eco-base.io |
-| Application description | Production OAuth app for eco-base platform |
-| Authorization callback URL | https://eco-base.io/auth/callback |
+| Application name | softwareos-base Production |
+| Homepage URL | https://softwareos-base.io |
+| Application description | Production OAuth app for softwareos-base platform |
+| Authorization callback URL | https://softwareos-base.io/auth/callback |
 
 ### OAuth Secrets to Add
 

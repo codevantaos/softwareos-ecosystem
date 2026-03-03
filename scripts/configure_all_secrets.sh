@@ -1,5 +1,5 @@
 #!/bin/bash
-# Complete Secrets Configuration Script for eco-base
+# Complete Secrets Configuration Script for softwareos-base
 # This script configures all GCP, Supabase, and Cloudflare secrets
 
 set -e
@@ -11,7 +11,7 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}=== eco-base Complete Secrets Configuration ===${NC}"
+echo -e "${BLUE}=== softwareos-base Complete Secrets Configuration ===${NC}"
 echo ""
 
 # Check if kubectl is installed
@@ -27,7 +27,7 @@ if ! kubectl cluster-info &> /dev/null; then
 fi
 
 # Configuration
-NAMESPACE="eco-base"
+NAMESPACE="softwareos-base"
 MONITORING_NAMESPACE="monitoring"
 
 echo -e "${GREEN}Step 1: Configuring GCP Service Account Secret${NC}"
@@ -113,8 +113,8 @@ echo "  Username: admin"
 echo "  Password: $GRAFANA_PASSWORD"
 echo ""
 echo -e "${BLUE}Access URLs:${NC}"
-echo "  Prometheus: https://prometheus._cf-custom-hostname.autoecoops.io"
-echo "  Grafana:    https://grafana._cf-custom-hostname.autoecoops.io"
+echo "  Prometheus: https://prometheus._cf-custom-hostname.softwareos.io"
+echo "  Grafana:    https://grafana._cf-custom-hostname.softwareos.io"
 echo ""
 echo -e "${YELLOW}Next Steps:${NC}"
 echo "1. Deploy monitoring stack: ./scripts/setup_supabase_monitoring.sh"

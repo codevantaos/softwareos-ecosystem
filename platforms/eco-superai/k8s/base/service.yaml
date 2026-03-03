@@ -3,10 +3,10 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/superai-app
-    eco-base/urn: urn:eco-base:k8s:core:service:superai-app:sha256-ac71ff0686de6bbd8d89b01837f9c93743afb513670ee7ba04f05fa777d643e9
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/superai-app
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:superai-app:sha256-ac71ff0686de6bbd8d89b01837f9c93743afb513670ee7ba04f05fa777d643e9
     prometheus.io/path: /metrics
     prometheus.io/port: '8000'
     prometheus.io/scrape: 'true'
@@ -14,11 +14,11 @@ metadata:
     app.kubernetes.io/component: app
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: superai-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: superai-app
   namespace: eco-superai
 spec:
@@ -41,19 +41,19 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/superai-app-headless
-    eco-base/urn: urn:eco-base:k8s:core:service:superai-app-headless:sha256-699298fab87ee797c4a30d0ccc48f6612f24f99f0387315cb07bd7f9f520c4e1
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/superai-app-headless
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:superai-app-headless:sha256-699298fab87ee797c4a30d0ccc48f6612f24f99f0387315cb07bd7f9f520c4e1
   labels:
     app.kubernetes.io/component: app
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: superai-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: superai-app-headless
   namespace: eco-superai
 spec:

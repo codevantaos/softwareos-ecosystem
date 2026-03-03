@@ -3,19 +3,19 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/govops-engine
-    eco-base/urn: urn:eco-base:k8s:core:service:govops-engine:sha256-125a0a083ba5b3a00de29537f9b2d3c5e25ba7a06e5fd8ae14debbe2530ec1f3
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/govops-engine
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:govops-engine:sha256-125a0a083ba5b3a00de29537f9b2d3c5e25ba7a06e5fd8ae14debbe2530ec1f3
   labels:
     app.kubernetes.io/component: engine
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: govops-engine
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
     governance.io/managed: 'true'
   name: govops-engine
   namespace: eco-govops

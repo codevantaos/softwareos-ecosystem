@@ -13,7 +13,7 @@ kind: GLLayerDefinition
   version: "1.0.0"
 spec:
   range: "30-49"
-  description: "Schemas, templates, contracts, automation, tools"
+  description: "Schemas, templates, softwareos-contracts, automation, tools"
   dimensions:
     - id: "26-tools"
       purpose: "Execution tools and utilities"
@@ -49,8 +49,8 @@ spec:
         - "batch_validate"
     - id: "36-modules"
       purpose: "Reusable execution modules"
-    - id: "37-behavior-contracts"
-      purpose: "Behavioral contracts and agreements"
+    - id: "37-behavior-softwareos-contracts"
+      purpose: "Behavioral softwareos-contracts and agreements"
     - id: "38-sbom"
       purpose: "Software Bill of Materials management"
     - id: "39-automation"
@@ -74,7 +74,7 @@ spec:
       - "GL50-59"
       - "GL60-80"
   validation:
-    semantic_boundary: "Execution artifacts - tools, templates, schemas, contracts, automation"
+    semantic_boundary: "Execution artifacts - tools, templates, schemas, softwareos-contracts, automation"
     no_conflicts: true
     no_duplicates: true
     clear_boundaries: true

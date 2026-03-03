@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 PR Blocked Response — Fully Autonomous Self-Healing Engine v3
-eco-base: zero human intervention, zero external platform dependency.
+softwareos-base: zero human intervention, zero external platform dependency.
 
 Design principles:
   1. ONLY internal CI checks matter (validate/lint/test/build/opa-policy/supply-chain)
@@ -40,7 +40,7 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 
-REPO           = os.environ.get("REPO", "indestructibleorg/eco-base")
+REPO           = os.environ.get("REPO", "indestructibleorg/softwareos-base")
 SPECIFIC_PR    = os.environ.get("SPECIFIC_PR", "").strip()
 GH_TOKEN       = os.environ.get("GH_TOKEN", "")
 TRIGGER_EVENT  = os.environ.get("TRIGGER_EVENT", "").strip()
@@ -401,7 +401,7 @@ def post_escalation_explanation(pr_num, escalation_reasons):
         f"{reasons_text}\n\n"
         "**To proceed:** Resolve the above concern and remove the `human-review-required` "
         "label, or confirm it is safe by commenting `/approve-anyway`.\n\n"
-        "_This comment was posted automatically by the eco-base autonomous PR engine._"
+        "_This comment was posted automatically by the softwareos-base autonomous PR engine._"
     )
     r = gh_run(["pr", "comment", str(pr_num), "--repo", REPO, "--body", body])
     if r.returncode == 0:
@@ -585,12 +585,12 @@ def parse_anomaly_metadata(body):
     dedup_key, signature, count = "", "", 0
     for line in text.splitlines():
         line = line.strip()
-        if line.startswith("<!-- autoecoops:dkey=") and line.endswith(" -->"):
-            dedup_key = line[len("<!-- autoecoops:dkey="):-4]
-        elif line.startswith("<!-- autoecoops:asig=") and line.endswith(" -->"):
-            signature = line[len("<!-- autoecoops:asig="):-4]
-        elif line.startswith("<!-- autoecoops:acount=") and line.endswith(" -->"):
-            raw_count = line[len("<!-- autoecoops:acount="):-4]
+        if line.startswith("<!-- softwareos:dkey=") and line.endswith(" -->"):
+            dedup_key = line[len("<!-- softwareos:dkey="):-4]
+        elif line.startswith("<!-- softwareos:asig=") and line.endswith(" -->"):
+            signature = line[len("<!-- softwareos:asig="):-4]
+        elif line.startswith("<!-- softwareos:acount=") and line.endswith(" -->"):
+            raw_count = line[len("<!-- softwareos:acount="):-4]
             if raw_count.isdigit():
                 count = int(raw_count)
     return {
@@ -645,9 +645,9 @@ def upsert_auto_anomaly_issue(pr_num, anomalies, head_sha):
             f"The following non-required gates are not healthy and need follow-up:\n\n"
             f"{body_lines}\n\n"
             f"This issue is automatically maintained and will be auto-closed once anomalies disappear.\n\n"
-            f"<!-- autoecoops:dkey={dedup_key} -->\n"
-            f"<!-- autoecoops:asig={anomaly_signature} -->\n"
-            f"<!-- autoecoops:acount={anomaly_count} -->\n\n"
+            f"<!-- softwareos:dkey={dedup_key} -->\n"
+            f"<!-- softwareos:asig={anomaly_signature} -->\n"
+            f"<!-- softwareos:acount={anomaly_count} -->\n\n"
             f"> AutoEcoOps PR Governance Engine"
         )
         current_body = (issue.get("body", "") or "").replace("\r\n", "\n").strip()
@@ -671,9 +671,9 @@ def upsert_auto_anomaly_issue(pr_num, anomalies, head_sha):
         f"The following non-required gates are not healthy and need follow-up:\n\n"
         f"{body_lines}\n\n"
         f"This issue is automatically maintained and will be auto-closed once anomalies disappear.\n\n"
-        f"<!-- autoecoops:dkey={dedup_key} -->\n"
-        f"<!-- autoecoops:asig={anomaly_signature} -->\n"
-        f"<!-- autoecoops:acount={anomaly_count} -->\n\n"
+        f"<!-- softwareos:dkey={dedup_key} -->\n"
+        f"<!-- softwareos:asig={anomaly_signature} -->\n"
+        f"<!-- softwareos:acount={anomaly_count} -->\n\n"
         f"> AutoEcoOps PR Governance Engine"
     )
 

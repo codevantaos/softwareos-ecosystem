@@ -108,7 +108,7 @@ sealed_scope_02:
       status: IMMUTABLE
     - layer: GL60-80
       boundary: Feedback and optimization only
-      prohibitions: [direct_execution, policy_creation, external_contracts]
+      prohibitions: [direct_execution, policy_creation, external_softwareos-contracts]
       status: IMMUTABLE
     - layer: GL81-83
       boundary: External integration only

@@ -12,8 +12,8 @@ metadata:
   name: naming-governance-alerts
   namespace: monitoring
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: naming-governance
     release: prometheus
 spec:
@@ -24,8 +24,8 @@ spec:
           expr: naming_governance_adoption_rate < 0.75
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             app.kubernetes.io/component: naming-governance
           annotations:
@@ -37,8 +37,8 @@ spec:
           expr: naming_governance_compliance_rate < 0.90
           for: 10m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             app.kubernetes.io/component: naming-governance
           annotations:
@@ -49,8 +49,8 @@ spec:
           expr: naming_governance_compliance_rate < 0.85
           for: 10m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             app.kubernetes.io/component: naming-governance
           annotations:
@@ -63,8 +63,8 @@ spec:
           expr: rate(naming_governance_violations_total[1h]) > 20
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: high
             app.kubernetes.io/component: naming-governance
           annotations:
@@ -75,8 +75,8 @@ spec:
           expr: naming_governance_conflicts_total > 5
           for: 15m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             app.kubernetes.io/component: naming-governance
           annotations:
@@ -87,8 +87,8 @@ spec:
           expr: naming_governance_consistency_score < 80
           for: 30m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             app.kubernetes.io/component: naming-governance
           annotations:
@@ -101,8 +101,8 @@ spec:
           expr: naming_governance_validation_duration_seconds > 5
           for: 10m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             app.kubernetes.io/component: naming-governance
           annotations:
@@ -113,8 +113,8 @@ spec:
           expr: rate(naming_governance_validation_failures_total[5m]) > 0.1
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: error
             app.kubernetes.io/component: naming-governance
           annotations:
@@ -127,8 +127,8 @@ spec:
           expr: naming_governance_security_violations_total > 0
           for: 1m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             app.kubernetes.io/component: naming-governance
           annotations:
@@ -140,8 +140,8 @@ spec:
           expr: naming_governance_config_drift{env="prod"} > 0
           for: 1m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             app.kubernetes.io/component: naming-governance
           annotations:

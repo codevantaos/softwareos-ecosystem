@@ -24,7 +24,7 @@ class GovernanceModule(BaseModel):
 
     Attributes:
         module_id: Globally-unique identifier (UUID-4 string).
-        name: Human-readable module name (e.g. ``"auth-service"``).
+        name: Human-readable module name (e.g. ``"codevantaos-auth"``).
         path: Filesystem or repository path to the module root.
         gl_layer: Governance Layer designation (e.g. ``"GL30-49"``).
         ng_era: Naming-generation era tag (e.g. ``"Era-2"``).

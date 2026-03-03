@@ -2,7 +2,7 @@
 
 **Date**: February 21, 2026
 **Commit**: b2f95ef
-**Project**: eco-base
+**Project**: softwareos-base
 
 ---
 
@@ -53,8 +53,8 @@ I've successfully configured a comprehensive monitoring system for your Supabase
   - Node Exporter (DaemonSet for cluster metrics)
 
 #### Access URLs
-- **Prometheus**: https://prometheus._cf-custom-hostname.autoecoops.io
-- **Grafana**: https://grafana._cf-custom-hostname.autoecoops.io
+- **Prometheus**: https://prometheus._cf-custom-hostname.softwareos.io
+- **Grafana**: https://grafana._cf-custom-hostname.softwareos.io
 
 ### 3. Automation Scripts
 
@@ -169,7 +169,7 @@ kubectl create secret tls cloudflare-origin-cert \
 kubectl patch ingress prometheus-ingress -n monitoring -p '{
   "spec": {
     "tls": [{
-      "hosts": ["prometheus._cf-custom-hostname.autoecoops.io"],
+      "hosts": ["prometheus._cf-custom-hostname.softwareos.io"],
       "secretName": "cloudflare-origin-cert"
     }]
   }
@@ -178,7 +178,7 @@ kubectl patch ingress prometheus-ingress -n monitoring -p '{
 kubectl patch ingress grafana-ingress -n monitoring -p '{
   "spec": {
     "tls": [{
-      "hosts": ["grafana._cf-custom-hostname.autoecoops.io"],
+      "hosts": ["grafana._cf-custom-hostname.softwareos.io"],
       "secretName": "cloudflare-origin-cert"
     }]
   }
@@ -264,7 +264,7 @@ kubectl patch ingress grafana-ingress -n monitoring -p '{
    ```
 
 2. **Access Grafana**
-   - URL: http://grafana.eco-base.io
+   - URL: http://grafana.softwareos-base.io
    - Login with admin credentials
    - Navigate to Dashboards → Supabase → Supabase Overview
 

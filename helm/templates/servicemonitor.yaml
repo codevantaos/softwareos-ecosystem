@@ -3,7 +3,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: {{ include "eco.fullname" . }}
-  namespace: {{ .Values.namespace | default "eco-base" }}
+  namespace: {{ .Values.namespace | default "softwareos-base" }}
   labels:
   {{- include "eco.labels" . | nindent 4 }}
   release: prometheus
@@ -13,7 +13,7 @@ spec:
       {{- include "eco.selectorLabels" . | nindent 6 }}
   namespaceSelector:
     matchNames:
-      - {{ .Values.namespace | default "eco-base" }}
+      - {{ .Values.namespace | default "softwareos-base" }}
   endpoints:
     - port: http
       path: /metrics

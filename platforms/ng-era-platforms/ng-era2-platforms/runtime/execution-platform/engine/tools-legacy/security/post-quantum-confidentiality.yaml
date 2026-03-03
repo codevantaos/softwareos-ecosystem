@@ -15,8 +15,8 @@ metadata:
   name: post-quantum-confidentiality
   namespace: security
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     layer: layer-2
     nist.pqc: level-5-plus
     crypto.agility: enabled

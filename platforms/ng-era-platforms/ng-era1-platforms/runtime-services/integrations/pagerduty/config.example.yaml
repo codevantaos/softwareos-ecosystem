@@ -10,8 +10,8 @@ metadata:
   name: gl-platform-pagerduty
   namespace: gl-platform
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: gl-platform
     app.kubernetes.io/component: pagerduty-integration
     tier: notifications
@@ -165,8 +165,8 @@ spec:
           "{{ range .Metrics }}{{ .Name }}": "{{ .Value }}"
           {{ end }}"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           "{{ range $key, $value := .Labels }}{{ $key }}": "{{ $value }}"
           {{ end }}"
   

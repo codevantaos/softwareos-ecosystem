@@ -6,7 +6,7 @@ ENV_ALLOWED = {"production", "staging", "development"}
 AUDIT_ALLOWED = {"full", "minimal"}
 
 URN_RE = re.compile(
-    r"^urn:eco-base:"
+    r"^urn:softwareos-base:"
     r"(?P<rtype>[a-z0-9-]+):"
     r"(?P<platform>[a-z0-9-]+):"
     r"(?P<component>[a-z0-9-]+):"
@@ -14,7 +14,7 @@ URN_RE = re.compile(
     r"(?P<uid>([0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}|sha256-[0-9a-f]{8,}))$"
 )
 
-URI_RE = re.compile(r"^eco-base://[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+/.+(\?.*)?$")
+URI_RE = re.compile(r"^softwareos-base://[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+/.+(\?.*)?$")
 
 MANDATORY_LABELS = [
     "app.kubernetes.io/name",
@@ -22,16 +22,16 @@ MANDATORY_LABELS = [
     "app.kubernetes.io/version",
     "app.kubernetes.io/component",
     "app.kubernetes.io/part-of",
-    "eco-base/platform",
-    "eco-base/environment",
-    "eco-base/owner",
+    "softwareos-base/platform",
+    "softwareos-base/environment",
+    "softwareos-base/owner",
 ]
 
 MANDATORY_ANNOTATIONS = [
-    "eco-base/uri",
-    "eco-base/urn",
-    "eco-base/governance-policy",
-    "eco-base/audit-log-level",
+    "softwareos-base/uri",
+    "softwareos-base/urn",
+    "softwareos-base/governance-policy",
+    "softwareos-base/audit-log-level",
 ]
 
 KIND_FILTER = {
@@ -145,29 +145,29 @@ def validate_obj(obj, src):
     for k in MANDATORY_LABELS:
         if k not in labels or str(labels.get(k)).strip() == "":
             fails.append(err(f"{src}: {kind}/{name}: missing label {k}"))
-    if labels.get("app.kubernetes.io/part-of") and labels["app.kubernetes.io/part-of"] != "eco-base":
-        fails.append(err(f"{src}: {kind}/{name}: app.kubernetes.io/part-of must be 'eco-base'"))
+    if labels.get("app.kubernetes.io/part-of") and labels["app.kubernetes.io/part-of"] != "softwareos-base":
+        fails.append(err(f"{src}: {kind}/{name}: app.kubernetes.io/part-of must be 'softwareos-base'"))
 
-    env = labels.get("eco-base/environment")
+    env = labels.get("softwareos-base/environment")
     if env and env not in ENV_ALLOWED:
-        fails.append(err(f"{src}: {kind}/{name}: eco-base/environment={env!r} not in {sorted(ENV_ALLOWED)}"))
+        fails.append(err(f"{src}: {kind}/{name}: softwareos-base/environment={env!r} not in {sorted(ENV_ALLOWED)}"))
 
     # annotations
     for k in MANDATORY_ANNOTATIONS:
         if k not in ann or str(ann.get(k)).strip() == "":
             fails.append(err(f"{src}: {kind}/{name}: missing annotation {k}"))
 
-    u = ann.get("eco-base/urn")
+    u = ann.get("softwareos-base/urn")
     if u and not URN_RE.match(u):
-        fails.append(err(f"{src}: {kind}/{name}: eco-base/urn invalid: {u!r}"))
+        fails.append(err(f"{src}: {kind}/{name}: softwareos-base/urn invalid: {u!r}"))
 
-    uri = ann.get("eco-base/uri")
+    uri = ann.get("softwareos-base/uri")
     if uri and not URI_RE.match(uri):
-        fails.append(err(f"{src}: {kind}/{name}: eco-base/uri invalid: {uri!r}"))
+        fails.append(err(f"{src}: {kind}/{name}: softwareos-base/uri invalid: {uri!r}"))
 
-    al = ann.get("eco-base/audit-log-level")
+    al = ann.get("softwareos-base/audit-log-level")
     if al and al not in AUDIT_ALLOWED:
-        fails.append(err(f"{src}: {kind}/{name}: eco-base/audit-log-level={al!r} not in {sorted(AUDIT_ALLOWED)}"))
+        fails.append(err(f"{src}: {kind}/{name}: softwareos-base/audit-log-level={al!r} not in {sorted(AUDIT_ALLOWED)}"))
 
     return fails
 

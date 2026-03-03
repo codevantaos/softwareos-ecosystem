@@ -41,8 +41,8 @@ else:
     production_governance = {
         'document_metadata': {
             'unique_id': 'eco-prod-cm-0001-0001-000000000001',
-            'uri': 'eco-base://k8s/eco-production/configmap/eco-config',
-            'urn': 'urn:eco-base:k8s:eco-production:configmap:eco-config:eco-prod-cm-0001-0001-000000000001',
+            'uri': 'softwareos-base://k8s/eco-production/configmap/eco-config',
+            'urn': 'urn:softwareos-base:k8s:eco-production:configmap:eco-config:eco-prod-cm-0001-0001-000000000001',
             'target_system': 'gke-eco-production',
             'cross_layer_binding': ['api-gateway', 'ai-service', 'api-service', 'web-frontend'],
             'schema_version': 'v8',
@@ -71,7 +71,7 @@ else:
 
 # === FIX STAGING CONFIGMAP ===
 # Add missing security/observability keys from production
-staging_cm['data']['ECO_CORS_ORIGINS'] = "https://staging.autoecoops.io,https://api-staging.autoecoops.io"
+staging_cm['data']['ECO_CORS_ORIGINS'] = "https://staging.softwareos.io,https://api-staging.softwareos.io"
 staging_cm['data']['ECO_RATE_LIMIT_RPS'] = "100"
 staging_cm['data']['ECO_RATE_LIMIT_BURST'] = "200"
 staging_cm['data']['ECO_METRICS_ENABLED'] = "true"
@@ -132,8 +132,8 @@ production_secret = {
         'name': 'eco-secrets',
         'namespace': 'eco-production',
         'labels': {
-            'app.kubernetes.io/name': 'eco-base',
-            'app.kubernetes.io/part-of': 'eco-base',
+            'app.kubernetes.io/name': 'softwareos-base',
+            'app.kubernetes.io/part-of': 'softwareos-base',
             'environment': 'production'
         }
     },

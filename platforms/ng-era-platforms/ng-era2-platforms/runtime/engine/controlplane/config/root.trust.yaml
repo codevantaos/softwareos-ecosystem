@@ -6,8 +6,8 @@ metadata:
     machinenativeops.io/description: Root layer trust, certificates and security configuration
     machinenativeops.io/last-modified: '2025-12-20T22:00:00Z'
   labels:
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     machinenativeops.io/component: trust-configuration
     machinenativeops.io/tier: trust
     machinenativeops.io/version: v1.0.0
@@ -415,18 +415,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/trust-schema
-    eco-base/urn: urn:eco-base:k8s:core:configmap:trust-schema:sha256-45ac21df88c9d95de544798e4242e06209d29b9e198aede863b1c834088d8790
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/trust-schema
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:trust-schema:sha256-45ac21df88c9d95de544798e4242e06209d29b9e198aede863b1c834088d8790
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: trust-schema
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: trust-schema
   namespace: machinenativenops-trust

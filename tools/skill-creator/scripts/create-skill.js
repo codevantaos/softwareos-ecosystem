@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * eco-base YAML Skill Creator
+ * softwareos-base YAML Skill Creator
  * Scaffolds a new .qyaml governance skill
  */
 const fs   = require("fs");

@@ -432,7 +432,7 @@ async def oai_list_models(request: Request):
             "id": m.model_id,
             "object": "model",
             "created": int(time.time()),
-            "owned_by": "eco-base",
+            "owned_by": "softwareos-base",
             "permission": [],
             "root": m.source,
             "parent": None,
@@ -471,8 +471,8 @@ async def generate(req: GenerateRequest, request: Request):
         content=result.get("content", ""),
         model_id=model_id,
         engine=result.get("engine", "unknown"),
-        uri=f"eco-base://ai/generation/{request_id}",
-        urn=f"urn:eco-base:ai:generation:{model_id}:{request_id}",
+        uri=f"softwareos-base://ai/generation/{request_id}",
+        urn=f"urn:softwareos-base:ai:generation:{model_id}:{request_id}",
         usage=result.get("usage", {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}),
         finish_reason=result.get("finish_reason", "stop"),
         latency_ms=result.get("latency_ms", 0),
@@ -519,8 +519,8 @@ async def vector_align(req: VectorAlignRequest):
         alignment_model=req.alignment_model,
         alignment_score=alignment_score,
         function_keywords=req.tokens[:10],
-        uri=f"eco-base://ai/vector/{uid}",
-        urn=f"urn:eco-base:ai:vector:{req.alignment_model}:{uid}",
+        uri=f"softwareos-base://ai/vector/{uid}",
+        urn=f"urn:softwareos-base:ai:vector:{req.alignment_model}:{uid}",
     )
 
 
@@ -553,8 +553,8 @@ async def list_models(request: Request):
             name=info["name"],
             provider=provider_id,
             status=status,
-            uri=f"eco-base://ai/model/{provider_id}-default",
-            urn=f"urn:eco-base:ai:model:{provider_id}:{uid}",
+            uri=f"softwareos-base://ai/model/{provider_id}-default",
+            urn=f"urn:softwareos-base:ai:model:{provider_id}:{uid}",
             capabilities=info["caps"],
         ))
 
@@ -594,8 +594,8 @@ async def create_embeddings(req: EmbedRequest, request: Request):
         dimensions=result.dimensions,
         total_tokens=result.total_tokens,
         latency_ms=round(result.latency_ms, 2),
-        uri=f"eco-base://ai/embedding/{uid}",
-        urn=f"urn:eco-base:ai:embedding:{model}:{uid}",
+        uri=f"softwareos-base://ai/embedding/{uid}",
+        urn=f"urn:softwareos-base:ai:embedding:{model}:{uid}",
     )
 
 
@@ -622,8 +622,8 @@ async def compute_similarity(req: SimilarityRequest, request: Request):
         cosine_similarity=round(result.cosine_similarity, 6),
         euclidean_distance=round(result.euclidean_distance, 6),
         model=model,
-        uri=f"eco-base://ai/similarity/{uid}",
-        urn=f"urn:eco-base:ai:similarity:{model}:{uid}",
+        uri=f"softwareos-base://ai/similarity/{uid}",
+        urn=f"urn:softwareos-base:ai:similarity:{model}:{uid}",
     )
 
 
@@ -661,8 +661,8 @@ async def submit_job(req: AsyncJobRequest, request: Request):
     return AsyncJobResponse(
         job_id=job_id,
         status=job.status.value,
-        uri=f"eco-base://ai/job/{job_id}",
-        urn=f"urn:eco-base:ai:job:{resolved_model}:{job_id}",
+        uri=f"softwareos-base://ai/job/{job_id}",
+        urn=f"urn:softwareos-base:ai:job:{resolved_model}:{job_id}",
         created_at=datetime.fromtimestamp(job.created_at, tz=timezone.utc).isoformat(),
     )
 
@@ -686,8 +686,8 @@ async def get_job(job_id: str, request: Request):
         engine=job.engine,
         usage=job.usage,
         latency_ms=job.latency_ms,
-        uri=f"eco-base://ai/job/{job.job_id}",
-        urn=f"urn:eco-base:ai:job:{job.model_id}:{job.job_id}",
+        uri=f"softwareos-base://ai/job/{job.job_id}",
+        urn=f"urn:softwareos-base:ai:job:{job.model_id}:{job.job_id}",
         created_at=datetime.fromtimestamp(job.created_at, tz=timezone.utc).isoformat(),
         completed_at=(
             datetime.fromtimestamp(job.completed_at, tz=timezone.utc).isoformat()
@@ -742,8 +742,8 @@ async def generate_qyaml_descriptor(request: Request):
     descriptor = {
         "document_metadata": {
             "unique_id": str(uid),
-            "uri": f"eco-base://ai/descriptor/{service_name}",
-            "urn": f"urn:eco-base:ai:descriptor:{service_name}:{uid}",
+            "uri": f"softwareos-base://ai/descriptor/{service_name}",
+            "urn": f"urn:softwareos-base:ai:descriptor:{service_name}:{uid}",
             "target_system": "gke-production",
             "cross_layer_binding": ["redis", "supabase", "vllm", "ollama"],
             "schema_version": "v1",
@@ -757,7 +757,7 @@ async def generate_qyaml_descriptor(request: Request):
             "lifecycle_policy": "active",
         },
         "registry_binding": {
-            "service_endpoint": f"http://{service_name}.eco-base.svc.cluster.local:8001",
+            "service_endpoint": f"http://{service_name}.softwareos-base.svc.cluster.local:8001",
             "discovery_protocol": "consul",
             "health_check_path": "/health",
             "registry_ttl": 30,

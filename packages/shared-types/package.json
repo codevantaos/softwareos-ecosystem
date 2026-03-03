@@ -1,7 +1,7 @@
 {
-  "name": "@eco-base/shared-types",
+  "name": "@softwareos-base/shared-types",
   "version": "1.0.0",
-  "description": "Shared TypeScript type definitions for eco-base platform",
+  "description": "Shared TypeScript type definitions for softwareos-base platform",
   "types": "src/index.ts",
   "main": "dist/index.js",
   "files": [
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/indestructibleorg/eco-base.git",
+    "url": "https://github.com/indestructibleorg/softwareos-base.git",
     "directory": "packages/shared-types"
   },
   "publishConfig": {
@@ -25,15 +25,15 @@
     "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
-    "eco-base",
+    "softwareos-base",
     "types",
     "typescript",
     "ai-platform"
   ],
   "license": "Apache-2.0",
-  "homepage": "https://github.com/indestructibleorg/eco-base/tree/main/packages/shared-types",
+  "homepage": "https://github.com/indestructibleorg/softwareos-base/tree/main/packages/shared-types",
   "bugs": {
-    "url": "https://github.com/indestructibleorg/eco-base/issues"
+    "url": "https://github.com/indestructibleorg/softwareos-base/issues"
   },
   "devDependencies": {
     "typescript": "~5.5.4"

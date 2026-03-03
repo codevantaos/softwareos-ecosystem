@@ -1,1 +1,1 @@
-"""eco-base AI Engines."""
+"""softwareos-base AI Engines."""

@@ -61,8 +61,8 @@ spec:
         threshold: 50
         for: "5m"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "governance"
         priority: "P1"
         runbook: "https://docs.machinenativeops.io/runbooks/gl-health-critical"
@@ -104,8 +104,8 @@ spec:
         threshold: 70
         for: "15m"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "governance"
         priority: "P1"
         runbook: "https://docs.machinenativeops.io/runbooks/gl-compliance-critical"
@@ -134,12 +134,12 @@ spec:
         threshold: 50
         for: "10m"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           workflow_name: "gl-layer-validation|gl-compliance-check"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "platform"
         priority: "P1"
         runbook: "https://docs.machinenativeops.io/runbooks/gl-workflow-failure"
@@ -172,8 +172,8 @@ spec:
         threshold: 70
         for: "15m"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "governance"
         priority: "P2"
       annotations:
@@ -200,8 +200,8 @@ spec:
         threshold: 85
         for: "30m"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "governance"
         priority: "P2"
       annotations:
@@ -225,8 +225,8 @@ spec:
         threshold: 180
         for: "1d"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "governance"
         priority: "P3"
       annotations:
@@ -251,8 +251,8 @@ spec:
         threshold: 600
         for: "5m"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "platform"
         priority: "P3"
       annotations:
@@ -276,8 +276,8 @@ spec:
         threshold: 10
         for: "5m"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "governance"
         priority: "P2"
       annotations:
@@ -304,8 +304,8 @@ spec:
         operator: ">"
         threshold: 0
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "governance"
       annotations:
         summary: "新Artifact已創建於層級 {{ $labels.layer_id }}"
@@ -326,8 +326,8 @@ spec:
         operator: ">"
         threshold: 0
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "governance"
       annotations:
         summary: "合規檢查已完成"

@@ -33,19 +33,19 @@ spec:
 
   components:
     services:
-      - name: auth-service
+      - name: codevantaos-auth
         description: "OIDC federation, RBAC, token issuance (Keycloak/Supabase)"
         port: 8081
-      - name: memory-hub
+      - name: codevantaos-memory
         description: "Document chunking, vector retrieval, RAG context (pgvector)"
         port: 8082
-      - name: event-bus
+      - name: codevantaos-event
         description: "Event routing, replay, deduplication (Kafka/Redis Streams)"
         port: 8083
-      - name: policy-audit
+      - name: codevantaos-policy
         description: "Policy decisions, immutable audit trail (OPA/Kyverno)"
         port: 8084
-      - name: infra-manager
+      - name: codevantaos-infra
         description: "Drift detection, sync, rollback hooks (ArgoCD/Helm)"
         port: 8085
 
@@ -58,13 +58,13 @@ spec:
   # ECO Namespace Specification v1.0 Alignment
   eco_namespace:
     k8s_namespace: eco-core
-    eco_uri: "eco-base://k8s/platform-core/namespace/eco-core"
-    eco_urn: "urn:eco-base:k8s:platform-core:namespace:eco-core:gl.core.shared-kernel"
+    eco_uri: "softwareos-base://k8s/platform-core/namespace/eco-core"
+    eco_urn: "urn:softwareos-base:k8s:platform-core:namespace:eco-core:gl.core.shared-kernel"
     eco_env_prefix: "PLATFORM_CORE_"
     mandatory_labels:
-      eco-base/platform: platform-core
-      eco-base/environment: production
-      eco-base/owner: platform-engineering-team
+      softwareos-base/platform: platform-core
+      softwareos-base/environment: production
+      softwareos-base/owner: platform-engineering-team
     mandatory_annotations:
-      eco-base/governance-policy: "eco-core-governance.rego"
-      eco-base/audit-log-level: "full"
+      softwareos-base/governance-policy: "eco-core-governance.rego"
+      softwareos-base/audit-log-level: "full"

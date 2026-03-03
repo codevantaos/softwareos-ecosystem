@@ -16,8 +16,8 @@ metadata:
   description: "GL Structural Unification Specification - 結構統一規範"
   namespace: gl-platform-ecosystem
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     unification.level: L1
     unification.type: structural
     governance.layer: constitutional
@@ -35,14 +35,14 @@ spec:
           - pattern: "gl-<domain>-<capability>-platform/"
             example: "gl-runtime-dag-platform/"
         
-      - name: contracts
+      - name: softwareos-contracts
         description: "架構契約層"
         purpose: "存放全局性契約與規範"
         sub-structure:
           - "unification-specs/"
-          - "platform-contracts/"
-          - "api-contracts/"
-          - "governance-contracts/"
+          - "platform-softwareos-contracts/"
+          - "api-softwareos-contracts/"
+          - "governance-softwareos-contracts/"
         
       - name: governance
         description: "治理層"
@@ -129,7 +129,7 @@ spec:
     naming-governance-structure:
       description: "命名治理專案的詳細結構"
       directories:
-        - name: contracts
+        - name: softwareos-contracts
           purpose: "命名治理相關的契約"
           contents:
             - "naming-contract.yaml"
@@ -262,7 +262,7 @@ spec:
         description: "禁止使用符號鏈接"
         scope:
           - "platforms/"
-          - "contracts/"
+          - "softwareos-contracts/"
           - "governance/"
           - "workflows/"
         exceptions:
@@ -274,7 +274,7 @@ spec:
         description: "禁止使用硬鏈接"
         scope:
           - "platforms/"
-          - "contracts/"
+          - "softwareos-contracts/"
           - "governance/"
         exceptions: []
       
@@ -289,8 +289,8 @@ spec:
             - "/absolute/path/to/resource"
           good:
             - "./config.yaml"
-            - "./contracts/contract.yaml"
-            - "/gl-platform-ecosystem/contracts/shared.yaml"
+            - "./softwareos-contracts/contract.yaml"
+            - "/gl-platform-ecosystem/softwareos-contracts/shared.yaml"
       
       ## Relative Path Outside Platform
       no-relative-path-outside-platform:
@@ -303,7 +303,7 @@ spec:
             - "../../../common/utils.yaml"
           good:
             - "./config.yaml"
-            - "contracts/config.yaml"
+            - "softwareos-contracts/config.yaml"
       
       ## Hidden Files
       no-hidden-files:
@@ -381,7 +381,7 @@ spec:
       - tests/
       - docs/
       - configs/
-      - contracts/
+      - softwareos-contracts/
       - governance/
   
   ## File Naming

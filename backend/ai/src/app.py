@@ -1,4 +1,4 @@
-"""eco-base AI Generation Service -- FastAPI + Uvicorn.
+"""softwareos-base AI Generation Service -- FastAPI + Uvicorn.
 
 Runtime: Python 3.11 + FastAPI + Uvicorn
 Ports: 8000 (gRPC internal) + 8001 (HTTP)
@@ -135,7 +135,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="eco-base AI Service",
+    title="softwareos-base AI Service",
     version="1.0.0",
     docs_url="/docs" if settings.environment != "production" else None,
     lifespan=lifespan,
@@ -174,8 +174,8 @@ async def health(request: Request):
         "status": "degraded" if is_degraded else "healthy",
         "service": "ai",
         "version": "1.0.0",
-        "uri": "eco-base://backend/ai/health",
-        "urn": f"urn:eco-base:backend:ai:health:{uuid.uuid1()}",
+        "uri": "softwareos-base://backend/ai/health",
+        "urn": f"urn:softwareos-base:backend:ai:health:{uuid.uuid1()}",
         "uptime_seconds": round(uptime, 2),
         "engines": available_engines,
         "models_registered": model_count,

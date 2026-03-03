@@ -3,7 +3,7 @@
 execution_id: 05a65738-f8e8-4e40-88a9-484e81458e0d
 input_hash: 2ea8c89f7fc21b367af5c1ac961f615e88d169352cb73dc38cbe4abe54b8c1b7
 
-  contracts:
+  softwareos-contracts:
   - gl-naming-ontology
   - gl-platforms
   environment: production
@@ -18,7 +18,7 @@ raw_data:
     context: 每月例行檢查
     query: 分析GL生態系統狀態
   
-    contracts:
+    softwareos-contracts:
     - gl-naming-ontology
     - gl-platforms
     environment: production
@@ -28,7 +28,7 @@ raw_data:
     user: governance-bot
     version: 1.2.0
   output:
-    contracts_validated: 45
+    softwareos-contracts_validated: 45
     issues_found: 3
     recommendations: 12
   status: success

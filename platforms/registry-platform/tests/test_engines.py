@@ -59,18 +59,18 @@ class TestCatalogEngine:
         assert results[0].name == "core-svc"
 
     def test_search_by_name_pattern(self, catalog_engine: CatalogEngine):
-        catalog_engine.register(PlatformEntry(name="auth-service"))
+        catalog_engine.register(PlatformEntry(name="codevantaos-auth"))
         catalog_engine.register(PlatformEntry(name="billing-service"))
         catalog_engine.register(PlatformEntry(name="data-processor"))
         results = catalog_engine.search(name_pattern="service")
         assert len(results) == 2
 
     def test_search_by_tags_and_name(self, catalog_engine: CatalogEngine):
-        catalog_engine.register(PlatformEntry(name="auth-service", tags=["core"]))
+        catalog_engine.register(PlatformEntry(name="codevantaos-auth", tags=["core"]))
         catalog_engine.register(PlatformEntry(name="billing-service", tags=["billing"]))
         results = catalog_engine.search(tags=["core"], name_pattern="auth")
         assert len(results) == 1
-        assert results[0].name == "auth-service"
+        assert results[0].name == "codevantaos-auth"
 
     def test_update_health_healthy(self, catalog_engine: CatalogEngine):
         entry = PlatformEntry(name="svc")

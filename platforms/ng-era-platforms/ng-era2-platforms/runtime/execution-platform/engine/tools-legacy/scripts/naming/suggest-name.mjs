@@ -226,7 +226,7 @@ if (process.argv[1] === __filename) {
 
 範例:
   suggest-name.mjs my-service
-  suggest-name.mjs "My Service" deployment contracts-team production
+  suggest-name.mjs "My Service" deployment softwareos-contracts-team production
   suggest-name.mjs team-platform namespace platform production
     `);
     process.exit(1);

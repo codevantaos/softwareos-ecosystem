@@ -51,8 +51,8 @@ cat << EOJSON
     "compliance_mode": "${COMPLIANCE_MODE}",
     "compliance_tags": ${COMPLIANCE_TAGS},
     "governance_stamp": {
-      "uri": "eco-base://skills/ai-code-editor-workflow-pipeline/audit/${TRACE_ID}",
-      "urn": "urn:eco-base:skills:ai-code-editor-workflow-pipeline:audit:${TRACE_ID}",
+      "uri": "softwareos-base://skills/ai-code-editor-workflow-pipeline/audit/${TRACE_ID}",
+      "urn": "urn:softwareos-base:skills:ai-code-editor-workflow-pipeline:audit:${TRACE_ID}",
       "schema_version": "1.0.0",
       "generated_by": "skill-creator-v1"
     },

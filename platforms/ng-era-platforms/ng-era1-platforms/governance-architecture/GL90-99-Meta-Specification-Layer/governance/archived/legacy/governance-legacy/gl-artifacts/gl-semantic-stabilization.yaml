@@ -28,7 +28,7 @@ layer_boundaries:
     clear: true
     conflicts: none
   GL30-49:
-    semantic: "Execution artifacts - tools, templates, schemas, contracts, automation"
+    semantic: "Execution artifacts - tools, templates, schemas, softwareos-contracts, automation"
     clear: true
     conflicts: none
   GL50-59:
@@ -36,7 +36,7 @@ layer_boundaries:
     clear: true
     conflicts: none
   GL60-80:
-    semantic: "Advanced capabilities - audit, contracts, AI, optimization, feedback"
+    semantic: "Advanced capabilities - audit, softwareos-contracts, AI, optimization, feedback"
     clear: true
     conflicts: none
   GL81-83:

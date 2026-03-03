@@ -1,5 +1,5 @@
 /**
- * eco-base WhatsApp Cloud API Adapter
+ * softwareos-base WhatsApp Cloud API Adapter
  *
  * Production-grade adapter for Meta WhatsApp Cloud API.
  * Uses shared normalizer for message parsing, shared router for
@@ -14,7 +14,7 @@
  * - Graceful shutdown
  * - Health + metrics endpoints
  *
- * URI: eco-base://platforms/im-integration/whatsapp
+ * URI: softwareos-base://platforms/im-integration/whatsapp
  */
 
 import express from "express";
@@ -287,7 +287,7 @@ app.get("/health", (_req, res) =>
     version: "2.0.0",
     api: process.env.ECO_API_URL || "http://localhost:3000",
     phone_number_id: PHONE_NUMBER_ID ? "configured" : "missing",
-    uri: "eco-base://platforms/im-integration/whatsapp/health",
+    uri: "softwareos-base://platforms/im-integration/whatsapp/health",
     timestamp: new Date().toISOString(),
   })
 );
@@ -295,7 +295,7 @@ app.get("/health", (_req, res) =>
 app.get("/metrics", (_req, res) =>
   res.json({
     ...metrics,
-    uri: "eco-base://platforms/im-integration/whatsapp/metrics",
+    uri: "softwareos-base://platforms/im-integration/whatsapp/metrics",
     timestamp: new Date().toISOString(),
   })
 );
@@ -319,7 +319,7 @@ server = app.listen(PORT, () => {
   logger.info({
     msg: "WhatsApp adapter started",
     port: PORT,
-    uri: "eco-base://platforms/im-integration/whatsapp",
+    uri: "softwareos-base://platforms/im-integration/whatsapp",
   });
 });
 

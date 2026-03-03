@@ -150,7 +150,7 @@ Target: 2-3 minutes | Human Intervention: 0
   [1/6] Policy Engine (10-policy/)... ✓
   [2/6] Intent Orchestrator (20-intent/)... ✓
   [3/6] Agent Governance (30-agents/)... ✓
-  [4/6] Contract Registry (60-contracts/)... ✓
+  [4/6] Contract Registry (60-softwareos-contracts/)... ✓
   [5/6] Audit System (70-audit/)... ✓
   [6/6] Feedback Loop (80-feedback/)... ✓
   ✅ Phase 2 Complete: 0s

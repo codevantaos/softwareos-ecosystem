@@ -1,10 +1,10 @@
 /**
- * eco-base WebSocket Client
+ * softwareos-base WebSocket Client
  *
  * Persistent connection with automatic reconnection, heartbeat,
  * and typed event handling.
  *
- * URI: eco-base://packages/api-client/ws
+ * URI: softwareos-base://packages/api-client/ws
  */
 
 type EventHandler = (data: unknown) => void;

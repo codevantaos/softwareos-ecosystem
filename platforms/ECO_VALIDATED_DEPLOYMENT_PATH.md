@@ -118,12 +118,12 @@ Phase 6   platform-superai (eco-superai)
 | Phase | 平台 | K8s 命名空間 | API 端口 | Metrics 端口 | ECO URI | 環境變數前綴 |
 |-------|------|-------------|---------|-------------|---------|------------|
 | 0 | GKE Infra | — | — | — | — | — |
-| 1 | platform-core | `eco-core` | 8080 | 9080 | `eco-base://k8s/platform-core/namespace/eco-core` | `PLATFORM_CORE_` |
-| 2 | platform-seccompops | `eco-seccompops` | 8095 | 9095 | `eco-base://k8s/platform-seccompops/namespace/eco-seccompops` | `PLATFORM_SECCOMPOPS_` |
-| 3 | platform-observops | `eco-observops` | 8094 | 9094 | `eco-base://k8s/platform-observops/namespace/eco-observops` | `PLATFORM_OBSERVOPS_` |
-| 4 | platform-govops | `eco-govops` | 8091 | 9091 | `eco-base://k8s/platform-govops/namespace/eco-govops` | `PLATFORM_GOVOPS_` |
-| 5 | platform-dataops | `eco-dataops` | 8093 | 9093 | `eco-base://k8s/platform-dataops/namespace/eco-dataops` | `PLATFORM_DATAOPS_` |
-| 6 | platform-superai | `eco-superai` | 8096 | 9096 | `eco-base://k8s/platform-superai/namespace/eco-superai` | `PLATFORM_SUPERAI_` |
+| 1 | platform-core | `eco-core` | 8080 | 9080 | `softwareos-base://k8s/platform-core/namespace/eco-core` | `PLATFORM_CORE_` |
+| 2 | platform-seccompops | `eco-seccompops` | 8095 | 9095 | `softwareos-base://k8s/platform-seccompops/namespace/eco-seccompops` | `PLATFORM_SECCOMPOPS_` |
+| 3 | platform-observops | `eco-observops` | 8094 | 9094 | `softwareos-base://k8s/platform-observops/namespace/eco-observops` | `PLATFORM_OBSERVOPS_` |
+| 4 | platform-govops | `eco-govops` | 8091 | 9091 | `softwareos-base://k8s/platform-govops/namespace/eco-govops` | `PLATFORM_GOVOPS_` |
+| 5 | platform-dataops | `eco-dataops` | 8093 | 9093 | `softwareos-base://k8s/platform-dataops/namespace/eco-dataops` | `PLATFORM_DATAOPS_` |
+| 6 | platform-superai | `eco-superai` | 8096 | 9096 | `softwareos-base://k8s/platform-superai/namespace/eco-superai` | `PLATFORM_SUPERAI_` |
 
 ---
 
@@ -137,7 +137,7 @@ Phase 6   platform-superai (eco-superai)
 | 4 | `platform-superai` 命名空間為 `superai`（非 `eco-superai`） | 已修正所有 k8s/argocd/security 檔案 | ✅ |
 | 5 | `platform-superai` 缺少 `.platform/manifest.yaml` | 已建立，含 eco_namespace | ✅ |
 | 6 | `platform-superai` 缺少 `.platform/dependencies.yaml` | 已建立 | ✅ |
-| 7 | `platform-superai` 標籤為 `indestructible-eco` | 已修正為 `eco-base` | ✅ |
+| 7 | `platform-superai` 標籤為 `indestructible-eco` | 已修正為 `softwareos-base` | ✅ |
 | 8 | `platform-superai` managed-by 為 `kustomize` | 已修正為 `argocd` | ✅ |
 | 9 | `platform-observops` 缺少 `eco_env_prefix` | 已補充 `PLATFORM_OBSERVOPS_` | ✅ |
 | 10 | `platform-observops` 缺少 mandatory_labels/annotations | 已補充 | ✅ |

@@ -1,4 +1,4 @@
-# P0 Closure Document — eco-base Platform
+# P0 Closure Document — softwareos-base Platform
 
 **Status**: CLOSED  
 **Date**: 2026-02-26  
@@ -21,7 +21,7 @@
 
 ```bash
 # Gate-1: EventBus fault injection
-cd /home/ubuntu/eco-base-repo
+cd /home/ubuntu/softwareos-base-repo
 bash tests/gate1-eventbus-fault-injection.sh
 # Expected: gate1-eventbus-report.json with result=PASS
 

@@ -15,8 +15,8 @@ metadata:
   name: quantum-root-trust
   namespace: security
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     security.level: slsa-l4
     quantum.resistance: nist-level-5-plus
     compliance: fips-140-3-level-4

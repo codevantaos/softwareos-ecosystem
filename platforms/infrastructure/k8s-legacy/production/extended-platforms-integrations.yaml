@@ -61,16 +61,16 @@ data:
     \ monitoring:\n    enabled: ${CLOUDFLARE_MONITORING_ENABLED:-true}\n    provider:\
     \ ${MONITORING_PROVIDER:-prometheus}\n    metricsEndpoint: ${PROMETHEUS_REMOTE_WRITE_URL:-}\n\
     \    metrics:\n      - name: worker_requests_total\n        type: counter\n  \
-    \      labels:\neco-base/part-of: eco-base\neco-base/governance: aligned\n   \
+    \      labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n   \
     \       - worker_name\n          - route\n          - status\n      - name: worker_duration_seconds\n\
-    \        type: histogram\n        labels:\neco-base/part-of: eco-base\neco-base/governance:\
+    \        type: histogram\n        labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance:\
     \ aligned\n          - worker_name\n          - route\n        buckets:\n    \
     \      - 0.005\n          - 0.01\n          - 0.025\n          - 0.05\n      \
     \    - 0.1\n          - 0.25\n          - 0.5\n          - 1\n          - 2.5\n\
     \          - 5\n          - 10\n      - name: kv_operations_total\n        type:\
-    \ counter\n        labels:\neco-base/part-of: eco-base\neco-base/governance: aligned\n\
+    \ counter\n        labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n\
     \          - operation\n          - status\n      - name: r2_operations_total\n\
-    \        type: counter\n        labels:\neco-base/part-of: eco-base\neco-base/governance:\
+    \        type: counter\n        labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance:\
     \ aligned\n          - operation\n          - status\n  \n  # D1 Database Integration\n\
     \  d1Integration:\n    enabled: ${CLOUDFLARE_D1_INTEGRATION_ENABLED:-true}\n \
     \   connectionPooling:\n      enabled: true\n      maxConnections: 10\n      idleTimeout:\
@@ -215,18 +215,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/extended-platforms-integrations
-    eco-base/urn: urn:eco-base:k8s:core:configmap:extended-platforms-integrations:sha256-77ff124e5db884c8f9868b5774106970a4ab9024b3072c2fb3100b3c03a31b18
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/extended-platforms-integrations
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:extended-platforms-integrations:sha256-77ff124e5db884c8f9868b5774106970a4ab9024b3072c2fb3100b3c03a31b18
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: extended-platforms-integrations
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: extended-platforms-integrations
   namespace: production

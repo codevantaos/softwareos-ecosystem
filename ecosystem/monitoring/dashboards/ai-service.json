@@ -92,13 +92,13 @@
     }
   ],
   "schemaVersion": 39,
-  "tags": ["eco-base", "ai-service", "inference"],
+  "tags": ["softwareos-base", "ai-service", "inference"],
   "templating": {
     "list": [
-      { "name": "namespace", "type": "query", "query": "label_values(eco_inference_requests_total, namespace)", "current": { "text": "eco-base" } }
+      { "name": "namespace", "type": "query", "query": "label_values(eco_inference_requests_total, namespace)", "current": { "text": "softwareos-base" } }
     ]
   },
   "time": { "from": "now-1h", "to": "now" },
-  "title": "eco-base AI Service",
+  "title": "softwareos-base AI Service",
   "uid": "eco-ai-service-v1"
 }

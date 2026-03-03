@@ -88,7 +88,7 @@
 ### Phase 6: Validate (Recursive)
 **Purpose:** Ensure the fix is correct through multiple validation layers.
 
-**Layers:** Static analysis (SAST, code quality) → Integration tests (API contracts, dependency compatibility) → Security patterns (dangerous function detection) → CI Validator Engine (governance, identity) → Policy validation (OPA/Kyverno).
+**Layers:** Static analysis (SAST, code quality) → Integration tests (API softwareos-contracts, dependency compatibility) → Security patterns (dangerous function detection) → CI Validator Engine (governance, identity) → Policy validation (OPA/Kyverno).
 
 **Recursive Loop:** Propose Fix → Test → Confirm No New Risk → Pass? YES → Approve. NO → Refine → Repeat.
 
@@ -107,7 +107,7 @@
   "commit_sha": "abc123",
   "content_hash": "sha256:...",
   "compliance_tags": ["slsa-l3", "sbom", "soc2"],
-  "governance_stamp": { "uri": "eco-base://...", "urn": "urn:eco-base:..." }
+  "governance_stamp": { "uri": "softwareos-base://...", "urn": "urn:softwareos-base:..." }
 }
 ```
 

@@ -7,8 +7,8 @@ metadata:
   configuration
   machinenativeops.io/last-modified: '2025-12-20T22:00:00Z'
   labels:
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     machinenativeops.io/component: super-execution
     machinenativeops.io/tier: execution
     machinenativeops.io/version: v1.0.0
@@ -352,14 +352,14 @@ spec:
     metrics:
     - description: Time taken to execute flows
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
       name: flow_execution_duration
       type: histogram
     - description: Success rate of flow executions
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
       name: flow_success_rate
       type: gauge
     - description: Number of currently active flows
@@ -475,18 +475,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/super-execution-schema
-    eco-base/urn: urn:eco-base:k8s:core:configmap:super-execution-schema:sha256-47727a8d8543bdc53ede1757645fa5d9380492bee23444efab1b24f06f1255ba
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/super-execution-schema
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:super-execution-schema:sha256-47727a8d8543bdc53ede1757645fa5d9380492bee23444efab1b24f06f1255ba
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: super-execution-schema
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: super-execution-schema
   namespace: machinenativenops-execution

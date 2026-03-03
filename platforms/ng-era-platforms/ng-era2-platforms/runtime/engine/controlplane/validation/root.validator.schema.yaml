@@ -43,8 +43,8 @@ spec:
           type: string
           default: "machinenativenops-root"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           type: object
           properties:
             machinenativeops.io/tier:

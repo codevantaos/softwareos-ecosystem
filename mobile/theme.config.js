@@ -1,10 +1,10 @@
 /** @type {const} */
 const themeColors = {
-  // eco-base brand primary: circuit cyan
+  // softwareos-base brand primary: circuit cyan
   primary:    { light: '#00D4FF', dark: '#00D4FF' },
-  // eco-base brand background: deep navy / pure white
+  // softwareos-base brand background: deep navy / pure white
   background: { light: '#FFFFFF', dark: '#0D1B2A' },
-  // eco-base surface: soft navy tint / slightly lighter navy
+  // softwareos-base surface: soft navy tint / slightly lighter navy
   surface:    { light: '#F0FAFF', dark: '#162233' },
   // foreground text
   foreground: { light: '#0D1B2A', dark: '#E8F8FF' },

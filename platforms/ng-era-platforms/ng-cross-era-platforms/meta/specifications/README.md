@@ -42,7 +42,7 @@ The GL Meta Specifications layer (GL90-99) provides meta-specification definitio
 ```
 gl-meta-specifications/
 ├── governance/                   # Governance compliance
-│   ├── contracts/               # Layer contracts
+│   ├── softwareos-contracts/               # Layer softwareos-contracts
 │   ├── policies/                # Enforcement policies
 │   └── validators/              # Validation rules
 ├── src/                         # Source code (minimal, validation only)

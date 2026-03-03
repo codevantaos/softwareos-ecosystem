@@ -10,8 +10,8 @@ metadata:
   name: auto-labeler
   namespace: monitoring
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: auto-labeler
     version: "1.0.0"
     environment: dev
@@ -26,8 +26,8 @@ spec:
   template:
     
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         app.kubernetes.io/name: auto-labeler
         version: "1.0.0"
         environment: dev
@@ -153,8 +153,8 @@ data:
   enforcement.yaml: |
     strict-mode: true
     required-labels:
-      eco-base/part-of: eco-base
-      eco-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
+      softwareos-base/governance: aligned
       - app
       - version
       - environment
@@ -227,8 +227,8 @@ data:
     
     # Required labels for governance
     governance-labels:
-      eco-base/part-of: eco-base
-      eco-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
+      softwareos-base/governance: aligned
       - "gl.governed"
       - "gl.layer"
       - "gl.semantic"

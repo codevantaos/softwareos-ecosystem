@@ -41,21 +41,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/anomaly-detection-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:anomaly-detection-config:sha256-b15f50d85e837be29b097308652fc5dc17898b5dad51e1d696c7bf6b62baab45
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/anomaly-detection-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:anomaly-detection-config:sha256-b15f50d85e837be29b097308652fc5dc17898b5dad51e1d696c7bf6b62baab45
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: anomaly-detection-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: ai-anomaly-detection
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: anomaly-detection-config
   namespace: default
 ---
@@ -63,21 +63,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/anomaly-model-training
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:anomaly-model-training:sha256-af238090c0eedcb4101b39359a10f6d25609fd95b0ff0e5314e6ebd3eb97dec6
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/anomaly-model-training
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:anomaly-model-training:sha256-af238090c0eedcb4101b39359a10f6d25609fd95b0ff0e5314e6ebd3eb97dec6
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: anomaly-model-training
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: ai-anomaly-detection
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: anomaly-model-training
   namespace: default
 spec:
@@ -142,21 +142,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/anomaly-detection-service
-    eco-base/urn: urn:eco-base:k8s:core:deployment:anomaly-detection-service:sha256-068f2a0ccb03d6df119504c42c2c27813622b432f502bfb57a7820dbe7cb343c
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/anomaly-detection-service
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:anomaly-detection-service:sha256-068f2a0ccb03d6df119504c42c2c27813622b432f502bfb57a7820dbe7cb343c
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: anomaly-detection-service
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: ai-anomaly-detection
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: anomaly-detection-service
   namespace: default
 spec:
@@ -224,21 +224,21 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/anomaly-detection-service
-    eco-base/urn: urn:eco-base:k8s:core:service:anomaly-detection-service:sha256-1add5408b350091fdc46997600d5fd6934d33dcd62f7176efe709fa5dac80e03
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/anomaly-detection-service
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:anomaly-detection-service:sha256-1add5408b350091fdc46997600d5fd6934d33dcd62f7176efe709fa5dac80e03
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: anomaly-detection-service
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: ai-anomaly-detection
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: anomaly-detection-service
   namespace: default
 spec:
@@ -257,21 +257,21 @@ apiVersion: v1
 kind: Secret
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/secret/anomaly-detection-secrets
-    eco-base/urn: urn:eco-base:k8s:core:secret:anomaly-detection-secrets:sha256-5690ed0e228feb3c37a88a16e853d6abaee2dedd31b125951bc715e9339a942a
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/secret/anomaly-detection-secrets
+    softwareos-base/urn: urn:softwareos-base:k8s:core:secret:anomaly-detection-secrets:sha256-5690ed0e228feb3c37a88a16e853d6abaee2dedd31b125951bc715e9339a942a
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: anomaly-detection-secrets
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: ai-anomaly-detection
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: anomaly-detection-secrets
   namespace: default
 stringData:

@@ -7,10 +7,10 @@ FROM python:3.11.9-slim AS base
 LABEL org.opencontainers.image.title="platform-core"
 LABEL org.opencontainers.image.description="Shared Kernel — Auth, Memory Hub, Event Bus, Policy & Audit, Infra Manager"
 LABEL app.kubernetes.io/name="platform-core"
-LABEL app.kubernetes.io/part-of="eco-base"
+LABEL app.kubernetes.io/part-of="softwareos-base"
 LABEL app.kubernetes.io/managed-by="argocd"
-LABEL eco-base/platform="platform-core"
-LABEL eco-base/namespace="eco-core"
+LABEL softwareos-base/platform="platform-core"
+LABEL softwareos-base/namespace="eco-core"
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \

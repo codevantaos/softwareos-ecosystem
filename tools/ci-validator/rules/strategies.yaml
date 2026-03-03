@@ -5,7 +5,7 @@
 # Format:
 #   rule_id: strategy_name
 #
-# URI: eco-base://tools/ci-validator/rules/strategies
+# URI: softwareos-base://tools/ci-validator/rules/strategies
 ---
 strategies:
   # Workflow rules

@@ -1,8 +1,8 @@
-# GCP SSD Quota Increase Guide - eco-base
+# GCP SSD Quota Increase Guide - softwareos-base
 
 ## Overview
 
-This guide explains how to request and manage SSD quota increases for the eco-base production cluster deployment.
+This guide explains how to request and manage SSD quota increases for the softwareos-base production cluster deployment.
 
 ## Current Situation
 
@@ -47,7 +47,7 @@ https://console.cloud.google.com/iam-admin/quotas?project=my-project-ops-1991
 1. **New Limit**: Enter `500` (GB)
 2. **Justification**: Provide the following:
    ```
-   Production cluster deployment for eco-base platform.
+   Production cluster deployment for softwareos-base platform.
    Current staging cluster uses ~100 GB. Production cluster requires ~200 GB.
    Requesting 500 GB to accommodate future growth and high availability.
    ```
@@ -173,7 +173,7 @@ If 500 GB is still insufficient:
 
 - **Owner**: indestructibleorg
 - **Policy**: zero-trust
-- **Compliance**: eco-base v1.0
+- **Compliance**: softwareos-base v1.0
 - **Audit**: All quota requests logged in GCP
 
 ## References

@@ -25,18 +25,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/superai-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:superai-config:sha256-bc0fc2c6caaec62f7b2431cd884bd623d1213bdf669a7b079cb28bfdef7239f5
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/superai-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:superai-config:sha256-bc0fc2c6caaec62f7b2431cd884bd623d1213bdf669a7b079cb28bfdef7239f5
   labels:
     app.kubernetes.io/component: config
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: superai-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: superai-config
   namespace: eco-superai

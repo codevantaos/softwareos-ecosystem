@@ -9,8 +9,8 @@
 # This file serves as the central registry for all modules in the system
 registry_version: \"1.0.0\"
 labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
 
 last_updated: "2025-01-18"
 

@@ -12,7 +12,7 @@ echo -e "${BLUE}🔍 Finding all INSTANT series files...${NC}"
 
 # Create the instant directory structure
 echo -e "${BLUE}📁 Creating instant directory structure...${NC}"
-mkdir -p instant/{contracts,archive,docs,scripts,configs,workflows,tests,src,legacy}
+mkdir -p instant/{softwareos-contracts,archive,docs,scripts,configs,workflows,tests,src,legacy}
 
 # Counter for moved files
 MOVED_COUNT=0
@@ -42,8 +42,8 @@ find . -type f \( -iname "*instant*" -o -iname "*INSTANT*" \) 2>/dev/null | sort
         dest="instant/src/"
     elif [[ "$file" == *"archive"* ]] || [[ "$file" == *"legacy"* ]]; then
         dest="instant/archive/"
-    elif [[ "$file" == *"contracts"* ]]; then
-        dest="instant/contracts/"
+    elif [[ "$file" == *"softwareos-contracts"* ]]; then
+        dest="instant/softwareos-contracts/"
     else
         dest="instant/legacy/"
     fi

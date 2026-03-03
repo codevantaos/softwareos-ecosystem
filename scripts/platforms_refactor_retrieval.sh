@@ -92,7 +92,7 @@ for _, src_file, out_file in targets:
     status = 'ERROR'
     title = ''
     try:
-      req = Request(url, headers={'User-Agent': 'eco-base-retrieval/1.0'})
+      req = Request(url, headers={'User-Agent': 'softwareos-base-retrieval/1.0'})
       with urlopen(req, timeout=8) as resp:
         status = str(getattr(resp, 'status', 200))
         content_type = (resp.headers.get('Content-Type') or '').lower()

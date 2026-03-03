@@ -13,19 +13,19 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/seccompops-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:seccompops-config:sha256-2be986c5dcf490ee0cf83206b6b9e42b67f0346ffb797f57980230ca2a65b93a
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/seccompops-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:seccompops-config:sha256-2be986c5dcf490ee0cf83206b6b9e42b67f0346ffb797f57980230ca2a65b93a
   labels:
     app.kubernetes.io/component: config
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: seccompops-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
     governance.io/managed: 'true'
   name: seccompops-config
   namespace: eco-seccompops

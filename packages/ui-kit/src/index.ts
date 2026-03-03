@@ -1,6 +1,6 @@
 /**
- * eco-base UI Kit — shared component library.
- * URI: eco-base://packages/ui-kit
+ * softwareos-base UI Kit — shared component library.
+ * URI: softwareos-base://packages/ui-kit
  */
 export { Modal } from './Modal';
 export type { ModalProps } from './Modal';

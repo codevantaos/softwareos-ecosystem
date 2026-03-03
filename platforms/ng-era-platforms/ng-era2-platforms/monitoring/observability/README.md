@@ -46,7 +46,7 @@ gl-observability/
 │   │   └── prometheus-rules/   # Prometheus alert rules
 │   └── dashboards/              # Dashboard configurations
 ├── governance/                   # Governance compliance
-│   ├── contracts/               # Layer contracts
+│   ├── softwareos-contracts/               # Layer softwareos-contracts
 │   ├── policies/                # Enforcement policies
 │   └── validators/              # Validation rules
 ├── src/                         # Source code

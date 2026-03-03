@@ -1,6 +1,6 @@
-# eco-base Environment Variables Reference
+# softwareos-base Environment Variables Reference
 
-URI: eco-base://docs/ENV_REFERENCE
+URI: softwareos-base://docs/ENV_REFERENCE
 
 All environment variables use the `ECO_*` prefix for namespace isolation. A complete template is available at `.env.example` in the repository root.
 

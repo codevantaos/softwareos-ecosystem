@@ -3,19 +3,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: full
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/platform-observops/deployment/observops-engine
-    eco-base/urn: urn:eco-base:k8s:platform-observops:deployment:observops-engine:sha256-8842c6b6faf097d90a99cb44598b3af0ea0d45be62f22c9c97aa3fac8c0dfef5
+    softwareos-base/audit-log-level: full
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/platform-observops/deployment/observops-engine
+    softwareos-base/urn: urn:softwareos-base:k8s:platform-observops:deployment:observops-engine:sha256-8842c6b6faf097d90a99cb44598b3af0ea0d45be62f22c9c97aa3fac8c0dfef5
   labels:
     app.kubernetes.io/component: engine
     app.kubernetes.io/instance: observops-engine-prod
     app.kubernetes.io/name: observops-engine
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: production
-    eco-base/owner: observability-operations-team
-    eco-base/platform: platform-observops
+    softwareos-base/environment: production
+    softwareos-base/owner: observability-operations-team
+    softwareos-base/platform: platform-observops
     governance.io/managed: 'true'
   name: observops-engine
   namespace: eco-observops
@@ -41,10 +41,10 @@ spec:
         app.kubernetes.io/component: engine
         app.kubernetes.io/instance: observops-engine-prod
         app.kubernetes.io/name: observops-engine
-        app.kubernetes.io/part-of: eco-base
+        app.kubernetes.io/part-of: softwareos-base
         app.kubernetes.io/version: 1.0.0
-        eco-base/environment: production
-        eco-base/platform: platform-observops
+        softwareos-base/environment: production
+        softwareos-base/platform: platform-observops
         governance.io/managed: 'true'
     spec:
       affinity:
@@ -66,7 +66,7 @@ spec:
             name: observops-engine-config
         - secretRef:
             name: observops-engine-secrets
-        image: asia-east1-docker.pkg.dev/eco-base/eco-registry/observops-platform:1.0.0
+        image: asia-east1-docker.pkg.dev/softwareos-base/eco-registry/observops-platform:1.0.0
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3

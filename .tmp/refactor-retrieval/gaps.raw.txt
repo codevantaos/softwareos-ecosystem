@@ -11352,14 +11352,14 @@ platforms/data-platform/tests/test_engines.py:337:    def test_unknown_check_typ
 platforms/data-platform/tests/test_engines.py:339:        rules = [QualityRule(name="bad", field="x", check_type="unknown_type")]
 platforms/data-platform/src/data_platform/engines/quality_engine.py:175:                f"Regex rule '{rule.name}' missing 'pattern' parameter",
 platforms/data-platform/src/data_platform/engines/evidence_engine.py:108:                    f"Record '{record_id}' missing from store",
-platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:48:| govops | 標籤缺失 | 無 `eco-base/platform` | `eco-base/platform: platform-govops` |
-platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:49:| govops | 標籤缺失 | 無 `eco-base/environment` | `eco-base/environment: production` |
-platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:50:| govops | 標籤缺失 | 無 `eco-base/owner` | `eco-base/owner: governance-operations-team` |
+platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:48:| govops | 標籤缺失 | 無 `softwareos-base/platform` | `softwareos-base/platform: platform-govops` |
+platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:49:| govops | 標籤缺失 | 無 `softwareos-base/environment` | `softwareos-base/environment: production` |
+platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:50:| govops | 標籤缺失 | 無 `softwareos-base/owner` | `softwareos-base/owner: governance-operations-team` |
 platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:51:| govops | 標籤缺失 | 無 `app.kubernetes.io/instance` | `app.kubernetes.io/instance: govops-engine-prod` |
-platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:52:| govops | 註解缺失 | 無 `eco-base/uri` | `eco-base://k8s/platform-govops/deployment/govops-engine` |
-platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:53:| govops | 註解缺失 | 無 `eco-base/urn` | `urn:eco-base:k8s:platform-govops:deployment:govops-engine:<uuid>` |
-platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:54:| govops | 註解缺失 | 無 `eco-base/governance-policy` | `eco-govops-governance.rego` |
-platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:55:| govops | 註解缺失 | 無 `eco-base/audit-log-level` | `full` |
+platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:52:| govops | 註解缺失 | 無 `softwareos-base/uri` | `softwareos-base://k8s/platform-govops/deployment/govops-engine` |
+platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:53:| govops | 註解缺失 | 無 `softwareos-base/urn` | `urn:softwareos-base:k8s:platform-govops:deployment:govops-engine:<uuid>` |
+platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:54:| govops | 註解缺失 | 無 `softwareos-base/governance-policy` | `eco-govops-governance.rego` |
+platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:55:| govops | 註解缺失 | 無 `softwareos-base/audit-log-level` | `full` |
 platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:57:| dataops | 標籤/註解缺失 | 同 govops | 同 govops 規範 |
 platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:59:| seccompops | 標籤/註解缺失 | 同 govops | 同 govops 規範 |
 platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:60:| seccompops | 部署標籤缺失 | 無 `governance.io/managed` | `governance.io/managed: "true"` |

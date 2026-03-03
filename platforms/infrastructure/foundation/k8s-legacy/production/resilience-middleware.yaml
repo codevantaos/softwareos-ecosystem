@@ -3,21 +3,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/resilience-middleware
-    eco-base/urn: urn:eco-base:k8s:core:deployment:resilience-middleware:sha256-f2eb994b9ba4cb60a7e5ca23430fdbbf1bb6315fa16883a8aaa22e295e74f520
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/resilience-middleware
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:resilience-middleware:sha256-f2eb994b9ba4cb60a7e5ca23430fdbbf1bb6315fa16883a8aaa22e295e74f520
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: resilience-middleware
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
   name: resilience-middleware
   namespace: production
@@ -35,8 +35,8 @@ spec:
     prometheus.io/scrape: 'true'
   labels:
     app.kubernetes.io/name: resilience-middleware
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     environment: production
     spec:
       containers:
@@ -91,10 +91,10 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/resilience-middleware
-    eco-base/urn: urn:eco-base:k8s:core:service:resilience-middleware:sha256-84dfd5ee6012b490ae0e415b114246cdb40378e3d9915cf57014b7510817435b
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/resilience-middleware
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:resilience-middleware:sha256-84dfd5ee6012b490ae0e415b114246cdb40378e3d9915cf57014b7510817435b
     prometheus.io/path: /stats/prometheus
     prometheus.io/port: '15020'
     prometheus.io/scrape: 'true'
@@ -102,13 +102,13 @@ metadata:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: resilience-middleware
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
   name: resilience-middleware
   namespace: production

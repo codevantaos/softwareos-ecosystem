@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-# eco-base GCP SSD Quota Increase Request Script
+# softwareos-base GCP SSD Quota Increase Request Script
 # Automates quota increase request for eco-production cluster
 
 ECO_SCRIPT_VERSION="1.0.0"
@@ -99,7 +99,7 @@ request_quota_increase() {
     echo "3. Select asia-east1 region"
     echo "4. Click 'Edit Quotas'"
     echo "5. Request new limit: 500 GB"
-    echo "6. Provide justification: 'Production cluster deployment for eco-base platform'"
+    echo "6. Provide justification: 'Production cluster deployment for softwareos-base platform'"
     echo "7. Submit request"
     echo ""
     

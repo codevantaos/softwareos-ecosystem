@@ -13,9 +13,9 @@ data:
     signingSecret: $slack-signing-secret
 
     '
-  service.webhook.eco-base: "url: $webhook-url\nheaders:\n  - name: Content-Type\n\
-    \    value: application/json\n  - name: X-eco-base-Event\n    value: argocd-sync\n"
-  subscriptions: "- recipients:\n    - slack:eco-base-deployments\n    - webhook:eco-base\n\
+  service.webhook.softwareos-base: "url: $webhook-url\nheaders:\n  - name: Content-Type\n\
+    \    value: application/json\n  - name: X-softwareos-base-Event\n    value: argocd-sync\n"
+  subscriptions: "- recipients:\n    - slack:softwareos-base-deployments\n    - webhook:softwareos-base\n\
     \  triggers:\n    - on-sync-succeeded\n    - on-sync-failed\n    - on-health-degraded\n\
     \    - on-sync-running"
   template.app-health-degraded: "slack:\n  attachments: |\n    [{\n      \"color\"\
@@ -24,7 +24,7 @@ data:
     \ }}\", \"short\": true},\n        {\"title\": \"Health\", \"value\": \"{{ .app.status.health.status\
     \ }}\", \"short\": true},\n        {\"title\": \"Namespace\", \"value\": \"{{\
     \ .app.spec.destination.namespace }}\", \"short\": true}\n      ],\n      \"footer\"\
-    : \"eco-base GitOps | Argo CD\"\n    }]\n"
+    : \"softwareos-base GitOps | Argo CD\"\n    }]\n"
   template.app-sync-failed: "slack:\n  attachments: |\n    [{\n      \"color\": \"\
     #e53935\",\n      \"title\": \"❌ {{ .app.metadata.name }} — Sync Failed\",\n \
     \     \"fields\": [\n        {\"title\": \"Application\", \"value\": \"{{ .app.metadata.name\
@@ -32,8 +32,8 @@ data:
     \ .app.spec.destination.namespace }}\", \"short\": true},\n        {\"title\"\
     : \"Revision\", \"value\": \"{{ .app.status.sync.revision | trunc 7 }}\", \"short\"\
     : true},\n        {\"title\": \"Error\", \"value\": \"{{ .app.status.operationState.message\
-    \ | trunc 200 }}\", \"short\": false}\n      ],\n      \"footer\": \"eco-base\
-    \ GitOps | Argo CD\"\n    }]\nwebhook:\n  eco-base:\n    method: POST\n    body:\
+    \ | trunc 200 }}\", \"short\": false}\n      ],\n      \"footer\": \"softwareos-base\
+    \ GitOps | Argo CD\"\n    }]\nwebhook:\n  softwareos-base:\n    method: POST\n    body:\
     \ |\n      {\n        \"event\": \"sync-failed\",\n        \"app\": \"{{ .app.metadata.name\
     \ }}\",\n        \"namespace\": \"{{ .app.spec.destination.namespace }}\",\n \
     \       \"revision\": \"{{ .app.status.sync.revision }}\",\n        \"error\"\
@@ -43,7 +43,7 @@ data:
     #2196f3\",\n      \"title\": \"\U0001F504 {{ .app.metadata.name }} — Sync In Progress\"\
     ,\n      \"fields\": [\n        {\"title\": \"Application\", \"value\": \"{{ .app.metadata.name\
     \ }}\", \"short\": true},\n        {\"title\": \"Revision\", \"value\": \"{{ .app.status.sync.revision\
-    \ | trunc 7 }}\", \"short\": true}\n      ],\n      \"footer\": \"eco-base GitOps\
+    \ | trunc 7 }}\", \"short\": true}\n      ],\n      \"footer\": \"softwareos-base GitOps\
     \ | Argo CD\"\n    }]\n"
   template.app-sync-succeeded: "slack:\n  attachments: |\n    [{\n      \"color\"\
     : \"#18be52\",\n      \"title\": \"✅ {{ .app.metadata.name }} — Sync Succeeded\"\
@@ -52,9 +52,9 @@ data:
     \ .app.spec.destination.namespace }}\", \"short\": true},\n        {\"title\"\
     : \"Revision\", \"value\": \"{{ .app.status.sync.revision | trunc 7 }}\", \"short\"\
     : true},\n        {\"title\": \"Status\", \"value\": \"{{ .app.status.sync.status\
-    \ }}\", \"short\": true}\n      ],\n      \"footer\": \"eco-base GitOps | Argo\
+    \ }}\", \"short\": true}\n      ],\n      \"footer\": \"softwareos-base GitOps | Argo\
     \ CD\",\n      \"footer_icon\": \"https://argo-cd.readthedocs.io/en/stable/assets/logo.png\"\
-    \n    }]\nwebhook:\n  eco-base:\n    method: POST\n    body: |\n      {\n    \
+    \n    }]\nwebhook:\n  softwareos-base:\n    method: POST\n    body: |\n      {\n    \
     \    \"event\": \"sync-succeeded\",\n        \"app\": \"{{ .app.metadata.name\
     \ }}\",\n        \"namespace\": \"{{ .app.spec.destination.namespace }}\",\n \
     \       \"revision\": \"{{ .app.status.sync.revision }}\",\n        \"timestamp\"\
@@ -70,18 +70,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/argocd-notifications-cm
-    eco-base/urn: urn:eco-base:k8s:core:configmap:argocd-notifications-cm:sha256-117af4b903fc58875f1942b972986bc52c92f08280c11a6ed7db0807cea7a36d
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/argocd-notifications-cm
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:argocd-notifications-cm:sha256-117af4b903fc58875f1942b972986bc52c92f08280c11a6ed7db0807cea7a36d
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: argocd-notifications
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: argocd-notifications-cm
   namespace: argocd

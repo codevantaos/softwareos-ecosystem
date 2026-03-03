@@ -281,7 +281,7 @@ if (require.main === module) {
   
   if (args.length === 0) {
     console.log('用法: node contract-checker.js <contract-file>');
-    console.log('範例: node contract-checker.js contracts/external-api.json');
+    console.log('範例: node contract-checker.js softwareos-contracts/external-api.json');
     process.exit(1);
   }
   
@@ -309,7 +309,7 @@ module.exports = ContractChecker;
 // ==============================================================================
 // const ContractChecker = require('./contract-checker');
 //
-// const checker = new ContractChecker('contracts/external-api.json');
+// const checker = new ContractChecker('softwareos-contracts/external-api.json');
 // const passed = await checker.run();
 //
 // if (!passed) {

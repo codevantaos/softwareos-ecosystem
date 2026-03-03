@@ -48,8 +48,8 @@ healthRouter.get("/", (_req: Request, res: Response) => {
     status: "healthy",
     service: "api",
     version: "1.0.0",
-    uri: "eco-base://backend/api/health",
-    urn: `urn:eco-base:backend:api:health:${uuidv1()}`,
+    uri: "softwareos-base://backend/api/health",
+    urn: `urn:softwareos-base:backend:api:health:${uuidv1()}`,
     timestamp: new Date().toISOString(),
   });
 });
@@ -78,7 +78,7 @@ healthRouter.get("/ready", async (_req: Request, res: Response) => {
     status: overallStatus,
     service: "api",
     version: "1.0.0",
-    uri: "eco-base://backend/api/ready",
+    uri: "softwareos-base://backend/api/ready",
     components,
     timestamp: new Date().toISOString(),
   });

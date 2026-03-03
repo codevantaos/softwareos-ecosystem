@@ -38,8 +38,8 @@ python3 -c "import yaml; yaml.safe_load(open('$GOVERNANCE_DIR/30-agents/registry
 echo "  ✓ Validating 30-agents/permissions/rbac-policies.yaml"
 python3 -c "import yaml; yaml.safe_load(open('$GOVERNANCE_DIR/30-agents/permissions/rbac-policies.yaml'))" || exit 1
 
-echo "  ✓ Validating 60-contracts/framework.yaml"
-python3 -c "import yaml; yaml.safe_load(open('$GOVERNANCE_DIR/60-contracts/framework.yaml'))" || exit 1
+echo "  ✓ Validating 60-softwareos-contracts/framework.yaml"
+python3 -c "import yaml; yaml.safe_load(open('$GOVERNANCE_DIR/60-softwareos-contracts/framework.yaml'))" || exit 1
 
 echo "  ✓ Validating 70-audit/framework.yaml"
 python3 -c "import yaml; yaml.safe_load(open('$GOVERNANCE_DIR/70-audit/framework.yaml'))" || exit 1
@@ -80,8 +80,8 @@ echo "    ✓ Health checks configured (60s interval)"
 echo "    ✓ Compliance frameworks ready (ISO/NIST/EU)"
 echo "    ✓ Deployment time: < 30s"
 
-# 60-contracts: Contract Registry (20s)
-echo "  [4/6] Deploying Contract Registry (60-contracts/)..."
+# 60-softwareos-contracts: Contract Registry (20s)
+echo "  [4/6] Deploying Contract Registry (60-softwareos-contracts/)..."
 echo "    ✓ Contract schemas validated"
 echo "    ✓ Self-healing contract registered"
 echo "    ✓ Versioning policy active"

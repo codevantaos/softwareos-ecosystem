@@ -9,8 +9,8 @@ version: v1
 metadata:
 
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
 
   name: "instant_grail"
   description: "Holy Grail INSTANT pipeline binding the MCP unified pipeline with Quantum Flow Toolkit phases (deconstruct→integrate→refactor)."

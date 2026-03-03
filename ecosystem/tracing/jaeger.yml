@@ -1,17 +1,17 @@
-# eco-base Jaeger Tracing Configuration
-# URI: eco-base://ecosystem/tracing/jaeger
+# softwareos-base Jaeger Tracing Configuration
+# URI: softwareos-base://ecosystem/tracing/jaeger
 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jaeger
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app: jaeger
     component: tracing
     generated-by: yaml-toolkit-v1
   annotations:
-    eco-base/uri: "eco-base://ecosystem/tracing/jaeger"
+    softwareos-base/uri: "softwareos-base://ecosystem/tracing/jaeger"
 spec:
   replicas: 1
   selector:
@@ -60,7 +60,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: jaeger
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app: jaeger
     generated-by: yaml-toolkit-v1

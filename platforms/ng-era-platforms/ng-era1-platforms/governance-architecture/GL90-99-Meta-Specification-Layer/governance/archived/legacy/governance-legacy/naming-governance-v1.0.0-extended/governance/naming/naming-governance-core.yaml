@@ -30,8 +30,8 @@ metadata:
   created: "2025-06-17T00:00:00Z"
   modified: "2025-06-17T00:00:00Z"
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: governance
     layer: naming
     tier: core
@@ -365,8 +365,8 @@ spec:
         expr: naming_coherence < 0.95
         for: 5m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: critical
           namespace: naming-governance
           app.kubernetes.io/component: validation
@@ -380,8 +380,8 @@ spec:
         expr: conflict_entropy > 0.8
         for: 3m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           namespace: naming-governance
           app.kubernetes.io/component: conflict-detection
@@ -395,8 +395,8 @@ spec:
         expr: compliance_rate < 0.90
         for: 10m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: critical
           namespace: naming-governance
           app.kubernetes.io/component: compliance
@@ -410,8 +410,8 @@ spec:
         expr: auto_repair_success_rate < 0.95
         for: 15m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           namespace: naming-governance
           app.kubernetes.io/component: auto-repair

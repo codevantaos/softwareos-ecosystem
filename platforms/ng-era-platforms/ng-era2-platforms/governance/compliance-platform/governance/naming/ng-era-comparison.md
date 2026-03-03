@@ -30,7 +30,7 @@ Limitations:
 ## Era-2 (Microservice Era)
 
 Characteristics:
-- Explicit service boundaries and API contracts
+- Explicit service boundaries and API softwareos-contracts
 - Event-driven integration
 - Distributed coordination and service mesh
 - Dynamic configuration

@@ -1,6 +1,6 @@
-# eco-base Deployment Guide
+# softwareos-base Deployment Guide
 
-URI: eco-base://docs/DEPLOYMENT
+URI: softwareos-base://docs/DEPLOYMENT
 
 ## Prerequisites
 
@@ -23,8 +23,8 @@ URI: eco-base://docs/DEPLOYMENT
 Run the core test suite without any infrastructure dependencies:
 
 ```bash
-git clone https://github.com/indestructibleorg/eco-base.git
-cd eco-base
+git clone https://github.com/indestructibleorg/softwareos-base.git
+cd softwareos-base
 
 # Install Python dependencies
 pip install pydantic fastapi httpx pytest pytest-asyncio jsonschema pyyaml numpy
@@ -120,7 +120,7 @@ kubectl apply -f k8s/base/namespace.qyaml
 
 ```bash
 helm install eco helm/ \
-  --namespace eco-base \
+  --namespace softwareos-base \
   --values helm/values.yaml \
   --set global.imageRegistry=ghcr.io/indestructibleorg \
   --set secrets.jwtSecret=$(openssl rand -hex 32) \
@@ -132,7 +132,7 @@ helm install eco helm/ \
 
 ```bash
 helm install eco-staging helm/ \
-  --namespace eco-base-staging \
+  --namespace softwareos-base-staging \
   --values helm/values-staging.yaml
 ```
 
@@ -140,17 +140,17 @@ helm install eco-staging helm/ \
 
 ```bash
 # Check rollout status
-kubectl rollout status deployment/eco-ai -n eco-base
-kubectl rollout status deployment/eco-api -n eco-base
+kubectl rollout status deployment/eco-ai -n softwareos-base
+kubectl rollout status deployment/eco-api -n softwareos-base
 
 # Check pods
-kubectl get pods -n eco-base
+kubectl get pods -n softwareos-base
 
 # Check services
-kubectl get svc -n eco-base
+kubectl get svc -n softwareos-base
 
 # Test health endpoints
-kubectl port-forward svc/eco-ai-svc 8001:8001 -n eco-base &
+kubectl port-forward svc/eco-ai-svc 8001:8001 -n softwareos-base &
 curl http://localhost:8001/health
 ```
 
@@ -214,8 +214,8 @@ This creates two Argo CD Applications:
 
 | Application | Branch | Namespace | Auto-Sync | Prune |
 |-------------|--------|-----------|-----------|-------|
-| `eco-staging` | `develop` | `eco-base-staging` | Yes | Yes |
-| `eco-production` | `main` | `eco-base` | No (manual) | No |
+| `eco-staging` | `develop` | `softwareos-base-staging` | Yes | Yes |
+| `eco-production` | `main` | `softwareos-base` | No (manual) | No |
 
 ### Verify Sync
 
@@ -347,8 +347,8 @@ open http://localhost:9090   # Prometheus
 open http://localhost:3001   # Grafana
 
 # Kubernetes
-kubectl port-forward svc/prometheus 9090:9090 -n eco-base
-kubectl port-forward svc/grafana 3001:3000 -n eco-base
+kubectl port-forward svc/prometheus 9090:9090 -n softwareos-base
+kubectl port-forward svc/grafana 3001:3000 -n softwareos-base
 ```
 
 ---
@@ -394,10 +394,10 @@ opa test policy/
 
 ```bash
 # Check engine pods
-kubectl get pods -l app.kubernetes.io/component=engine -n eco-base
+kubectl get pods -l app.kubernetes.io/component=engine -n softwareos-base
 
 # Check engine logs
-kubectl logs -l app=eco-vllm -n eco-base --tail=50
+kubectl logs -l app=eco-vllm -n softwareos-base --tail=50
 
 # Check health monitor
 curl http://localhost:8001/health/monitor
@@ -410,7 +410,7 @@ curl http://localhost:8001/health/monitor
 kubectl exec -it deploy/eco-api -- nslookup eco-ai-svc
 
 # Check network policy
-kubectl get networkpolicy -n eco-base
+kubectl get networkpolicy -n softwareos-base
 ```
 
 **Tests failing locally:**

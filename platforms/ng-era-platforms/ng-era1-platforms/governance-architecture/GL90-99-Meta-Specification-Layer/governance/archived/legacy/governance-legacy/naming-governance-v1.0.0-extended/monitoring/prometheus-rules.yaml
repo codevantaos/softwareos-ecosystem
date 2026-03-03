@@ -14,8 +14,8 @@ metadata:
   name: naming-governance-rules
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: naming-governance
     app.kubernetes.io/component: monitoring
     version: v1.0.0
@@ -32,8 +32,8 @@ spec:
           expr: naming_coherence_gauge < 0.95
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -58,8 +58,8 @@ spec:
           expr: naming_conflict_entropy_gauge > 0.8
           for: 3m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -85,8 +85,8 @@ spec:
           expr: naming_compliance_rate_gauge < 0.90
           for: 10m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -112,8 +112,8 @@ spec:
           expr: naming_version_drift_gauge > 0.1
           for: 15m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -143,8 +143,8 @@ spec:
           expr: rate(naming_auto_repair_failures_total[5m]) > 0.05
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -169,8 +169,8 @@ spec:
           expr: naming_repair_queue_size_gauge > 100
           for: 10m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -195,8 +195,8 @@ spec:
           expr: naming_repair_success_rate_gauge < 0.95
           for: 15m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -225,8 +225,8 @@ spec:
           expr: histogram_quantile(0.95, naming_validation_duration_seconds_bucket) > 1
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -251,8 +251,8 @@ spec:
           expr: rate(naming_api_requests_failed_total[5m]) / rate(naming_api_requests_total[5m]) > 0.05
           for: 3m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -277,8 +277,8 @@ spec:
           expr: rate(naming_processed_requests_total[5m]) < 10
           for: 10m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -306,8 +306,8 @@ spec:
           expr: increase(naming_unauthorized_access_total[5m]) > 0
           for: 0m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -333,8 +333,8 @@ spec:
           expr: increase(naming_security_violations_total[5m]) > 0
           for: 1m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -360,8 +360,8 @@ spec:
           expr: naming_anomaly_score_gauge > 0.8
           for: 2m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -390,8 +390,8 @@ spec:
           expr: rate(naming_exception_requests_total[5m]) > 0.1
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -416,8 +416,8 @@ spec:
           expr: naming_overdue_exceptions_gauge > 5
           for: 1h
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -445,8 +445,8 @@ spec:
           expr: container_memory_usage_bytes{pod=~"naming-governance.*"} / container_spec_memory_limit_bytes{pod=~"naming-governance.*"} > 0.85
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -472,8 +472,8 @@ spec:
           expr: rate(container_cpu_usage_seconds_total{pod=~"naming-governance.*"}[5m]) > 0.8
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -498,8 +498,8 @@ spec:
           expr: increase(kube_pod_container_status_restarts_total{pod=~"naming-governance.*"}[15m]) > 0
           for: 0m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -524,8 +524,8 @@ spec:
           expr: kubelet_volume_stats_used_bytes / kubelet_volume_stats_capacity_bytes > 0.85
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -553,8 +553,8 @@ spec:
           expr: naming_sla_compliance_gauge < 0.99
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             namespace: platform-03
             app.kubernetes.io/component: naming-governance
@@ -580,8 +580,8 @@ spec:
           expr: up{job="naming-governance"} == 0
           for: 1m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             namespace: platform-03
             app.kubernetes.io/component: naming-governance

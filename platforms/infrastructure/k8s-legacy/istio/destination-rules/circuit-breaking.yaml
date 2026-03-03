@@ -56,13 +56,13 @@ spec:
   subsets:
   - name: stable
     labels:
-      eco-base/part-of: eco-base
-      eco-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
+      softwareos-base/governance: aligned
       version: stable
   - name: canary
     labels:
-      eco-base/part-of: eco-base
-      eco-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
+      softwareos-base/governance: aligned
       version: canary
 ---
 # Aggressive Circuit Breaking for Critical Services

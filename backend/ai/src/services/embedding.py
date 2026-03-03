@@ -12,7 +12,7 @@ Fallback chain:
   2. sentence-transformers local inference (requires ``pip install sentence-transformers``)
   3. Deterministic hash-based vectors (offline, no GPU/network — semantically meaningless)
 
-URI: eco-base://backend/ai/services/embedding
+URI: softwareos-base://backend/ai/services/embedding
 """
 
 from __future__ import annotations
@@ -74,8 +74,8 @@ class EmbeddingResult:
             "total_tokens": self.total_tokens,
             "latency_ms": round(self.latency_ms, 2),
             "created_at": self.created_at,
-            "uri": f"eco-base://ai/embedding/{self.request_id}",
-            "urn": f"urn:eco-base:ai:embedding:{self.model_id}:{self.request_id}",
+            "uri": f"softwareos-base://ai/embedding/{self.request_id}",
+            "urn": f"urn:softwareos-base:ai:embedding:{self.model_id}:{self.request_id}",
         }
 
 

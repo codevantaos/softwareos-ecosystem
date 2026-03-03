@@ -3,10 +3,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/machine-native-ops
-    eco-base/urn: urn:eco-base:k8s:core:deployment:machine-native-ops:sha256-97ba2fa390e47e9ea536cbc9d0a942e7a807c3899e1068a16d59567cc83c39a0
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/machine-native-ops
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:machine-native-ops:sha256-97ba2fa390e47e9ea536cbc9d0a942e7a807c3899e1068a16d59567cc83c39a0
     sidecar.istio.io/interceptionMode: TPROXY
     sidecar.istio.io/proxyConfig: "proxyStatsMatcher:\n  inclusionRegexps:\n  - \"\
       .*_outbound.*\"\n  - \".*_inbound.*\"\n"
@@ -14,11 +14,11 @@ metadata:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: machine-native-ops
   namespace: production
 spec:

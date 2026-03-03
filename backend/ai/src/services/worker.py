@@ -3,7 +3,7 @@
 Consumes jobs from Redis-backed Celery queues, dispatches to EngineManager,
 persists results, and emits completion events.
 
-URI: eco-base://backend/ai/services/worker
+URI: softwareos-base://backend/ai/services/worker
 """
 
 from __future__ import annotations
@@ -123,8 +123,8 @@ class InferenceJob:
                 if self.completed_at
                 else None
             ),
-            "uri": f"eco-base://ai/job/{self.job_id}",
-            "urn": f"urn:eco-base:ai:job:{self.model_id}:{self.job_id}",
+            "uri": f"softwareos-base://ai/job/{self.job_id}",
+            "urn": f"urn:softwareos-base:ai:job:{self.model_id}:{self.job_id}",
         }
 
     @classmethod

@@ -3,21 +3,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/performance-benchmark-smoke
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:performance-benchmark-smoke:sha256-15e7a473e1bfe270bc07648350dbb5ca013ca393137bfd4e05f672c70aed2795
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/performance-benchmark-smoke
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:performance-benchmark-smoke:sha256-15e7a473e1bfe270bc07648350dbb5ca013ca393137bfd4e05f672c70aed2795
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: performance-benchmark
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
     test-type: smoke
   name: performance-benchmark-smoke
@@ -72,21 +72,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/performance-benchmark-load
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:performance-benchmark-load:sha256-621d8db4a681c5af199849fbde671d502452fa5ebf0265a727b92a329be996b5
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/performance-benchmark-load
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:performance-benchmark-load:sha256-621d8db4a681c5af199849fbde671d502452fa5ebf0265a727b92a329be996b5
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: performance-benchmark
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
     test-type: load
   name: performance-benchmark-load
@@ -141,21 +141,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/performance-benchmark-stress
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:performance-benchmark-stress:sha256-d013ae7efd38d8fc0fea299c4f709242800203689e0f6e6259a2da8d17841514
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/performance-benchmark-stress
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:performance-benchmark-stress:sha256-d013ae7efd38d8fc0fea299c4f709242800203689e0f6e6259a2da8d17841514
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: performance-benchmark
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
     test-type: stress
   name: performance-benchmark-stress
@@ -210,21 +210,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/performance-benchmark-endurance
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:performance-benchmark-endurance:sha256-b28e84b7204683ecca2de69b6cbfa26ef03ca9e4b600521435202544aaaca0e4
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/performance-benchmark-endurance
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:performance-benchmark-endurance:sha256-b28e84b7204683ecca2de69b6cbfa26ef03ca9e4b600521435202544aaaca0e4
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: performance-benchmark
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
     test-type: endurance
   name: performance-benchmark-endurance

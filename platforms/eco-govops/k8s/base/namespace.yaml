@@ -7,15 +7,15 @@ metadata:
     app.kubernetes.io/instance: govops-platform-prod
     app.kubernetes.io/version: "1.0.0"
     app.kubernetes.io/component: governance
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/managed-by: argocd
-    eco-base/platform: platform-govops
-    eco-base/environment: production
-    eco-base/owner: governance-operations-team
+    softwareos-base/platform: platform-govops
+    softwareos-base/environment: production
+    softwareos-base/owner: governance-operations-team
     governance.io/managed: "true"
   annotations:
-    eco-base/uri: "eco-base://k8s/platform-govops/namespace/eco-govops"
-    eco-base/urn: "urn:eco-base:k8s:platform-govops:namespace:eco-govops:gl.gov.ops-platform"
-    eco-base/governance-policy: "eco-govops-governance.rego"
-    eco-base/audit-log-level: "full"
+    softwareos-base/uri: "softwareos-base://k8s/platform-govops/namespace/eco-govops"
+    softwareos-base/urn: "urn:softwareos-base:k8s:platform-govops:namespace:eco-govops:gl.gov.ops-platform"
+    softwareos-base/governance-policy: "eco-govops-governance.rego"
+    softwareos-base/audit-log-level: "full"
     description: "GovOps Platform — Governance and Operations Management"

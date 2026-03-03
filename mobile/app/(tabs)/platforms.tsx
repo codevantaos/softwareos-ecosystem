@@ -157,7 +157,7 @@ export default function PlatformsScreen() {
       <View style={[styles.header, { borderBottomColor: colors.border, backgroundColor: colors.background }]}>
         <View>
           <Text style={[styles.headerTitle, { color: colors.foreground }]}>Platforms</Text>
-          <Text style={[styles.headerSub, { color: colors.muted }]}>eco-base · GKE asia-east1</Text>
+          <Text style={[styles.headerSub, { color: colors.muted }]}>softwareos-base · GKE asia-east1</Text>
         </View>
         <TouchableOpacity onPress={onRefresh}>
           <IconSymbol name="arrow.clockwise" size={20} color={colors.primary} />

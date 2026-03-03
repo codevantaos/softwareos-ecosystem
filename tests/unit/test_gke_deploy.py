@@ -111,8 +111,8 @@ class TestStagingManifests:
 
     def test_ingress_staging_domain(self):
         content = _read("k8s/staging/ingress.qyaml")
-        assert "staging.autoecoops.io" in content
-        assert "api-staging.autoecoops.io" in content
+        assert "staging.softwareos.io" in content
+        assert "api-staging.softwareos.io" in content
 
     def test_all_have_governance_blocks(self):
         for f in self.STAGING_FILES:
@@ -199,14 +199,14 @@ class TestProductionManifests:
 
     def test_ingress_production_domain(self):
         content = _read("k8s/production/ingress.qyaml")
-        assert "autoecoops.io" in content
-        assert "api.autoecoops.io" in content
+        assert "softwareos.io" in content
+        assert "api.softwareos.io" in content
 
     def test_ingress_production_routing(self):
         content = _read("k8s/production/ingress.qyaml")
         assert "eco-web-svc" in content
         assert "eco-api-svc" in content
-        assert "api.autoecoops.io" in content
+        assert "api.softwareos.io" in content
 
     def test_production_security_context(self):
         # All services should use non-root user for security
@@ -316,27 +316,27 @@ class TestDeployScript:
 
 # ── Domain configuration ────────────────────────────────────
 class TestDomainConfig:
-    def test_staging_ingress_uses_autoecoops(self):
+    def test_staging_ingress_uses_softwareos(self):
         content = _read("k8s/staging/ingress.qyaml")
-        assert "autoecoops.io" in content
-        assert "eco-base.io" not in content
+        assert "softwareos.io" in content
+        assert "softwareos-base.io" not in content
 
-    def test_production_ingress_uses_autoecoops(self):
+    def test_production_ingress_uses_softwareos(self):
         content = _read("k8s/production/ingress.qyaml")
-        assert "autoecoops.io" in content
-        assert "eco-base.io" not in content
+        assert "softwareos.io" in content
+        assert "softwareos-base.io" not in content
 
-    def test_base_ingress_uses_autoecoops(self):
+    def test_base_ingress_uses_softwareos(self):
         content = _read("k8s/ingress/ingress.qyaml")
-        assert "autoecoops.io" in content
-        assert "eco-base.io" not in content
+        assert "softwareos.io" in content
+        assert "softwareos-base.io" not in content
 
-    def test_wrangler_uses_autoecoops(self):
+    def test_wrangler_uses_softwareos(self):
         content = _read("backend/cloudflare/wrangler.toml")
-        assert "autoecoops.io" in content
-        assert "eco-base.io" not in content
+        assert "softwareos.io" in content
+        assert "softwareos-base.io" not in content
 
-    def test_helm_values_uses_autoecoops(self):
+    def test_helm_values_uses_softwareos(self):
         content = _read("helm/values.yaml")
-        assert "autoecoops.io" in content
-        assert "eco-base.io" not in content
+        assert "softwareos.io" in content
+        assert "softwareos-base.io" not in content

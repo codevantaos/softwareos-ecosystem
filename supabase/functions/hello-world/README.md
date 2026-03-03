@@ -1,14 +1,14 @@
 # Hello World Edge Function
 
 ## Overview
-eco-base hello-world edge function deployed on Supabase.
+softwareos-base hello-world edge function deployed on Supabase.
 
 ## Function Details
 - **Name**: hello-world
 - **Runtime**: Deno 2
 - **Entry Point**: index.ts
-- **URI**: eco-base://functions/hello-world
-- **URN**: urn:eco-base:functions:hello-world:v1
+- **URI**: softwareos-base://functions/hello-world
+- **URN**: urn:softwareos-base:functions:hello-world:v1
 
 ## API Endpoint
 ```
@@ -24,10 +24,10 @@ Content-Type: application/json
 ```json
 {
   "message": "Hello World!",
-  "service": "eco-base",
+  "service": "softwareos-base",
   "timestamp": "2024-02-21T09:00:00.000Z",
-  "uri": "eco-base://functions/hello-world",
-  "urn": "urn:eco-base:functions:hello-world:v1"
+  "uri": "softwareos-base://functions/hello-world",
+  "urn": "urn:softwareos-base:functions:hello-world:v1"
 }
 ```
 
@@ -77,4 +77,4 @@ Required environment variables (set in Supabase dashboard):
 ## Governance
 - **Owner**: indestructibleorg
 - **Policy**: zero-trust
-- **Compliance**: eco-base v1.0
+- **Compliance**: softwareos-base v1.0

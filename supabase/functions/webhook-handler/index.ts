@@ -1,4 +1,4 @@
-// eco-base://supabase/functions/webhook-handler
+// softwareos-base://supabase/functions/webhook-handler
 // Database webhook handler for event-driven architecture
 // Receives Supabase Database Webhooks and routes events to appropriate handlers
 // Supports: INSERT/UPDATE/DELETE on governance_records, service_registry, platforms
@@ -59,8 +59,8 @@ Deno.serve(async (req) => {
                 detected_at: new Date().toISOString(),
               },
               compliance_tags: ["slo-breach", "auto-detected"],
-              uri: `eco-base://webhook/service-health/${record.service_name}/${Date.now()}`,
-              urn: `urn:eco-base:webhook:service-health:${record.service_name}`,
+              uri: `softwareos-base://webhook/service-health/${record.service_name}/${Date.now()}`,
+              urn: `urn:softwareos-base:webhook:service-health:${record.service_name}`,
             });
           }
         }
@@ -82,8 +82,8 @@ Deno.serve(async (req) => {
                 changed_at: new Date().toISOString(),
               },
               compliance_tags: ["platform-lifecycle"],
-              uri: `eco-base://webhook/platform-status/${record.slug}/${Date.now()}`,
-              urn: `urn:eco-base:webhook:platform-status:${record.slug}`,
+              uri: `softwareos-base://webhook/platform-status/${record.slug}/${Date.now()}`,
+              urn: `urn:softwareos-base:webhook:platform-status:${record.slug}`,
             });
           }
         }
@@ -107,8 +107,8 @@ Deno.serve(async (req) => {
                 error: record.error,
               },
               compliance_tags: ["ai-usage-tracking"],
-              uri: `eco-base://webhook/ai-job/${record.id}/${Date.now()}`,
-              urn: `urn:eco-base:webhook:ai-job:${record.id}`,
+              uri: `softwareos-base://webhook/ai-job/${record.id}/${Date.now()}`,
+              urn: `urn:softwareos-base:webhook:ai-job:${record.id}`,
             });
           }
         }
@@ -125,8 +125,8 @@ Deno.serve(async (req) => {
         event_type: type,
         table,
         timestamp: new Date().toISOString(),
-        uri: "eco-base://supabase/functions/webhook-handler",
-        urn: "urn:eco-base:supabase:functions:webhook-handler:v1",
+        uri: "softwareos-base://supabase/functions/webhook-handler",
+        urn: "urn:softwareos-base:supabase:functions:webhook-handler:v1",
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );

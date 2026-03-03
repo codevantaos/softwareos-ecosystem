@@ -115,7 +115,7 @@ export default function MonitorScreen() {
       <View style={[styles.header, { borderBottomColor: colors.border, backgroundColor: colors.background }]}>
         <View>
           <Text style={[styles.headerTitle, { color: colors.foreground }]}>Monitor</Text>
-          <Text style={[styles.headerSub, { color: colors.muted }]}>Observability · eco-base</Text>
+          <Text style={[styles.headerSub, { color: colors.muted }]}>Observability · softwareos-base</Text>
         </View>
         <TouchableOpacity onPress={onRefresh}>
           <IconSymbol name="arrow.clockwise" size={20} color={colors.primary} />

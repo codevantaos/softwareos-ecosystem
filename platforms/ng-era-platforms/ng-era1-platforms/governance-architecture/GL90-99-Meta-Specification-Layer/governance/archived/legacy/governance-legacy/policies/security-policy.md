@@ -352,7 +352,7 @@ The primary objectives of this policy are to:
 - Security questionnaire before onboarding
 - Annual security assessments
 - Right-to-audit provisions
-- Security requirements in contracts
+- Security requirements in softwareos-contracts
 
 #### 9.1.2 Vendor Monitoring
 - Regular security reviews

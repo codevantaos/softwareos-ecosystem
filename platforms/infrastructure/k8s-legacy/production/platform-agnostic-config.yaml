@@ -119,18 +119,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/platform-agnostic-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:platform-agnostic-config:sha256-0a1831603cb9aecd5f26d7911b753d469918219d37b14dc660bd9e2989c5aa6e
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/platform-agnostic-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:platform-agnostic-config:sha256-0a1831603cb9aecd5f26d7911b753d469918219d37b14dc660bd9e2989c5aa6e
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: platform-agnostic-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: platform-agnostic-config
   namespace: production

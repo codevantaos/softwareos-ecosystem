@@ -1,4 +1,4 @@
-"""End-to-end tests for eco-base API flow.
+"""End-to-end tests for softwareos-base API flow.
 
 Tests the complete request lifecycle:
   auth -> generate -> models -> vector/align -> health -> metrics
@@ -91,9 +91,9 @@ class TestAIServiceE2E:
         assert "content" in data
         assert "engine" in data
         assert "uri" in data
-        assert data["uri"].startswith("eco-base://")
+        assert data["uri"].startswith("softwareos-base://")
         assert "urn" in data
-        assert data["urn"].startswith("urn:eco-base:")
+        assert data["urn"].startswith("urn:softwareos-base:")
         assert "usage" in data
         assert "latency_ms" in data
 
@@ -119,7 +119,7 @@ class TestAIServiceE2E:
         assert data["alignment_model"] == "BAAI/bge-large-en-v1.5"
         assert 0.0 < data["alignment_score"] <= 1.0
         assert len(data["coherence_vector"]) == 10
-        assert data["uri"].startswith("eco-base://")
+        assert data["uri"].startswith("softwareos-base://")
 
     def test_vector_align_invalid_dim(self, ai_client):
         resp = ai_client.post("/api/v1/vector/align", json={
@@ -139,7 +139,7 @@ class TestAIServiceE2E:
             assert "provider" in m
             assert "status" in m
             assert "capabilities" in m
-            assert m["uri"].startswith("eco-base://")
+            assert m["uri"].startswith("softwareos-base://")
 
     def test_qyaml_descriptor(self, ai_client):
         resp = ai_client.post("/api/v1/qyaml/descriptor", json={
@@ -302,7 +302,7 @@ class TestOpenAIModels:
 
         for m in data["data"]:
             assert m["object"] == "model"
-            assert m["owned_by"] == "eco-base"
+            assert m["owned_by"] == "softwareos-base"
             assert "capabilities" in m
             assert "compatible_engines" in m
             assert "context_length" in m

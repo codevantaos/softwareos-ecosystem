@@ -744,7 +744,7 @@ class GLEvolutionEngine:
             "validation_success_rate": "92%",
             "compliance_level": "high",
             "drift_detected": False,
-            "contracts_validated": len(record.metadata.get("contracts", [])),
+            "softwareos-contracts_validated": len(record.metadata.get("softwareos-contracts", [])),
             "rules_triggered": len(record.metadata.get("rules", []))
         }
     
@@ -1181,7 +1181,7 @@ def main():
             "context": "每月例行檢查"
         },
         "output": {
-            "contracts_validated": 45,
+            "softwareos-contracts_validated": 45,
             "issues_found": 3,
             "recommendations": 12
         },
@@ -1189,7 +1189,7 @@ def main():
             "environment": "production",
             "version": "1.2.0",
             "user": "governance-bot",
-            "contracts": ["gl-naming-ontology", "gl-platforms"],
+            "softwareos-contracts": ["gl-naming-ontology", "gl-platforms"],
             "rules": ["naming-validation", "structure-validation"]
         }
     }
@@ -1206,7 +1206,7 @@ def main():
             "context": "每月例行檢查"
         },
         "output": {
-            "contracts_validated": 48,
+            "softwareos-contracts_validated": 48,
             "issues_found": 2,
             "recommendations": 8
         },
@@ -1214,7 +1214,7 @@ def main():
             "environment": "production",
             "version": "1.2.0",
             "user": "governance-bot",
-            "contracts": ["gl-naming-ontology", "gl-platforms", "gl-validation-rules"],
+            "softwareos-contracts": ["gl-naming-ontology", "gl-platforms", "gl-validation-rules"],
             "rules": ["naming-validation", "structure-validation", "evidence-coverage"]
         }
     }
@@ -1238,7 +1238,7 @@ def main():
             "environment": "production",
             "version": "1.2.0",
             "user": "governance-bot",
-            "contracts": ["gl-naming-ontology", "gl-platforms", "gl-new-contract"],
+            "softwareos-contracts": ["gl-naming-ontology", "gl-platforms", "gl-new-contract"],
             "rules": ["naming-validation"]
         }
     }

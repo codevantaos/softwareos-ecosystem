@@ -1,7 +1,7 @@
 {
-  "name": "@eco-base/skill-creator",
+  "name": "@softwareos-base/skill-creator",
   "version": "1.0.0",
-  "description": "Skill authoring, validation, and lifecycle management for eco-base platform automation units",
+  "description": "Skill authoring, validation, and lifecycle management for softwareos-base platform automation units",
   "scripts": {
     "init": "python3 scripts/init_skill.py",
     "validate": "node scripts/validate.js",

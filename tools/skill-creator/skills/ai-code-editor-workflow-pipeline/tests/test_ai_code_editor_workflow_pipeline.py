@@ -304,13 +304,13 @@ def test_metadata_governance_identity(manifest):
         "Provide a valid UUID in skill.json under 'metadata'."
     )
     uri = meta.get("uri", "")
-    assert uri.startswith("eco-base://"), (
-        f"Metadata 'uri' '{uri}' does not start with 'eco-base://'. "
+    assert uri.startswith("softwareos-base://"), (
+        f"Metadata 'uri' '{uri}' does not start with 'softwareos-base://'. "
         f"Update 'uri' in skill.json under 'metadata'."
     )
     urn = meta.get("urn", "")
-    assert urn.startswith("urn:eco-base:"), (
-        f"Metadata 'urn' '{urn}' does not start with 'urn:eco-base:'. "
+    assert urn.startswith("urn:softwareos-base:"), (
+        f"Metadata 'urn' '{urn}' does not start with 'urn:softwareos-base:'. "
         f"Update 'urn' in skill.json under 'metadata'."
     )
     sv = meta.get("schema_version", "")
@@ -533,13 +533,13 @@ def test_schema_array_items_have_type(input_schema, output_schema):
 @pytest.mark.skipif(not HAS_JSONSCHEMA, reason="jsonschema not installed")
 def test_sample_input_validates_against_schema(input_schema):
     sample = {
-        "repository": "indestructibleorg/eco-base",
+        "repository": "indestructibleorg/softwareos-base",
         "target_path": "backend/ai/src/app.py",
         "problem_description": "Memory leak in inference routing causing OOM kills under sustained load",
         "auth_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.test",
         "branch": "main",
         "compliance_mode": "enterprise",
-        "memory_hub_url": "http://memory-hub.eco-base.svc.cluster.local:8080",
+        "memory_hub_url": "http://codevantaos-memory.softwareos-base.svc.cluster.local:8080",
         "commit_message": "fix: resolve memory leak in inference router"
     }
     try:
@@ -565,8 +565,8 @@ def test_sample_output_validates_against_schema(output_schema):
             "commit_sha": "abc123def456",
             "compliance_tags": ["slsa-l3", "audit-trail", "soc2-compliant"],
             "governance_stamp": {
-                "uri": "eco-base://skills/ai-code-editor-workflow-pipeline",
-                "urn": "urn:eco-base:skills:ai-code-editor-workflow-pipeline:a1b2c3d4",
+                "uri": "softwareos-base://skills/ai-code-editor-workflow-pipeline",
+                "urn": "urn:softwareos-base:skills:ai-code-editor-workflow-pipeline:a1b2c3d4",
                 "schema_version": "1.0.0",
                 "generated_by": "skill-creator-v1"
             }

@@ -1,5 +1,5 @@
 # eco-superai Integration Test Environment
-# URI: eco-base://eco-superai/docker-compose/test
+# URI: softwareos-base://eco-superai/docker-compose/test
 # Purpose: Provide real PostgreSQL and Redis instances for integration tests
 # Usage: docker-compose -f docker-compose.test.yml up -d
 version: "3.9"

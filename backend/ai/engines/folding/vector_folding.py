@@ -1,6 +1,6 @@
 """Vector Folding Engine.
 
-URI: eco-base://backend/ai/engines/folding/vector_folding
+URI: softwareos-base://backend/ai/engines/folding/vector_folding
 
 Converts text/code into vector representations via embedding models,
 with dimensionality reduction to preserve core semantic information.

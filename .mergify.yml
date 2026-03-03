@@ -20,7 +20,7 @@ queue_rules:
 
       {{ body }}
 
-      Co-authored-by: eco-base-bot <bot@eco-base.io>
+      Co-authored-by: softwareos-base-bot <bot@softwareos-base.io>
 
   - name: security-fast-track
     description: Fast-track security fixes from autonomous bot

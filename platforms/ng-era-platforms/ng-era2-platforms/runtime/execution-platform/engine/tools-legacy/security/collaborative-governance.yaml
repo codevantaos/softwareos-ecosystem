@@ -14,8 +14,8 @@ metadata:
   name: collaborative-governance
   namespace: security
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     layer: layer-4
     multi.platform: true
     auto.compliance: enabled

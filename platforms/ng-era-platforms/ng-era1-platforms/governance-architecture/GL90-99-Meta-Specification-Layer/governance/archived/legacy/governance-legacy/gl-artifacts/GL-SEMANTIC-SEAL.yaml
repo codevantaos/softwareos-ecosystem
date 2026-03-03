@@ -193,7 +193,7 @@ GL30-49:
     - "34-config"
     - "35-scripts"
     - "36-modules"
-    - "37-behavior-contracts"
+    - "37-behavior-softwareos-contracts"
     - "38-sbom"
     - "39-automation"
     - "40-self-healing"
@@ -208,7 +208,7 @@ GL30-49:
     - "define_data_schemas"
     - "implement_automation"
     - "manage_configurations"
-    - "specify_behavior_contracts"
+    - "specify_behavior_softwareos-contracts"
   responsibilities_sealed:
     - "創建可重用模板"
     - "定義數據結構與驗證規則"
@@ -320,7 +320,7 @@ GL60-80:
       - "外部整合"
   dimensions_sealed:
     - "07-audit"
-    - "60-contracts"
+    - "60-softwareos-contracts"
     - "70-audit"
     - "80-feedback"
   skills_sealed:

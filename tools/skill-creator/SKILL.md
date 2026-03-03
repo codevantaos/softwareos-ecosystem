@@ -1,6 +1,6 @@
 # skill-creator
 
-Internal tool for authoring and validating eco-base YAML governance skills.
+Internal tool for authoring and validating softwareos-base YAML governance skills.
 
 ## Usage
 

@@ -1,11 +1,11 @@
 # Prometheus Configuration for Supabase Metrics
-# eco-base Production Monitoring
+# softwareos-base Production Monitoring
 
 global:
   scrape_interval: 60s
   evaluation_interval: 60s
   external_labels:
-    cluster: 'eco-base'
+    cluster: 'softwareos-base'
     environment: 'production'
 
 # Alertmanager configuration

@@ -1,5 +1,5 @@
-# eco-base v1.0 — Full Production Stack
-# URI: eco-base://docker/compose/production
+# softwareos-base v1.0 — Full Production Stack
+# URI: softwareos-base://docker/compose/production
 # Usage: cd docker && docker compose up
 # Context: repository root (..)
 
@@ -172,13 +172,13 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_USER=eco-base
+      - POSTGRES_USER=softwareos-base
       - POSTGRES_PASSWORD=${ECO_POSTGRES_PASSWORD:-eco_secret}
-      - POSTGRES_DB=eco-base
+      - POSTGRES_DB=softwareos-base
     volumes:
       - postgres-data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U eco-base"]
+      test: ["CMD-SHELL", "pg_isready -U softwareos-base"]
       interval: 10s
       timeout: 5s
       retries: 5

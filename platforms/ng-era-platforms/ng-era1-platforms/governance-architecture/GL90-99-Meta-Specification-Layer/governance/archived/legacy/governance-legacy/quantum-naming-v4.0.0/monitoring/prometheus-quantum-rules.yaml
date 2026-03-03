@@ -13,8 +13,8 @@ metadata:
   name: ""
   description: ""
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
 
 #   description: Prometheus alerting rules for quantum naming governance monitoring
 #   author: MachineNativeOps Observability Team
@@ -31,8 +31,8 @@ groups:
         expr: naming_coherence_quantum < 0.999
         for: 2m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: critical
           service: quantum-naming-governance
           app.kubernetes.io/component: coherence-monitor
@@ -47,8 +47,8 @@ groups:
         expr: rate(naming_coherence_quantum[5m]) < -0.001
         for: 5m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           service: quantum-naming-governance
           app.kubernetes.io/component: coherence-trend
@@ -63,8 +63,8 @@ groups:
         expr: entanglement_strength < 0.95
         for: 3m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           service: quantum-naming-governance
           app.kubernetes.io/component: entanglement-monitor
@@ -79,8 +79,8 @@ groups:
         expr: entanglement_strength < 0.8
         for: 1m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: critical
           service: quantum-naming-governance
           app.kubernetes.io/component: entanglement-monitor
@@ -95,8 +95,8 @@ groups:
         expr: conflict_entropy_quantum > 0.1
         for: 2m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           service: quantum-naming-governance
           app.kubernetes.io/component: entropy-monitor
@@ -110,8 +110,8 @@ groups:
         expr: conflict_entropy_quantum > 0.5
         for: 30s
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: critical
           service: quantum-naming-governance
           app.kubernetes.io/component: entropy-monitor
@@ -126,8 +126,8 @@ groups:
         expr: decoherence_rate > 0.001
         for: 5m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           service: quantum-naming-governance
           app.kubernetes.io/component: decoherence-monitor
@@ -141,8 +141,8 @@ groups:
         expr: decoherence_rate > 0.01
         for: 1m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: critical
           service: quantum-naming-governance
           app.kubernetes.io/component: decoherence-monitor
@@ -157,8 +157,8 @@ groups:
         expr: naming_violations_quantum > 0
         for: 0s
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: critical
           service: quantum-naming-governance
           app.kubernetes.io/component: violation-monitor
@@ -173,8 +173,8 @@ groups:
         expr: rate(naming_violations_quantum[5m]) > 0.1
         for: 2m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           service: quantum-naming-governance
           app.kubernetes.io/component: violation-monitor
@@ -193,8 +193,8 @@ groups:
           ) > 0.1
         for: 5m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           service: quantum-naming-governance
           app.kubernetes.io/component: state-monitor
@@ -212,8 +212,8 @@ groups:
           ) > 0.5
         for: 1m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: critical
           service: quantum-naming-governance
           app.kubernetes.io/component: state-monitor
@@ -228,8 +228,8 @@ groups:
         expr: bell_inequality_value < 2.0
         for: 30s
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           service: quantum-naming-governance
           app.kubernetes.io/component: bell-test
@@ -243,8 +243,8 @@ groups:
         expr: bell_inequality_value < 1.5
         for: 10s
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: critical
           service: quantum-naming-governance
           app.kubernetes.io/component: bell-test
@@ -259,8 +259,8 @@ groups:
         expr: quantum_circuit_duration_seconds > 10
         for: 5m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           service: quantum-naming-governance
           app.kubernetes.io/component: performance-monitor
@@ -274,8 +274,8 @@ groups:
         expr: quantum_circuit_error_rate > 0.01
         for: 2m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           service: quantum-naming-governance
           app.kubernetes.io/component: error-monitor
@@ -290,8 +290,8 @@ groups:
         expr: quantum_qubits_used / quantum_qubits_available > 0.9
         for: 2m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           service: quantum-naming-governance
           app.kubernetes.io/component: resource-monitor
@@ -305,8 +305,8 @@ groups:
         expr: quantum_qubits_used / quantum_qubits_available > 0.98
         for: 30s
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: critical
           service: quantum-naming-governance
           app.kubernetes.io/component: resource-monitor
@@ -321,8 +321,8 @@ groups:
         expr: up{service="quantum-naming-governance"} == 0
         for: 1m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: critical
           service: quantum-naming-governance
           app.kubernetes.io/component: health-monitor
@@ -340,8 +340,8 @@ groups:
           ) > 0.05
         for: 5m
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           severity: warning
           service: quantum-naming-governance
           app.kubernetes.io/component: health-monitor

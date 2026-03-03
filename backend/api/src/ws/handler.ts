@@ -48,7 +48,7 @@ export function setupWebSocket(io: SocketIOServer, logger: Logger): void {
         id: payload.sub,
         email: payload.email,
         role: payload.role,
-        urn: `urn:eco-base:iam:user:${payload.email}:${payload.sub}`,
+        urn: `urn:softwareos-base:iam:user:${payload.email}:${payload.sub}`,
       };
 
       next();

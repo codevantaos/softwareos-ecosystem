@@ -13,8 +13,8 @@ metadata:
   name: distributed-consensus-security
   namespace: security
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     layer: layer-3
     blockchain.anchored: true
     zk.proofs: enabled

@@ -195,19 +195,19 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/superai-app-canary
-    eco-base/urn: urn:eco-base:k8s:core:service:superai-app-canary:sha256-67e21e4555a842473756eaafa44e8f6326c92ca2ac9f47cd69d18e45f46b8139
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/superai-app-canary
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:superai-app-canary:sha256-67e21e4555a842473756eaafa44e8f6326c92ca2ac9f47cd69d18e45f46b8139
   labels:
     app.kubernetes.io/component: app
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: superai-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
     role: canary
   name: superai-app-canary
   namespace: eco-superai

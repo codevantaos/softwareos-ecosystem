@@ -1,5 +1,5 @@
-# eco-base v1.0 — Argo CD Application (Staging)
-# URI: eco-base://k8s/argocd/application/staging
+# softwareos-base v1.0 — Argo CD Application (Staging)
+# URI: softwareos-base://k8s/argocd/application/staging
 # Staging environment syncs from the same repo but targets ecosystem-staging namespace.
 # Used for pre-production validation before promoting to production.
 #
@@ -7,17 +7,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eco-base-staging
+  name: softwareos-base-staging
   namespace: argocd
   labels:
-    app.kubernetes.io/name: eco-base-staging
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/name: softwareos-base-staging
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/managed-by: argocd
     environment: staging
   annotations:
-    eco-base/uri: "eco-base://k8s/argocd/application/staging"
-    eco-base/owner: "platform-team"
-    eco-base/compliance: "soc2,zero-trust,gitops"
+    softwareos-base/uri: "softwareos-base://k8s/argocd/application/staging"
+    softwareos-base/owner: "platform-team"
+    softwareos-base/compliance: "soc2,zero-trust,gitops"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -25,7 +25,7 @@ spec:
 
   # ── Source: GitHub repository ──────────────────────────────
   source:
-    repoURL: https://github.com/indestructibleorg/eco-base
+    repoURL: https://github.com/indestructibleorg/softwareos-base
     targetRevision: main
     path: k8s
     directory:

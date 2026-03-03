@@ -4,16 +4,16 @@ metadata:
   name: eco-superai
   labels:
     app.kubernetes.io/name: superai-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/managed-by: argocd
     platform.gl/name: gl.ai.superai-platform
     governance.io/managed: "true"
-    eco-base/platform: platform-superai
-    eco-base/environment: production
-    eco-base/owner: ai-quantum-team
+    softwareos-base/platform: platform-superai
+    softwareos-base/environment: production
+    softwareos-base/owner: ai-quantum-team
   annotations:
     description: "SuperAI Platform — Quantum-AI Hybrid Cloud-Native Platform"
-    eco-base/uri: "eco-base://k8s/platform-superai/namespace/eco-superai"
-    eco-base/urn: "urn:eco-base:k8s:platform-superai:namespace:eco-superai:gl.ai.superai-platform"
-    eco-base/governance-policy: "eco-superai-governance.rego"
-    eco-base/audit-log-level: "full"
+    softwareos-base/uri: "softwareos-base://k8s/platform-superai/namespace/eco-superai"
+    softwareos-base/urn: "urn:softwareos-base:k8s:platform-superai:namespace:eco-superai:gl.ai.superai-platform"
+    softwareos-base/governance-policy: "eco-superai-governance.rego"
+    softwareos-base/audit-log-level: "full"

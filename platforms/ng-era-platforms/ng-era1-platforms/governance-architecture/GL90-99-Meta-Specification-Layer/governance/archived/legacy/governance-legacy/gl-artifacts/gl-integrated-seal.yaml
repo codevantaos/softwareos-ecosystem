@@ -176,7 +176,7 @@ GL30-49:
       - path: "34-config"
         artifacts: ["config-file"]
         sealed: true
-      - path: "37-behavior-contracts"
+      - path: "37-behavior-softwareos-contracts"
         artifacts: ["behavior-contract"]
         sealed: true
       - path: "39-automation"
@@ -186,7 +186,7 @@ GL30-49:
     skills: ["template_design", "schema_definition", "automation_scripting", "configuration_management", "contract_specification", "rule_engine_design"]
     sealed: true
   capabilities_seal:
-    capabilities: ["create_execution_templates", "define_data_schemas", "implement_automation", "manage_configurations", "specify_behavior_contracts"]
+    capabilities: ["create_execution_templates", "define_data_schemas", "implement_automation", "manage_configurations", "specify_behavior_softwareos-contracts"]
     sealed: true
   responsibilities_seal:
     responsibilities: ["template_creation", "schema_management", "automation_implementation", "configuration_control", "contract_enforcement"]

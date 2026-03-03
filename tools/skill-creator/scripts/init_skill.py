@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Skill Initializer — Creates a new skill from template within eco-base.
+Skill Initializer — Creates a new skill from template within softwareos-base.
 
 Usage:
     init_skill.py <skill-name>
@@ -27,11 +27,11 @@ def uuid_v1() -> str:
 
 
 def build_uri(skill_id: str) -> str:
-    return f"eco-base://skills/{skill_id}"
+    return f"softwareos-base://skills/{skill_id}"
 
 
 def build_urn(skill_id: str, uid: str) -> str:
-    return f"urn:eco-base:skills:{skill_id}:{uid}"
+    return f"urn:softwareos-base:skills:{skill_id}:{uid}"
 
 
 def generate_manifest(skill_name: str) -> dict:

@@ -86,11 +86,11 @@ metadata:
   labels:
     app.kubernetes.io/name: quantum-simulator
     app.kubernetes.io/component: vqe
-    eco-base/platform: platform-02
+    softwareos-base/platform: platform-02
     superai/quantum-circuit: vqe-optimization
   annotations:
-    eco-base/uri: "eco-base://job/platform-02/quantum/vqe-optimization"
-    eco-base/urn: "urn:eco-base:job:platform-02:quantum:vqe-optimization:sha256-quantum-vqe-001"
+    softwareos-base/uri: "softwareos-base://job/platform-02/quantum/vqe-optimization"
+    softwareos-base/urn: "urn:softwareos-base:job:platform-02:quantum:vqe-optimization:sha256-quantum-vqe-001"
 spec:
   backoffLimit: 3
   template:
@@ -245,7 +245,7 @@ jobs:
       
       - name: Deploy to GKE
         run: |
-          gcloud container clusters get-credentials eco-base-gke --region asia-east1
+          gcloud container clusters get-credentials softwareos-base-gke --region asia-east1
           kubectl apply -f k8s/quantum-simulator-job.yaml -n platform-02
 ```
 

@@ -1,14 +1,14 @@
-# eco-base - Complete Setup Guide
+# softwareos-base - Complete Setup Guide
 
 **Date**: February 21, 2026
-**Project**: eco-base
+**Project**: softwareos-base
 **Status**: Production Ready
 
 ---
 
 ## 🎯 Overview
 
-This guide provides complete instructions for deploying the eco-base infrastructure with all configurations, secrets, and monitoring systems.
+This guide provides complete instructions for deploying the softwareos-base infrastructure with all configurations, secrets, and monitoring systems.
 
 ---
 
@@ -49,8 +49,8 @@ All tokens and credentials are documented in `TOKENS_MANIFEST.md`. This file con
 
 ```bash
 # Clone the repository
-git clone https://github.com/indestructibleorg/eco-base.git
-cd eco-base
+git clone https://github.com/indestructibleorg/softwareos-base.git
+cd softwareos-base
 
 # Run the complete deployment script
 ./scripts/deploy_complete_infrastructure.sh
@@ -136,7 +136,7 @@ gcloud container clusters get-credentials eco-staging --region asia-east1
 ```bash
 kubectl create secret generic gcp-sa-key \
   --from-file=.gcp/eco-deployer-key.json \
-  --namespace=eco-base
+  --namespace=softwareos-base
 ```
 
 #### Supabase Secrets
@@ -148,7 +148,7 @@ kubectl create secret generic supabase-secrets \
   --from-literal=SUPABASE_DB_URL="postgresql://postgres:YOUR_PASSWORD@db.yrfxijooswpvdpdseswy.supabase.co:5432/postgres" \
   --from-literal=SUPABASE_JWT_SECRET="YOUR_JWT_SECRET" \
   --from-literal=SUPABASE_PROJECT_REF="yrfxijooswpvdpdseswy" \
-  --namespace=eco-base
+  --namespace=softwareos-base
 ```
 
 #### Cloudflare Certificate Secret
@@ -181,8 +181,8 @@ kubectl create secret generic grafana-secrets \
 
 ### Monitoring Stack
 
-- **Prometheus**: https://prometheus._cf-custom-hostname.autoecoops.io
-- **Grafana**: https://grafana._cf-custom-hostname.autoecoops.io
+- **Prometheus**: https://prometheus._cf-custom-hostname.softwareos.io
+- **Grafana**: https://grafana._cf-custom-hostname.softwareos.io
   - Username: `admin`
   - Password: `YOUR_GRAFANA_ADMIN_PASSWORD`
 
@@ -205,11 +205,11 @@ kubectl create secret generic grafana-secrets \
 
 ```bash
 # Check all secrets
-kubectl get secrets -n eco-base
+kubectl get secrets -n softwareos-base
 kubectl get secrets -n monitoring
 
 # Verify specific secret
-kubectl describe secret supabase-secrets -n eco-base
+kubectl describe secret supabase-secrets -n softwareos-base
 ```
 
 ### Verify Deployments
@@ -230,13 +230,13 @@ kubectl get ingress -n monitoring
 
 ### Verify Prometheus Scraping
 
-1. Access Prometheus: https://prometheus._cf-custom-hostname.autoecoops.io
+1. Access Prometheus: https://prometheus._cf-custom-hostname.softwareos.io
 2. Go to **Status → Targets**
 3. Verify `supabase-production` job is **UP**
 
 ### Verify Grafana Dashboards
 
-1. Access Grafana: https://grafana._cf-custom-hostname.autoecoops.io
+1. Access Grafana: https://grafana._cf-custom-hostname.softwareos.io
 2. Login with admin credentials
 3. Navigate to **Dashboards → Supabase → Supabase Overview**
 4. Verify metrics are displaying
@@ -304,7 +304,7 @@ export SUPABASE_PROJECT_REF="yrfxijooswpvdpdseswy"
 
 ### Cloudflare Environment Variables
 ```bash
-export CLOUDFLARE_CUSTOM_HOSTNAME="_cf-custom-hostname.autoecoops.io"
+export CLOUDFLARE_CUSTOM_HOSTNAME="_cf-custom-hostname.softwareos.io"
 export CLOUDFLARE_HOSTNAME_ID="21c5d22a-4512-485b-9557-8aa9fa7c96ed"
 ```
 
@@ -316,7 +316,7 @@ export CLOUDFLARE_HOSTNAME_ID="21c5d22a-4512-485b-9557-8aa9fa7c96ed"
 
 ```bash
 # Check if secrets exist
-kubectl get secrets -n eco-base
+kubectl get secrets -n softwareos-base
 kubectl get secrets -n monitoring
 
 # Reconfigure secrets
@@ -347,7 +347,7 @@ kubectl get secret cloudflare-origin-cert -n monitoring
 kubectl describe ingress prometheus-ingress -n monitoring
 
 # Test SSL certificate
-curl -v https://prometheus._cf-custom-hostname.autoecoops.io
+curl -v https://prometheus._cf-custom-hostname.softwareos.io
 ```
 
 ### Prometheus Not Scraping Supabase
@@ -403,4 +403,4 @@ For issues or questions:
 
 **End of Complete Setup Guide**
 
-🚀 Your eco-base infrastructure is ready for production!
+🚀 Your softwareos-base infrastructure is ready for production!

@@ -3,19 +3,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/dataops-engine
-    eco-base/urn: urn:eco-base:k8s:core:deployment:dataops-engine:sha256-cbdeca72b0172b83564e5f604f5d3591b543620e34bfabd153cd9378c0f6caf3
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/dataops-engine
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:dataops-engine:sha256-cbdeca72b0172b83564e5f604f5d3591b543620e34bfabd153cd9378c0f6caf3
   labels:
     app.kubernetes.io/component: api
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: dataops-engine
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: dataops-engine
   namespace: eco-dataops
 spec:
@@ -93,19 +93,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/dataops-pipeline
-    eco-base/urn: urn:eco-base:k8s:core:deployment:dataops-pipeline:sha256-5b1385931c4d5e048c31f6765546bb4beecd7a67ccb240d87426f516e3f8191c
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/dataops-pipeline
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:dataops-pipeline:sha256-5b1385931c4d5e048c31f6765546bb4beecd7a67ccb240d87426f516e3f8191c
   labels:
     app.kubernetes.io/component: worker
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: dataops-pipeline
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: dataops-pipeline
   namespace: eco-dataops
 spec:
@@ -147,19 +147,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/dataops-anomaly
-    eco-base/urn: urn:eco-base:k8s:core:deployment:dataops-anomaly:sha256-8612752457482b07bb1a5b5d51b338c48c9f852f9e69f6c74ecd3b0c37d29e7a
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/dataops-anomaly
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:dataops-anomaly:sha256-8612752457482b07bb1a5b5d51b338c48c9f852f9e69f6c74ecd3b0c37d29e7a
   labels:
     app.kubernetes.io/component: worker
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: dataops-anomaly
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: dataops-anomaly
   namespace: eco-dataops
 spec:

@@ -1,4 +1,4 @@
-// eco-base://supabase/functions/hello-world
+// softwareos-base://supabase/functions/hello-world
 // Basic hello-world endpoint for connectivity verification
 
 const corsHeaders = {
@@ -15,11 +15,11 @@ Deno.serve(async (req) => {
 
   const data = {
     message: `Hello ${name}!`,
-    service: "eco-base",
+    service: "softwareos-base",
     version: "1.1.0",
     timestamp: new Date().toISOString(),
-    uri: "eco-base://functions/hello-world",
-    urn: "urn:eco-base:functions:hello-world:v1",
+    uri: "softwareos-base://functions/hello-world",
+    urn: "urn:softwareos-base:functions:hello-world:v1",
   };
 
   return new Response(JSON.stringify(data, null, 2), {

@@ -10,7 +10,7 @@
 ## Reporting a Vulnerability
 
 1. **Do NOT** open a public issue for security vulnerabilities
-2. Use [GitHub Security Advisories](https://github.com/indestructibleorg/eco-base/security/advisories/new)
+2. Use [GitHub Security Advisories](https://github.com/indestructibleorg/softwareos-base/security/advisories/new)
 3. Include:
    - Description of the vulnerability
    - Steps to reproduce
@@ -46,4 +46,4 @@
 
 ## Contact
 
-security@autoecoops.io
+security@softwareos.io

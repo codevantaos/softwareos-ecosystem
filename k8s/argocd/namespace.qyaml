@@ -1,13 +1,13 @@
-# eco-base v1.0 — ArgoCD Namespace & RBAC
-# URI: eco-base://k8s/argocd/namespace
+# softwareos-base v1.0 — ArgoCD Namespace & RBAC
+# URI: softwareos-base://k8s/argocd/namespace
 apiVersion: v1
 kind: Namespace
 metadata:
   name: argocd
   labels:
     app.kubernetes.io/name: argocd
-    app.kubernetes.io/part-of: eco-base
-    app.kubernetes.io/managed-by: eco-base-yaml-toolkit-v1
+    app.kubernetes.io/part-of: softwareos-base
+    app.kubernetes.io/managed-by: softwareos-base-yaml-toolkit-v1
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -62,10 +62,10 @@ subjects:
 # YAML Toolkit v8 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "eco-argo-ns-0001-0001-000000000001"
-  uri: "eco-base://k8s/argocd/namespace"
-  urn: "urn:eco-base:k8s:argocd:namespace:eco-argo-ns-0001-0001-000000000001"
+  uri: "softwareos-base://k8s/argocd/namespace"
+  urn: "urn:softwareos-base:k8s:argocd:namespace:eco-argo-ns-0001-0001-000000000001"
   target_system: gke-production
-  cross_layer_binding: [argocd, ecosystem-staging, eco-base]
+  cross_layer_binding: [argocd, ecosystem-staging, softwareos-base]
   schema_version: v8
   generated_by: yaml-toolkit-v8
   created_at: "2025-02-20T00:00:00.000Z"
@@ -83,4 +83,4 @@ vector_alignment_map:
   alignment_model: BAAI/bge-large-en-v1.5
   coherence_vector_dim: 1024
   function_keyword: [argocd, gitops, sync, namespace, rbac, deployment-automation]
-  contextual_binding: "argocd-namespace -> [ecosystem-staging, eco-base]"
+  contextual_binding: "argocd-namespace -> [ecosystem-staging, softwareos-base]"

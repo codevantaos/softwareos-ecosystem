@@ -286,12 +286,12 @@ def test_metadata_governance_identity(manifest):
     meta = manifest["metadata"]
     assert meta.get("unique_id"), "Metadata 'unique_id' is missing or empty."
     uri = meta.get("uri", "")
-    assert uri.startswith("eco-base://"), (
-        f"Metadata 'uri' '{uri}' does not start with 'eco-base://'."
+    assert uri.startswith("softwareos-base://"), (
+        f"Metadata 'uri' '{uri}' does not start with 'softwareos-base://'."
     )
     urn = meta.get("urn", "")
-    assert urn.startswith("urn:eco-base:"), (
-        f"Metadata 'urn' '{urn}' does not start with 'urn:eco-base:'."
+    assert urn.startswith("urn:softwareos-base:"), (
+        f"Metadata 'urn' '{urn}' does not start with 'urn:softwareos-base:'."
     )
     sv = meta.get("schema_version", "")
     assert re.match(r"^\d+\.\d+\.\d+$", sv), (
@@ -493,7 +493,7 @@ def test_schema_array_items_have_type(input_schema, output_schema):
 @pytest.mark.skipif(not HAS_JSONSCHEMA, reason="jsonschema not installed")
 def test_sample_input_validates_against_schema(input_schema):
     sample = {
-        "repository": "indestructibleorg/eco-base",
+        "repository": "indestructibleorg/softwareos-base",
         "run_id": "22159820085",
         "github_token": "ghp_XXXX_EXAMPLE_TOKEN_FOR_TESTING_ONLY",
         "branch": "main",

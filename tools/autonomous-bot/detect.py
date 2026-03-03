@@ -86,7 +86,7 @@ if ci_conclusion == "failure":
         "type": "ci_failure",
         "severity": "high",
         "title": "CI/CD pipeline failed",
-        "description": "The eco-base CI/CD pipeline failed. Auto-fix engine will attempt remediation.",
+        "description": "The softwareos-base CI/CD pipeline failed. Auto-fix engine will attempt remediation.",
         "auto_fixable": True,
         "fix_strategy": "run_autofix_engine",
         "affected_paths": [".github/workflows/"],

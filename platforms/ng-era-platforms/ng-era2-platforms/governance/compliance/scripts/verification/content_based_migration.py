@@ -38,7 +38,7 @@ class ContentAnalysis:
     keywords: List[str]
     
     # L2: Contract Analysis
-    contracts_referenced: List[str]
+    softwareos-contracts_referenced: List[str]
     governance_layer: Optional[str]
     platform_references: List[str]
     
@@ -64,9 +64,9 @@ class ContentAnalyzer:
         
         # Define directory mappings based on content analysis
         self.directory_patterns = {
-            "ecosystem/contracts/": {
+            "ecosystem/softwareos-contracts/": {
                 "keywords": ["contract", "specification", "ontology", "definition", "schema"],
-                "purpose": "Defines governance contracts and specifications"
+                "purpose": "Defines governance softwareos-contracts and specifications"
             },
             "ecosystem/governance/": {
                 "keywords": ["governance-manifest", "governance-monitor", "init-governance"],
@@ -127,7 +127,7 @@ class ContentAnalyzer:
                 purpose="Binary file",
                 responsibility_boundary="Unknown",
                 keywords=[],
-                contracts_referenced=[],
+                softwareos-contracts_referenced=[],
                 governance_layer=None,
                 platform_references=[],
                 is_executable=False,
@@ -147,7 +147,7 @@ class ContentAnalyzer:
         purpose, responsibility_boundary, keywords = self._analyze_semantic(content, file_path)
         
         # L2: Contract Analysis
-        contracts, governance_layer, platform_refs = self._analyze_contracts(content)
+        softwareos-contracts, governance_layer, platform_refs = self._analyze_softwareos-contracts(content)
         
         # L3: Implementation Analysis
         is_executable, is_config, is_doc, has_gl_markers = self._analyze_implementation(content, file_path)
@@ -166,7 +166,7 @@ class ContentAnalyzer:
             purpose=purpose,
             responsibility_boundary=responsibility_boundary,
             keywords=keywords,
-            contracts_referenced=contracts,
+            softwareos-contracts_referenced=softwareos-contracts,
             governance_layer=governance_layer,
             platform_references=platform_refs,
             is_executable=is_executable,
@@ -239,9 +239,9 @@ class ContentAnalyzer:
         
         return purpose, responsibility_boundary, keywords
     
-    def _analyze_contracts(self, content: str) -> Tuple[List[str], Optional[str], List[str]]:
+    def _analyze_softwareos-contracts(self, content: str) -> Tuple[List[str], Optional[str], List[str]]:
         """L2: Contract Analysis"""
-        contracts = []
+        softwareos-contracts = []
         
         # Find contract references
         contract_patterns = [
@@ -252,7 +252,7 @@ class ContentAnalyzer:
         
         for pattern in contract_patterns:
             matches = re.findall(pattern, content, re.IGNORECASE)
-            contracts.extend(matches)
+            softwareos-contracts.extend(matches)
         
         # Determine governance layer
         if 'GL00-09' in content or 'enterprise-architecture' in content.lower():
@@ -271,7 +271,7 @@ class ContentAnalyzer:
         # Find platform references
         platform_refs = re.findall(r'gl\.\w+\.\w+-platform', content, re.IGNORECASE)
         
-        return list(set(contracts)), governance_layer, list(set(platform_refs))
+        return list(set(softwareos-contracts)), governance_layer, list(set(platform_refs))
     
     def _analyze_implementation(self, content: str, file_path: str) -> Tuple[bool, bool, bool, bool]:
         """L3: Implementation Analysis"""

@@ -391,8 +391,8 @@ spec:
 # metadata:
 #   name: team-frontend-prod
 #   labels:
-  eco-base/part-of: eco-base
-  eco-base/governance: aligned
+  softwareos-base/part-of: softwareos-base
+  softwareos-base/governance: aligned
 #     environment: prod
 #     tenant: platform-team
 #   annotations:

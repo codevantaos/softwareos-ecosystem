@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# eco-base v1.0 — Argo CD Automated Installation
-# URI: eco-base://scripts/argocd-install
+# softwareos-base v1.0 — Argo CD Automated Installation
+# URI: softwareos-base://scripts/argocd-install
 #
 # Usage:
 #   ./scripts/argocd-install.sh                    # Install with defaults
@@ -36,7 +36,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 echo "╔══════════════════════════════════════════════════════════╗"
-echo "║  eco-base — Argo CD Installation               ║"
+echo "║  softwareos-base — Argo CD Installation               ║"
 echo "║  Version: ${ARGOCD_VERSION}                             ║"
 echo "╚══════════════════════════════════════════════════════════╝"
 echo ""
@@ -126,24 +126,24 @@ echo ""
 
 # ── Step 6: Configure repository credentials ────────────────
 echo "[6/7] Configuring repository access..."
-if kubectl get secret argocd-repo-eco-base -n "${ARGOCD_NAMESPACE}" &>/dev/null; then
+if kubectl get secret argocd-repo-softwareos-base -n "${ARGOCD_NAMESPACE}" &>/dev/null; then
   echo "  Repository secret already exists — skipping"
 else
   echo "  Repository secret not found."
   echo "  To configure, run one of:"
   echo ""
   echo "  # Option A: HTTPS with PAT"
-  echo "  kubectl create secret generic argocd-repo-eco-base \&quot;
+  echo "  kubectl create secret generic argocd-repo-softwareos-base \&quot;
   echo "    --from-literal=type=git \&quot;
-  echo "    --from-literal=url=https://github.com/indestructibleorg/eco-base \&quot;
+  echo "    --from-literal=url=https://github.com/indestructibleorg/softwareos-base \&quot;
   echo "    --from-literal=username=<GITHUB_USERNAME> \&quot;
   echo "    --from-literal=password=<GITHUB_PAT> \&quot;
   echo "    -n argocd"
   echo ""
   echo "  # Option B: SSH"
-  echo "  kubectl create secret generic argocd-repo-eco-base \&quot;
+  echo "  kubectl create secret generic argocd-repo-softwareos-base \&quot;
   echo "    --from-literal=type=git \&quot;
-  echo "    --from-literal=url=git@github.com:indestructibleorg/eco-base.git \&quot;
+  echo "    --from-literal=url=git@github.com:indestructibleorg/softwareos-base.git \&quot;
   echo "    --from-file=sshPrivateKey=~/.ssh/id_ed25519 \&quot;
   echo "    -n argocd"
   echo ""

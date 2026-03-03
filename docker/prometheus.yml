@@ -1,5 +1,5 @@
-# eco-base v1.0 — Prometheus Scrape Configuration
-# URI: eco-base://monitoring/prometheus/config
+# softwareos-base v1.0 — Prometheus Scrape Configuration
+# URI: softwareos-base://monitoring/prometheus/config
 # Used by: docker/docker-compose.yml → prometheus service
 
 global:

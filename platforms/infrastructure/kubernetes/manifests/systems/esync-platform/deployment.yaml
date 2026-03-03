@@ -12,8 +12,8 @@ metadata:
   name: esync-platform
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: esync-platform
     app.kubernetes.io/app.kubernetes.io/component: platform
     app.kubernetes.io/part-of: machine-native-ops
@@ -27,8 +27,8 @@ spec:
   template:
     
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         app.kubernetes.io/name: esync-platform
         app.kubernetes.io/app.kubernetes.io/component: platform
         governance.machinenativeops.io/layer: "platform"

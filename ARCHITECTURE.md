@@ -89,7 +89,7 @@ ECO Base (IndestructibleAutoOps) is an enterprise-grade Kubernetes-native platfo
 
 | Module | Path | Namespace | Description |
 |--------|------|-----------|-------------|
-| eco-core | platforms/eco-core | infra | Shared kernel (auth, memory-hub, event-bus) |
+| eco-core | platforms/eco-core | infra | Shared kernel (auth, codevantaos-memory, codevantaos-event) |
 | eco-govops | platforms/eco-govops | platform-01 | Governance & compliance operations |
 | eco-seccompops | platforms/eco-seccompops | platform-01 | Security & compliance operations |
 | eco-dataops | platforms/eco-dataops | platform-02 | Data pipeline operations |
@@ -101,7 +101,7 @@ ECO Base (IndestructibleAutoOps) is an enterprise-grade Kubernetes-native platfo
 ## GitOps Configuration
 
 **Argo CD Applications**:
-- `eco-base-platforms` — Synced / Healthy (auto-sync: prune + selfHeal)
+- `softwareos-base-platforms` — Synced / Healthy (auto-sync: prune + selfHeal)
 - ApplicationSet `eco-platforms` — 6 ECO platform apps
 - ApplicationSet `eco-infra-tools` — 4 infrastructure tool apps
 
@@ -145,7 +145,7 @@ ECO Base (IndestructibleAutoOps) is an enterprise-grade Kubernetes-native platfo
 ## Repository Structure
 
 ```
-indestructibleorg/eco-base/
+indestructibleorg/softwareos-base/
 ├── platforms/
 │   ├── eco-core/
 │   ├── eco-govops/
@@ -210,8 +210,8 @@ indestructibleorg/eco-base/
 
 | 元件 | 配置 | 狀態 |
 |------|------|------|
-| AppProject `eco-platforms` | sourceRepos: indestructibleorg/eco-base, destinations: platform-01/02/03 | Applied |
-| AppProject `eco-infra` | sourceRepos: indestructibleorg/eco-base, destinations: infra/monitoring/keda/flagger-system | Applied |
+| AppProject `eco-platforms` | sourceRepos: indestructibleorg/softwareos-base, destinations: platform-01/02/03 | Applied |
+| AppProject `eco-infra` | sourceRepos: indestructibleorg/softwareos-base, destinations: infra/monitoring/keda/flagger-system | Applied |
 | Diff Gate CI | `.github/workflows/argocd-diff-gate.yml` (argocd-diff + drift-detection jobs) | Active |
 
 ### 4-B: 供應鏈 Gate

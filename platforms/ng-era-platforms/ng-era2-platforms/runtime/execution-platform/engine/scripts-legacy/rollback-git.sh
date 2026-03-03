@@ -61,10 +61,10 @@ if [ -f ".last-backup" ]; then
                 cp -r "$BACKUP_DIR/core" workspace/src/
             fi
             
-            if [ -d "$BACKUP_DIR/contracts" ]; then
-                echo -e "${YELLOW}恢復 workspace/src/contracts/...${NC}"
-                rm -rf workspace/src/contracts
-                cp -r "$BACKUP_DIR/contracts" workspace/src/
+            if [ -d "$BACKUP_DIR/softwareos-contracts" ]; then
+                echo -e "${YELLOW}恢復 workspace/src/softwareos-contracts/...${NC}"
+                rm -rf workspace/src/softwareos-contracts
+                cp -r "$BACKUP_DIR/softwareos-contracts" workspace/src/
             fi
             
             if [ -d "$BACKUP_DIR/web" ]; then

@@ -141,7 +141,7 @@ class RefactorPlaybookGenerator:
 範例格式：
 ### 受影響目錄
 - services/gateway/
-- core/machinenativenops.contracts/
+- core/machinenativenops.softwareos-contracts/
 - automation/intelligent/
 ### 結構示意（僅涵蓋變更區域）
 ```

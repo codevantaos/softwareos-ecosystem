@@ -1,4 +1,4 @@
-# eco-base - Progress Summary
+# softwareos-base - Progress Summary
 
 **Date**: February 21, 2026
 **Latest Commit**: afca737 (OAuth and SSD quota automation workflows and scripts)
@@ -7,7 +7,7 @@
 
 ## Executive Summary
 
-The eco-base GKE deployment and security remediation project has made significant progress. All infrastructure automation scripts, documentation, and workflows have been completed. The project is now blocked on browser-based GCP Console operations (SSD quota increase and OAuth consent screen configuration) that require manual intervention.
+The softwareos-base GKE deployment and security remediation project has made significant progress. All infrastructure automation scripts, documentation, and workflows have been completed. The project is now blocked on browser-based GCP Console operations (SSD quota increase and OAuth consent screen configuration) that require manual intervention.
 
 ---
 
@@ -45,8 +45,8 @@ The eco-base GKE deployment and security remediation project has made significan
 
 - **Status**: ✅ RUNNING (6/6 pods)
 - **Endpoints**: 
-  - https://staging.autoecoops.io/
-  - <https://api-staging.autoecoops.io/>
+  - https://staging.softwareos.io/
+  - <https://api-staging.softwareos.io/>
 - **Pods**: gateway, ai, api, web, postgres, redis (all healthy)
 
 #### Production Cluster
@@ -250,8 +250,8 @@ The eco-base GKE deployment and security remediation project has made significan
 
 ## Contact Information
 
-- **Repository**: https://github.com/indestructibleorg/eco-base
-- **Project**: eco-base
+- **Repository**: https://github.com/indestructibleorg/softwareos-base
+- **Project**: softwareos-base
 - **GCP Project**: my-project-ops-1991
 - **Region**: asia-east1
 

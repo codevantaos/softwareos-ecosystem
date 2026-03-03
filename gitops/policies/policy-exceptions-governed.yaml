@@ -13,7 +13,7 @@ metadata:
   annotations:
     eco.policy/expires: "2026-06-01"
     eco.policy/owner: "platform-team"
-    eco.policy/issue: "https://github.com/indestructibleorg/eco-base/issues/1"
+    eco.policy/issue: "https://github.com/indestructibleorg/softwareos-base/issues/1"
     eco.policy/reason: "kube-system components managed by GKE, not subject to ECO resource limits"
     eco.policy/review-date: "2026-05-01"
 spec:
@@ -46,7 +46,7 @@ metadata:
   annotations:
     eco.policy/expires: "2026-05-01"
     eco.policy/owner: "platform-team"
-    eco.policy/issue: "https://github.com/indestructibleorg/eco-base/issues/2"
+    eco.policy/issue: "https://github.com/indestructibleorg/softwareos-base/issues/2"
     eco.policy/reason: "Prometheus/Grafana/Loki use upstream Helm charts; resource limits defined in Helm values, not pod spec annotations"
     eco.policy/review-date: "2026-04-01"
 spec:
@@ -77,7 +77,7 @@ metadata:
   annotations:
     eco.policy/expires: "2026-04-01"
     eco.policy/owner: "platform-team"
-    eco.policy/issue: "https://github.com/indestructibleorg/eco-base/issues/3"
+    eco.policy/issue: "https://github.com/indestructibleorg/softwareos-base/issues/3"
     eco.policy/reason: "JetStream StatefulSet requires root for volume mount; track upstream fix"
     eco.policy/review-date: "2026-03-15"
 spec:
@@ -105,7 +105,7 @@ metadata:
   annotations:
     eco.policy/expires: "2026-04-15"
     eco.policy/owner: "platform-team"
-    eco.policy/issue: "https://github.com/indestructibleorg/eco-base/issues/4"
+    eco.policy/issue: "https://github.com/indestructibleorg/softwareos-base/issues/4"
     eco.policy/reason: "Tekton upstream Helm chart; labels and resource limits managed by chart maintainer"
     eco.policy/review-date: "2026-04-01"
 spec:
@@ -134,7 +134,7 @@ metadata:
   annotations:
     eco.policy/expires: "2026-04-15"
     eco.policy/owner: "platform-team"
-    eco.policy/issue: "https://github.com/indestructibleorg/eco-base/issues/5"
+    eco.policy/issue: "https://github.com/indestructibleorg/softwareos-base/issues/5"
     eco.policy/reason: "Harbor upstream Helm chart; resource limits and labels managed by chart"
     eco.policy/review-date: "2026-04-01"
 spec:
@@ -165,7 +165,7 @@ metadata:
   annotations:
     eco.policy/expires: "2026-04-15"
     eco.policy/owner: "platform-team"
-    eco.policy/issue: "https://github.com/indestructibleorg/eco-base/issues/6"
+    eco.policy/issue: "https://github.com/indestructibleorg/softwareos-base/issues/6"
     eco.policy/reason: "Argo CD upstream Helm chart; resource limits and labels managed by chart"
     eco.policy/review-date: "2026-04-01"
 spec:
@@ -193,7 +193,7 @@ metadata:
   annotations:
     eco.policy/expires: "2026-04-15"
     eco.policy/owner: "platform-team"
-    eco.policy/issue: "https://github.com/indestructibleorg/eco-base/issues/7"
+    eco.policy/issue: "https://github.com/indestructibleorg/softwareos-base/issues/7"
     eco.policy/reason: "Gatekeeper system namespace; managed by OPA team, not ECO policies"
     eco.policy/review-date: "2026-04-01"
 spec:
@@ -221,7 +221,7 @@ metadata:
   annotations:
     eco.policy/expires: "2026-04-15"
     eco.policy/owner: "platform-team"
-    eco.policy/issue: "https://github.com/indestructibleorg/eco-base/issues/8"
+    eco.policy/issue: "https://github.com/indestructibleorg/softwareos-base/issues/8"
     eco.policy/reason: "KEDA upstream Helm chart; resource limits managed by chart"
     eco.policy/review-date: "2026-04-01"
 spec:
@@ -249,7 +249,7 @@ metadata:
   annotations:
     eco.policy/expires: "2026-04-15"
     eco.policy/owner: "platform-team"
-    eco.policy/issue: "https://github.com/indestructibleorg/eco-base/issues/9"
+    eco.policy/issue: "https://github.com/indestructibleorg/softwareos-base/issues/9"
     eco.policy/reason: "Flagger upstream Helm chart; resource limits managed by chart"
     eco.policy/review-date: "2026-04-01"
 spec:

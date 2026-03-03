@@ -1,5 +1,5 @@
--- eco-base v1.0 — Schema Alignment Migration
--- URI: eco-base://supabase/migrations/002
+-- softwareos-base v1.0 — Schema Alignment Migration
+-- URI: softwareos-base://supabase/migrations/002
 -- Aligns DB schema with packages/shared-types entities (Step 6 → Step 7)
 
 -- ─── Users: add metadata + last_sign_in_at ─────────────────────────────────

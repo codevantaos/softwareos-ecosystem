@@ -50,19 +50,19 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/backup-compliance-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:backup-compliance-config:sha256-ac0a76e41e920bcc7766adb13b4d8abff0e6cd8bc5d86fa388f579408b68787d
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/backup-compliance-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:backup-compliance-config:sha256-ac0a76e41e920bcc7766adb13b4d8abff0e6cd8bc5d86fa388f579408b68787d
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: backup-compliance-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: backup-compliance-config
   namespace: velero
 ---
@@ -70,19 +70,19 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/backup-compliance-report
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:backup-compliance-report:sha256-c96ed5bbeb4a3cd5d52f6e4e79602d95685b328ca0da2217f5229f14ee8ed511
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/backup-compliance-report
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:backup-compliance-report:sha256-c96ed5bbeb4a3cd5d52f6e4e79602d95685b328ca0da2217f5229f14ee8ed511
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: backup-compliance-report
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: backup-compliance-report
   namespace: velero
 spec:

@@ -129,18 +129,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/cross-platform-storage-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:cross-platform-storage-config:sha256-86d5095047843c5b29bc5b12c7f586b453f3777ccd139a9fc8b2374e9a343956
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/cross-platform-storage-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:cross-platform-storage-config:sha256-86d5095047843c5b29bc5b12c7f586b453f3777ccd139a9fc8b2374e9a343956
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: cross-platform-storage-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: cross-platform-storage-config
   namespace: production

@@ -3,21 +3,21 @@ apiVersion: v1
 kind: Secret
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/secret/alertmanager-pagerduty
-    eco-base/urn: urn:eco-base:k8s:core:secret:alertmanager-pagerduty:sha256-22af890b6d7958c75fe03ccef4e4e4afd9397da3b8e4ad9b3e07c4cba8a06f68
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/secret/alertmanager-pagerduty
+    softwareos-base/urn: urn:softwareos-base:k8s:core:secret:alertmanager-pagerduty:sha256-22af890b6d7958c75fe03ccef4e4e4afd9397da3b8e4ad9b3e07c4cba8a06f68
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: alertmanager-pagerduty
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: monitoring
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: alertmanager-pagerduty
   namespace: default
 stringData:
@@ -79,21 +79,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/alertmanager-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:alertmanager-config:sha256-4909913e3f66ea933e5cca9a7bc2cd2b61d6aef382f1be8eac5d4a1265e8c220
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/alertmanager-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:alertmanager-config:sha256-4909913e3f66ea933e5cca9a7bc2cd2b61d6aef382f1be8eac5d4a1265e8c220
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: alertmanager-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: monitoring
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: alertmanager-config
   namespace: default
 ---
@@ -101,21 +101,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/alertmanager
-    eco-base/urn: urn:eco-base:k8s:core:deployment:alertmanager:sha256-460319379f7f39fad382c7b855c6a8298774d7665bbd8ea5a82f49b062284faa
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/alertmanager
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:alertmanager:sha256-460319379f7f39fad382c7b855c6a8298774d7665bbd8ea5a82f49b062284faa
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: alertmanager
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: alertmanager
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: alertmanager
   namespace: default
 spec:
@@ -188,21 +188,21 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/alertmanager
-    eco-base/urn: urn:eco-base:k8s:core:service:alertmanager:sha256-61c0039e3deffd50eedc38ef45714d340cc5c77a0008f0fe0ef76d8cb72dd8a6
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/alertmanager
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:alertmanager:sha256-61c0039e3deffd50eedc38ef45714d340cc5c77a0008f0fe0ef76d8cb72dd8a6
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: alertmanager
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: alertmanager
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: alertmanager
   namespace: default
 spec:
@@ -300,20 +300,20 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/prometheus-alerts
-    eco-base/urn: urn:eco-base:k8s:core:configmap:prometheus-alerts:sha256-512d77fdca04257492e8774e0c89ba42a14c327157ffc869f9669ab0cdd90bf4
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/prometheus-alerts
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:prometheus-alerts:sha256-512d77fdca04257492e8774e0c89ba42a14c327157ffc869f9669ab0cdd90bf4
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: prometheus-alerts
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: monitoring
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: prometheus-alerts
   namespace: default

@@ -12,8 +12,8 @@ metadata:
   name: kubernetes-manifests-index
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: kubernetes-manifests
     app.kubernetes.io/app.kubernetes.io/component: index
     governance.machinenativeops.io/charter-version: "2.0.0"

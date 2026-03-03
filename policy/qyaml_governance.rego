@@ -32,15 +32,15 @@ deny[msg] {
 deny[msg] {
     input.document_metadata
     uri := input.document_metadata.uri
-    not startswith(uri, "eco-base://")
-    msg := sprintf("Invalid URI format (expected eco-base://): %s", [uri])
+    not startswith(uri, "softwareos-base://")
+    msg := sprintf("Invalid URI format (expected softwareos-base://): %s", [uri])
 }
 
 deny[msg] {
     input.document_metadata
     urn := input.document_metadata.urn
-    not startswith(urn, "urn:eco-base:")
-    msg := sprintf("Invalid URN format (expected urn:eco-base:): %s", [urn])
+    not startswith(urn, "urn:softwareos-base:")
+    msg := sprintf("Invalid URN format (expected urn:softwareos-base:): %s", [urn])
 }
 
 # Namespace check: only for K8s resource documents (not governance blocks)
@@ -49,13 +49,13 @@ deny[msg] {
     input.kind
     ns := input.metadata.namespace
     ns != ""
-    ns != "eco-base"
-    ns != "eco-base-staging"
+    ns != "softwareos-base"
+    ns != "softwareos-base-staging"
     ns != "argocd"
     ns != "monitoring"
     ns != "cert-manager"
     ns != "kube-system"
-    msg := sprintf("Invalid namespace: %s (expected eco-base or eco-base-staging)", [ns])
+    msg := sprintf("Invalid namespace: %s (expected softwareos-base or softwareos-base-staging)", [ns])
 }
 
 warn[msg] {

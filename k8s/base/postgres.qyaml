@@ -1,13 +1,13 @@
-# eco-base v1.0 - PostgreSQL StatefulSet
+# softwareos-base v1.0 - PostgreSQL StatefulSet
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: postgres
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app.kubernetes.io/name: postgres
     app.kubernetes.io/component: database
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
 spec:
   serviceName: postgres-svc
   replicas: 1
@@ -38,7 +38,7 @@ spec:
                   name: eco-secrets
                   key: ECO_POSTGRES_PASSWORD
             - name: POSTGRES_DB
-              value: "eco-base"
+              value: "softwareos-base"
             - name: PGDATA
               value: /var/lib/postgresql/data/pgdata
           resources:
@@ -53,12 +53,12 @@ spec:
               mountPath: /var/lib/postgresql/data
           readinessProbe:
             exec:
-              command: ["pg_isready", "-U", "eco-base"]
+              command: ["pg_isready", "-U", "softwareos-base"]
             initialDelaySeconds: 10
             periodSeconds: 10
           livenessProbe:
             exec:
-              command: ["pg_isready", "-U", "eco-base"]
+              command: ["pg_isready", "-U", "softwareos-base"]
             initialDelaySeconds: 30
             periodSeconds: 30
   volumeClaimTemplates:
@@ -75,7 +75,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgres-svc
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app.kubernetes.io/name: postgres
 spec:
@@ -90,8 +90,8 @@ spec:
 # YAML Toolkit v8 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "eco-pg-0001-0001-000000000001"
-  uri: "eco-base://k8s/eco-base/statefulset/postgres"
-  urn: "urn:eco-base:k8s:eco-base:statefulset:postgres:eco-pg-0001-0001-000000000001"
+  uri: "softwareos-base://k8s/softwareos-base/statefulset/postgres"
+  urn: "urn:softwareos-base:k8s:softwareos-base:statefulset:postgres:eco-pg-0001-0001-000000000001"
   target_system: gke-production
   cross_layer_binding: [api-gateway]
   schema_version: v8
@@ -103,7 +103,7 @@ governance_info:
   compliance_tags: [zero-trust, soc2, internal, stateful, database]
   lifecycle_policy: active
 registry_binding:
-  service_endpoint: "postgres://postgres-svc.eco-base.svc.cluster.local:5432"
+  service_endpoint: "postgres://postgres-svc.softwareos-base.svc.cluster.local:5432"
   discovery_protocol: k8s-dns
   health_check_path: "n/a"
   registry_ttl: 30

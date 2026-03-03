@@ -1,6 +1,6 @@
-"""eco-base v1.0 — Application Factory.
+"""softwareos-base v1.0 — Application Factory.
 
-URI: eco-base://src/app
+URI: softwareos-base://src/app
 
 Provides:
 - create_app() factory for FastAPI application
@@ -126,7 +126,7 @@ def create_app() -> FastAPI:
         await app.state.api_proxy.close()
 
     app = FastAPI(
-        title="eco-base AI Service",
+        title="softwareos-base AI Service",
         version=VERSION,
         docs_url="/docs" if ENVIRONMENT != "production" else None,
         lifespan=lifespan,
@@ -182,8 +182,8 @@ def create_app() -> FastAPI:
             "service": "ai",
             "version": VERSION,
             "engines": sorted(engines),
-            "uri": "eco-base://backend/ai/health",
-            "urn": f"urn:eco-base:backend:ai:health:{uuid.uuid1()}",
+            "uri": "softwareos-base://backend/ai/health",
+            "urn": f"urn:softwareos-base:backend:ai:health:{uuid.uuid1()}",
             "uptime_seconds": round(uptime, 2),
             "timestamp": datetime.now(timezone.utc).isoformat(),
         }

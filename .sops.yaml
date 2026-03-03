@@ -11,12 +11,12 @@
 creation_rules:
   # Production secrets — require GCP KMS key
   - path_regex: secrets/prod/.*\.yaml$
-    gcp_kms: projects/eco-base-prod/locations/global/keyRings/sops-keyring/cryptoKeys/sops-key
+    gcp_kms: projects/softwareos-base-prod/locations/global/keyRings/sops-keyring/cryptoKeys/sops-key
     encrypted_regex: '^(data|stringData|password|token|key|secret|credential)$'
 
   # Staging secrets — GCP KMS staging key
   - path_regex: secrets/staging/.*\.yaml$
-    gcp_kms: projects/eco-base-staging/locations/global/keyRings/sops-keyring/cryptoKeys/sops-key
+    gcp_kms: projects/softwareos-base-staging/locations/global/keyRings/sops-keyring/cryptoKeys/sops-key
     encrypted_regex: '^(data|stringData|password|token|key|secret|credential)$'
 
   # Development secrets — age key (local dev)
@@ -26,7 +26,7 @@ creation_rules:
 
   # Kubernetes sealed secrets manifest pattern
   - path_regex: k8s/.*\.enc\.yaml$
-    gcp_kms: projects/eco-base-prod/locations/global/keyRings/sops-keyring/cryptoKeys/sops-key
+    gcp_kms: projects/softwareos-base-prod/locations/global/keyRings/sops-keyring/cryptoKeys/sops-key
 
   # Default fallback — age key
   - path_regex: .*\.enc\.yaml$

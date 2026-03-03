@@ -64,7 +64,7 @@ gl-platform-services/
 │   ├── adapters/                # External adapters
 │   └── utils/                   # Utility functions
 ├── governance/                   # Governance compliance
-│   ├── contracts/               # Layer contracts
+│   ├── softwareos-contracts/               # Layer softwareos-contracts
 │   ├── policies/                # Enforcement policies
 │   └── validators/              # Validation rules
 ├── configs/                      # Configuration files
@@ -137,7 +137,7 @@ Other layers can use platform services through:
 
 ## Dependencies
 
-**Incoming**: GL00-09 (Enterprise Architecture) - governance contracts only
+**Incoming**: GL00-09 (Enterprise Architecture) - governance softwareos-contracts only
 **Outgoing**: GL50-59 (Observability), GL60-80 (Governance Compliance), GL81-83 (Extension Services), GL90-99 (Meta Specifications)
 
 **Forbidden Dependencies**:
@@ -147,7 +147,7 @@ Other layers can use platform services through:
 ## Interaction Rules
 
 ### Allowed Interactions
-- ✅ Consume governance contracts from GL00-09
+- ✅ Consume governance softwareos-contracts from GL00-09
 - ✅ Provide platform services to lower layers
 - ✅ Coordinate service discovery
 - ✅ Manage external integrations
@@ -162,7 +162,7 @@ Other layers can use platform services through:
 
 ## Compliance
 
-This layer is **REGULATORY** - all services must follow defined contracts and policies.
+This layer is **REGULATORY** - all services must follow defined softwareos-contracts and policies.
 
 ## Version
 

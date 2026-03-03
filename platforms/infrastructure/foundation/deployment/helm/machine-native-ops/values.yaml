@@ -13,8 +13,8 @@ metadata:
   name: ""
   description: ""
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
 
 global:
   # Project and environment settings
@@ -29,8 +29,8 @@ global:
   
   # Common labels
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
   
   # Common annotations
   annotations: {}
@@ -328,6 +328,6 @@ serviceMonitor:
   interval: 30s
   scrapeTimeout: 10s
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     release: prometheus

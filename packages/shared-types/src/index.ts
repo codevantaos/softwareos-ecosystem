@@ -4,6 +4,6 @@ export type * from "./entities/platform";
 export type * from "./entities/yaml";
 export type * from "./entities/ai";
 
-// API contracts
+// API softwareos-contracts
 export type * from "./api/requests";
 export type * from "./api/responses";

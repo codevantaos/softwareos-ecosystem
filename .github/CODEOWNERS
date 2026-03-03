@@ -1,5 +1,5 @@
-# CODEOWNERS — eco-base
-# URI: eco-base://github/codeowners
+# CODEOWNERS — softwareos-base
+# URI: softwareos-base://github/codeowners
 #
 # Defense Matrix Layer 2: Human-in-the-Loop Gate
 # Sensitive paths ALWAYS require human approval — autonomous bot cannot bypass.
@@ -62,5 +62,5 @@ ecosystem/                              @indestructibleorg/platform-team
 
 # ── AUTO-GENERATED: Bot PRs on non-sensitive paths bypass CODEOWNERS ────────
 # Files modified by github-actions[bot] autonomous-bot on non-sensitive paths
-# are exempted via branch protection bypass rules for the eco-base-bot app.
+# are exempted via branch protection bypass rules for the softwareos-base-bot app.
 # Sensitive paths above ALWAYS require human review regardless of bot status.

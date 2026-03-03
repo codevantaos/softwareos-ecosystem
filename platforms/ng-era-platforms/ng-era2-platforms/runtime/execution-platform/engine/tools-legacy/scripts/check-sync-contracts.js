@@ -9,7 +9,7 @@
 /**
  * SynergyMesh Sync Contract Checker
  * 
- * Validates that sync_contracts between config files are maintained.
+ * Validates that sync_softwareos-contracts between config files are maintained.
  * Ensures referential integrity across the configuration hierarchy.
  */
 
@@ -26,7 +26,7 @@ const CONFIG_HIERARCHY = [
   'config/safety-mechanisms.yaml'
 ];
 
-// Sync contracts define what each config can reference
+// Sync softwareos-contracts define what each config can reference
 const SYNC_CONTRACTS = {
   'dependencies.yaml': {
     can_reference: ['environment.yaml'],
@@ -216,7 +216,7 @@ function checkSyncContracts() {
     log('\n❌ Sync contract check failed', 'red');
     process.exit(1);
   } else {
-    log('\n✅ All sync contracts valid', 'green');
+    log('\n✅ All sync softwareos-contracts valid', 'green');
     process.exit(0);
   }
 }

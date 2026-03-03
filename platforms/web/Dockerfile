@@ -18,7 +18,7 @@ FROM nginx:1.29-alpine AS production
 LABEL org.opencontainers.image.title="IndestructibleEco Web Frontend" \
       org.opencontainers.image.version="1.0.2" \
       org.opencontainers.image.vendor="IndestructibleOrg" \
-      org.opencontainers.image.source="https://github.com/indestructibleorg/eco-base"
+      org.opencontainers.image.source="https://github.com/indestructibleorg/softwareos-base"
 
 # Fix nginx to run as non-root (uid 101 = nginx user in alpine)
 # Create required cache directories with correct permissions

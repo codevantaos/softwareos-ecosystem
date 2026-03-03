@@ -1,8 +1,8 @@
-# OAuth Consent Screen Setup Guide - eco-base
+# OAuth Consent Screen Setup Guide - softwareos-base
 
 ## Overview
 
-This guide explains how to configure the OAuth consent screen for the eco-base platform authentication.
+This guide explains how to configure the OAuth consent screen for the softwareos-base platform authentication.
 
 ## Prerequisites
 
@@ -36,16 +36,16 @@ Choose the appropriate user type:
 ### Step 3: Fill in App Information
 
 **Required Fields:**
-- **App name**: `eco-base`
-- **User support email**: `support@eco-base.io`
-- **Developer contact email**: `dev@eco-base.io`
+- **App name**: `softwareos-base`
+- **User support email**: `support@softwareos-base.io`
+- **Developer contact email**: `dev@softwareos-base.io`
 
 **Optional Fields:**
 - **App logo**: Upload your company logo
-- **Application home page**: `https://autoecoops.io`
-- **Application privacy policy link**: `https://autoecoops.io/privacy`
-- **Application terms of service link**: `https://autoecoops.io/terms`
-- **Authorized domains**: `autoecoops.io`, `indestructibleorg.github.io`
+- **Application home page**: `https://softwareos.io`
+- **Application privacy policy link**: `https://softwareos.io/privacy`
+- **Application terms of service link**: `https://softwareos.io/terms`
+- **Authorized domains**: `softwareos.io`, `indestructibleorg.github.io`
 
 ### Step 4: Configure Scopes
 
@@ -104,8 +104,8 @@ After consent screen is configured, create OAuth clients:
    - **Web application**: For web frontend
    - **Desktop app**: For CLI tools
 4. Configure authorized redirect URIs:
-   - `https://staging.autoecoops.io/auth/callback`
-   - `https://production.autoecoops.io/auth/callback`
+   - `https://staging.softwareos.io/auth/callback`
+   - `https://production.softwareos.io/auth/callback`
    - `http://localhost:3000/auth/callback` (development)
 5. Save client ID and client secret
 
@@ -115,7 +115,7 @@ After consent screen is configured, create OAuth clients:
 2. Click "Create Service Account"
 3. Fill in details:
    - Name: `eco-auth-sa`
-   - Description: `eco-base authentication service account`
+   - Description: `softwareos-base authentication service account`
 4. Assign roles:
    - `roles/iam.serviceAccountUser`
    - `roles/cloudsql.client` (if using Cloud SQL)
@@ -155,7 +155,7 @@ open http://localhost:3000/auth/login
 kubectl apply -f k8s/staging/
 
 # Test OAuth flow
-curl -X POST https://staging.autoecoops.io/auth/callback \
+curl -X POST https://staging.softwareos.io/auth/callback \
   -H "Content-Type: application/json" \
   -d '{"code": "auth-code"}'
 ```
@@ -197,7 +197,7 @@ If OAuth client is not working:
 
 - **Owner**: indestructibleorg
 - **Policy**: zero-trust
-- **Compliance**: eco-base v1.0
+- **Compliance**: softwareos-base v1.0
 - **Audit**: All OAuth configurations logged in GCP
 
 ## References

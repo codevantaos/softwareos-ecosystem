@@ -9,7 +9,7 @@
 #   --active-token TOKEN     Active PAT used to call GitHub API (required)
 #   --new-token    TOKEN     New replacement PAT to set in Secrets (optional)
 #   --expiry       DATE      Expiry date of new PAT in YYYY-MM-DD format (optional)
-#   --repo         OWNER/REPO  Target repository (default: indestructibleorg/eco-base)
+#   --repo         OWNER/REPO  Target repository (default: indestructibleorg/softwareos-base)
 #   --dry-run                Preview all actions without executing
 #   --skip-revoke            Skip revocation step (only update Secrets)
 #   --skip-secrets           Skip Secrets update step (only revoke)
@@ -34,7 +34,7 @@
 set -euo pipefail
 
 # ── Defaults ──────────────────────────────────────────────────────────────────
-REPO="${TARGET_REPO:-indestructibleorg/eco-base}"
+REPO="${TARGET_REPO:-indestructibleorg/softwareos-base}"
 ACTIVE_TOKEN="${ACTIVE_TOKEN:-}"
 NEW_TOKEN="${NEW_PAT:-}"
 EXPIRY="${PAT_EXPIRY_DATE:-}"

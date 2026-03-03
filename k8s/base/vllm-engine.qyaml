@@ -1,13 +1,13 @@
-# eco-base v1.0 - vLLM Inference Engine StatefulSet
+# softwareos-base v1.0 - vLLM Inference Engine StatefulSet
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: vllm
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app.kubernetes.io/name: vllm
     app.kubernetes.io/component: inference-engine
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
 spec:
   serviceName: vllm-svc
   replicas: 1
@@ -105,7 +105,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: vllm-svc
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app.kubernetes.io/name: vllm
 spec:
@@ -120,8 +120,8 @@ spec:
 # YAML Toolkit v8 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "eco-vl-0001-0001-000000000001"
-  uri: "eco-base://k8s/eco-base/statefulset/vllm"
-  urn: "urn:eco-base:k8s:eco-base:statefulset:vllm:eco-vl-0001-0001-000000000001"
+  uri: "softwareos-base://k8s/softwareos-base/statefulset/vllm"
+  urn: "urn:softwareos-base:k8s:softwareos-base:statefulset:vllm:eco-vl-0001-0001-000000000001"
   target_system: gke-production
   cross_layer_binding: [api-gateway, ai-service]
   schema_version: v8
@@ -133,7 +133,7 @@ governance_info:
   compliance_tags: [zero-trust, soc2, internal, gpu-workload, inference]
   lifecycle_policy: active
 registry_binding:
-  service_endpoint: "http://vllm-svc.eco-base.svc.cluster.local:8001"
+  service_endpoint: "http://vllm-svc.softwareos-base.svc.cluster.local:8001"
   discovery_protocol: consul
   health_check_path: "/health"
   registry_ttl: 30

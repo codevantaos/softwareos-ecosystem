@@ -54,8 +54,8 @@
 - `argocd-server` — API + Web UI
 
 ### Argo CD Application
-- **Name**: `eco-base-platforms`
-- **Source**: `https://github.com/indestructibleorg/eco-base` (branch: main, path: platforms/)
+- **Name**: `softwareos-base-platforms`
+- **Source**: `https://github.com/indestructibleorg/softwareos-base` (branch: main, path: platforms/)
 - **Destination**: `eco-production` namespace
 - **Sync**: Automated (prune + selfHeal)
 - **Status**: Synced / Healthy

@@ -53,7 +53,7 @@ describe("yaml-toolkit generate", () => {
     fs.writeFileSync(inputPath, JSON.stringify({
       name: "eco-test-svc",
       kind: "Deployment",
-      namespace: "eco-base",
+      namespace: "softwareos-base",
       image: "ghcr.io/indestructibleorg/test:1.0.0",
       ports: [8080],
       depends_on: ["redis", "postgres"],
@@ -73,8 +73,8 @@ describe("yaml-toolkit generate", () => {
     assert.ok(generated.includes("vector_alignment_map:"));
     assert.ok(generated.includes("schema_version: v8"));
     assert.ok(generated.includes("yaml-toolkit-v8"));
-    assert.ok(generated.includes("eco-base://"));
-    assert.ok(generated.includes("urn:eco-base:"));
+    assert.ok(generated.includes("softwareos-base://"));
+    assert.ok(generated.includes("urn:softwareos-base:"));
     assert.ok(generated.includes("eco-test-svc"));
   });
 
@@ -125,7 +125,7 @@ describe("yaml-toolkit generate", () => {
     fs.writeFileSync(inputPath, JSON.stringify({
       name: "eco-test-ing",
       kind: "Ingress",
-      host: "test.eco-base.io",
+      host: "test.softwareos-base.io",
       ports: [8080],
     }));
     const outDir = path.join(tmpDir, "ing-output");

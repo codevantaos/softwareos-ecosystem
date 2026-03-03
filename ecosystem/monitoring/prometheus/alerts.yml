@@ -1,5 +1,5 @@
 groups:
-  - name: eco-base.slo
+  - name: softwareos-base.slo
     rules:
       - alert: HighErrorRate
         expr: rate(http_requests_total{status=~"5.."}[5m]) > 0.05

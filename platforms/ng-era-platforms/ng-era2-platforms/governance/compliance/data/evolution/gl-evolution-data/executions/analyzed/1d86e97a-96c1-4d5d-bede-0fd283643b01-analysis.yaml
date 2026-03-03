@@ -2,8 +2,8 @@
 # @ECO-governed
 version: \"1.0.0\"
 labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
 
 evidence_coverage: 1.0
 execution_id: 1d86e97a-96c1-4d5d-bede-0fd283643b01
@@ -18,7 +18,7 @@ failure_patterns: []
 governance_impact:
   compliance_level: high
   contract_coverage: 85%
-  contracts_validated: 3
+  softwareos-contracts_validated: 3
   drift_detected: false
   rules_triggered: 3
   validation_success_rate: 92%

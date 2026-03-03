@@ -80,7 +80,7 @@ etl-pipeline/
 ├── root-policy/               # GL06: Root policy layer
 │   └── naming-convention/
 │       └── etl-naming-registry.yaml
-├── root-contracts/            # GL07: Contracts layer
+├── root-softwareos-contracts/            # GL07: Contracts layer
 ├── root-evidence/             # GL08: Evidence layer
 ├── tools/
 │   └── etl/

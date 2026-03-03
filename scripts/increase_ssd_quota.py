@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SSD Quota Increase Script for eco-base
+SSD Quota Increase Script for softwareos-base
 
 This script automates the process of requesting SSD quota increases for GKE clusters.
 """
@@ -115,7 +115,7 @@ class SSDQuotaManager:
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Manage SSD quota for eco-base GKE clusters'
+        description='Manage SSD quota for softwareos-base GKE clusters'
     )
     parser.add_argument(
         '--action',

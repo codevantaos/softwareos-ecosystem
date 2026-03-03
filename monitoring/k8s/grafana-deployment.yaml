@@ -54,15 +54,15 @@ data:
           path: /etc/grafana/provisioning/dashboards/kubernetes
           foldersFromFilesStructure: true
 
-      - name: 'eco-base Dashboards'
+      - name: 'softwareos-base Dashboards'
         orgId: 1
-        folder: 'eco-base'
+        folder: 'softwareos-base'
         type: file
         disableDeletion: false
         updateIntervalSeconds: 10
         allowUiUpdates: true
         options:
-          path: /etc/grafana/provisioning/dashboards/eco-base
+          path: /etc/grafana/provisioning/dashboards/softwareos-base
           foldersFromFilesStructure: true
 ---
 apiVersion: v1
@@ -533,7 +533,7 @@ spec:
       - name: GF_INSTALL_PLUGINS
           value: ""
       - name: GF_SERVER_ROOT_URL
-          value: "https://grafana._cf-custom-hostname.autoecoops.io"
+          value: "https://grafana._cf-custom-hostname.softwareos.io"
         volumeMounts:
       - name: datasources
           mountPath: /etc/grafana/provisioning/datasources
@@ -589,10 +589,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - grafana._cf-custom-hostname.autoecoops.io
+    - grafana._cf-custom-hostname.softwareos.io
     secretName: grafana-tls
   rules:
-  - host: grafana._cf-custom-hostname.autoecoops.io
+  - host: grafana._cf-custom-hostname.softwareos.io
     http:
       paths:
       - path: /

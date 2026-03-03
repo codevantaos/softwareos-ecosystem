@@ -1,7 +1,7 @@
 {
-  "name": "@eco-base/api-client",
+  "name": "@softwareos-base/api-client",
   "version": "1.0.0",
-  "description": "Typed API + WebSocket client SDK for eco-base platform",
+  "description": "Typed API + WebSocket client SDK for softwareos-base platform",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/indestructibleorg/eco-base.git",
+    "url": "https://github.com/indestructibleorg/softwareos-base.git",
     "directory": "packages/api-client"
   },
   "publishConfig": {
@@ -27,16 +27,16 @@
     "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
-    "eco-base",
+    "softwareos-base",
     "api-client",
     "sdk",
     "typescript",
     "websocket"
   ],
   "license": "Apache-2.0",
-  "homepage": "https://github.com/indestructibleorg/eco-base/tree/main/packages/api-client",
+  "homepage": "https://github.com/indestructibleorg/softwareos-base/tree/main/packages/api-client",
   "bugs": {
-    "url": "https://github.com/indestructibleorg/eco-base/issues"
+    "url": "https://github.com/indestructibleorg/softwareos-base/issues"
   },
   "dependencies": {
     "socket.io-client": "~4.8.3"

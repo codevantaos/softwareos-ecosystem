@@ -1,6 +1,6 @@
 /**
  * Shared TypeScript types for API service.
- * URI: eco-base://backend/api/src/types
+ * URI: softwareos-base://backend/api/src/types
  */
 
 export interface ServiceHealth {

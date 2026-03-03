@@ -15,8 +15,8 @@ metadata:
   name: gov-quantum-naming-violations
   namespace: monitoring
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     gov-version: v10.0.0
     tier: quantum-monitoring
     release: prometheus
@@ -30,8 +30,8 @@ spec:
             sum(increase(glnamingconvention_violations_total[5m])) by (namespace, kind) > 0
           for: 1m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             category: naming-governance
           annotations:
@@ -46,8 +46,8 @@ spec:
             ) / sum(kube_pod_info) by (namespace) < 0.95
           for: 15m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             category: naming-governance
           annotations:
@@ -59,8 +59,8 @@ spec:
             sum(increase(glnamingconvention_violations_total{severity="critical"}[5m])) > 0
           for: 1m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             category: naming-governance
           annotations:
@@ -75,8 +75,8 @@ spec:
             sum(increase(naming_remediation_failures_total[10m])) > 0
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             category: naming-governance
           annotations:
@@ -88,8 +88,8 @@ spec:
             time() - naming_migration_start_timestamp_seconds > 7200
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             category: naming-governance
           annotations:

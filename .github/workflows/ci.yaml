@@ -1,6 +1,6 @@
-name: eco-base CI/CD
-# eco-base Unified CI/CD Pipeline
-# URI: eco-base://github/workflows/ci
+name: softwareos-base CI/CD
+# softwareos-base Unified CI/CD Pipeline
+# URI: softwareos-base://github/workflows/ci
 # Last updated: 2026-02-26 - Coverage threshold raised to 100%
 
 permissions:

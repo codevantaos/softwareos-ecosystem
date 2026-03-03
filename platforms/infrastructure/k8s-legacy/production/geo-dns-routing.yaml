@@ -53,18 +53,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/geo-dns-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:geo-dns-config:sha256-153b0134c1d490d63b2025c2b4905012b4aacd4067411c590c9fdfece9291ab0
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/geo-dns-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:geo-dns-config:sha256-153b0134c1d490d63b2025c2b4905012b4aacd4067411c590c9fdfece9291ab0
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: geo-dns-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: geo-dns-config
   namespace: production

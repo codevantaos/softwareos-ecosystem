@@ -42,7 +42,7 @@ class TestWhatsAppAdapter:
         data = resp.json()
         assert "content" in data
         assert "engine" in data
-        assert data["uri"].startswith("eco-base://")
+        assert data["uri"].startswith("softwareos-base://")
 
     def test_whatsapp_payload_normalization(self):
         """Verify WhatsApp Cloud API payload extracts correctly."""
@@ -308,10 +308,10 @@ class TestCrossChannel:
         """All normalized payloads must have uri and urn fields."""
         channels = ["whatsapp", "telegram", "line", "messenger"]
         for ch in channels:
-            uri = f"eco-base://im/{ch}/message/test"
-            urn = f"urn:eco-base:im:{ch}:message:user:test"
-            assert uri.startswith("eco-base://")
-            assert urn.startswith("urn:eco-base:")
+            uri = f"softwareos-base://im/{ch}/message/test"
+            urn = f"urn:softwareos-base:im:{ch}:message:user:test"
+            assert uri.startswith("softwareos-base://")
+            assert urn.startswith("urn:softwareos-base:")
 
     def test_concurrent_channel_requests(self, ai_client):
         """Multiple channels can be processed without interference."""

@@ -5,8 +5,8 @@ metadata:
   labels:
     app.kubernetes.io/app.kubernetes.io/component: alerting
     app.kubernetes.io/name: gl-governance
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     gl.governance.level: '3'
   name: gl-naming-governance-alerts
   namespace: gl-monitoring
@@ -24,8 +24,8 @@ spec:
         ) * 100 < 95\n"
       for: 5m
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
         governance: naming
         severity: warning
         sla: NCR
@@ -38,8 +38,8 @@ spec:
         '
       for: 10m
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
         governance: naming
         severity: critical
         sla: VFC
@@ -51,8 +51,8 @@ spec:
         ) * 100 > 20\n"
       for: 15m
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
         governance: autofix
         severity: warning
     - alert: GovernanceAuditMissing
@@ -64,8 +64,8 @@ spec:
         '
       for: 1h
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
         governance: audit
         severity: warning
   - interval: 120s
@@ -80,8 +80,8 @@ spec:
         '
       for: 5m
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
         governance: supply-chain
         severity: critical
         slsa: level3
@@ -94,8 +94,8 @@ spec:
         '
       for: 0m
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
         governance: security
         severity: critical
     - alert: ProvenanceSigningFailed
@@ -107,8 +107,8 @@ spec:
         '
       for: 5m
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
         governance: supply-chain
         severity: warning
   - interval: 300s
@@ -123,8 +123,8 @@ spec:
         '
       for: 10m
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
         governance: security
         scan: cis
         severity: warning
@@ -137,8 +137,8 @@ spec:
         '
       for: 5m
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
         governance: iac
         severity: warning
 ---
@@ -192,21 +192,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/gl-grafana-dashboards
-    eco-base/urn: urn:eco-base:k8s:core:configmap:gl-grafana-dashboards:sha256-996c66d3e7017cc55ceceeef3af9a8e580f552ed35a30e6eff7da6e26407ab27
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/gl-grafana-dashboards
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:gl-grafana-dashboards:sha256-996c66d3e7017cc55ceceeef3af9a8e580f552ed35a30e6eff7da6e26407ab27
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: gl-grafana-dashboards
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     grafana_dashboard: '1'
   name: gl-grafana-dashboards
   namespace: gl-monitoring

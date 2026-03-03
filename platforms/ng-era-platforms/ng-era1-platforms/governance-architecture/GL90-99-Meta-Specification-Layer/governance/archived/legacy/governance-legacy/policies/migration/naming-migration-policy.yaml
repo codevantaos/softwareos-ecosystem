@@ -11,8 +11,8 @@ kind: MigrationPolicy
 metadata:
   name: naming-migration-standard
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     category: migration
     module: naming-governance
 

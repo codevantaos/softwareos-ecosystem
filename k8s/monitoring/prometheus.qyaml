@@ -1,13 +1,13 @@
-# eco-base v1.0 - Prometheus Monitoring Stack
+# softwareos-base v1.0 - Prometheus Monitoring Stack
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: prometheus
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app.kubernetes.io/name: prometheus
     app.kubernetes.io/component: monitoring
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
 spec:
   replicas: 1
   selector:
@@ -54,7 +54,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: prometheus-config
-  namespace: eco-base
+  namespace: softwareos-base
 data:
   prometheus.yml: |
     global:
@@ -66,7 +66,7 @@ data:
         kubernetes_sd_configs:
           - role: pod
             namespaces:
-              names: ["eco-base"]
+              names: ["softwareos-base"]
         relabel_configs:
           - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
             action: keep
@@ -138,7 +138,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: prometheus-data
-  namespace: eco-base
+  namespace: softwareos-base
 spec:
   accessModes: ["ReadWriteOnce"]
   storageClassName: standard
@@ -150,7 +150,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: prometheus-svc
-  namespace: eco-base
+  namespace: softwareos-base
 spec:
   type: ClusterIP
   ports:
@@ -162,8 +162,8 @@ spec:
 # YAML Toolkit v8 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "eco-pm-0001-0001-000000000001"
-  uri: "eco-base://k8s/eco-base/deployment/prometheus"
-  urn: "urn:eco-base:k8s:eco-base:deployment:prometheus:eco-pm-0001-0001-000000000001"
+  uri: "softwareos-base://k8s/softwareos-base/deployment/prometheus"
+  urn: "urn:softwareos-base:k8s:softwareos-base:deployment:prometheus:eco-pm-0001-0001-000000000001"
   target_system: gke-production
   cross_layer_binding: [api-gateway, vllm, tgi, sglang, grafana]
   schema_version: v8
@@ -175,7 +175,7 @@ governance_info:
   compliance_tags: [zero-trust, soc2, internal, monitoring]
   lifecycle_policy: active
 registry_binding:
-  service_endpoint: "http://prometheus-svc.eco-base.svc.cluster.local:9090"
+  service_endpoint: "http://prometheus-svc.softwareos-base.svc.cluster.local:9090"
   discovery_protocol: k8s-dns
   health_check_path: "/-/healthy"
   registry_ttl: 30

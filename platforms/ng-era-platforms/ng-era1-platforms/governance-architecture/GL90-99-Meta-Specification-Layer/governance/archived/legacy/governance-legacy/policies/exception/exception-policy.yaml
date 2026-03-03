@@ -9,8 +9,8 @@ metadata:
   name: exception-handling-policy
   description: "合规例外处理流程与规范"
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     category: "process"
     domain: "compliance"
   annotations:

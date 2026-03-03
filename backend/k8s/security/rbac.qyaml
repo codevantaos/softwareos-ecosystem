@@ -3,33 +3,33 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: api-sa
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app: api
     generated-by: yaml-toolkit-v1
     unique-id: "6ba7b81a-9dad-11d1-80b4-00c04fd430c8"
   annotations:
-    eco-base/uri: "eco-base://k8s/eco-base/serviceaccount/api-sa"
-    eco-base/urn: "urn:eco-base:k8s:eco-base:serviceaccount:api-sa:6ba7b81a-9dad-11d1-80b4-00c04fd430c8"
+    softwareos-base/uri: "softwareos-base://k8s/softwareos-base/serviceaccount/api-sa"
+    softwareos-base/urn: "urn:softwareos-base:k8s:softwareos-base:serviceaccount:api-sa:6ba7b81a-9dad-11d1-80b4-00c04fd430c8"
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: ai-sa
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app: ai
     generated-by: yaml-toolkit-v1
     unique-id: "6ba7b81b-9dad-11d1-80b4-00c04fd430c8"
   annotations:
-    eco-base/uri: "eco-base://k8s/eco-base/serviceaccount/ai-sa"
-    eco-base/urn: "urn:eco-base:k8s:eco-base:serviceaccount:ai-sa:6ba7b81b-9dad-11d1-80b4-00c04fd430c8"
+    softwareos-base/uri: "softwareos-base://k8s/softwareos-base/serviceaccount/ai-sa"
+    softwareos-base/urn: "urn:softwareos-base:k8s:softwareos-base:serviceaccount:ai-sa:6ba7b81b-9dad-11d1-80b4-00c04fd430c8"
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: api-role
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     generated-by: yaml-toolkit-v1
 spec: {}
@@ -46,13 +46,13 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: api-role-binding
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     generated-by: yaml-toolkit-v1
 subjects:
 - kind: ServiceAccount
   name: api-sa
-  namespace: eco-base
+  namespace: softwareos-base
 roleRef:
   kind: Role
   name: api-role
@@ -62,7 +62,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: ai-role
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     generated-by: yaml-toolkit-v1
 rules:
@@ -78,13 +78,13 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: ai-role-binding
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     generated-by: yaml-toolkit-v1
 subjects:
 - kind: ServiceAccount
   name: ai-sa
-  namespace: eco-base
+  namespace: softwareos-base
 roleRef:
   kind: Role
   name: ai-role
@@ -93,8 +93,8 @@ roleRef:
 # YAML Toolkit v8 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "6ba7b81a-9dad-11d1-80b4-00c04fd430c8"
-  uri: "eco-base://k8s/eco-base/rbac/service-accounts"
-  urn: "urn:eco-base:k8s:eco-base:rbac:service-accounts:6ba7b81a-9dad-11d1-80b4-00c04fd430c8"
+  uri: "softwareos-base://k8s/softwareos-base/rbac/service-accounts"
+  urn: "urn:softwareos-base:k8s:softwareos-base:rbac:service-accounts:6ba7b81a-9dad-11d1-80b4-00c04fd430c8"
   target_system: gke-production
   cross_layer_binding: [api-service, ai-service]
   schema_version: v8

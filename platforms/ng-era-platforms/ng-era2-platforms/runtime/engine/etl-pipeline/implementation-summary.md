@@ -122,7 +122,7 @@ etl-pipeline/
 │   ├── manifest.yaml
 │   └── naming-convention/
 │       └── naming-registry.yaml
-├── root-contracts/                  # GL07: Contracts layer
+├── root-softwareos-contracts/                  # GL07: Contracts layer
 ├── root-evidence/                   # GL08: Evidence layer
 ├── tools/
 │   └── etl/

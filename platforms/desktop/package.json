@@ -1,5 +1,5 @@
 {
-  "name": "@eco-base/desktop",
+  "name": "@softwareos-base/desktop",
   "version": "0.1.0",
   "private": true,
   "main": "dist/electron/main.js",
@@ -13,7 +13,7 @@
   "dependencies": {
     "electron-updater": "^6.3.0",
     "better-sqlite3": "^11.0.0",
-    "@eco-base/api-client": "workspace:*"
+    "@softwareos-base/api-client": "workspace:*"
   },
   "devDependencies": {
     "electron": "^40.6.0",
@@ -24,8 +24,8 @@
     "typescript": "^5.5.0"
   },
   "build": {
-    "appId": "io.eco-base.desktop",
-    "productName": "eco-base",
+    "appId": "io.softwareos-base.desktop",
+    "productName": "softwareos-base",
     "directories": { "output": "build" },
     "mac": { "target": "dmg", "icon": "resources/icon.icns" },
     "win": { "target": "nsis", "icon": "resources/icon.ico" }

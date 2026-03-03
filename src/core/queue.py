@@ -1,6 +1,6 @@
 """Request Queue — priority-based async inference request queue.
 
-URI: eco-base://src/core/queue
+URI: softwareos-base://src/core/queue
 
 Contracts defined by: tests/unit/test_queue.py
 """

@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Owner:** eco-ops-team
 **Last Updated:** 2026-02-26
-**Applies To:** indestructibleorg/eco-base and all related repositories
+**Applies To:** indestructibleorg/softwareos-base and all related repositories
 
 ---
 
@@ -22,7 +22,7 @@
 
 ## 2. Least-Privilege Scoping
 
-### Fine-grained PAT — Minimum Required Permissions for eco-base CI/CD
+### Fine-grained PAT — Minimum Required Permissions for softwareos-base CI/CD
 
 | Permission | Level | Justification |
 |------------|-------|---------------|
@@ -116,7 +116,7 @@ Scope fine-grained PATs to **only the repositories that require access**. Do not
    https://github.com/organizations/indestructibleorg/settings/audit-log
    Filter: token=<compromised_prefix>
 
-5. Open security incident issue in eco-base with:
+5. Open security incident issue in softwareos-base with:
    - Token prefix (never full value)
    - Time of compromise discovery
    - API calls made with compromised token (from audit log)
@@ -139,7 +139,7 @@ The `pat-expiry-check.yml` workflow enforces the following:
 
 ### Required Secrets
 
-Set these in `indestructibleorg/eco-base` → Settings → Secrets → Actions:
+Set these in `indestructibleorg/softwareos-base` → Settings → Secrets → Actions:
 
 | Secret | Format | Example |
 |--------|--------|---------|
@@ -177,7 +177,7 @@ For long-term automation, migrate from PAT to **GitHub App**:
 Migration steps:
 1. Create GitHub App at `github.com/organizations/indestructibleorg/settings/apps/new`
 2. Set permissions identical to current PAT scope
-3. Install app on `indestructibleorg/eco-base`
+3. Install app on `indestructibleorg/softwareos-base`
 4. Generate installation token in CI via `actions/create-github-app-token`
 5. Revoke PAT after successful migration
 

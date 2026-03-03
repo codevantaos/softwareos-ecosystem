@@ -1,5 +1,5 @@
 # Governance Validation Rules
-# URI: eco-base://tools/ci-validator/rules/governance
+# URI: softwareos-base://tools/ci-validator/rules/governance
 
 required_blocks:
   - document_metadata
@@ -32,8 +32,8 @@ required_fields:
     - function_keyword
     - contextual_binding
 
-uri_scheme: "eco-base://"
-urn_scheme: "urn:eco-base:"
+uri_scheme: "softwareos-base://"
+urn_scheme: "urn:softwareos-base:"
 schema_version: v1
 generated_by: yaml-toolkit-v1
 

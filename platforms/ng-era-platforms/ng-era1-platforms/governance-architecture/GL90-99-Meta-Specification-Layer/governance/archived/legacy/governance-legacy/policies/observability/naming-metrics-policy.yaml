@@ -11,8 +11,8 @@ kind: NamingObservability
 metadata:
   name: naming-compliance-monitoring
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     category: observability
     module: naming-governance
 
@@ -24,8 +24,8 @@ spec:
       type: gauge
       help: "Number of resources compliant with naming standards"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
       required: true
 
     naming_compliance_bad:
@@ -33,8 +33,8 @@ spec:
       type: gauge
       help: "Number of resources violating naming standards"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
       required: true
 
     naming_compliance_rate:
@@ -49,8 +49,8 @@ spec:
       type: counter
       help: "Total count of naming violations detected"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
       required: true
 
     naming_remediation_success:
@@ -58,8 +58,8 @@ spec:
       type: counter
       help: "Successful naming remediations"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
       required: false
 
     naming_remediation_failure:
@@ -67,8 +67,8 @@ spec:
       type: counter
       help: "Failed naming remediations"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
       required: false
 
   # 必须配置的告警规则
@@ -78,8 +78,8 @@ spec:
       for: 5m
       severity: critical
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         category: governance
         app.kubernetes.io/component: naming
       annotations:
@@ -99,8 +99,8 @@ spec:
       for: 15m
       severity: warning
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         category: governance
         app.kubernetes.io/component: naming
       annotations:

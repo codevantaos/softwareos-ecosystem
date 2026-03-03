@@ -532,7 +532,7 @@ GL30-49:
       name: "manage_configurations"
       name_zh: "管理配置"
     - capability_id: "CAP-30-05"
-      name: "specify_behavior_contracts"
+      name: "specify_behavior_softwareos-contracts"
       name_zh: "規範行為契約"
   # 產物類型 (Artifact Types)
   artifact_types:
@@ -591,7 +591,7 @@ GL30-49:
       - path: "34-config"
         purpose: "系統配置文件"
         artifact_types: ["config-file"]
-      - path: "37-behavior-contracts"
+      - path: "37-behavior-softwareos-contracts"
         purpose: "行為契約規範"
         artifact_types: ["behavior-contract"]
       - path: "39-automation"

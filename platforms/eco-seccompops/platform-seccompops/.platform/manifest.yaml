@@ -92,13 +92,13 @@ spec:
   # ECO Namespace Specification v1.0 Alignment
   eco_namespace:
     k8s_namespace: eco-seccompops
-    eco_uri: "eco-base://k8s/platform-seccompops/namespace/eco-seccompops"
-    eco_urn: "urn:eco-base:k8s:platform-seccompops:namespace:eco-seccompops:gl.sec-ops.compliance-platform"
+    eco_uri: "softwareos-base://k8s/platform-seccompops/namespace/eco-seccompops"
+    eco_urn: "urn:softwareos-base:k8s:platform-seccompops:namespace:eco-seccompops:gl.sec-ops.compliance-platform"
     eco_env_prefix: "PLATFORM_SECCOMPOPS_"
     mandatory_labels:
-      eco-base/platform: platform-seccompops
-      eco-base/environment: production
-      eco-base/owner: security-compliance-team
+      softwareos-base/platform: platform-seccompops
+      softwareos-base/environment: production
+      softwareos-base/owner: security-compliance-team
     mandatory_annotations:
-      eco-base/governance-policy: "eco-seccompops-governance.rego"
-      eco-base/audit-log-level: "full"
+      softwareos-base/governance-policy: "eco-seccompops-governance.rego"
+      softwareos-base/audit-log-level: "full"

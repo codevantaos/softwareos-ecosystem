@@ -1,6 +1,6 @@
 """Governance Engine — GL enforcement, audit trail, schema validation.
 
-URI: eco-base://backend/ai/src/governance
+URI: softwareos-base://backend/ai/src/governance
 
 Enforces:
 - UUID v1 for all identifiers
@@ -184,18 +184,18 @@ class GovernanceEngine:
                         })
                 # URI format check
                 uri_val = doc_meta.get("uri", "")
-                if uri_val and not str(uri_val).startswith("eco-base://"):
+                if uri_val and not str(uri_val).startswith("softwareos-base://"):
                     errors.append({
                         "path": "document_metadata.uri",
-                        "message": f"URI must start with 'eco-base://', got: {uri_val}",
+                        "message": f"URI must start with 'softwareos-base://', got: {uri_val}",
                         "severity": "error",
                     })
                 # URN format check
                 urn_val = doc_meta.get("urn", "")
-                if urn_val and not str(urn_val).startswith("urn:eco-base:"):
+                if urn_val and not str(urn_val).startswith("urn:softwareos-base:"):
                     errors.append({
                         "path": "document_metadata.urn",
-                        "message": f"URN must start with 'urn:eco-base:', got: {urn_val}",
+                        "message": f"URN must start with 'urn:softwareos-base:', got: {urn_val}",
                         "severity": "error",
                     })
                 # UUID v1 format check
@@ -273,7 +273,7 @@ class GovernanceEngine:
         # --- Phase 5: Semantic warnings (parsed or fallback string) ---
         if parsed is not None:
             if not any(
-                "eco-base://" in str(v)
+                "softwareos-base://" in str(v)
                 for v in _deep_values(parsed)
             ):
                 errors.append({
@@ -282,7 +282,7 @@ class GovernanceEngine:
                     "severity": "warning",
                 })
             if not any(
-                "urn:eco-base:" in str(v)
+                "urn:softwareos-base:" in str(v)
                 for v in _deep_values(parsed)
             ):
                 errors.append({
@@ -291,13 +291,13 @@ class GovernanceEngine:
                     "severity": "warning",
                 })
         else:
-            if "eco-base://" not in content:
+            if "softwareos-base://" not in content:
                 errors.append({
                     "path": "metadata.uri",
                     "message": "No URI identifier found",
                     "severity": "warning",
                 })
-            if "urn:eco-base:" not in content:
+            if "urn:softwareos-base:" not in content:
                 errors.append({
                     "path": "metadata.urn",
                     "message": "No URN identifier found",
@@ -312,7 +312,7 @@ class GovernanceEngine:
     def stamp_governance(
         self,
         name: str,
-        namespace: str = "eco-base",
+        namespace: str = "softwareos-base",
         kind: str = "Deployment",
         target_system: str = "gke-production",
         cross_layer_binding: Optional[List[str]] = None,
@@ -321,8 +321,8 @@ class GovernanceEngine:
     ) -> Dict[str, Any]:
         """Generate complete governance stamp with UUID v1, URI, URN."""
         uid = uuid.uuid1()
-        uri = f"eco-base://k8s/{namespace}/{kind.lower()}/{name}"
-        urn = f"urn:eco-base:k8s:{namespace}:{kind.lower()}:{name}:{uid}"
+        uri = f"softwareos-base://k8s/{namespace}/{kind.lower()}/{name}"
+        urn = f"urn:softwareos-base:k8s:{namespace}:{kind.lower()}:{name}:{uid}"
         bindings = cross_layer_binding or []
         keywords = function_keywords or [name, kind.lower()]
 
@@ -376,7 +376,7 @@ class GovernanceEngine:
             "action": action,
             "details": details,
             "timestamp": datetime.now(timezone.utc).isoformat(),
-            "uri": f"eco-base://governance/audit/{action}",
+            "uri": f"softwareos-base://governance/audit/{action}",
         }
         self._audit_log.append(entry)
         if len(self._audit_log) > 10000:

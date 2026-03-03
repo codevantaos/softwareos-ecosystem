@@ -93,7 +93,7 @@ while elapsed < max_wait:
             "commit_title": f"fix(bot): autonomous fixes (PR #{pr_number})",
             "commit_message": (
                 "Automatically merged by Autonomous Bot after all CI checks passed.\n"
-                "Squash merge per eco-base best practices.\n\n"
+                "Squash merge per softwareos-base best practices.\n\n"
                 f"Problems fixed: {len(problems)}\n"
                 "Risk assessment: All problems cleared for auto-merge.\n"
             ),

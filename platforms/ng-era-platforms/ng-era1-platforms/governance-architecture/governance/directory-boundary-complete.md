@@ -19,7 +19,7 @@ Successfully completed comprehensive directory boundary definition for the Machi
 - Migration guidelines
 
 **Key Highlights**:
-- **GL00-09**: Pure governance, no execution, provides contracts only
+- **GL00-09**: Pure governance, no execution, provides softwareos-contracts only
 - **GL10-29**: Platform services, no business logic, provides APIs
 - **GL20-29**: Data processing, ETL operations, provides data services
 - **GL30-49**: Execution runtime, task orchestration, manages resources
@@ -87,10 +87,10 @@ Successfully completed comprehensive directory boundary definition for the Machi
 - Clear dependency hierarchy enforced
 
 ### 2. Explicit Interface Definition
-- All cross-boundary interactions must have contracts
-- API contracts define allowed method signatures
-- Event contracts define message formats
-- Data contracts define data structures
+- All cross-boundary interactions must have softwareos-contracts
+- API softwareos-contracts define allowed method signatures
+- Event softwareos-contracts define message formats
+- Data softwareos-contracts define data structures
 
 ### 3. Autonomous Operation Capability
 - Each directory must be capable of independent operation
@@ -156,7 +156,7 @@ Successfully completed comprehensive directory boundary definition for the Machi
 ### Governance Compliance (GL60-80)
 - **Permission**: Can enforce policies across all layers
 - **Restrictions**: Cannot execute business logic
-- **Protocol**: Read governance contracts from GL00-09 only
+- **Protocol**: Read governance softwareos-contracts from GL00-09 only
 
 ## Violation Detection and Handling
 

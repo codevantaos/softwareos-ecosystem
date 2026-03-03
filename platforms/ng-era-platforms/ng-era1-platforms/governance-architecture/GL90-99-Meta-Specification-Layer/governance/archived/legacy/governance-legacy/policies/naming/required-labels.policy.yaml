@@ -12,8 +12,8 @@ kind: LabelPolicy
 metadata:
   name: required-labels-policy
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     category: naming
     module: canonical-naming
     enforcement: strict
@@ -39,8 +39,8 @@ spec:
 
   # 必需標籤定義
   required_labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     # 標籤 1: environment (環境標識)
     - key: "environment"
       description: "部署環境標識（dev/test/staging/prod/learn）"
@@ -190,8 +190,8 @@ spec:
 
   # 推薦標籤（非必需）
   recommended_labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     - key: "cost-center"
       description: "成本中心代碼"
       validation:
@@ -221,8 +221,8 @@ spec:
       resource_type: "Namespace"
       severity: "critical"
       required_labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         - "environment"
         - "tenant"
       error_message: "Namespace 缺少必需標籤"
@@ -233,8 +233,8 @@ spec:
       resource_type: "Deployment"
       severity: "high"
       required_labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         - "environment"
         - "app.kubernetes.io/name"
         - "app.kubernetes.io/managed-by"
@@ -246,8 +246,8 @@ spec:
       resource_type: "Service"
       severity: "high"
       required_labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         - "environment"
         - "app.kubernetes.io/name"
       error_message: "Service 缺少必需標籤"
@@ -268,8 +268,8 @@ spec:
       - from: "Namespace"
         to: ["Deployment", "StatefulSet", "DaemonSet", "Service", "Ingress"]
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "environment"
           - "tenant"
           - "team"
@@ -278,8 +278,8 @@ spec:
       - from: "Deployment"
         to: ["Pod"]
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "environment"
           - "app.kubernetes.io/name"
           - "app.kubernetes.io/version"
@@ -292,20 +292,20 @@ spec:
       # 基於 Namespace 自動添加環境標籤
       - condition: "namespace matches 'team-.*-prod'"
         add_labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           environment: "prod"
 
       - condition: "namespace matches 'team-.*-staging'"
         add_labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           environment: "staging"
 
       - condition: "namespace matches 'team-.*-dev'"
         add_labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           environment: "dev"
 
   # 強制執行
@@ -400,8 +400,8 @@ examples:
       metadata:
   name: "team-frontend-prod"
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     environment: "prod"
     tenant: "platform-team"
     team: "frontend-team"
@@ -416,8 +416,8 @@ examples:
       metadata:
   name: "team-frontend-prod"
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     tenant: "platform-team"
     expected: "FAIL"
     violation: "LABEL-001"
@@ -430,8 +430,8 @@ examples:
       metadata:
   name: "team-frontend-prod"
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     environment: "production"  # 應該是 'prod'
     tenant: "platform-team"
     expected: "FAIL"
@@ -446,8 +446,8 @@ examples:
   name: "frontend-api"
   namespace: "team-frontend-prod"
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     environment: "prod"
     app.kubernetes.io/name: "frontend-api"
     app.kubernetes.io/managed-by: "helm"

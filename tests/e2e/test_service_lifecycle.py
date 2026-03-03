@@ -1,4 +1,4 @@
-"""End-to-end tests for eco-base service lifecycle.
+"""End-to-end tests for softwareos-base service lifecycle.
 
 Covers cross-service integration flows not tested in test_full_flow.py:
   - Connection pool lifecycle (init -> get_client -> close)
@@ -9,11 +9,11 @@ Covers cross-service integration flows not tested in test_full_flow.py:
   - Governance engine audit trail integrity
   - Config validation
   - Model registry filter + resolve + lifecycle
-  - gRPC servicer request/response contracts
+  - gRPC servicer request/response softwareos-contracts
   - Engine manager init + degraded generate
   - Request queue enqueue/dequeue with priority
 
-URI: eco-base://tests/e2e/test_service_lifecycle
+URI: softwareos-base://tests/e2e/test_service_lifecycle
 """
 
 import pytest
@@ -266,7 +266,7 @@ class TestWorkerJobLifecycle:
 
 
 class TestGrpcServicerContracts:
-    """Verify gRPC servicer request/response data contracts."""
+    """Verify gRPC servicer request/response data softwareos-contracts."""
 
     def test_generate_request_creation(self):
         from backend.ai.src.services.grpc_server import GenerateRequest
@@ -397,25 +397,25 @@ class TestGovernanceAuditTrail:
         self.gov = GovernanceEngine()
 
     def test_stamp_contains_all_blocks(self):
-        stamp = self.gov.stamp_governance("e2e-svc", "eco-base", "Deployment")
+        stamp = self.gov.stamp_governance("e2e-svc", "softwareos-base", "Deployment")
         assert "document_metadata" in stamp
         assert "governance_info" in stamp
         assert "registry_binding" in stamp
         assert "vector_alignment_map" in stamp
 
     def test_stamp_uri_format(self):
-        stamp = self.gov.stamp_governance("test-svc", "eco-base", "Service")
+        stamp = self.gov.stamp_governance("test-svc", "softwareos-base", "Service")
         uri = stamp["document_metadata"]["uri"]
-        assert uri.startswith("eco-base://")
+        assert uri.startswith("softwareos-base://")
 
     def test_stamp_urn_format(self):
-        stamp = self.gov.stamp_governance("test-svc", "eco-base", "Service")
+        stamp = self.gov.stamp_governance("test-svc", "softwareos-base", "Service")
         urn = stamp["document_metadata"]["urn"]
-        assert urn.startswith("urn:eco-base:")
+        assert urn.startswith("urn:softwareos-base:")
 
     def test_audit_log_grows(self):
         initial = len(self.gov.get_audit_log())
-        self.gov.stamp_governance("audit-test", "eco-base", "ConfigMap")
+        self.gov.stamp_governance("audit-test", "softwareos-base", "ConfigMap")
         after = len(self.gov.get_audit_log())
         assert after > initial
 
@@ -643,14 +643,14 @@ class TestSharedUtilsE2E:
         from backend.shared.utils import build_uri
 
         uri = build_uri("k8s", "deployment", "e2e-test")
-        assert uri == "eco-base://k8s/deployment/e2e-test"
+        assert uri == "softwareos-base://k8s/deployment/e2e-test"
 
     def test_urn_format(self):
         from backend.shared.utils import build_urn, new_uuid
 
         uid = new_uuid()
         urn = build_urn("k8s", "deployment", "e2e-test", uid)
-        assert urn.startswith("urn:eco-base:")
+        assert urn.startswith("urn:softwareos-base:")
         assert "e2e-test" in urn
 
     def test_governance_stamp(self):
@@ -663,9 +663,9 @@ class TestSharedUtilsE2E:
     def test_qyaml_metadata_complete(self):
         from backend.shared.utils import build_qyaml_metadata
 
-        meta = build_qyaml_metadata("e2e-svc", "eco-base", "Deployment", "gke-prod")
+        meta = build_qyaml_metadata("e2e-svc", "softwareos-base", "Deployment", "gke-prod")
         for block in ["document_metadata", "governance_info", "registry_binding", "vector_alignment_map"]:
             assert block in meta
         assert meta["document_metadata"]["schema_version"] == "v1"
-        assert "eco-base://" in meta["document_metadata"]["uri"]
-        assert "urn:eco-base:" in meta["document_metadata"]["urn"]
+        assert "softwareos-base://" in meta["document_metadata"]["uri"]
+        assert "urn:softwareos-base:" in meta["document_metadata"]["urn"]

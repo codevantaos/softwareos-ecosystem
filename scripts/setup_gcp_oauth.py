@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-OAuth 2.0 Configuration Setup Script for eco-base
+OAuth 2.0 Configuration Setup Script for softwareos-base
 
 This script automates the setup of OAuth 2.0 configuration for GKE/IAP integration.
 """
@@ -35,7 +35,7 @@ class OAuthSetup:
                 "client_id": client_id,
                 "client_secret": client_secret,
                 "redirect_uris": [
-                    f"https://{self.environment}.autoecoops.io/auth/callback",
+                    f"https://{self.environment}.softwareos.io/auth/callback",
                     "http://localhost:3000/auth/callback"
                 ],
                 "scopes": [
@@ -85,7 +85,7 @@ class OAuthSetup:
 kind: Secret
 metadata:
   name: oauth-secrets
-  namespace: eco-base
+  namespace: softwareos-base
 type: Opaque
 stringData:
   ECO_OAUTH_CLIENT_ID: {config['oauth']['client_id']}
@@ -95,7 +95,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: oauth-config
-  namespace: eco-base
+  namespace: softwareos-base
 data:
   oauth-config.json: |
     {json.dumps(config, indent=2)}
@@ -117,7 +117,7 @@ data:
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Setup OAuth 2.0 configuration for eco-base'
+        description='Setup OAuth 2.0 configuration for softwareos-base'
     )
     parser.add_argument(
         '--environment',

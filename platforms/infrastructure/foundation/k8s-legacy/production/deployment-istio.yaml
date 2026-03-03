@@ -3,21 +3,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/machine-native-ops
-    eco-base/urn: urn:eco-base:k8s:core:deployment:machine-native-ops:sha256-2b78aa61fe77c3beb857ddeb86d49b7fb42907c62f9880142f91e41853910f26
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/machine-native-ops
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:machine-native-ops:sha256-2b78aa61fe77c3beb857ddeb86d49b7fb42907c62f9880142f91e41853910f26
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
     istio-injection: enabled
     version: v1
@@ -47,8 +47,8 @@ spec:
     traffic.sidecar.istio.io/includeOutboundIPRanges: '*'
   labels:
     app.kubernetes.io/name: machine-native-ops
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     environment: production
     version: v1
     spec:
@@ -185,10 +185,10 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/machine-native-ops
-    eco-base/urn: urn:eco-base:k8s:core:service:machine-native-ops:sha256-0a851dca9efb7b228b9abe1f384f2c7936005fcadd9402e5d3605354a90532f8
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/machine-native-ops
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:machine-native-ops:sha256-0a851dca9efb7b228b9abe1f384f2c7936005fcadd9402e5d3605354a90532f8
     prometheus.io/path: /stats/prometheus
     prometheus.io/port: '15020'
     prometheus.io/scrape: 'true'
@@ -196,13 +196,13 @@ metadata:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
   name: machine-native-ops
   namespace: production

@@ -24,7 +24,7 @@
       "etl-pipeline/var/evidence",
       "etl-pipeline/root-policy",
       "etl-pipeline/root-policy/naming-convention",
-      "etl-pipeline/root-contracts",
+      "etl-pipeline/root-softwareos-contracts",
       "etl-pipeline/root-evidence",
       "etl-pipeline/tools"
     ],
@@ -55,7 +55,7 @@
           "var/evidence",
           "root-policy",
           "root-policy/naming-convention",
-          "root-contracts",
+          "root-softwareos-contracts",
           "root-evidence",
           "tools"
         ],

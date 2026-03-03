@@ -56,7 +56,7 @@ governance_layers:
   GL30-39:
     name: Execution Layer
     range: "30-39"
-    description: Schemas, templates, contracts, automation, tools
+    description: Schemas, templates, softwareos-contracts, automation, tools
     dimensions:
       - "26-tools"
       - "27-templates"
@@ -67,7 +67,7 @@ governance_layers:
       - "34-config"
       - "35-scripts"
       - "36-modules"
-      - "37-behavior-contracts"
+      - "37-behavior-softwareos-contracts"
       - "38-sbom"
       - "39-automation"
   GL40-49:
@@ -114,10 +114,10 @@ governance_layers:
   GL70-79:
     name: Advanced/Feedback Layer
     range: "70-79"
-    description: AI, contracts, audit, optimization, feedback
+    description: AI, softwareos-contracts, audit, optimization, feedback
     dimensions:
       - "07-audit"
-      - "70-contracts"
+      - "70-softwareos-contracts"
       - "71-audit"
       - "80-feedback"
   GL80-89:

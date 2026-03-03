@@ -1,5 +1,5 @@
 # GitHub Actions Policy Configuration
-# URI: eco-base://policy/github-actions
+# URI: softwareos-base://policy/github-actions
 # Schema: v1
 
 policy:

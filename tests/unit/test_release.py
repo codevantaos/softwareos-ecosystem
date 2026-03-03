@@ -48,7 +48,7 @@ class TestChangelog:
 
     def test_changelog_has_release_link(self):
         content = self._read()
-        assert "[1.0.0]: https://github.com/indestructibleorg/eco-base/releases/tag/v1.0.0" in content
+        assert "[1.0.0]: https://github.com/indestructibleorg/softwareos-base/releases/tag/v1.0.0" in content
 
     def test_changelog_semver_format(self):
         content = self._read()
@@ -80,7 +80,7 @@ class TestNpmPackages:
     def test_has_repository(self, pkg):
         data = self._load(pkg)
         assert "repository" in data, f"{pkg} missing repository"
-        assert "eco-base" in data["repository"]["url"]
+        assert "softwareos-base" in data["repository"]["url"]
 
     @pytest.mark.parametrize("pkg", PACKAGES)
     def test_has_files_field(self, pkg):
@@ -112,7 +112,7 @@ class TestNpmPackages:
     def test_has_keywords(self, pkg):
         data = self._load(pkg)
         assert "keywords" in data, f"{pkg} missing keywords"
-        assert "eco-base" in data["keywords"]
+        assert "softwareos-base" in data["keywords"]
 
 
 class TestPyProjectToml:

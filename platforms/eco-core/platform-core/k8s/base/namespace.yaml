@@ -4,16 +4,16 @@ metadata:
   name: eco-core
   labels:
     app.kubernetes.io/name: platform-core
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/managed-by: argocd
     platform.gl/name: gl.core.shared-kernel
     governance.io/managed: "true"
-    eco-base/platform: platform-core
-    eco-base/environment: production
-    eco-base/owner: platform-engineering-team
+    softwareos-base/platform: platform-core
+    softwareos-base/environment: production
+    softwareos-base/owner: platform-engineering-team
   annotations:
     description: "Shared Kernel — Auth, Memory Hub, Event Bus, Policy & Audit, Infra Manager"
-    eco-base/uri: "eco-base://k8s/platform-core/namespace/eco-core"
-    eco-base/urn: "urn:eco-base:k8s:platform-core:namespace:eco-core:gl.core.shared-kernel"
-    eco-base/governance-policy: "eco-core-governance.rego"
-    eco-base/audit-log-level: "full"
+    softwareos-base/uri: "softwareos-base://k8s/platform-core/namespace/eco-core"
+    softwareos-base/urn: "urn:softwareos-base:k8s:platform-core:namespace:eco-core:gl.core.shared-kernel"
+    softwareos-base/governance-policy: "eco-core-governance.rego"
+    softwareos-base/audit-log-level: "full"

@@ -4,8 +4,8 @@ kind: Gateway
 metadata:
   labels:
     app.kubernetes.io/name: machine-native-ops
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     environment: production
   name: machine-native-ops-gateway
   namespace: production
@@ -46,23 +46,23 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/machine-native-ops-lb
-    eco-base/urn: urn:eco-base:k8s:core:service:machine-native-ops-lb:sha256-e311bd1d73ec1d0b416504be3d050fc57f4776a813539017cc57c7b5bebfe5b9
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/machine-native-ops-lb
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:machine-native-ops-lb:sha256-e311bd1d73ec1d0b416504be3d050fc57f4776a813539017cc57c7b5bebfe5b9
     service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: 'true'
     service.beta.kubernetes.io/aws-load-balancer-type: nlb
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
   name: machine-native-ops-lb
   namespace: production

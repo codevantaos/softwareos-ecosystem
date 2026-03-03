@@ -1,7 +1,7 @@
 package eco_base.skipped_check_response
 
 # ── Skipped Architecture Content Response Policy ─────────────────────────────
-# URI: eco-base://policy/skipped-check-response
+# URI: softwareos-base://policy/skipped-check-response
 # Purpose: Define what happens when a check is skipped (conclusion=skipped)
 #          rather than passed or failed. Skipped checks are NOT failures and
 #          MUST NOT block merge.

@@ -43,8 +43,8 @@ jobs:
           go-version: '1.21'
 
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
 
           cache: true
 

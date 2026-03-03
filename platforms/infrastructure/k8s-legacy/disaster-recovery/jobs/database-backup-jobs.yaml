@@ -4,21 +4,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/postgres-backup
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:postgres-backup:sha256-ed3e39ac20a1c1881b5028f5c2bb009d6d5e56024f7425fecf97e0ec5da37b29
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/postgres-backup
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:postgres-backup:sha256-ed3e39ac20a1c1881b5028f5c2bb009d6d5e56024f7425fecf97e0ec5da37b29
   labels:
     app.kubernetes.io/component: backup
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: postgres-backup
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: postgres-backup
   namespace: platform-03
 spec:
@@ -99,21 +99,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/redis-backup
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:redis-backup:sha256-9e01c3b25fe54647e2146a0e72280fc154a252493af5b930b1375cb4d1893c23
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/redis-backup
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:redis-backup:sha256-9e01c3b25fe54647e2146a0e72280fc154a252493af5b930b1375cb4d1893c23
   labels:
     app.kubernetes.io/component: backup
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: redis-backup
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: redis-backup
   namespace: platform-03
 spec:
@@ -192,21 +192,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/config-backup
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:config-backup:sha256-bd92beb2ddbc92612e106721a8a3e1dc3e121794fd5a435cf6ba166dd5635ae1
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/config-backup
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:config-backup:sha256-bd92beb2ddbc92612e106721a8a3e1dc3e121794fd5a435cf6ba166dd5635ae1
   labels:
     app.kubernetes.io/component: backup
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: config-backup
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: config-backup
   namespace: platform-03
 spec:
@@ -293,21 +293,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/backup-validation
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:backup-validation:sha256-676403f5f6964e58d8671252063ef613e021f9255e5935c7ddd7f8adccaa4ae9
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/backup-validation
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:backup-validation:sha256-676403f5f6964e58d8671252063ef613e021f9255e5935c7ddd7f8adccaa4ae9
   labels:
     app.kubernetes.io/component: backup
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: backup-validation
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: backup-validation
   namespace: platform-03
 spec:
@@ -386,8 +386,8 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   annotations:
-    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml
-    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:disaster-recovery:jobs:database-backup-jobs.yaml
+    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml
+    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:disaster-recovery:jobs:database-backup-jobs.yaml
   name: backup-service-account
   namespace: platform-03
 ---
@@ -395,8 +395,8 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   annotations:
-    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml
-    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:disaster-recovery:jobs:database-backup-jobs.yaml
+    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml
+    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:disaster-recovery:jobs:database-backup-jobs.yaml
   name: backup-role
   namespace: platform-03
 rules:

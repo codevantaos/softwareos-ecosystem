@@ -2,19 +2,19 @@ import fs from "fs";
 import path from "path";
 
 /**
- * OpenAPI 3.1 specification generator for eco-base API.
+ * OpenAPI 3.1 specification generator for softwareos-base API.
  * Run: tsx src/openapi-gen.ts
  */
 const spec = {
   openapi: "3.1.0",
   info: {
-    title: "eco-base API",
+    title: "softwareos-base API",
     version: "1.0.0",
     description: "Enterprise cloud-native platform API — REST + WebSocket",
-    contact: { name: "Platform Team", url: "https://autoecoops.io" },
+    contact: { name: "Platform Team", url: "https://softwareos.io" },
   },
   servers: [
-    { url: "https://api.autoecoops.io", description: "Production" },
+    { url: "https://api.softwareos.io", description: "Production" },
     { url: "http://localhost:3000", description: "Local Development" },
   ],
   paths: {

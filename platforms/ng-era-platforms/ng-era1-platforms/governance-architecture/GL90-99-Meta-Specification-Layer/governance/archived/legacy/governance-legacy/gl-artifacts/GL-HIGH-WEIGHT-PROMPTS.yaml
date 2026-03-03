@@ -155,7 +155,7 @@ GL30-49_prompts:
         2. 定義前置條件 (preconditions)
         3. 定義後置條件 (postconditions)
         4. 定義副作用 (side_effects)
-        5. 存放路徑：governance/37-behavior-contracts/
+        5. 存放路徑：governance/37-behavior-softwareos-contracts/
       triggers:
         - "定義契約"
         - "行為規範"

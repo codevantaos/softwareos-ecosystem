@@ -1,7 +1,7 @@
-# eco-base v1.0 — Helm Values
-# URI: eco-base://helm/values
+# softwareos-base v1.0 — Helm Values
+# URI: softwareos-base://helm/values
 global:
-  namespace: eco-base
+  namespace: softwareos-base
   imageRegistry: "ghcr.io/indestructibleorg"
   imagePullSecrets: []
 
@@ -173,8 +173,8 @@ postgres:
   image:
     repository: postgres
     tag: "16-alpine"
-  database: eco-base
-  user: eco-base
+  database: softwareos-base
+  user: softwareos-base
   resources:
     requests:
       cpu: "250m"
@@ -205,13 +205,13 @@ ingress:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
-    - host: api.autoecoops.io
+    - host: api.softwareos.io
       paths:
         - path: /
           pathType: Prefix
           service: eco-api-svc
           port: 8000
-    - host: ai.autoecoops.io
+    - host: ai.softwareos.io
       paths:
         - path: /
           pathType: Prefix
@@ -220,8 +220,8 @@ ingress:
   tls:
     - secretName: eco-tls
       hosts:
-        - api.autoecoops.io
-        - ai.autoecoops.io
+        - api.softwareos.io
+        - ai.softwareos.io
 
 # ── Secrets (override via --set or external secret manager) ──────────
 secrets:
@@ -230,7 +230,7 @@ secrets:
   postgresPassword: ""
   hfToken: ""
 # -- Top-level defaults for Helm templates (deployment.yaml, hpa.yaml, pdb.yaml)
-namespace: eco-base
+namespace: softwareos-base
 replicaCount: 2
 
 image:

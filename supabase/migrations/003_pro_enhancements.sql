@@ -1,5 +1,5 @@
--- eco-base v1.1 — Pro Plan Enhancements Migration
--- URI: eco-base://supabase/migrations/003
+-- softwareos-base v1.1 — Pro Plan Enhancements Migration
+-- URI: softwareos-base://supabase/migrations/003
 -- Enables: Database Webhooks, PITR-optimized indexes, Realtime subscriptions, Storage buckets
 
 -- ─── Enable required extensions ─────────────────────────────────────────
@@ -71,10 +71,10 @@ create table if not exists public.deployment_history (
   ) stored,
   details        jsonb not null default '{}',
   uri            text generated always as (
-    'eco-base://deployment/' || environment || '/' || id::text
+    'softwareos-base://deployment/' || environment || '/' || id::text
   ) stored,
   urn            text generated always as (
-    'urn:eco-base:deployment:' || environment || ':' || id::text
+    'urn:softwareos-base:deployment:' || environment || ':' || id::text
   ) stored,
   created_at     timestamptz not null default now()
 );
@@ -117,7 +117,7 @@ create table if not exists public.slo_metrics (
   window_end      timestamptz not null,
   details         jsonb not null default '{}',
   uri             text generated always as (
-    'eco-base://slo/' || service_name || '/' || metric_type
+    'softwareos-base://slo/' || service_name || '/' || metric_type
   ) stored,
   created_at      timestamptz not null default now()
 );

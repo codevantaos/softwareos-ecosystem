@@ -16,8 +16,8 @@ metadata:
   name: urn-registry
   namespace: machinenativenops-registry
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     machinenativeops.io/tier: "registry"
     machinenativeops.io/version: "v1.0.0"
     machinenativeops.io/component: "urn-registry"

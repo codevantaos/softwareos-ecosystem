@@ -1,5 +1,5 @@
--- eco-base v1.0 — Unified Database Schema
--- URI: eco-base://supabase/schema
+-- softwareos-base v1.0 — Unified Database Schema
+-- URI: softwareos-base://supabase/schema
 -- Target: Supabase PostgreSQL 15+
 
 create extension if not exists "uuid-ossp";
@@ -14,7 +14,7 @@ create table public.users (
   display_name text,
   avatar_url   text,
   urn          text generated always as
-               ('urn:eco-base:iam:user:' || id::text) stored,
+               ('urn:softwareos-base:iam:user:' || id::text) stored,
   created_at   timestamptz not null default now(),
   updated_at   timestamptz not null default now()
 );
@@ -33,10 +33,10 @@ create table public.platforms (
                  check (status in ('active','inactive','maintenance','deprecated')),
   config         jsonb not null default '{}',
   capabilities   text[] not null default '{}',
-  k8s_namespace  text not null default 'eco-base',
+  k8s_namespace  text not null default 'softwareos-base',
   deploy_target  text not null default '',
   uri            text generated always as
-                 ('eco-base://platform/module/' || slug) stored,
+                 ('softwareos-base://platform/module/' || slug) stored,
   urn            text,
   owner_id       uuid references public.users(id) on delete set null,
   created_at     timestamptz not null default now(),
@@ -94,7 +94,7 @@ create table public.service_registry (
   health_status      text not null default 'unknown'
                      check (health_status in ('healthy','degraded','unhealthy','unknown')),
   registry_ttl       integer not null default 30,
-  k8s_namespace      text not null default 'eco-base',
+  k8s_namespace      text not null default 'softwareos-base',
   uri                text,
   urn                text,
   last_heartbeat     timestamptz,

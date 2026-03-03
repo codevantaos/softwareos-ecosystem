@@ -21,7 +21,7 @@ export default function SettingsScreen() {
   const colorScheme = useColorScheme();
   const isDark = colorScheme === "dark";
 
-  const [apiGateway, setApiGateway] = useState("https://api.autoecoops.io");
+  const [apiGateway, setApiGateway] = useState("https://api.softwareos.io");
   const [authToken, setAuthToken] = useState("••••••••••••••••");
   const [defaultEngine, setDefaultEngine] = useState("vllm");
   const [streamingEnabled, setStreamingEnabled] = useState(true);
@@ -65,7 +65,7 @@ export default function SettingsScreen() {
               style={[styles.settingInput, { color: colors.foreground, borderColor: colors.border, backgroundColor: colors.background }]}
               value={apiGateway}
               onChangeText={setApiGateway}
-              placeholder="https://api.autoecoops.io"
+              placeholder="https://api.softwareos.io"
               placeholderTextColor={colors.muted}
               autoCapitalize="none"
               keyboardType="url"
@@ -186,7 +186,7 @@ export default function SettingsScreen() {
           <View style={[styles.divider, { backgroundColor: colors.border }]} />
           <View style={styles.aboutRow}>
             <Text style={[styles.aboutKey, { color: colors.muted }]}>Repository</Text>
-            <Text style={[styles.aboutValue, { color: colors.primary }]}>indestructibleorg/eco-base</Text>
+            <Text style={[styles.aboutValue, { color: colors.primary }]}>indestructibleorg/softwareos-base</Text>
           </View>
           <View style={[styles.divider, { backgroundColor: colors.border }]} />
           <View style={styles.aboutRow}>

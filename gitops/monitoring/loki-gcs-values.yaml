@@ -10,9 +10,9 @@ loki:
   storage:
     type: gcs
     bucketNames:
-      chunks: eco-base-loki-chunks-my-project-ops-1991
-      ruler: eco-base-loki-chunks-my-project-ops-1991
-      admin: eco-base-loki-chunks-my-project-ops-1991
+      chunks: softwareos-base-loki-chunks-my-project-ops-1991
+      ruler: softwareos-base-loki-chunks-my-project-ops-1991
+      admin: softwareos-base-loki-chunks-my-project-ops-1991
 
   schemaConfig:
     configs:

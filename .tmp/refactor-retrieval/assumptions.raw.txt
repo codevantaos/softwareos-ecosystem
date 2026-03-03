@@ -45,7 +45,7 @@ platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/scri
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/scripts/scan_source_code_timelines.py:328:            f.write("- 排除備份目錄、歷史檔案、暫時文件\n")
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/scripts/scan_source_code_timelines.py:407:    print("  - 排除備份目錄、歷史檔案、暫時文件")
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance/scripts/verification/content_based_migration.py:96:                "keywords": ["v4", "v5", "v9", "v10", "v11", "v12", "legacy", "old"],
-platforms/ng-era-platforms/ng-era2-platforms/governance/compliance/contracts/gl_contract.py:70:        status: Contract status (active, deprecated, archived)
+platforms/ng-era-platforms/ng-era2-platforms/governance/compliance/softwareos-contracts/gl_contract.py:70:        status: Contract status (active, deprecated, archived)
 platforms/ng-era-platforms/ng-era2-platforms/runtime/execution/README.md:59:│   ├── integration-tests-legacy/  # Legacy integration tests
 platforms/ng-era-platforms/ng-era2-platforms/runtime/execution/README.md:63:│   ├── performance-tests-legacy/  # Performance tests
 platforms/ng-era-platforms/ng-era2-platforms/runtime/execution/README.md:67:│   ├── scripts-legacy/          # Legacy scripts
@@ -7926,10 +7926,10 @@ platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Met
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/README.md:60:> 此目錄結構已建立，部分文件內容待補充。
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/naming-governance-v1.0.0-extended/automation/scripts/naming_governance_repair.py:3:# @ECO-semantic: legacy-scripts
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/naming-governance-v1.0.0-extended/automation/scripts/naming_governance_migration.py:3:# @ECO-semantic: legacy-scripts
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/contracts/unified-naming-governance-contract.yaml:619:        - DEPRECATED
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/contracts/unified-naming-governance-contract.yaml:670:  state-machine: "DECLARED->REGISTERED->COORDINATED->ACTIVE->DEPRECATED->RETIRED"
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/contracts/unified-naming-governance-contract.yaml:694:        - to: DEPRECATED
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/contracts/unified-naming-governance-contract.yaml:697:    - state: DEPRECATED
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/softwareos-contracts/unified-naming-governance-contract.yaml:619:        - DEPRECATED
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/softwareos-contracts/unified-naming-governance-contract.yaml:670:  state-machine: "DECLARED->REGISTERED->COORDINATED->ACTIVE->DEPRECATED->RETIRED"
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/softwareos-contracts/unified-naming-governance-contract.yaml:694:        - to: DEPRECATED
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/softwareos-contracts/unified-naming-governance-contract.yaml:697:    - state: DEPRECATED
 platforms/ng-era-platforms/README.md:17:- All historical reports, TODOs, and deployment specs remain unchanged inside each era so execution flows can be replayed without reconstruction.
 platforms/PLATFORMS_REFACTOR_FORCED_RETRIEVAL_WORKFLOW.md:54:grep -RInE "TODO|FIXME|HACK|DEPRECATED|legacy|archived|暫時|待補" "$TARGET" > "$OUT/assumptions.raw.txt" || true
 platforms/PLATFORMS_REFACTOR_FORCED_RETRIEVAL_WORKFLOW.md:140:C3,legacy path still referenced,YES,NO,YES,REVIEW
@@ -7946,7 +7946,7 @@ platforms/runtime-platform/pyproject.toml:3:build-backend = "setuptools.backends
 platforms/automation/instant/docs/INSTANT-EXECUTION-README.md:151:   - `governance/20-information` → `governance/_legacy/20-information`
 platforms/automation/instant/docs/INSTANT-MIGRATION-COMPLETE.md:156:├── _legacy_scratch/            (1 file)  ✅
 platforms/automation/instant/docs/INSTANT-ARCHIVE-SUCCESS-REPORT.md:146:└── _legacy_scratch/
-platforms/automation/instant/scripts/organize-instant-files.sh:15:mkdir -p instant/{contracts,archive,docs,scripts,configs,workflows,tests,src,legacy}
+platforms/automation/instant/scripts/organize-instant-files.sh:15:mkdir -p instant/{softwareos-contracts,archive,docs,scripts,configs,workflows,tests,src,legacy}
 platforms/automation/instant/scripts/organize-instant-files.sh:43:    elif [[ "$file" == *"archive"* ]] || [[ "$file" == *"legacy"* ]]; then
 platforms/automation/instant/scripts/organize-instant-files.sh:48:        dest="instant/legacy/"
 platforms/automation/instant/src/INSTANT-DEBT-RESOLUTION-REPORT.md:174:4. **Platform Positioning**: Modern AI level, not legacy approach
@@ -7960,84 +7960,84 @@ platforms/eco-dataops/src/engines/evidence_pipeline/engine.py:42:    ARCHIVED = 
 platforms/eco-dataops/src/engines/evidence_pipeline/engine.py:338:            True if successfully archived, False otherwise.
 platforms/infrastructure/rke2/profiles/production/audit-policy.yaml:206:# - Compress archived logs to save space
 platforms/infrastructure/rke2/profiles/production/psa-config.yaml:124:# 4. For legacy workloads, consider:
-platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:389:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml
-platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:390:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:disaster-recovery:jobs:database-backup-jobs.yaml
-platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:398:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml
-platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:399:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:disaster-recovery:jobs:database-backup-jobs.yaml
+platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:389:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml
+platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:390:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:disaster-recovery:jobs:database-backup-jobs.yaml
+platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:398:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml
+platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:399:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:disaster-recovery:jobs:database-backup-jobs.yaml
 platforms/infrastructure/k8s-legacy/istio/security/peer-authentication.yaml:24:# Allows permissive mode for legacy services
 platforms/infrastructure/k8s-legacy/istio/security/peer-authentication.yaml:33:      app.kubernetes.io/name: legacy-service
-platforms/infrastructure/k8s-legacy/production/service-observability.yaml:48:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/production/service-observability.yaml
-platforms/infrastructure/k8s-legacy/production/service-observability.yaml:49:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:production:service-observability.yaml
-platforms/infrastructure/k8s-legacy/production/service-observability.yaml:118:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/production/service-observability.yaml
-platforms/infrastructure/k8s-legacy/production/service-observability.yaml:119:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:production:service-observability.yaml
-platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml:97:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/production/enhanced-tracing.yaml
-platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml:98:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:production:enhanced-tracing.yaml
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:6:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/production/velero-config.yaml
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:7:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:production:velero-config.yaml
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:51:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/production/velero-config.yaml
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:52:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:production:velero-config.yaml
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:75:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/production/velero-config.yaml
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:76:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:production:velero-config.yaml
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:93:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/production/velero-config.yaml
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:94:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:production:velero-config.yaml
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:140:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/production/velero-config.yaml
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:141:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:production:velero-config.yaml
-platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:93:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/production/backup-encryption.yaml
-platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:94:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:production:backup-encryption.yaml
-platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:113:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/production/backup-encryption.yaml
-platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:114:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:production:backup-encryption.yaml
-platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:133:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/production/backup-encryption.yaml
-platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:134:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:production:backup-encryption.yaml
-platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:6:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/jaeger/istio-config.yaml
-platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:7:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:jaeger:istio-config.yaml
-platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:83:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/jaeger/istio-config.yaml
-platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:84:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:jaeger:istio-config.yaml
-platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:113:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/jaeger/istio-config.yaml
-platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:114:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:jaeger:istio-config.yaml
-platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:137:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/jaeger/istio-config.yaml
-platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:138:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:jaeger:istio-config.yaml
-platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:158:    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/jaeger/istio-config.yaml
-platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:159:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:jaeger:istio-config.yaml
+platforms/infrastructure/k8s-legacy/production/service-observability.yaml:48:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/production/service-observability.yaml
+platforms/infrastructure/k8s-legacy/production/service-observability.yaml:49:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:production:service-observability.yaml
+platforms/infrastructure/k8s-legacy/production/service-observability.yaml:118:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/production/service-observability.yaml
+platforms/infrastructure/k8s-legacy/production/service-observability.yaml:119:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:production:service-observability.yaml
+platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml:97:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/production/enhanced-tracing.yaml
+platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml:98:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:production:enhanced-tracing.yaml
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:6:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/production/velero-config.yaml
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:7:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:production:velero-config.yaml
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:51:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/production/velero-config.yaml
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:52:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:production:velero-config.yaml
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:75:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/production/velero-config.yaml
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:76:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:production:velero-config.yaml
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:93:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/production/velero-config.yaml
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:94:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:production:velero-config.yaml
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:140:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/production/velero-config.yaml
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:141:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:production:velero-config.yaml
+platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:93:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/production/backup-encryption.yaml
+platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:94:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:production:backup-encryption.yaml
+platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:113:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/production/backup-encryption.yaml
+platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:114:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:production:backup-encryption.yaml
+platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:133:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/production/backup-encryption.yaml
+platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:134:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:production:backup-encryption.yaml
+platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:6:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/jaeger/istio-config.yaml
+platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:7:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:jaeger:istio-config.yaml
+platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:83:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/jaeger/istio-config.yaml
+platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:84:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:jaeger:istio-config.yaml
+platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:113:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/jaeger/istio-config.yaml
+platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:114:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:jaeger:istio-config.yaml
+platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:137:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/jaeger/istio-config.yaml
+platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:138:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:jaeger:istio-config.yaml
+platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:158:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/jaeger/istio-config.yaml
+platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:159:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:jaeger:istio-config.yaml
 platforms/infrastructure/foundation/rke2/profiles/production/audit-policy.yaml:206:# - Compress archived logs to save space
 platforms/infrastructure/foundation/rke2/profiles/production/psa-config.yaml:124:# 4. For legacy workloads, consider:
-platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:389:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml
-platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:390:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:disaster-recovery:jobs:database-backup-jobs.yaml
-platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:398:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml
-platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:399:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:disaster-recovery:jobs:database-backup-jobs.yaml
+platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:389:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml
+platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:390:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:disaster-recovery:jobs:database-backup-jobs.yaml
+platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:398:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml
+platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:399:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:disaster-recovery:jobs:database-backup-jobs.yaml
 platforms/infrastructure/foundation/k8s-legacy/istio/security/peer-authentication.yaml:24:# Allows permissive mode for legacy services
 platforms/infrastructure/foundation/k8s-legacy/istio/security/peer-authentication.yaml:33:      app.kubernetes.io/name: legacy-service
-platforms/infrastructure/foundation/k8s-legacy/production/service-observability.yaml:48:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/service-observability.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/service-observability.yaml:49:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:service-observability.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/service-observability.yaml:118:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/service-observability.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/service-observability.yaml:119:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:service-observability.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml:97:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml:98:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:enhanced-tracing.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:6:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/velero-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:7:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:velero-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:51:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/velero-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:52:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:velero-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:75:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/velero-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:76:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:velero-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:93:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/velero-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:94:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:velero-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:140:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/velero-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:141:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:velero-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:93:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:94:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:backup-encryption.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:113:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:114:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:backup-encryption.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:133:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml
-platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:134:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:backup-encryption.yaml
-platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:6:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:7:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:jaeger:istio-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:83:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:84:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:jaeger:istio-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:113:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:114:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:jaeger:istio-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:137:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:138:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:jaeger:istio-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:158:    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml
-platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:159:    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:jaeger:istio-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/service-observability.yaml:48:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/service-observability.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/service-observability.yaml:49:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:service-observability.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/service-observability.yaml:118:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/service-observability.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/service-observability.yaml:119:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:service-observability.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml:97:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml:98:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:enhanced-tracing.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:6:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/velero-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:7:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:velero-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:51:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/velero-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:52:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:velero-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:75:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/velero-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:76:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:velero-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:93:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/velero-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:94:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:velero-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:140:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/velero-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:141:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:velero-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:93:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:94:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:backup-encryption.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:113:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:114:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:backup-encryption.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:133:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml
+platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:134:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:backup-encryption.yaml
+platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:6:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:7:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:jaeger:istio-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:83:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:84:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:jaeger:istio-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:113:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:114:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:jaeger:istio-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:137:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:138:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:jaeger:istio-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:158:    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml
+platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:159:    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:jaeger:istio-config.yaml
 platforms/eco-superai/platform-superai/src/ai/agents/task_executor.py:89:            "code_generator": f'"""\nGenerated code stub for: {task[:100]}\nTODO: Implement with LLM assistance\n"""\n\ndef generated_function():\n    raise NotImplementedError("LLM unavailable - implement manually")\n',
 platforms/eco-superai/platform-superai/src/ai/agents/task_executor.py:91:            "test_writer": f'"""Test suite stub for: {task[:100]}"""\nimport pytest\n\nclass TestGenerated:\n    def test_placeholder(self):\n        """TODO: Generate tests with LLM"""\n        pytest.skip("LLM unavailable")\n',
 platforms/eco-superai/src/ai/agents/task_executor.py:89:            "code_generator": f'"""\nGenerated code stub for: {task[:100]}\nTODO: Implement with LLM assistance\n"""\n\ndef generated_function():\n    raise NotImplementedError("LLM unavailable - implement manually")\n',

@@ -5,7 +5,7 @@ metadata:
   namespace: eco-dataops
   labels:
     app.kubernetes.io/name: dataops-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/component: engine
     governance.io/managed: "true"
 spec:

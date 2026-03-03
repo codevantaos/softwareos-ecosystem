@@ -30,7 +30,7 @@ def main():
                 "digest": {"sha256": hashlock_sha}
             }
         ],
-        "predicateType": "https://eco-base.io/Attestation/SupplyChain/v1",
+        "predicateType": "https://softwareos-base.io/Attestation/SupplyChain/v1",
         "predicate": {
             "generator": "eco-supplychain-attest-tool",
             "generatedAt": datetime.now(timezone.utc).isoformat(),

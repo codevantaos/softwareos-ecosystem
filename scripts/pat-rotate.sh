@@ -6,7 +6,7 @@
 #   ./scripts/pat-rotate.sh [OPTIONS]
 #
 # Options:
-#   --repo         OWNER/REPO          Target repository (default: indestructibleorg/eco-base)
+#   --repo         OWNER/REPO          Target repository (default: indestructibleorg/softwareos-base)
 #   --token        GITHUB_TOKEN        Active PAT with repo+workflow+admin:org scope
 #   --new-token    NEW_PAT             New PAT to set (if omitted, only revocation is performed)
 #   --expiry       YYYY-MM-DD          Expiry date of new PAT
@@ -32,7 +32,7 @@
 set -euo pipefail
 
 # ── Defaults ──────────────────────────────────────────────────────────────────
-REPO="${TARGET_REPO:-indestructibleorg/eco-base}"
+REPO="${TARGET_REPO:-indestructibleorg/softwareos-base}"
 TOKEN="${GITHUB_TOKEN:-}"
 NEW_TOKEN="${NEW_PAT:-}"
 EXPIRY="${PAT_EXPIRY_DATE:-}"

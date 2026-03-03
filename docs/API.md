@@ -1,10 +1,10 @@
-# eco-base API Reference
+# softwareos-base API Reference
 
-URI: eco-base://docs/API
+URI: softwareos-base://docs/API
 
 ## Overview
 
-eco-base exposes a multi-layer API surface through three service tiers. The AI service (FastAPI, port 8001) handles inference, embeddings, and governance. The API gateway (Express, port 3000) handles authentication, platform management, and proxies AI requests with job persistence. The root gateway (FastAPI, port 8000) provides a unified entry point with proxy routing to both backend services.
+softwareos-base exposes a multi-layer API surface through three service tiers. The AI service (FastAPI, port 8001) handles inference, embeddings, and governance. The API gateway (Express, port 3000) handles authentication, platform management, and proxies AI requests with job persistence. The root gateway (FastAPI, port 8000) provides a unified entry point with proxy routing to both backend services.
 
 All services share a common authentication model, error format, and URI/URN identification scheme.
 
@@ -13,8 +13,8 @@ All services share a common authentication model, error format, and URI/URN iden
 | Environment | AI Service | API Gateway | Root Gateway |
 |-------------|-----------|-------------|--------------|
 | Development | `http://localhost:8001` | `http://localhost:3000` | `http://localhost:8000` |
-| Staging | `https://ai-staging.autoecoops.io` | `https://api-staging.autoecoops.io` | `https://staging.autoecoops.io` |
-| Production | `https://ai.autoecoops.io` | `https://api.autoecoops.io` | `https://autoecoops.io` |
+| Staging | `https://ai-staging.softwareos.io` | `https://api-staging.softwareos.io` | `https://staging.softwareos.io` |
+| Production | `https://ai.softwareos.io` | `https://api.softwareos.io` | `https://softwareos.io` |
 
 ## Authentication
 
@@ -62,7 +62,7 @@ Returns service liveness status. Used by Kubernetes liveness probes.
   "engines": ["vllm", "tgi", "ollama", "sglang"],
   "uptime_seconds": 3621.4,
   "models_registered": 6,
-  "uri": "eco-base://backend/ai/health"
+  "uri": "softwareos-base://backend/ai/health"
 }
 ```
 
@@ -220,7 +220,7 @@ Create a new user account via Supabase Auth.
   "user": {
     "id": "550e8400-e29b-41d4-a716-446655440000",
     "email": "dev@example.com",
-    "urn": "urn:eco-base:iam:user:550e8400-e29b-41d4-a716-446655440000"
+    "urn": "urn:softwareos-base:iam:user:550e8400-e29b-41d4-a716-446655440000"
   },
   "session": {
     "access_token": "eyJhbGciOiJIUzI1NiIs...",
@@ -253,7 +253,7 @@ Sign in with email and password.
     "id": "550e8400-e29b-41d4-a716-446655440000",
     "email": "dev@example.com",
     "role": "member",
-    "urn": "urn:eco-base:iam:user:550e8400-e29b-41d4-a716-446655440000"
+    "urn": "urn:softwareos-base:iam:user:550e8400-e29b-41d4-a716-446655440000"
   },
   "session": {
     "access_token": "eyJhbGciOiJIUzI1NiIs...",
@@ -313,9 +313,9 @@ Get the current authenticated user profile.
     "id": "550e8400-e29b-41d4-a716-446655440000",
     "email": "dev@example.com",
     "role": "member",
-    "urn": "urn:eco-base:iam:user:550e8400-e29b-41d4-a716-446655440000"
+    "urn": "urn:softwareos-base:iam:user:550e8400-e29b-41d4-a716-446655440000"
   },
-  "uri": "eco-base://backend/api/auth/me"
+  "uri": "softwareos-base://backend/api/auth/me"
 }
 ```
 
@@ -464,7 +464,7 @@ List all available models from the registry with engine availability.
     {
       "id": "llama-3.1-8b-instruct",
       "object": "model",
-      "owned_by": "eco-base",
+      "owned_by": "softwareos-base",
       "capabilities": ["chat", "completion"],
       "compatible_engines": ["vllm", "tgi", "ollama", "sglang"],
       "context_length": 131072
@@ -472,7 +472,7 @@ List all available models from the registry with engine availability.
     {
       "id": "quantum-bert-xxl-v1",
       "object": "model",
-      "owned_by": "eco-base",
+      "owned_by": "softwareos-base",
       "capabilities": ["embedding"],
       "compatible_engines": ["vllm"],
       "context_length": 8192
@@ -485,7 +485,7 @@ List all available models from the registry with engine availability.
 
 ## AI Service Endpoints (Legacy)
 
-These endpoints are served by the AI service and provide the original eco-base API format. They remain available for backward compatibility.
+These endpoints are served by the AI service and provide the original softwareos-base API format. They remain available for backward compatibility.
 
 ### POST /generate
 
@@ -511,8 +511,8 @@ Generate text from a prompt using the engine manager with automatic failover.
   "content": "Servers in the sky\nData flows like morning mist\nScalable and free",
   "model_id": "llama-3.1-8b-instruct",
   "engine": "vllm",
-  "uri": "eco-base://ai/generation/550e8400-e29b-41d4-a716-446655440000",
-  "urn": "urn:eco-base:ai:generation:550e8400-e29b-41d4-a716-446655440000",
+  "uri": "softwareos-base://ai/generation/550e8400-e29b-41d4-a716-446655440000",
+  "urn": "urn:softwareos-base:ai:generation:550e8400-e29b-41d4-a716-446655440000",
   "usage": {
     "prompt_tokens": 8,
     "completion_tokens": 18,
@@ -548,14 +548,14 @@ Compute vector alignment for a set of tokens using the configured alignment mode
   "alignment_model": "quantum-bert-xxl-v1",
   "alignment_score": 0.9847,
   "function_keywords": ["kubernetes", "deployment", "scaling"],
-  "uri": "eco-base://ai/vector/align/550e8400",
-  "urn": "urn:eco-base:ai:vector:align:550e8400"
+  "uri": "softwareos-base://ai/vector/align/550e8400",
+  "urn": "urn:softwareos-base:ai:vector:align:550e8400"
 }
 ```
 
 ### POST /embeddings
 
-Generate embeddings in the eco-base native format.
+Generate embeddings in the softwareos-base native format.
 
 **Request:**
 
@@ -688,8 +688,8 @@ List all registered platforms.
       "type": "web",
       "status": "active",
       "capabilities": ["chat", "models", "yaml-studio"],
-      "k8s_namespace": "eco-base",
-      "urn": "urn:eco-base:platform:module:web-dashboard:550e8400"
+      "k8s_namespace": "softwareos-base",
+      "urn": "urn:softwareos-base:platform:module:web-dashboard:550e8400"
     }
   ],
   "total": 1
@@ -721,7 +721,7 @@ Register a new platform (admin only).
     "name": "Mobile App",
     "slug": "mobile-app",
     "status": "active",
-    "urn": "urn:eco-base:platform:module:mobile-app:..."
+    "urn": "urn:softwareos-base:platform:module:mobile-app:..."
   }
 }
 ```
@@ -755,7 +755,7 @@ Generate a .qyaml manifest with all four governance blocks.
   "module": {
     "name": "eco-payment-service",
     "ports": [8080],
-    "depends_on": ["eco-auth-service", "eco-db"]
+    "depends_on": ["eco-codevantaos-auth", "eco-db"]
   },
   "target": "k8s"
 }
@@ -815,7 +815,7 @@ Generate a governance descriptor for a service.
 ```json
 {
   "service_name": "eco-ai-service",
-  "namespace": "eco-base",
+  "namespace": "softwareos-base",
   "kind": "Deployment"
 }
 ```
@@ -924,10 +924,10 @@ npx @redocly/cli lint backend/api/openapi.yaml
 
 ### TypeScript/JavaScript
 
-The `@eco-base/api-client` package provides a typed HTTP client with retry and interceptors:
+The `@softwareos-base/api-client` package provides a typed HTTP client with retry and interceptors:
 
 ```typescript
-import { EcoClient } from "@eco-base/api-client";
+import { EcoClient } from "@softwareos-base/api-client";
 
 const client = new EcoClient({
   baseUrl: "http://localhost:3000",
@@ -945,7 +945,7 @@ const response = await client.chat({
 ### WebSocket Client
 
 ```typescript
-import { EcoWebSocket } from "@eco-base/api-client/ws";
+import { EcoWebSocket } from "@softwareos-base/api-client/ws";
 
 const ws = new EcoWebSocket("ws://localhost:3000/ws", {
   token: "sk-eco-...",

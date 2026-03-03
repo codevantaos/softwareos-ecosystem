@@ -3,56 +3,56 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: api-config
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     generated-by: yaml-toolkit-v1
     unique-id: "6ba7b815-9dad-11d1-80b4-00c04fd430c8"
   annotations:
-    eco-base/uri: "eco-base://k8s/eco-base/configmap/api-config"
-    eco-base/urn: "urn:eco-base:k8s:eco-base:configmap:api-config:6ba7b815-9dad-11d1-80b4-00c04fd430c8"
+    softwareos-base/uri: "softwareos-base://k8s/softwareos-base/configmap/api-config"
+    softwareos-base/urn: "urn:softwareos-base:k8s:softwareos-base:configmap:api-config:6ba7b815-9dad-11d1-80b4-00c04fd430c8"
 data:
   NODE_ENV: "production"
   PORT: "3000"
   LOG_LEVEL: "info"
   LOG_FORMAT: "json"
-  CORS_ORIGINS: "https://app.autoecoops.io,https://autoecoops.io"
+  CORS_ORIGINS: "https://app.softwareos.io,https://softwareos.io"
   RATE_LIMIT_AUTHENTICATED: "100"
   RATE_LIMIT_PUBLIC: "10"
   RATE_LIMIT_WINDOW_MS: "60000"
-  AI_SERVICE_GRPC: "ai-svc.eco-base.svc.cluster.local:8000"
-  AI_SERVICE_HTTP: "http://ai-svc.eco-base.svc.cluster.local:8001"
-  CONSUL_ENDPOINT: "http://consul.eco-base.svc.cluster.local:8500"
-  JAEGER_ENDPOINT: "http://jaeger.eco-base.svc.cluster.local:14268/api/traces"
+  AI_SERVICE_GRPC: "ai-svc.softwareos-base.svc.cluster.local:8000"
+  AI_SERVICE_HTTP: "http://ai-svc.softwareos-base.svc.cluster.local:8001"
+  CONSUL_ENDPOINT: "http://consul.softwareos-base.svc.cluster.local:8500"
+  JAEGER_ENDPOINT: "http://jaeger.softwareos-base.svc.cluster.local:14268/api/traces"
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: ai-config
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     generated-by: yaml-toolkit-v1
     unique-id: "6ba7b816-9dad-11d1-80b4-00c04fd430c8"
   annotations:
-    eco-base/uri: "eco-base://k8s/eco-base/configmap/ai-config"
-    eco-base/urn: "urn:eco-base:k8s:eco-base:configmap:ai-config:6ba7b816-9dad-11d1-80b4-00c04fd430c8"
+    softwareos-base/uri: "softwareos-base://k8s/softwareos-base/configmap/ai-config"
+    softwareos-base/urn: "urn:softwareos-base:k8s:softwareos-base:configmap:ai-config:6ba7b816-9dad-11d1-80b4-00c04fd430c8"
 data:
   models: "vllm,ollama,tgi,sglang"
   VECTOR_DIM: "1024"
   ALIGNMENT_MODEL: "BAAI/bge-large-en-v1.5"
   ALIGNMENT_TOLERANCE: "0.001"
-  CELERY_BROKER: "redis://redis-svc.eco-base.svc.cluster.local:6379/0"
-  CELERY_BACKEND: "redis://redis-svc.eco-base.svc.cluster.local:6379/1"
+  CELERY_BROKER: "redis://redis-svc.softwareos-base.svc.cluster.local:6379/0"
+  CELERY_BACKEND: "redis://redis-svc.softwareos-base.svc.cluster.local:6379/1"
   GRPC_PORT: "8000"
   HTTP_PORT: "8001"
   LOG_LEVEL: "info"
-  CONSUL_ENDPOINT: "http://consul.eco-base.svc.cluster.local:8500"
-  JAEGER_ENDPOINT: "http://jaeger.eco-base.svc.cluster.local:14268/api/traces"
+  CONSUL_ENDPOINT: "http://consul.softwareos-base.svc.cluster.local:8500"
+  JAEGER_ENDPOINT: "http://jaeger.softwareos-base.svc.cluster.local:14268/api/traces"
 ---
 # YAML Toolkit v8 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "6ba7b815-9dad-11d1-80b4-00c04fd430c8"
-  uri: "eco-base://k8s/eco-base/configmap/api-config"
-  urn: "urn:eco-base:k8s:eco-base:configmap:api-config:6ba7b815-9dad-11d1-80b4-00c04fd430c8"
+  uri: "softwareos-base://k8s/softwareos-base/configmap/api-config"
+  urn: "urn:softwareos-base:k8s:softwareos-base:configmap:api-config:6ba7b815-9dad-11d1-80b4-00c04fd430c8"
   target_system: gke-production
   cross_layer_binding: [api-service, ai-service, consul, jaeger]
   schema_version: v8
@@ -64,7 +64,7 @@ governance_info:
   compliance_tags: [zero-trust, internal]
   lifecycle_policy: active
 registry_binding:
-  service_endpoint: "http://api-config.eco-base.svc.cluster.local"
+  service_endpoint: "http://api-config.softwareos-base.svc.cluster.local"
   discovery_protocol: consul
   health_check_path: "/health"
   registry_ttl: 30

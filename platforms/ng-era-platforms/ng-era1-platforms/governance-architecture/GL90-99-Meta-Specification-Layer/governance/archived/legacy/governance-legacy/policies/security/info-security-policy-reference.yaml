@@ -9,8 +9,8 @@ metadata:
   name: information-security-policy-reference
   description: "信息安全策略索引和治理集成点"
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     category: "security"
     domain: "compliance"
   annotations:

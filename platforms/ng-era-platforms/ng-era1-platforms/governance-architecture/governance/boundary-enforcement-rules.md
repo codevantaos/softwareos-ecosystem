@@ -202,7 +202,7 @@ def check_no_external_dependencies(file_path):
 NAME: interface-contract-required
 LEVEL: E1 - HIGH
 ACTION: REJECT (require fix before merge)
-DESCRIPTION: All cross-boundary interactions must have defined contracts
+DESCRIPTION: All cross-boundary interactions must have defined softwareos-contracts
 ```
 
 **Implementation**:
@@ -671,7 +671,7 @@ jobs:
 class RuntimeBoundaryChecker:
     def __init__(self):
         self.dependency_matrix = self._load_dependency_matrix()
-        self.interface_contracts = self._load_interface_contracts()
+        self.interface_softwareos-contracts = self._load_interface_softwareos-contracts()
     
     def validate_cross_layer_call(self, layer_from, layer_to, operation):
         """Validate a cross-layer call at runtime"""

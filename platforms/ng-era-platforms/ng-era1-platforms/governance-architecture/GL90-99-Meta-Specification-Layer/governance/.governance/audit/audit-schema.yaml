@@ -14,8 +14,8 @@ apiVersion: audit.gl.io/v1
 kind: AuditTrailSchema
 
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     gl.governance.level: "3"
     gl.charter.version: "5.0"
 

@@ -22,16 +22,16 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
 
-      - name: Block manual edits of eco-base/urn and eco-base/uri
+      - name: Block manual edits of softwareos-base/urn and softwareos-base/uri
         run: |
           set -euo pipefail
           git fetch origin ${{ github.base_ref }} --depth=1
-          if git diff origin/${{ github.base_ref }}...HEAD -U0 | grep -E '^\+.*eco-base/(urn|uri):|^-.*eco-base/(urn|uri):' >/dev/null; then
+          if git diff origin/${{ github.base_ref }}...HEAD -U0 | grep -E '^\+.*softwareos-base/(urn|uri):|^-.*softwareos-base/(urn|uri):' >/dev/null; then
             AUTHOR="$(git log -1 --pretty=format:'%an <%ae>')"
             if echo "$AUTHOR" | grep -qi 'eco-supplychain-bot'; then
               echo "OK: urn/uri change authored by supplychain bot."
             else
-              echo "ERROR: manual edits to eco-base/urn or eco-base/uri are forbidden. Run supplychain regeneration (CI/bot) instead."
+              echo "ERROR: manual edits to softwareos-base/urn or softwareos-base/uri are forbidden. Run supplychain regeneration (CI/bot) instead."
               exit 1
             fi
           fi

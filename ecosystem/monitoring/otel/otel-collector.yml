@@ -37,7 +37,7 @@ processors:
         value:  development
         action: upsert
       - key:    service.namespace
-        value:  eco-base
+        value:  softwareos-base
         action: upsert
 
   filter/drop_health:

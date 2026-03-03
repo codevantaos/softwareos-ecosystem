@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
-# eco-base v1.0 — Deployment Script
-# URI: eco-base://scripts/deploy
+# softwareos-base v1.0 — Deployment Script
+# URI: softwareos-base://scripts/deploy
 set -euo pipefail
 
-NAMESPACE="${ECO_NAMESPACE:-eco-base}"
-RELEASE_NAME="${ECO_RELEASE:-eco-base}"
+NAMESPACE="${ECO_NAMESPACE:-softwareos-base}"
+RELEASE_NAME="${ECO_RELEASE:-softwareos-base}"
 CHART_DIR="./helm"
 VALUES_FILE="./helm/values.yaml"
 
 echo "╔══════════════════════════════════════════════════════════╗"
-echo "║     eco-base v1.0 — Deployment Script          ║"
+echo "║     softwareos-base v1.0 — Deployment Script          ║"
 echo "╚══════════════════════════════════════════════════════════╝"
 
 # ── Pre-deploy validation ─────────────────────────────────────

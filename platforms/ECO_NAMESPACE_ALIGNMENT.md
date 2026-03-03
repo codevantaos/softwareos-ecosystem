@@ -11,7 +11,7 @@
 ### 1.1 平台層級架構
 
 ```
-eco-base/
+softwareos-base/
 ├── platforms/
 │   ├── platform-eco/              # Platform-01: IndestructibleAutoOps (ECO)
 │   │   ├── k8s/
@@ -30,10 +30,10 @@ eco-base/
 │   │
 │   └── platform-core/             # 共享內核 (Core Services)
 │       ├── auth/
-│       ├── memory-hub/
-│       ├── event-bus/
-│       ├── policy-audit/
-│       └── infra-manager/
+│       ├── codevantaos-memory/
+│       ├── codevantaos-event/
+│       ├── codevantaos-policy/
+│       └── codevantaos-infra/
 │
 ├── kubernetes/
 │   ├── namespaces/
@@ -96,7 +96,7 @@ eco-base/
 
 ```bash
 # 基礎設施
-ECO_INFRA_CLUSTER_NAME=eco-base-gke
+ECO_INFRA_CLUSTER_NAME=softwareos-base-gke
 ECO_INFRA_REGION=asia-east1
 ECO_INFRA_PROJECT_ID=my-project-ops-1991
 
@@ -106,7 +106,7 @@ ECO_ARGO_EVENTS_WEBHOOK_PORT=12000
 
 # Tekton
 ECO_TEKTON_NAMESPACE=infra
-ECO_TEKTON_REGISTRY=asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base
+ECO_TEKTON_REGISTRY=asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base
 
 # Argo CD
 ECO_ARGOCD_NAMESPACE=infra
@@ -140,7 +140,7 @@ SUPERAI_QUANTUM_BACKEND=qasm_simulator
 SUPERAI_QUANTUM_SHOTS=1024
 
 # IaC (Terraform)
-SUPERAI_TERRAFORM_BACKEND=gs://eco-base-terraform-state
+SUPERAI_TERRAFORM_BACKEND=gs://softwareos-base-terraform-state
 SUPERAI_TERRAFORM_WORKSPACE=superai-prod
 
 # 機械硬體
@@ -155,30 +155,30 @@ SUPERAI_HARDWARE_MONITORING_INTERVAL=30s
 ### 4.1 Platform-ECO 資源 URI/URN
 
 **Kubernetes 部署**:
-- URI: `eco-base://k8s/platform-01/deployment/observability-stack`
-- URN: `urn:eco-base:k8s:platform-01:deployment:observability-stack:6ba7b811-9dad-11d1-80b4-00c04fd430c8`
+- URI: `softwareos-base://k8s/platform-01/deployment/observability-stack`
+- URN: `urn:softwareos-base:k8s:platform-01:deployment:observability-stack:6ba7b811-9dad-11d1-80b4-00c04fd430c8`
 
 **Argo CD 應用**:
-- URI: `eco-base://service/platform-01/argocd/app-deployment`
-- URN: `urn:eco-base:service:platform-01:argocd:app-deployment:sha256-abcdef123456`
+- URI: `softwareos-base://service/platform-01/argocd/app-deployment`
+- URN: `urn:softwareos-base:service:platform-01:argocd:app-deployment:sha256-abcdef123456`
 
 **GitHub Actions 工作流程**:
-- URI: `eco-base://gh/platform-01/workflow/ci-cd-pipeline`
-- URN: `urn:eco-base:gh:platform-01:workflow:ci-cd-pipeline:github-action-123456`
+- URI: `softwareos-base://gh/platform-01/workflow/ci-cd-pipeline`
+- URN: `urn:softwareos-base:gh:platform-01:workflow:ci-cd-pipeline:github-action-123456`
 
 ### 4.2 Platform-SuperAI 資源 URI/URN
 
 **AI 服務**:
-- URI: `eco-base://service/platform-02/ai/llm-inference`
-- URN: `urn:eco-base:service:platform-02:ai:llm-inference:6ba7b811-9dad-11d1-80b4-00c04fd430c8`
+- URI: `softwareos-base://service/platform-02/ai/llm-inference`
+- URN: `urn:softwareos-base:service:platform-02:ai:llm-inference:6ba7b811-9dad-11d1-80b4-00c04fd430c8`
 
 **量子模擬任務**:
-- URI: `eco-base://job/platform-02/quantum/vqe-optimization`
-- URN: `urn:eco-base:job:platform-02:quantum:vqe-optimization:sha256-quantum-123456`
+- URI: `softwareos-base://job/platform-02/quantum/vqe-optimization`
+- URN: `urn:softwareos-base:job:platform-02:quantum:vqe-optimization:sha256-quantum-123456`
 
 **機械硬體代理**:
-- URI: `eco-base://daemonset/platform-03/hardware/edge-agent`
-- URN: `urn:eco-base:daemonset:platform-03:hardware:edge-agent:hardware-agent-node-001`
+- URI: `softwareos-base://daemonset/platform-03/hardware/edge-agent`
+- URN: `urn:softwareos-base:daemonset:platform-03:hardware:edge-agent:hardware-agent-node-001`
 
 ---
 
@@ -197,15 +197,15 @@ metadata:
     app.kubernetes.io/instance: observability-prod
     app.kubernetes.io/version: v1.0.0
     app.kubernetes.io/component: monitoring
-    app.kubernetes.io/part-of: eco-base
-    eco-base/platform: platform-01
-    eco-base/environment: production
-    eco-base/owner: platform-team
+    app.kubernetes.io/part-of: softwareos-base
+    softwareos-base/platform: platform-01
+    softwareos-base/environment: production
+    softwareos-base/owner: platform-team
   annotations:
-    eco-base/uri: "eco-base://k8s/platform-01/deployment/observability-stack"
-    eco-base/urn: "urn:eco-base:k8s:platform-01:deployment:observability-stack:6ba7b811-9dad-11d1-80b4-00c04fd430c8"
-    eco-base/governance-policy: "qyaml-governance.rego"
-    eco-base/audit-log-level: "full"
+    softwareos-base/uri: "softwareos-base://k8s/platform-01/deployment/observability-stack"
+    softwareos-base/urn: "urn:softwareos-base:k8s:platform-01:deployment:observability-stack:6ba7b811-9dad-11d1-80b4-00c04fd430c8"
+    softwareos-base/governance-policy: "qyaml-governance.rego"
+    softwareos-base/audit-log-level: "full"
 ```
 
 ### 5.2 Platform-SuperAI 標籤示例
@@ -221,17 +221,17 @@ metadata:
     app.kubernetes.io/instance: ai-llm-prod
     app.kubernetes.io/version: v2.0.0
     app.kubernetes.io/component: backend
-    app.kubernetes.io/part-of: eco-base
-    eco-base/platform: platform-02
-    eco-base/environment: production
-    eco-base/owner: ai-team
+    app.kubernetes.io/part-of: softwareos-base
+    softwareos-base/platform: platform-02
+    softwareos-base/environment: production
+    softwareos-base/owner: ai-team
     superai/model: llm
     superai/inference-type: batch
   annotations:
-    eco-base/uri: "eco-base://service/platform-02/ai/llm-inference"
-    eco-base/urn: "urn:eco-base:service:platform-02:ai:llm-inference:6ba7b811-9dad-11d1-80b4-00c04fd430c8"
-    eco-base/governance-policy: "qyaml-governance.rego"
-    eco-base/audit-log-level: "full"
+    softwareos-base/uri: "softwareos-base://service/platform-02/ai/llm-inference"
+    softwareos-base/urn: "urn:softwareos-base:service:platform-02:ai:llm-inference:6ba7b811-9dad-11d1-80b4-00c04fd430c8"
+    softwareos-base/governance-policy: "qyaml-governance.rego"
+    softwareos-base/audit-log-level: "full"
     superai/quantum-optimization: "enabled"
 ```
 
@@ -244,10 +244,10 @@ metadata:
 ```
 Platform-01 (ECO)
 ├── 依賴: core-auth (Auth Service)
-├── 依賴: core-memory-hub (Memory Hub)
-├── 依賴: core-event-bus (Event Bus)
-├── 依賴: core-policy-audit (Policy & Audit)
-├── 依賴: core-infra-manager (Infra Manager)
+├── 依賴: core-codevantaos-memory (Memory Hub)
+├── 依賴: core-codevantaos-event (Event Bus)
+├── 依賴: core-codevantaos-policy (Policy & Audit)
+├── 依賴: core-codevantaos-infra (Infra Manager)
 ├── 依賴: svc-prometheus (Prometheus)
 ├── 依賴: svc-grafana (Grafana)
 ├── 依賴: svc-loki (Loki)
@@ -262,9 +262,9 @@ Platform-01 (ECO)
 ```
 Platform-02 (SuperAI)
 ├── 依賴: core-auth (Auth Service)
-├── 依賴: core-memory-hub (Memory Hub)
-├── 依賴: core-event-bus (Event Bus)
-├── 依賴: core-policy-audit (Policy & Audit)
+├── 依賴: core-codevantaos-memory (Memory Hub)
+├── 依賴: core-codevantaos-event (Event Bus)
+├── 依賴: core-codevantaos-policy (Policy & Audit)
 ├── 依賴: svc-ai-inference (AI Inference Service)
 ├── 依賴: svc-quantum-simulator (Quantum Simulator - Qiskit)
 ├── 依賴: svc-iac-manager (IaC Manager - Terraform)
@@ -273,7 +273,7 @@ Platform-02 (SuperAI)
 
 Platform-03 (MachineNativeOps)
 ├── 依賴: core-auth (Auth Service)
-├── 依賴: core-infra-manager (Infra Manager)
+├── 依賴: core-codevantaos-infra (Infra Manager)
 ├── 依賴: svc-hardware-agent (Hardware Agent)
 ├── 依賴: svc-node-monitoring (Node Monitoring)
 └── 依賴: svc-edge-computing (Edge Computing)

@@ -6,10 +6,10 @@ FROM python:3.11.9-slim AS base
 LABEL org.opencontainers.image.title="dataops-platform"
 LABEL org.opencontainers.image.description="Data & Evidence Operations Platform"
 LABEL app.kubernetes.io/name="dataops-platform"
-LABEL app.kubernetes.io/part-of="eco-base"
+LABEL app.kubernetes.io/part-of="softwareos-base"
 LABEL app.kubernetes.io/managed-by="argocd"
-LABEL eco-base/platform="platform-dataops"
-LABEL eco-base/namespace="eco-dataops"
+LABEL softwareos-base/platform="platform-dataops"
+LABEL softwareos-base/namespace="eco-dataops"
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \

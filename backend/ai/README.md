@@ -1,6 +1,6 @@
-# eco-base AI Service
+# softwareos-base AI Service
 
-AI generation and YAML governance service for the eco-base platform.
+AI generation and YAML governance service for the softwareos-base platform.
 
 ## Features
 
@@ -14,7 +14,7 @@ AI generation and YAML governance service for the eco-base platform.
 ## Installation
 
 ```bash
-pip install eco-base-ai
+pip install softwareos-base-ai
 ```
 
 ## License

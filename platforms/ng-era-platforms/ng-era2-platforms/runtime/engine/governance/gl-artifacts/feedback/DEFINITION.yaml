@@ -13,7 +13,7 @@ kind: GLLayerDefinition
   version: "1.0.0"
 spec:
   range: "60-80"
-  description: "AI, contracts, audit, optimization, feedback"
+  description: "AI, softwareos-contracts, audit, optimization, feedback"
   dimensions:
     - id: "07-audit"
       purpose: "Audit and compliance verification"
@@ -23,7 +23,7 @@ spec:
         - "run_audit"
         - "generate_compliance_report"
       note: "Moved from GL00-09 during semantic stabilization"
-    - id: "60-contracts"
+    - id: "60-softwareos-contracts"
       purpose: "Advanced contract management"
     - id: "70-audit"
       purpose: "Advanced audit capabilities"
@@ -64,7 +64,7 @@ spec:
     downstream:
       - "GL81-83"
   validation:
-    semantic_boundary: "Advanced capabilities - audit, contracts, AI, optimization, feedback"
+    semantic_boundary: "Advanced capabilities - audit, softwareos-contracts, AI, optimization, feedback"
     no_conflicts: true
     no_duplicates: true
     clear_boundaries: true

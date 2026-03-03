@@ -62,7 +62,7 @@ After successful remediation, the pipeline ingests the fix details into Memory H
 - Audit trail reference
 
 ### Embedding Model
-Default: `text-embedding-3-small` via `ECO_EMBEDDING_MODEL` environment variable. Dimension: 1024 (aligned with eco-base vector alignment model).
+Default: `text-embedding-3-small` via `ECO_EMBEDDING_MODEL` environment variable. Dimension: 1024 (aligned with softwareos-base vector alignment model).
 
 ## 3. Event Bus Integration
 

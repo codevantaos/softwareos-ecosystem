@@ -47,7 +47,7 @@ def test_governance_semantic_engine():
     # Load the semantic-unification-spec.yaml
     print_section("Loading Semantic Specification")
     
-    spec_file = "/workspace/machine-native-ops/gl-enterprise-architecture/contracts/semantic-unification-spec.yaml"
+    spec_file = "/workspace/machine-native-ops/gl-enterprise-architecture/softwareos-contracts/semantic-unification-spec.yaml"
     
     try:
         with open(spec_file, 'r', encoding='utf-8') as f:

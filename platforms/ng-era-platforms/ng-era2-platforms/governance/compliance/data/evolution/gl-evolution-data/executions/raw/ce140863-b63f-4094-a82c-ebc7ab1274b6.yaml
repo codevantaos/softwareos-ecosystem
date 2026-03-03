@@ -3,7 +3,7 @@
 execution_id: ce140863-b63f-4094-a82c-ebc7ab1274b6
 input_hash: 2ea8c89f7fc21b367af5c1ac961f615e88d169352cb73dc38cbe4abe54b8c1b7
 
-  contracts:
+  softwareos-contracts:
   - gl-naming-ontology
   - gl-platforms
   - gl-new-contract
@@ -18,7 +18,7 @@ raw_data:
     context: 每月例行檢查
     query: 分析GL生態系統狀態
   
-    contracts:
+    softwareos-contracts:
     - gl-naming-ontology
     - gl-platforms
     - gl-new-contract

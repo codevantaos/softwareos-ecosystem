@@ -372,7 +372,7 @@ GL30-49:
       artifacts_output:
         - "config-file"
     - capability_id: "CAP-30-05"
-      name: "specify_behavior_contracts"
+      name: "specify_behavior_softwareos-contracts"
       name_zh: "規範行為契約"
       description: "規範行為契約"
       skills_required:
@@ -413,7 +413,7 @@ GL30-49:
       name_zh: "契約執行"
       description: "規範行為契約"
       capabilities_required:
-        - "specify_behavior_contracts"
+        - "specify_behavior_softwareos-contracts"
       accountability: "dev-team"
 GL50-59:
   matrix_id: "MATRIX-GL50-59"

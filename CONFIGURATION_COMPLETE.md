@@ -1,4 +1,4 @@
-# eco-base - Configuration Complete ✅
+# softwareos-base - Configuration Complete ✅
 
 **Date**: February 21, 2026
 **Status**: All Configurations Complete
@@ -8,7 +8,7 @@
 
 ## 🎉 Configuration Summary
 
-All configurations, secrets, and infrastructure have been successfully set up for the eco-base project!
+All configurations, secrets, and infrastructure have been successfully set up for the softwareos-base project!
 
 ---
 
@@ -30,7 +30,7 @@ All configurations, secrets, and infrastructure have been successfully set up fo
 - ✅ Edge Functions: Ready for deployment
 
 ### 3. Cloudflare SSL/TLS
-- ✅ Custom Hostname: `_cf-custom-hostname.autoecoops.io`
+- ✅ Custom Hostname: `_cf-custom-hostname.softwareos.io`
 - ✅ Origin Certificate: Configured
 - ✅ Private Key: Configured
 - ✅ Certificate Files: `.cloudflare/cloudflare-origin-cert.pem` and `.cloudflare/cloudflare-origin-key.key`
@@ -92,8 +92,8 @@ This single command will:
 
 #### Step 3: Configure Cloudflare DNS
 Create CNAME records in Cloudflare:
-- `prometheus._cf-custom-hostname.autoecoops.io` → `<INGRESS_IP>`
-- `grafana._cf-custom-hostname.autoecoops.io` → `<INGRESS_IP>`
+- `prometheus._cf-custom-hostname.softwareos.io` → `<INGRESS_IP>`
+- `grafana._cf-custom-hostname.softwareos.io` → `<INGRESS_IP>`
 
 Get Ingress IP:
 ```bash
@@ -105,8 +105,8 @@ kubectl get ingress -n monitoring
 ## 🔗 Access URLs
 
 ### Monitoring Stack
-- **Prometheus**: https://prometheus._cf-custom-hostname.autoecoops.io
-- **Grafana**: https://grafana._cf-custom-hostname.autoecoops.io
+- **Prometheus**: https://prometheus._cf-custom-hostname.softwareos.io
+- **Grafana**: https://grafana._cf-custom-hostname.softwareos.io
   - Username: `admin`
   - Password: `YOUR_GRAFANA_ADMIN_PASSWORD`
 
@@ -213,7 +213,7 @@ kubectl logs -n monitoring deployment/prometheus
 **SSL/TLS Issues**
 ```bash
 kubectl get secret cloudflare-origin-cert -n monitoring
-curl -v https://prometheus._cf-custom-hostname.autoecoops.io
+curl -v https://prometheus._cf-custom-hostname.softwareos.io
 ```
 
 **Prometheus Not Scraping**
@@ -260,7 +260,7 @@ For issues or questions:
 
 ## 🎉 Success!
 
-Your eco-base infrastructure is now fully configured and ready for deployment!
+Your softwareos-base infrastructure is now fully configured and ready for deployment!
 
 All configurations have been completed:
 - ✅ GCP Service Account with full permissions

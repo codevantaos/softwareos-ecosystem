@@ -18,19 +18,19 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/jaeger-enhanced-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:jaeger-enhanced-config:sha256-5739178d638d17720aeafd8dd30a8ce3c96204126add48587503471de1ba5b9b
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/jaeger-enhanced-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:jaeger-enhanced-config:sha256-5739178d638d17720aeafd8dd30a8ce3c96204126add48587503471de1ba5b9b
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: jaeger-enhanced-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: jaeger-enhanced-config
   namespace: istio-system
 ---
@@ -43,19 +43,19 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/tracing-context-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:tracing-context-config:sha256-2c665560aebdc905d357283af6f8fb7217a6808c4f44852950e001995fad6964
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/tracing-context-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:tracing-context-config:sha256-2c665560aebdc905d357283af6f8fb7217a6808c4f44852950e001995fad6964
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: tracing-context-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: tracing-context-config
   namespace: istio-system
 ---
@@ -74,19 +74,19 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/trace-retention-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:trace-retention-config:sha256-145b7674afd4f84e48b44213f4164eece7e5e1821861d6283bf375abdcd343d8
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/trace-retention-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:trace-retention-config:sha256-145b7674afd4f84e48b44213f4164eece7e5e1821861d6283bf375abdcd343d8
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: trace-retention-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: trace-retention-config
   namespace: istio-system
 ---
@@ -94,8 +94,8 @@ apiVersion: telemetry.istio.io/v1alpha1
 kind: Telemetry
 metadata:
   annotations:
-    eco-base/uri: eco-base://platform/resource/infrastructure/k8s-legacy/production/enhanced-tracing.yaml
-    eco-base/urn: urn:eco-base:platform:resource:infrastructure:k8s-legacy:production:enhanced-tracing.yaml
+    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/k8s-legacy/production/enhanced-tracing.yaml
+    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:k8s-legacy:production:enhanced-tracing.yaml
   name: enhanced-tracing
   namespace: istio-system
 spec:

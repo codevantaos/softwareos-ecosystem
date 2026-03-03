@@ -3,21 +3,21 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/hybrid-decider-service
-    eco-base/urn: urn:eco-base:k8s:core:service:hybrid-decider-service:sha256-1f1db019f1ae33b23a3589c8ee4de9d19c58f1d8bac43c773b55cc2f2b101c10
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/hybrid-decider-service
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:hybrid-decider-service:sha256-1f1db019f1ae33b23a3589c8ee4de9d19c58f1d8bac43c773b55cc2f2b101c10
   labels:
     app.kubernetes.io/component: hybrid-decider
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: validation-system
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     version: v1.0.0
   name: hybrid-decider-service
   namespace: gl-runtime-verification
@@ -43,21 +43,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/hybrid-decider
-    eco-base/urn: urn:eco-base:k8s:core:deployment:hybrid-decider:sha256-b8958e8129536fd038b74259ce8dfcfd9bd0e06871353c8996b6dd858be3bf2f
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/hybrid-decider
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:hybrid-decider:sha256-b8958e8129536fd038b74259ce8dfcfd9bd0e06871353c8996b6dd858be3bf2f
   labels:
     app.kubernetes.io/component: hybrid-decider
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: validation-system
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     version: v1.0.0
   name: hybrid-decider
   namespace: gl-runtime-verification
@@ -78,8 +78,8 @@ spec:
     prometheus.io/scrape: 'true'
   labels:
     app.kubernetes.io/name: hybrid-decider
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     version: v1.0.0
     spec:
       affinity:
@@ -168,21 +168,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/hybrid-decider-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:hybrid-decider-config:sha256-6f30041e0b31afc233455217b3a78ea1f136dcd67ff2d4767bba0df1a6cec5d1
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/hybrid-decider-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:hybrid-decider-config:sha256-6f30041e0b31afc233455217b3a78ea1f136dcd67ff2d4767bba0df1a6cec5d1
   labels:
     app.kubernetes.io/component: hybrid-decider
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: validation-system
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: hybrid-decider-config
   namespace: gl-runtime-verification
 ---

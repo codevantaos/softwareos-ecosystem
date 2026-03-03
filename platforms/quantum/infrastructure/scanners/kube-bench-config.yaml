@@ -15,8 +15,8 @@ metadata:
   name: gov-quantum-kube-bench
   namespace: infrastructure
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     gov-version: v10.0.0
     tier: quantum-scanners
 spec:

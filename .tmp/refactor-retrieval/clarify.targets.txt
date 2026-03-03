@@ -7,17 +7,17 @@ docs/DEVELOPER_GUIDE.md:83:If an imported external platform is chaotic/polluted,
 docs/QYAML_GOVERNANCE.md:113:  owner: "platform-team"
 docs/QYAML_GOVERNANCE.md:49:  owner: "platform-team"                    # Owning team (required)
 docs/argocd-gitops-guide.md:12:2. [Architecture](#architecture)
-docs/argocd-gitops-guide.md:36:The eco-base GitOps architecture consists of three layers working in concert. The source layer is the GitHub repository containing all Kubernetes manifests in the `k8s/` directory as `.qyaml` files (governance-validated YAML). The orchestration layer is Argo CD, which watches the repository and manages synchronization. The target layer is the Kubernetes cluster with two namespaces: `eco-base` for production and `ecosystem-staging` for pre-production validation.
+docs/argocd-gitops-guide.md:36:The softwareos-base GitOps architecture consists of three layers working in concert. The source layer is the GitHub repository containing all Kubernetes manifests in the `k8s/` directory as `.qyaml` files (governance-validated YAML). The orchestration layer is Argo CD, which watches the repository and manages synchronization. The target layer is the Kubernetes cluster with two namespaces: `softwareos-base` for production and `ecosystem-staging` for pre-production validation.
 docs/auto-repair-architecture.md:13:3. [Auto-Repair Engine Architecture](#auto-repair-engine-architecture)
 docs/auto-repair-architecture.md:230:Static analysis identifies potential issues before they manifest in CI. Dependency update impact analysis predicts breaking changes before upgrading. Resource utilization trends predict scaling needs before capacity is exhausted. Human involvement shifts from reactive repair to proactive architecture decisions.
-docs/auto-repair-architecture.md:3:**URI:** `eco-base://docs/auto-repair-architecture`
+docs/auto-repair-architecture.md:3:**URI:** `softwareos-base://docs/auto-repair-architecture`
 docs/gke-operations.md:139:- **Roles**: container.admin, compute.admin, iam.serviceAccountUser, storage.admin, artifactregistry.admin, serviceusage.serviceUsageAdmin, owner
-docs/oauth-setup-guide.md:41:- **Developer contact email**: `dev@eco-base.io`
+docs/oauth-setup-guide.md:41:- **Developer contact email**: `dev@softwareos-base.io`
 docs/pat-security-guide.md:157:| Token created | Date, type, permissions, expiry, owner |
-platforms/ECO_NAMESPACE_ALIGNMENT.md:203:    eco-base/owner: platform-team
-platforms/ECO_NAMESPACE_ALIGNMENT.md:227:    eco-base/owner: ai-team
-platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:50:| govops | 標籤缺失 | 無 `eco-base/owner` | `eco-base/owner: governance-operations-team` |
-platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:95:    eco-base/owner: <platform-name>-team
+platforms/ECO_NAMESPACE_ALIGNMENT.md:203:    softwareos-base/owner: platform-team
+platforms/ECO_NAMESPACE_ALIGNMENT.md:227:    softwareos-base/owner: ai-team
+platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:50:| govops | 標籤缺失 | 無 `softwareos-base/owner` | `softwareos-base/owner: governance-operations-team` |
+platforms/ECO_PLATFORM_INTEGRATION_MASTER.md:95:    softwareos-base/owner: <platform-name>-team
 platforms/PLATFORMS_REFACTOR_FORCED_RETRIEVAL_WORKFLOW.md:94:grep -RInE "owner|maintainer|contact|runbook|ADR|architecture" platforms docs | sort > .tmp/refactor-retrieval/clarify.targets.txt
 platforms/README.md:121:- **gl.platform.owner**: Platform owner
 platforms/README.md:13:- ECO deployment architecture map: `ARCHITECTURE.md` (ECO Platform Modules)
@@ -81,53 +81,53 @@ platforms/automation/organizer/server/tsconfig.json:4:# @ECO-audit-trail: gov-en
 platforms/automation/organizer/server/tsconfig.json:7:# GL Root Semantic Anchor: gov-enterprise-architecture/governance/ECO-ROOT-SEMANTIC-ANCHOR.yaml
 platforms/automation/organizer/server/tsconfig.json:8:# GL Unified Naming Charter: gov-enterprise-architecture/governance/ECO-UNIFIED-NAMING-CHARTER.yaml
 platforms/eco-core/.platform/manifest.yaml:14:  owner: "platform-engineering-team"
-platforms/eco-core/.platform/manifest.yaml:67:      eco-base/owner: platform-engineering-team
-platforms/eco-core/k8s/base/namespace.yaml:13:    eco-base/owner: platform-engineering-team
+platforms/eco-core/.platform/manifest.yaml:67:      softwareos-base/owner: platform-engineering-team
+platforms/eco-core/k8s/base/namespace.yaml:13:    softwareos-base/owner: platform-engineering-team
 platforms/eco-core/platform-core/.platform/manifest.yaml:14:  owner: "platform-engineering-team"
-platforms/eco-core/platform-core/.platform/manifest.yaml:67:      eco-base/owner: platform-engineering-team
-platforms/eco-core/platform-core/k8s/base/namespace.yaml:13:    eco-base/owner: platform-engineering-team
-platforms/eco-dataops/.platform/manifest.yaml:102:      eco-base/owner: data-evidence-operations-team
+platforms/eco-core/platform-core/.platform/manifest.yaml:67:      softwareos-base/owner: platform-engineering-team
+platforms/eco-core/platform-core/k8s/base/namespace.yaml:13:    softwareos-base/owner: platform-engineering-team
+platforms/eco-dataops/.platform/manifest.yaml:102:      softwareos-base/owner: data-evidence-operations-team
 platforms/eco-dataops/.platform/manifest.yaml:13:  owner: IndestructibleAutoOps
 platforms/eco-dataops/.platform/manifest.yaml:30:    data_ownership: exclusive
 platforms/eco-dataops/Dockerfile.prod:45:LABEL maintainer="IndestructibleAutoOps Data & Evidence Team" \
 platforms/eco-dataops/helm/dataops/Chart.yaml:7:maintainers:
 platforms/eco-dataops/helm/dataops/values.yaml:36:  architecture: standalone
-platforms/eco-dataops/k8s/base/configmap.yaml:27:    eco-base/owner: eco-system
-platforms/eco-dataops/k8s/base/deployment.yaml:109:    eco-base/owner: eco-system
-platforms/eco-dataops/k8s/base/deployment.yaml:165:    eco-base/owner: eco-system
-platforms/eco-dataops/k8s/base/deployment.yaml:17:    eco-base/owner: eco-system
-platforms/eco-dataops/k8s/base/namespace.yaml:14:    eco-base/owner: data-evidence-operations-team
-platforms/eco-dataops/k8s/base/service.yaml:17:    eco-base/owner: eco-system
-platforms/eco-dataops/platform-dataops/.platform/manifest.yaml:102:      eco-base/owner: data-evidence-operations-team
+platforms/eco-dataops/k8s/base/configmap.yaml:27:    softwareos-base/owner: eco-system
+platforms/eco-dataops/k8s/base/deployment.yaml:109:    softwareos-base/owner: eco-system
+platforms/eco-dataops/k8s/base/deployment.yaml:165:    softwareos-base/owner: eco-system
+platforms/eco-dataops/k8s/base/deployment.yaml:17:    softwareos-base/owner: eco-system
+platforms/eco-dataops/k8s/base/namespace.yaml:14:    softwareos-base/owner: data-evidence-operations-team
+platforms/eco-dataops/k8s/base/service.yaml:17:    softwareos-base/owner: eco-system
+platforms/eco-dataops/platform-dataops/.platform/manifest.yaml:102:      softwareos-base/owner: data-evidence-operations-team
 platforms/eco-dataops/platform-dataops/.platform/manifest.yaml:13:  owner: IndestructibleAutoOps
 platforms/eco-dataops/platform-dataops/.platform/manifest.yaml:30:    data_ownership: exclusive
 platforms/eco-dataops/platform-dataops/Dockerfile.prod:45:LABEL maintainer="IndestructibleAutoOps Data & Evidence Team" \
 platforms/eco-dataops/platform-dataops/helm/dataops/Chart.yaml:7:maintainers:
 platforms/eco-dataops/platform-dataops/helm/dataops/values.yaml:36:  architecture: standalone
-platforms/eco-dataops/platform-dataops/k8s/base/configmap.yaml:27:    eco-base/owner: eco-system
-platforms/eco-dataops/platform-dataops/k8s/base/deployment.yaml:107:    eco-base/owner: eco-system
-platforms/eco-dataops/platform-dataops/k8s/base/deployment.yaml:161:    eco-base/owner: eco-system
-platforms/eco-dataops/platform-dataops/k8s/base/deployment.yaml:17:    eco-base/owner: eco-system
-platforms/eco-dataops/platform-dataops/k8s/base/namespace.yaml:14:    eco-base/owner: data-evidence-operations-team
-platforms/eco-dataops/platform-dataops/k8s/base/service.yaml:17:    eco-base/owner: eco-system
+platforms/eco-dataops/platform-dataops/k8s/base/configmap.yaml:27:    softwareos-base/owner: eco-system
+platforms/eco-dataops/platform-dataops/k8s/base/deployment.yaml:107:    softwareos-base/owner: eco-system
+platforms/eco-dataops/platform-dataops/k8s/base/deployment.yaml:161:    softwareos-base/owner: eco-system
+platforms/eco-dataops/platform-dataops/k8s/base/deployment.yaml:17:    softwareos-base/owner: eco-system
+platforms/eco-dataops/platform-dataops/k8s/base/namespace.yaml:14:    softwareos-base/owner: data-evidence-operations-team
+platforms/eco-dataops/platform-dataops/k8s/base/service.yaml:17:    softwareos-base/owner: eco-system
 platforms/eco-dataops/platform-dataops/scripts/backup-db.sh:28:    --format=custom --compress=9 --no-owner --no-privileges --verbose 2>/dev/null \
 platforms/eco-dataops/scripts/backup-db.sh:28:    --format=custom --compress=9 --no-owner --no-privileges --verbose 2>/dev/null \
 platforms/eco-govops/.platform/manifest.yaml:13:  owner: IndestructibleAutoOps
 platforms/eco-govops/.platform/manifest.yaml:30:    data_ownership: exclusive
-platforms/eco-govops/.platform/manifest.yaml:74:      eco-base/owner: governance-operations-team
+platforms/eco-govops/.platform/manifest.yaml:74:      softwareos-base/owner: governance-operations-team
 platforms/eco-govops/helm/govops/Chart.yaml:9:maintainers:
-platforms/eco-govops/k8s/base/configmap.yaml:31:    eco-base/owner: eco-system
-platforms/eco-govops/k8s/base/deployment.yaml:17:    eco-base/owner: governance-operations-team
-platforms/eco-govops/k8s/base/namespace.yaml:14:    eco-base/owner: governance-operations-team
-platforms/eco-govops/k8s/base/service.yaml:17:    eco-base/owner: eco-system
+platforms/eco-govops/k8s/base/configmap.yaml:31:    softwareos-base/owner: eco-system
+platforms/eco-govops/k8s/base/deployment.yaml:17:    softwareos-base/owner: governance-operations-team
+platforms/eco-govops/k8s/base/namespace.yaml:14:    softwareos-base/owner: governance-operations-team
+platforms/eco-govops/k8s/base/service.yaml:17:    softwareos-base/owner: eco-system
 platforms/eco-govops/platform-govops/.platform/manifest.yaml:13:  owner: IndestructibleAutoOps
 platforms/eco-govops/platform-govops/.platform/manifest.yaml:30:    data_ownership: exclusive
-platforms/eco-govops/platform-govops/.platform/manifest.yaml:74:      eco-base/owner: governance-operations-team
+platforms/eco-govops/platform-govops/.platform/manifest.yaml:74:      softwareos-base/owner: governance-operations-team
 platforms/eco-govops/platform-govops/helm/govops/Chart.yaml:9:maintainers:
-platforms/eco-govops/platform-govops/k8s/base/configmap.yaml:31:    eco-base/owner: eco-system
-platforms/eco-govops/platform-govops/k8s/base/deployment.yaml:17:    eco-base/owner: governance-operations-team
-platforms/eco-govops/platform-govops/k8s/base/namespace.yaml:14:    eco-base/owner: governance-operations-team
-platforms/eco-govops/platform-govops/k8s/base/service.yaml:17:    eco-base/owner: eco-system
+platforms/eco-govops/platform-govops/k8s/base/configmap.yaml:31:    softwareos-base/owner: eco-system
+platforms/eco-govops/platform-govops/k8s/base/deployment.yaml:17:    softwareos-base/owner: governance-operations-team
+platforms/eco-govops/platform-govops/k8s/base/namespace.yaml:14:    softwareos-base/owner: governance-operations-team
+platforms/eco-govops/platform-govops/k8s/base/service.yaml:17:    softwareos-base/owner: eco-system
 platforms/eco-govops/platform-govops/scripts/backup-db.sh:41:    --no-owner \
 platforms/eco-govops/platform-govops/src/engine/scanner/__init__.py:554:    "responsibility-mnga-architecture-boundary": {
 platforms/eco-govops/platform-govops/src/engine/scanner/__init__.py:555:        "forbidden_patterns": [r"ops.*\.sh$", r"runbook.*\.yaml$"],
@@ -138,17 +138,17 @@ platforms/eco-govops/src/engine/scanner/__init__.py:555:        "forbidden_patte
 platforms/eco-govops/src/engine/scanner/__init__.py:556:        "reason": "MNGA boundary must not contain ops runbooks",
 platforms/eco-observops/.platform/manifest.yaml:13:  owner: IndestructibleAutoOps
 platforms/eco-observops/.platform/manifest.yaml:29:    data_ownership: exclusive
-platforms/eco-observops/.platform/manifest.yaml:75:      eco-base/owner: observability-team
-platforms/eco-observops/k8s/base/deployment.yaml:17:    eco-base/owner: observability-operations-team
-platforms/eco-observops/k8s/base/namespace.yaml:14:    eco-base/owner: observability-operations-team
-platforms/eco-observops/k8s/base/service.yaml:17:    eco-base/owner: eco-system
+platforms/eco-observops/.platform/manifest.yaml:75:      softwareos-base/owner: observability-team
+platforms/eco-observops/k8s/base/deployment.yaml:17:    softwareos-base/owner: observability-operations-team
+platforms/eco-observops/k8s/base/namespace.yaml:14:    softwareos-base/owner: observability-operations-team
+platforms/eco-observops/k8s/base/service.yaml:17:    softwareos-base/owner: eco-system
 platforms/eco-observops/platform-observops/.platform/manifest.yaml:13:  owner: IndestructibleAutoOps
 platforms/eco-observops/platform-observops/.platform/manifest.yaml:29:    data_ownership: exclusive
-platforms/eco-observops/platform-observops/.platform/manifest.yaml:75:      eco-base/owner: observability-team
-platforms/eco-observops/platform-observops/k8s/base/deployment.yaml:17:    eco-base/owner: observability-operations-team
-platforms/eco-observops/platform-observops/k8s/base/namespace.yaml:14:    eco-base/owner: observability-operations-team
-platforms/eco-observops/platform-observops/k8s/base/service.yaml:17:    eco-base/owner: eco-system
-platforms/eco-seccompops/.platform/manifest.yaml:101:      eco-base/owner: security-compliance-team
+platforms/eco-observops/platform-observops/.platform/manifest.yaml:75:      softwareos-base/owner: observability-team
+platforms/eco-observops/platform-observops/k8s/base/deployment.yaml:17:    softwareos-base/owner: observability-operations-team
+platforms/eco-observops/platform-observops/k8s/base/namespace.yaml:14:    softwareos-base/owner: observability-operations-team
+platforms/eco-observops/platform-observops/k8s/base/service.yaml:17:    softwareos-base/owner: eco-system
+platforms/eco-seccompops/.platform/manifest.yaml:101:      softwareos-base/owner: security-compliance-team
 platforms/eco-seccompops/.platform/manifest.yaml:13:  owner: IndestructibleAutoOps
 platforms/eco-seccompops/.platform/manifest.yaml:30:    data_ownership: exclusive
 platforms/eco-seccompops/.platform/manifest.yaml:44:        description: "SHA3-512 cryptographic verification, 5-layer architecture enforcement, 6 governance rules"
@@ -157,13 +157,13 @@ platforms/eco-seccompops/.platform/manifest.yaml:64:        description: "5-laye
 platforms/eco-seccompops/Dockerfile.prod:50:LABEL maintainer="IndestructibleAutoOps Security Team" \
 platforms/eco-seccompops/helm/seccompops/Chart.yaml:7:maintainers:
 platforms/eco-seccompops/helm/seccompops/values.yaml:36:  architecture: standalone
-platforms/eco-seccompops/k8s/base/configmap.yaml:27:    eco-base/owner: eco-system
-platforms/eco-seccompops/k8s/base/deployment.yaml:110:    eco-base/owner: eco-system
-platforms/eco-seccompops/k8s/base/deployment.yaml:166:    eco-base/owner: eco-system
-platforms/eco-seccompops/k8s/base/deployment.yaml:17:    eco-base/owner: eco-system
-platforms/eco-seccompops/k8s/base/namespace.yaml:14:    eco-base/owner: security-compliance-team
-platforms/eco-seccompops/k8s/base/service.yaml:17:    eco-base/owner: eco-system
-platforms/eco-seccompops/platform-seccompops/.platform/manifest.yaml:101:      eco-base/owner: security-compliance-team
+platforms/eco-seccompops/k8s/base/configmap.yaml:27:    softwareos-base/owner: eco-system
+platforms/eco-seccompops/k8s/base/deployment.yaml:110:    softwareos-base/owner: eco-system
+platforms/eco-seccompops/k8s/base/deployment.yaml:166:    softwareos-base/owner: eco-system
+platforms/eco-seccompops/k8s/base/deployment.yaml:17:    softwareos-base/owner: eco-system
+platforms/eco-seccompops/k8s/base/namespace.yaml:14:    softwareos-base/owner: security-compliance-team
+platforms/eco-seccompops/k8s/base/service.yaml:17:    softwareos-base/owner: eco-system
+platforms/eco-seccompops/platform-seccompops/.platform/manifest.yaml:101:      softwareos-base/owner: security-compliance-team
 platforms/eco-seccompops/platform-seccompops/.platform/manifest.yaml:13:  owner: IndestructibleAutoOps
 platforms/eco-seccompops/platform-seccompops/.platform/manifest.yaml:30:    data_ownership: exclusive
 platforms/eco-seccompops/platform-seccompops/.platform/manifest.yaml:44:        description: "SHA3-512 cryptographic verification, 5-layer architecture enforcement, 6 governance rules"
@@ -172,12 +172,12 @@ platforms/eco-seccompops/platform-seccompops/.platform/manifest.yaml:64:        
 platforms/eco-seccompops/platform-seccompops/Dockerfile.prod:50:LABEL maintainer="IndestructibleAutoOps Security Team" \
 platforms/eco-seccompops/platform-seccompops/helm/seccompops/Chart.yaml:7:maintainers:
 platforms/eco-seccompops/platform-seccompops/helm/seccompops/values.yaml:36:  architecture: standalone
-platforms/eco-seccompops/platform-seccompops/k8s/base/configmap.yaml:27:    eco-base/owner: eco-system
-platforms/eco-seccompops/platform-seccompops/k8s/base/deployment.yaml:108:    eco-base/owner: eco-system
-platforms/eco-seccompops/platform-seccompops/k8s/base/deployment.yaml:162:    eco-base/owner: eco-system
-platforms/eco-seccompops/platform-seccompops/k8s/base/deployment.yaml:17:    eco-base/owner: eco-system
-platforms/eco-seccompops/platform-seccompops/k8s/base/namespace.yaml:14:    eco-base/owner: security-compliance-team
-platforms/eco-seccompops/platform-seccompops/k8s/base/service.yaml:17:    eco-base/owner: eco-system
+platforms/eco-seccompops/platform-seccompops/k8s/base/configmap.yaml:27:    softwareos-base/owner: eco-system
+platforms/eco-seccompops/platform-seccompops/k8s/base/deployment.yaml:108:    softwareos-base/owner: eco-system
+platforms/eco-seccompops/platform-seccompops/k8s/base/deployment.yaml:162:    softwareos-base/owner: eco-system
+platforms/eco-seccompops/platform-seccompops/k8s/base/deployment.yaml:17:    softwareos-base/owner: eco-system
+platforms/eco-seccompops/platform-seccompops/k8s/base/namespace.yaml:14:    softwareos-base/owner: security-compliance-team
+platforms/eco-seccompops/platform-seccompops/k8s/base/service.yaml:17:    softwareos-base/owner: eco-system
 platforms/eco-seccompops/platform-seccompops/scripts/backup-db.sh:28:    --format=custom --compress=9 --no-owner --no-privileges --verbose 2>/dev/null \
 platforms/eco-seccompops/platform-seccompops/src/engines/verification_compliance/framework.ts:495:    let architectureViolations = 0;
 platforms/eco-seccompops/platform-seccompops/src/engines/verification_compliance/framework.ts:506:          } else if (check.id.includes('architecture')) {
@@ -279,18 +279,18 @@ platforms/eco-seccompops/src/registries/governance_registry.yaml:13:  governance
 platforms/eco-seccompops/src/registries/supply_chain_registry.yaml:308:        - role: "product_owner"
 platforms/eco-seccompops/src/registries/supply_chain_registry.yaml:377:      - registry: "architecture_registry"
 platforms/eco-superai/.platform/manifest.yaml:14:  owner: "ai-quantum-team"
-platforms/eco-superai/.platform/manifest.yaml:64:      eco-base/owner: ai-quantum-team
+platforms/eco-superai/.platform/manifest.yaml:64:      softwareos-base/owner: ai-quantum-team
 platforms/eco-superai/CHANGELOG.md:31:- **Documentation**: Comprehensive README with architecture overview, quick start guide, and deployment instructions.
 platforms/eco-superai/Dockerfile.dev:9:LABEL maintainer="Enterprise Engineering Team" \
 platforms/eco-superai/Dockerfile.prod:15:LABEL maintainer="Enterprise Engineering Team" \
 platforms/eco-superai/README.md:114:│   ├── architecture/            # Architecture design docs
 platforms/eco-superai/README.md:118:│   └── runbooks/                # Operations runbooks
-platforms/eco-superai/ai/anomaly-detection/config.yaml:158:    eco-base/owner: eco-system
-platforms/eco-superai/ai/anomaly-detection/config.yaml:240:    eco-base/owner: eco-system
-platforms/eco-superai/ai/anomaly-detection/config.yaml:273:    eco-base/owner: eco-system
-platforms/eco-superai/ai/anomaly-detection/config.yaml:57:    eco-base/owner: eco-system
-platforms/eco-superai/ai/anomaly-detection/config.yaml:79:    eco-base/owner: eco-system
-platforms/eco-superai/argocd/rollout.yaml:209:    eco-base/owner: eco-system
+platforms/eco-superai/ai/anomaly-detection/config.yaml:158:    softwareos-base/owner: eco-system
+platforms/eco-superai/ai/anomaly-detection/config.yaml:240:    softwareos-base/owner: eco-system
+platforms/eco-superai/ai/anomaly-detection/config.yaml:273:    softwareos-base/owner: eco-system
+platforms/eco-superai/ai/anomaly-detection/config.yaml:57:    softwareos-base/owner: eco-system
+platforms/eco-superai/ai/anomaly-detection/config.yaml:79:    softwareos-base/owner: eco-system
+platforms/eco-superai/argocd/rollout.yaml:209:    softwareos-base/owner: eco-system
 platforms/eco-superai/docs/REFACTORING-ANALYSIS-REPORT.md:34:        └── 06-operations-runbook.md (Phase 6: 運維手冊)
 platforms/eco-superai/docs/REFACTORING-ANALYSIS-REPORT.md:94:│   ├── architecture/                    # 架構文檔
 platforms/eco-superai/docs/REFACTORING-ANALYSIS-REPORT.md:97:│   └── runbooks/                        # 運維手冊
@@ -300,39 +300,39 @@ platforms/eco-superai/docs/adr/ADR-002-quantum-runtime-abstraction.md:1:# ADR-00
 platforms/eco-superai/docs/runbooks/INCIDENT-RESPONSE.md:214:4. **Action Items** — Concrete preventive measures with owners and deadlines
 platforms/eco-superai/helm/Chart.yaml:13:maintainers:
 platforms/eco-superai/infrastructure/docker/Dockerfile.dev:34:# Set ownership
-platforms/eco-superai/infrastructure/federation/cluster-registry.yaml:105:    eco-base/owner: eco-system
-platforms/eco-superai/infrastructure/federation/cluster-registry.yaml:189:    eco-base/owner: eco-system
-platforms/eco-superai/infrastructure/federation/cluster-registry.yaml:48:    eco-base/owner: eco-system
-platforms/eco-superai/infrastructure/federation/cluster-registry.yaml:70:    eco-base/owner: eco-system
-platforms/eco-superai/k8s/base/configmap.yaml:39:    eco-base/owner: eco-system
-platforms/eco-superai/k8s/base/cronjob.yaml:104:    eco-base/owner: eco-system
-platforms/eco-superai/k8s/base/cronjob.yaml:17:    eco-base/owner: eco-system
+platforms/eco-superai/infrastructure/federation/cluster-registry.yaml:105:    softwareos-base/owner: eco-system
+platforms/eco-superai/infrastructure/federation/cluster-registry.yaml:189:    softwareos-base/owner: eco-system
+platforms/eco-superai/infrastructure/federation/cluster-registry.yaml:48:    softwareos-base/owner: eco-system
+platforms/eco-superai/infrastructure/federation/cluster-registry.yaml:70:    softwareos-base/owner: eco-system
+platforms/eco-superai/k8s/base/configmap.yaml:39:    softwareos-base/owner: eco-system
+platforms/eco-superai/k8s/base/cronjob.yaml:104:    softwareos-base/owner: eco-system
+platforms/eco-superai/k8s/base/cronjob.yaml:17:    softwareos-base/owner: eco-system
 platforms/eco-superai/k8s/base/cronjob.yaml:41:              \ -d \"${DB_NAME}\" \\\n  --no-owner --no-privileges --clean --if-exists\
-platforms/eco-superai/k8s/base/deployment.yaml:148:    eco-base/owner: eco-system
-platforms/eco-superai/k8s/base/deployment.yaml:17:    eco-base/owner: eco-system
-platforms/eco-superai/k8s/base/deployment.yaml:254:    eco-base/owner: eco-system
-platforms/eco-superai/k8s/base/ingress.yaml:45:    eco-base/owner: eco-system
-platforms/eco-superai/k8s/base/namespace.yaml:13:    eco-base/owner: ai-quantum-team
-platforms/eco-superai/k8s/base/secret.yaml:17:    eco-base/owner: eco-system
-platforms/eco-superai/k8s/base/secret.yaml:50:    eco-base/owner: eco-system
-platforms/eco-superai/k8s/base/secret.yaml:77:    eco-base/owner: eco-system
-platforms/eco-superai/k8s/base/service.yaml:20:    eco-base/owner: eco-system
-platforms/eco-superai/k8s/base/service.yaml:55:    eco-base/owner: eco-system
-platforms/eco-superai/logging/loki-stack.yaml:123:    eco-base/owner: eco-system
-platforms/eco-superai/logging/loki-stack.yaml:145:    eco-base/owner: eco-system
-platforms/eco-superai/logging/loki-stack.yaml:179:    eco-base/owner: eco-system
-platforms/eco-superai/logging/loki-stack.yaml:19:    eco-base/owner: eco-system
-platforms/eco-superai/logging/loki-stack.yaml:210:    eco-base/owner: eco-system
-platforms/eco-superai/logging/loki-stack.yaml:312:    eco-base/owner: eco-system
-platforms/eco-superai/logging/loki-stack.yaml:374:    eco-base/owner: eco-system
+platforms/eco-superai/k8s/base/deployment.yaml:148:    softwareos-base/owner: eco-system
+platforms/eco-superai/k8s/base/deployment.yaml:17:    softwareos-base/owner: eco-system
+platforms/eco-superai/k8s/base/deployment.yaml:254:    softwareos-base/owner: eco-system
+platforms/eco-superai/k8s/base/ingress.yaml:45:    softwareos-base/owner: eco-system
+platforms/eco-superai/k8s/base/namespace.yaml:13:    softwareos-base/owner: ai-quantum-team
+platforms/eco-superai/k8s/base/secret.yaml:17:    softwareos-base/owner: eco-system
+platforms/eco-superai/k8s/base/secret.yaml:50:    softwareos-base/owner: eco-system
+platforms/eco-superai/k8s/base/secret.yaml:77:    softwareos-base/owner: eco-system
+platforms/eco-superai/k8s/base/service.yaml:20:    softwareos-base/owner: eco-system
+platforms/eco-superai/k8s/base/service.yaml:55:    softwareos-base/owner: eco-system
+platforms/eco-superai/logging/loki-stack.yaml:123:    softwareos-base/owner: eco-system
+platforms/eco-superai/logging/loki-stack.yaml:145:    softwareos-base/owner: eco-system
+platforms/eco-superai/logging/loki-stack.yaml:179:    softwareos-base/owner: eco-system
+platforms/eco-superai/logging/loki-stack.yaml:19:    softwareos-base/owner: eco-system
+platforms/eco-superai/logging/loki-stack.yaml:210:    softwareos-base/owner: eco-system
+platforms/eco-superai/logging/loki-stack.yaml:312:    softwareos-base/owner: eco-system
+platforms/eco-superai/logging/loki-stack.yaml:374:    softwareos-base/owner: eco-system
 platforms/eco-superai/monitoring/alertmanager/alertmanager.yml:104:          *Runbook:* {{ .Annotations.runbook_url }}
-platforms/eco-superai/monitoring/alertmanager/pagerduty-integration.yaml:117:    eco-base/owner: eco-system
-platforms/eco-superai/monitoring/alertmanager/pagerduty-integration.yaml:19:    eco-base/owner: eco-system
-platforms/eco-superai/monitoring/alertmanager/pagerduty-integration.yaml:204:    eco-base/owner: eco-system
+platforms/eco-superai/monitoring/alertmanager/pagerduty-integration.yaml:117:    softwareos-base/owner: eco-system
+platforms/eco-superai/monitoring/alertmanager/pagerduty-integration.yaml:19:    softwareos-base/owner: eco-system
+platforms/eco-superai/monitoring/alertmanager/pagerduty-integration.yaml:204:    softwareos-base/owner: eco-system
 platforms/eco-superai/monitoring/alertmanager/pagerduty-integration.yaml:246:    \ (threshold: 0.1)\"\n          runbook: \"https://docs.superai.platform/runbooks/high-error-rate\"\
 platforms/eco-superai/monitoring/alertmanager/pagerduty-integration.yaml:270:    \n          runbook: \"https://docs.superai.platform/runbooks/security-incident\"\
-platforms/eco-superai/monitoring/alertmanager/pagerduty-integration.yaml:316:    eco-base/owner: eco-system
-platforms/eco-superai/monitoring/alertmanager/pagerduty-integration.yaml:95:    eco-base/owner: eco-system
+platforms/eco-superai/monitoring/alertmanager/pagerduty-integration.yaml:316:    softwareos-base/owner: eco-system
+platforms/eco-superai/monitoring/alertmanager/pagerduty-integration.yaml:95:    softwareos-base/owner: eco-system
 platforms/eco-superai/monitoring/prometheus/alerts.yml:112:          runbook_url: "https://runbooks.superai.internal/naming/compliance-rate-low"
 platforms/eco-superai/monitoring/prometheus/alerts.yml:133:          runbook_url: "https://runbooks.superai.internal/naming/autofix-failure-rate"
 platforms/eco-superai/monitoring/prometheus/alerts.yml:159:          runbook_url: "https://runbooks.superai.internal/quantum/high-failure-rate"
@@ -355,18 +355,18 @@ platforms/eco-superai/monitoring/prometheus/alerts.yml:65:            Prometheus
 platforms/eco-superai/monitoring/prometheus/alerts.yml:68:          runbook_url: "https://runbooks.superai.internal/api/service-down"
 platforms/eco-superai/monitoring/prometheus/alerts.yml:90:          runbook_url: "https://runbooks.superai.internal/naming/violations-detected"
 platforms/eco-superai/platform-superai/.platform/manifest.yaml:14:  owner: "ai-quantum-team"
-platforms/eco-superai/platform-superai/.platform/manifest.yaml:64:      eco-base/owner: ai-quantum-team
+platforms/eco-superai/platform-superai/.platform/manifest.yaml:64:      softwareos-base/owner: ai-quantum-team
 platforms/eco-superai/platform-superai/CHANGELOG.md:31:- **Documentation**: Comprehensive README with architecture overview, quick start guide, and deployment instructions.
 platforms/eco-superai/platform-superai/Dockerfile.dev:9:LABEL maintainer="Enterprise Engineering Team" \
 platforms/eco-superai/platform-superai/Dockerfile.prod:15:LABEL maintainer="Enterprise Engineering Team" \
 platforms/eco-superai/platform-superai/README.md:114:│   ├── architecture/            # Architecture design docs
 platforms/eco-superai/platform-superai/README.md:118:│   └── runbooks/                # Operations runbooks
-platforms/eco-superai/platform-superai/ai/anomaly-detection/config.yaml:158:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/ai/anomaly-detection/config.yaml:240:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/ai/anomaly-detection/config.yaml:273:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/ai/anomaly-detection/config.yaml:57:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/ai/anomaly-detection/config.yaml:79:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/argocd/rollout.yaml:209:    eco-base/owner: eco-system
+platforms/eco-superai/platform-superai/ai/anomaly-detection/config.yaml:158:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/ai/anomaly-detection/config.yaml:240:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/ai/anomaly-detection/config.yaml:273:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/ai/anomaly-detection/config.yaml:57:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/ai/anomaly-detection/config.yaml:79:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/argocd/rollout.yaml:209:    softwareos-base/owner: eco-system
 platforms/eco-superai/platform-superai/docs/REFACTORING-ANALYSIS-REPORT.md:34:        └── 06-operations-runbook.md (Phase 6: 運維手冊)
 platforms/eco-superai/platform-superai/docs/REFACTORING-ANALYSIS-REPORT.md:94:│   ├── architecture/                    # 架構文檔
 platforms/eco-superai/platform-superai/docs/REFACTORING-ANALYSIS-REPORT.md:97:│   └── runbooks/                        # 運維手冊
@@ -376,39 +376,39 @@ platforms/eco-superai/platform-superai/docs/adr/ADR-002-quantum-runtime-abstract
 platforms/eco-superai/platform-superai/docs/runbooks/INCIDENT-RESPONSE.md:214:4. **Action Items** — Concrete preventive measures with owners and deadlines
 platforms/eco-superai/platform-superai/helm/Chart.yaml:13:maintainers:
 platforms/eco-superai/platform-superai/infrastructure/docker/Dockerfile.dev:34:# Set ownership
-platforms/eco-superai/platform-superai/infrastructure/federation/cluster-registry.yaml:105:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/infrastructure/federation/cluster-registry.yaml:189:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/infrastructure/federation/cluster-registry.yaml:48:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/infrastructure/federation/cluster-registry.yaml:70:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/k8s/base/configmap.yaml:39:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/k8s/base/cronjob.yaml:104:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/k8s/base/cronjob.yaml:17:    eco-base/owner: eco-system
+platforms/eco-superai/platform-superai/infrastructure/federation/cluster-registry.yaml:105:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/infrastructure/federation/cluster-registry.yaml:189:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/infrastructure/federation/cluster-registry.yaml:48:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/infrastructure/federation/cluster-registry.yaml:70:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/k8s/base/configmap.yaml:39:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/k8s/base/cronjob.yaml:104:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/k8s/base/cronjob.yaml:17:    softwareos-base/owner: eco-system
 platforms/eco-superai/platform-superai/k8s/base/cronjob.yaml:41:              \ -d \"${DB_NAME}\" \\\n  --no-owner --no-privileges --clean --if-exists\
-platforms/eco-superai/platform-superai/k8s/base/deployment.yaml:148:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/k8s/base/deployment.yaml:17:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/k8s/base/deployment.yaml:254:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/k8s/base/ingress.yaml:45:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/k8s/base/namespace.yaml:13:    eco-base/owner: ai-quantum-team
-platforms/eco-superai/platform-superai/k8s/base/secret.yaml:17:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/k8s/base/secret.yaml:50:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/k8s/base/secret.yaml:77:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/k8s/base/service.yaml:20:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/k8s/base/service.yaml:55:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/logging/loki-stack.yaml:123:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/logging/loki-stack.yaml:145:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/logging/loki-stack.yaml:179:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/logging/loki-stack.yaml:19:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/logging/loki-stack.yaml:210:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/logging/loki-stack.yaml:312:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/logging/loki-stack.yaml:374:    eco-base/owner: eco-system
+platforms/eco-superai/platform-superai/k8s/base/deployment.yaml:148:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/k8s/base/deployment.yaml:17:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/k8s/base/deployment.yaml:254:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/k8s/base/ingress.yaml:45:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/k8s/base/namespace.yaml:13:    softwareos-base/owner: ai-quantum-team
+platforms/eco-superai/platform-superai/k8s/base/secret.yaml:17:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/k8s/base/secret.yaml:50:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/k8s/base/secret.yaml:77:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/k8s/base/service.yaml:20:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/k8s/base/service.yaml:55:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/logging/loki-stack.yaml:123:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/logging/loki-stack.yaml:145:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/logging/loki-stack.yaml:179:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/logging/loki-stack.yaml:19:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/logging/loki-stack.yaml:210:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/logging/loki-stack.yaml:312:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/logging/loki-stack.yaml:374:    softwareos-base/owner: eco-system
 platforms/eco-superai/platform-superai/monitoring/alertmanager/alertmanager.yml:104:          *Runbook:* {{ .Annotations.runbook_url }}
-platforms/eco-superai/platform-superai/monitoring/alertmanager/pagerduty-integration.yaml:117:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/monitoring/alertmanager/pagerduty-integration.yaml:19:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/monitoring/alertmanager/pagerduty-integration.yaml:204:    eco-base/owner: eco-system
+platforms/eco-superai/platform-superai/monitoring/alertmanager/pagerduty-integration.yaml:117:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/monitoring/alertmanager/pagerduty-integration.yaml:19:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/monitoring/alertmanager/pagerduty-integration.yaml:204:    softwareos-base/owner: eco-system
 platforms/eco-superai/platform-superai/monitoring/alertmanager/pagerduty-integration.yaml:246:    \ (threshold: 0.1)\"\n          runbook: \"https://docs.superai.platform/runbooks/high-error-rate\"\
 platforms/eco-superai/platform-superai/monitoring/alertmanager/pagerduty-integration.yaml:270:    \n          runbook: \"https://docs.superai.platform/runbooks/security-incident\"\
-platforms/eco-superai/platform-superai/monitoring/alertmanager/pagerduty-integration.yaml:316:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/monitoring/alertmanager/pagerduty-integration.yaml:95:    eco-base/owner: eco-system
+platforms/eco-superai/platform-superai/monitoring/alertmanager/pagerduty-integration.yaml:316:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/monitoring/alertmanager/pagerduty-integration.yaml:95:    softwareos-base/owner: eco-system
 platforms/eco-superai/platform-superai/monitoring/prometheus/alerts.yml:112:          runbook_url: "https://runbooks.superai.internal/naming/compliance-rate-low"
 platforms/eco-superai/platform-superai/monitoring/prometheus/alerts.yml:133:          runbook_url: "https://runbooks.superai.internal/naming/autofix-failure-rate"
 platforms/eco-superai/platform-superai/monitoring/prometheus/alerts.yml:159:          runbook_url: "https://runbooks.superai.internal/quantum/high-failure-rate"
@@ -433,18 +433,18 @@ platforms/eco-superai/platform-superai/monitoring/prometheus/alerts.yml:90:     
 platforms/eco-superai/platform-superai/scripts/auto-fix/collect-issues.sh:13:#   --repo <owner/name>  Repository (default: from git remote)
 platforms/eco-superai/platform-superai/scripts/auto-fix/collect-issues.sh:50:            echo "Usage: $0 [--run-id <id>] [--repo <owner/name>] [--output <path>] [--local] [--verbose]"
 platforms/eco-superai/platform-superai/scripts/backup-db.sh:55:    --no-owner \
-platforms/eco-superai/platform-superai/security/audit-logging.yaml:141:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/security/audit-logging.yaml:218:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/security/audit-logging.yaml:320:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/security/audit-logging.yaml:369:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/security/audit-logging.yaml:43:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/security/audit-logging.yaml:65:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/security/falco/falco-config.yaml:31:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/security/security-scanning.yaml:104:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/security/security-scanning.yaml:19:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/security/security-scanning.yaml:218:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/security/security-scanning.yaml:304:    eco-base/owner: eco-system
-platforms/eco-superai/platform-superai/security/security-scanning.yaml:424:    eco-base/owner: eco-system
+platforms/eco-superai/platform-superai/security/audit-logging.yaml:141:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/security/audit-logging.yaml:218:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/security/audit-logging.yaml:320:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/security/audit-logging.yaml:369:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/security/audit-logging.yaml:43:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/security/audit-logging.yaml:65:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/security/falco/falco-config.yaml:31:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/security/security-scanning.yaml:104:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/security/security-scanning.yaml:19:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/security/security-scanning.yaml:218:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/security/security-scanning.yaml:304:    softwareos-base/owner: eco-system
+platforms/eco-superai/platform-superai/security/security-scanning.yaml:424:    softwareos-base/owner: eco-system
 platforms/eco-superai/platform-superai/src/ai/agents/task_executor.py:17:    "doc_writer": "You are a technical documentation expert. Write clear, comprehensive documentation including API docs, architecture guides, and runbooks.",
 platforms/eco-superai/platform-superai/src/ai/factory/expert_factory.py:25:            "devops": "You are a DevOps expert specializing in Kubernetes, ArgoCD, Helm, CI/CD pipelines, and cloud-native architecture.",
 platforms/eco-superai/platform-superai/src/ai/factory/expert_factory.py:26:            "security": "You are a cybersecurity expert focusing on application security, OWASP, and zero-trust architecture.",
@@ -471,18 +471,18 @@ platforms/eco-superai/platform-superai/tests/unit/infrastructure/test_repository
 platforms/eco-superai/scripts/auto-fix/collect-issues.sh:13:#   --repo <owner/name>  Repository (default: from git remote)
 platforms/eco-superai/scripts/auto-fix/collect-issues.sh:50:            echo "Usage: $0 [--run-id <id>] [--repo <owner/name>] [--output <path>] [--local] [--verbose]"
 platforms/eco-superai/scripts/backup-db.sh:55:    --no-owner \
-platforms/eco-superai/security/audit-logging.yaml:141:    eco-base/owner: eco-system
-platforms/eco-superai/security/audit-logging.yaml:218:    eco-base/owner: eco-system
-platforms/eco-superai/security/audit-logging.yaml:320:    eco-base/owner: eco-system
-platforms/eco-superai/security/audit-logging.yaml:369:    eco-base/owner: eco-system
-platforms/eco-superai/security/audit-logging.yaml:43:    eco-base/owner: eco-system
-platforms/eco-superai/security/audit-logging.yaml:65:    eco-base/owner: eco-system
-platforms/eco-superai/security/falco/falco-config.yaml:31:    eco-base/owner: eco-system
-platforms/eco-superai/security/security-scanning.yaml:104:    eco-base/owner: eco-system
-platforms/eco-superai/security/security-scanning.yaml:19:    eco-base/owner: eco-system
-platforms/eco-superai/security/security-scanning.yaml:218:    eco-base/owner: eco-system
-platforms/eco-superai/security/security-scanning.yaml:304:    eco-base/owner: eco-system
-platforms/eco-superai/security/security-scanning.yaml:424:    eco-base/owner: eco-system
+platforms/eco-superai/security/audit-logging.yaml:141:    softwareos-base/owner: eco-system
+platforms/eco-superai/security/audit-logging.yaml:218:    softwareos-base/owner: eco-system
+platforms/eco-superai/security/audit-logging.yaml:320:    softwareos-base/owner: eco-system
+platforms/eco-superai/security/audit-logging.yaml:369:    softwareos-base/owner: eco-system
+platforms/eco-superai/security/audit-logging.yaml:43:    softwareos-base/owner: eco-system
+platforms/eco-superai/security/audit-logging.yaml:65:    softwareos-base/owner: eco-system
+platforms/eco-superai/security/falco/falco-config.yaml:31:    softwareos-base/owner: eco-system
+platforms/eco-superai/security/security-scanning.yaml:104:    softwareos-base/owner: eco-system
+platforms/eco-superai/security/security-scanning.yaml:19:    softwareos-base/owner: eco-system
+platforms/eco-superai/security/security-scanning.yaml:218:    softwareos-base/owner: eco-system
+platforms/eco-superai/security/security-scanning.yaml:304:    softwareos-base/owner: eco-system
+platforms/eco-superai/security/security-scanning.yaml:424:    softwareos-base/owner: eco-system
 platforms/eco-superai/src/ai/agents/task_executor.py:17:    "doc_writer": "You are a technical documentation expert. Write clear, comprehensive documentation including API docs, architecture guides, and runbooks.",
 platforms/eco-superai/src/ai/factory/expert_factory.py:25:            "devops": "You are a DevOps expert specializing in Kubernetes, ArgoCD, Helm, CI/CD pipelines, and cloud-native architecture.",
 platforms/eco-superai/src/ai/factory/expert_factory.py:26:            "security": "You are a cybersecurity expert focusing on application security, OWASP, and zero-trust architecture.",
@@ -528,106 +528,106 @@ platforms/enterprise-devops-engineering/frontend/src/types/index.ts:222:  role: 
 platforms/im-integration/shared/normalizer.ts:34:  const contact = change?.contacts?.[0];
 platforms/im-integration/shared/normalizer.ts:41:    userName: contact?.profile?.name || "",
 platforms/infrastructure/deployment/helm/machine-native-ops/Chart.yaml:30:maintainers:
-platforms/infrastructure/deployment/kubernetes/base/configmap.yaml:26:    eco-base/owner: eco-system
-platforms/infrastructure/deployment/kubernetes/base/configmap.yaml:52:    eco-base/owner: eco-system
-platforms/infrastructure/deployment/kubernetes/base/configmap.yaml:77:    eco-base/owner: eco-system
-platforms/infrastructure/deployment/kubernetes/base/secrets.yaml:17:    eco-base/owner: eco-system
+platforms/infrastructure/deployment/kubernetes/base/configmap.yaml:26:    softwareos-base/owner: eco-system
+platforms/infrastructure/deployment/kubernetes/base/configmap.yaml:52:    softwareos-base/owner: eco-system
+platforms/infrastructure/deployment/kubernetes/base/configmap.yaml:77:    softwareos-base/owner: eco-system
+platforms/infrastructure/deployment/kubernetes/base/secrets.yaml:17:    softwareos-base/owner: eco-system
 platforms/infrastructure/foundation/deployment/helm/machine-native-ops/Chart.yaml:30:maintainers:
-platforms/infrastructure/foundation/deployment/kubernetes/base/configmap.yaml:26:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/deployment/kubernetes/base/configmap.yaml:52:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/deployment/kubernetes/base/configmap.yaml:77:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/deployment/kubernetes/base/secrets.yaml:17:    eco-base/owner: eco-system
+platforms/infrastructure/foundation/deployment/kubernetes/base/configmap.yaml:26:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/deployment/kubernetes/base/configmap.yaml:52:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/deployment/kubernetes/base/configmap.yaml:77:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/deployment/kubernetes/base/secrets.yaml:17:    softwareos-base/owner: eco-system
 platforms/infrastructure/foundation/governance/GL-SEMANTIC-ANCHOR.json:42:    "gl_architecture": "../.github/governance/architecture/",
 platforms/infrastructure/foundation/k8s-legacy/ENTERPRISE-INFRASTRUCTURE-SUMMARY.md:505:5. Create runbooks and SOPs
 platforms/infrastructure/foundation/k8s-legacy/ENTERPRISE-INFRASTRUCTURE-SUMMARY.md:95:- ✅ Disaster recovery runbooks
 platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/README.md:20:- **DR Plans**: Detailed disaster recovery runbooks and procedures
 platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/README.md:513:- Include contact information for key personnel
-platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:114:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:19:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:207:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:308:    eco-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:114:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:19:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:207:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:308:    softwareos-base/owner: eco-system
 platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:40:              \     --format=plain \\\n        --no-owner \\\n        --no-acl \\\n\
 platforms/infrastructure/foundation/k8s-legacy/high-availability/README.md:250:      owner: postgres
-platforms/infrastructure/foundation/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml:19:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml:200:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml:342:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml:111:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml:143:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml:180:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml:215:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml:30:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml:76:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:74:    eco-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml:19:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml:200:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml:342:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml:111:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml:143:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml:180:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml:215:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml:30:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml:76:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml:74:    softwareos-base/owner: eco-system
 platforms/infrastructure/foundation/k8s-legacy/production/PLUGGABLE-ARCHITECTURE-DESIGN.md:13:This document defines a **pluggable, modular architecture** that enables deployment across any environment without modification. The system supports:
 platforms/infrastructure/foundation/k8s-legacy/production/PLUGGABLE-ARCHITECTURE-DESIGN.md:2830:This pluggable architecture design provides:
-platforms/infrastructure/foundation/k8s-legacy/production/alertmanager-config.yaml:57:    eco-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/alertmanager-config.yaml:57:    softwareos-base/owner: eco-system
 platforms/infrastructure/foundation/k8s-legacy/production/automation-config.yaml:130:    \      enabled: true\n      auto_create_incident_report: true\n      update_runbooks:\
-platforms/infrastructure/foundation/k8s-legacy/production/automation-config.yaml:180:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/backup-compliance-reporting.yaml:64:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/backup-compliance-reporting.yaml:84:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:38:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:58:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/backup-lifecycle.yaml:136:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/backup-lifecycle.yaml:56:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/backup-lifecycle.yaml:76:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/configmap.yaml:66:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/cost-optimization.yaml:93:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/cross-platform-networking.yaml:155:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/cross-platform-storage.yaml:143:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/cross-region-failover.yaml:78:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/deployment-istio.yaml:18:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/deployment-istio.yaml:203:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/deployment.yaml:187:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/deployment.yaml:18:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/disaster-recovery-job.yaml:105:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/disaster-recovery-job.yaml:18:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/disaster-recovery-testing.yaml:140:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/enhanced-backup-strategy.yaml:48:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml:32:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml:57:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml:88:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/extended-platforms-config.yaml:204:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/extended-platforms-integrations.yaml:229:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/gateway.yaml:63:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/geo-dns-routing.yaml:67:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/grafana-dashboards.yaml:96:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/jaeger-config.yaml:31:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/jaeger-config.yaml:63:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/k6-benchmark-tests.yaml:66:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/multi-cluster-mesh.yaml:196:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/multi-cluster-mesh.yaml:224:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/multi-region-dr.yaml:71:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/performance-auto-tuning.yaml:95:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-config.yaml:120:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-job.yaml:156:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-job.yaml:18:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-job.yaml:225:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-job.yaml:87:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/platform-agnostic-config.yaml:133:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/predictive-scaling.yaml:95:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/prometheus-config.yaml:167:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/prometheus-config.yaml:74:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/resilience-middleware.yaml:109:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/resilience-middleware.yaml:18:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/resilience-policies.yaml:112:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/resource-optimization-monitoring.yaml:129:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/service-observability.yaml:107:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/service-observability.yaml:39:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/trace-analysis-dashboard.yaml:111:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/trace-analysis-dashboard.yaml:131:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/trace-analysis-dashboard.yaml:64:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/tracing-middleware-config.yaml:20:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:179:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:246:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:31:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/kubernetes/manifests/base/configmap.yaml:26:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/kubernetes/manifests/base/ingress.yaml:21:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/kubernetes/manifests/base/secret.yaml:20:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/kubernetes/manifests/systems/elasticsearch-search-system/service.yaml:19:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/kubernetes/manifests/systems/engine/service.yaml:19:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/kubernetes/manifests/systems/esync-platform/service.yaml:19:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/kubernetes/manifests/systems/file-organizer-system/service.yaml:19:    eco-base/owner: eco-system
-platforms/infrastructure/foundation/kubernetes/manifests/systems/instant/service.yaml:19:    eco-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/automation-config.yaml:180:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/backup-compliance-reporting.yaml:64:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/backup-compliance-reporting.yaml:84:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:38:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml:58:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/backup-lifecycle.yaml:136:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/backup-lifecycle.yaml:56:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/backup-lifecycle.yaml:76:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/configmap.yaml:66:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/cost-optimization.yaml:93:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/cross-platform-networking.yaml:155:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/cross-platform-storage.yaml:143:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/cross-region-failover.yaml:78:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/deployment-istio.yaml:18:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/deployment-istio.yaml:203:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/deployment.yaml:187:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/deployment.yaml:18:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/disaster-recovery-job.yaml:105:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/disaster-recovery-job.yaml:18:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/disaster-recovery-testing.yaml:140:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/enhanced-backup-strategy.yaml:48:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml:32:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml:57:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml:88:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/extended-platforms-config.yaml:204:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/extended-platforms-integrations.yaml:229:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/gateway.yaml:63:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/geo-dns-routing.yaml:67:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/grafana-dashboards.yaml:96:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/jaeger-config.yaml:31:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/jaeger-config.yaml:63:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/k6-benchmark-tests.yaml:66:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/multi-cluster-mesh.yaml:196:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/multi-cluster-mesh.yaml:224:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/multi-region-dr.yaml:71:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/performance-auto-tuning.yaml:95:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-config.yaml:120:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-job.yaml:156:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-job.yaml:18:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-job.yaml:225:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-job.yaml:87:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/platform-agnostic-config.yaml:133:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/predictive-scaling.yaml:95:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/prometheus-config.yaml:167:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/prometheus-config.yaml:74:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/resilience-middleware.yaml:109:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/resilience-middleware.yaml:18:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/resilience-policies.yaml:112:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/resource-optimization-monitoring.yaml:129:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/service-observability.yaml:107:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/service-observability.yaml:39:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/trace-analysis-dashboard.yaml:111:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/trace-analysis-dashboard.yaml:131:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/trace-analysis-dashboard.yaml:64:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/tracing-middleware-config.yaml:20:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:179:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:246:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml:31:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/kubernetes/manifests/base/configmap.yaml:26:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/kubernetes/manifests/base/ingress.yaml:21:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/kubernetes/manifests/base/secret.yaml:20:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/kubernetes/manifests/systems/elasticsearch-search-system/service.yaml:19:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/kubernetes/manifests/systems/engine/service.yaml:19:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/kubernetes/manifests/systems/esync-platform/service.yaml:19:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/kubernetes/manifests/systems/file-organizer-system/service.yaml:19:    softwareos-base/owner: eco-system
+platforms/infrastructure/foundation/kubernetes/manifests/systems/instant/service.yaml:19:    softwareos-base/owner: eco-system
 platforms/infrastructure/foundation/rke2/scripts/install-rke2.sh:250:    # Set ownership of etcd data directory
 platforms/infrastructure/foundation/rke2/scripts/validate-cis.sh:138:        local owner=$(stat -c %U "$etcd_dir")
 platforms/infrastructure/foundation/rke2/scripts/validate-cis.sh:139:        if [ "$owner" = "etcd" ]; then
@@ -638,92 +638,92 @@ platforms/infrastructure/k8s-legacy/ENTERPRISE-INFRASTRUCTURE-SUMMARY.md:505:5. 
 platforms/infrastructure/k8s-legacy/ENTERPRISE-INFRASTRUCTURE-SUMMARY.md:95:- ✅ Disaster recovery runbooks
 platforms/infrastructure/k8s-legacy/disaster-recovery/README.md:20:- **DR Plans**: Detailed disaster recovery runbooks and procedures
 platforms/infrastructure/k8s-legacy/disaster-recovery/README.md:513:- Include contact information for key personnel
-platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:114:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:19:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:207:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:308:    eco-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:114:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:19:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:207:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:308:    softwareos-base/owner: eco-system
 platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml:40:              \     --format=plain \\\n        --no-owner \\\n        --no-acl \\\n\
 platforms/infrastructure/k8s-legacy/high-availability/README.md:250:      owner: postgres
-platforms/infrastructure/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml:19:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml:200:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml:342:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml:111:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml:143:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml:180:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml:215:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml:30:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml:76:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:74:    eco-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml:19:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml:200:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml:342:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml:111:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml:143:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml:180:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml:215:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml:30:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml:76:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml:74:    softwareos-base/owner: eco-system
 platforms/infrastructure/k8s-legacy/production/PLUGGABLE-ARCHITECTURE-DESIGN.md:13:This document defines a **pluggable, modular architecture** that enables deployment across any environment without modification. The system supports:
 platforms/infrastructure/k8s-legacy/production/PLUGGABLE-ARCHITECTURE-DESIGN.md:2830:This pluggable architecture design provides:
-platforms/infrastructure/k8s-legacy/production/alertmanager-config.yaml:57:    eco-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/alertmanager-config.yaml:57:    softwareos-base/owner: eco-system
 platforms/infrastructure/k8s-legacy/production/automation-config.yaml:130:    \      enabled: true\n      auto_create_incident_report: true\n      update_runbooks:\
-platforms/infrastructure/k8s-legacy/production/automation-config.yaml:180:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/backup-compliance-reporting.yaml:64:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/backup-compliance-reporting.yaml:84:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:38:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:58:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/backup-lifecycle.yaml:136:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/backup-lifecycle.yaml:56:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/backup-lifecycle.yaml:76:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/configmap.yaml:66:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/cost-optimization.yaml:93:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/cross-platform-networking.yaml:155:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/cross-platform-storage.yaml:143:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/cross-region-failover.yaml:78:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/deployment-istio.yaml:18:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/deployment-istio.yaml:203:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/deployment.yaml:187:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/deployment.yaml:18:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/disaster-recovery-job.yaml:105:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/disaster-recovery-job.yaml:18:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/disaster-recovery-testing.yaml:140:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/enhanced-backup-strategy.yaml:48:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml:32:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml:57:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml:88:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/extended-platforms-config.yaml:204:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/extended-platforms-integrations.yaml:229:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/gateway.yaml:63:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/geo-dns-routing.yaml:67:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/grafana-dashboards.yaml:96:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/jaeger-config.yaml:31:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/jaeger-config.yaml:63:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/k6-benchmark-tests.yaml:66:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/multi-cluster-mesh.yaml:196:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/multi-cluster-mesh.yaml:224:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/multi-region-dr.yaml:71:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/performance-auto-tuning.yaml:95:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/performance-benchmark-config.yaml:120:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/performance-benchmark-job.yaml:156:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/performance-benchmark-job.yaml:18:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/performance-benchmark-job.yaml:225:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/performance-benchmark-job.yaml:87:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/platform-agnostic-config.yaml:133:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/predictive-scaling.yaml:95:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/prometheus-config.yaml:167:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/prometheus-config.yaml:74:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/resilience-middleware.yaml:109:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/resilience-middleware.yaml:18:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/resilience-policies.yaml:112:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/resource-optimization-monitoring.yaml:129:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/service-observability.yaml:107:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/service-observability.yaml:39:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/trace-analysis-dashboard.yaml:111:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/trace-analysis-dashboard.yaml:131:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/trace-analysis-dashboard.yaml:64:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/tracing-middleware-config.yaml:20:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:179:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:246:    eco-base/owner: eco-system
-platforms/infrastructure/k8s-legacy/production/velero-config.yaml:31:    eco-base/owner: eco-system
-platforms/infrastructure/kubernetes/manifests/base/configmap.yaml:26:    eco-base/owner: eco-system
-platforms/infrastructure/kubernetes/manifests/base/ingress.yaml:21:    eco-base/owner: eco-system
-platforms/infrastructure/kubernetes/manifests/base/secret.yaml:20:    eco-base/owner: eco-system
-platforms/infrastructure/kubernetes/manifests/systems/elasticsearch-search-system/service.yaml:19:    eco-base/owner: eco-system
-platforms/infrastructure/kubernetes/manifests/systems/engine/service.yaml:19:    eco-base/owner: eco-system
-platforms/infrastructure/kubernetes/manifests/systems/esync-platform/service.yaml:19:    eco-base/owner: eco-system
-platforms/infrastructure/kubernetes/manifests/systems/file-organizer-system/service.yaml:19:    eco-base/owner: eco-system
-platforms/infrastructure/kubernetes/manifests/systems/instant/service.yaml:19:    eco-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/automation-config.yaml:180:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/backup-compliance-reporting.yaml:64:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/backup-compliance-reporting.yaml:84:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:38:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml:58:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/backup-lifecycle.yaml:136:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/backup-lifecycle.yaml:56:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/backup-lifecycle.yaml:76:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/configmap.yaml:66:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/cost-optimization.yaml:93:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/cross-platform-networking.yaml:155:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/cross-platform-storage.yaml:143:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/cross-region-failover.yaml:78:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/deployment-istio.yaml:18:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/deployment-istio.yaml:203:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/deployment.yaml:187:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/deployment.yaml:18:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/disaster-recovery-job.yaml:105:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/disaster-recovery-job.yaml:18:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/disaster-recovery-testing.yaml:140:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/enhanced-backup-strategy.yaml:48:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml:32:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml:57:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml:88:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/extended-platforms-config.yaml:204:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/extended-platforms-integrations.yaml:229:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/gateway.yaml:63:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/geo-dns-routing.yaml:67:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/grafana-dashboards.yaml:96:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/jaeger-config.yaml:31:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/jaeger-config.yaml:63:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/k6-benchmark-tests.yaml:66:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/multi-cluster-mesh.yaml:196:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/multi-cluster-mesh.yaml:224:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/multi-region-dr.yaml:71:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/performance-auto-tuning.yaml:95:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/performance-benchmark-config.yaml:120:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/performance-benchmark-job.yaml:156:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/performance-benchmark-job.yaml:18:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/performance-benchmark-job.yaml:225:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/performance-benchmark-job.yaml:87:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/platform-agnostic-config.yaml:133:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/predictive-scaling.yaml:95:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/prometheus-config.yaml:167:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/prometheus-config.yaml:74:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/resilience-middleware.yaml:109:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/resilience-middleware.yaml:18:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/resilience-policies.yaml:112:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/resource-optimization-monitoring.yaml:129:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/service-observability.yaml:107:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/service-observability.yaml:39:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/trace-analysis-dashboard.yaml:111:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/trace-analysis-dashboard.yaml:131:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/trace-analysis-dashboard.yaml:64:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/tracing-middleware-config.yaml:20:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:179:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:246:    softwareos-base/owner: eco-system
+platforms/infrastructure/k8s-legacy/production/velero-config.yaml:31:    softwareos-base/owner: eco-system
+platforms/infrastructure/kubernetes/manifests/base/configmap.yaml:26:    softwareos-base/owner: eco-system
+platforms/infrastructure/kubernetes/manifests/base/ingress.yaml:21:    softwareos-base/owner: eco-system
+platforms/infrastructure/kubernetes/manifests/base/secret.yaml:20:    softwareos-base/owner: eco-system
+platforms/infrastructure/kubernetes/manifests/systems/elasticsearch-search-system/service.yaml:19:    softwareos-base/owner: eco-system
+platforms/infrastructure/kubernetes/manifests/systems/engine/service.yaml:19:    softwareos-base/owner: eco-system
+platforms/infrastructure/kubernetes/manifests/systems/esync-platform/service.yaml:19:    softwareos-base/owner: eco-system
+platforms/infrastructure/kubernetes/manifests/systems/file-organizer-system/service.yaml:19:    softwareos-base/owner: eco-system
+platforms/infrastructure/kubernetes/manifests/systems/instant/service.yaml:19:    softwareos-base/owner: eco-system
 platforms/infrastructure/rke2/scripts/install-rke2.sh:250:    # Set ownership of etcd data directory
 platforms/infrastructure/rke2/scripts/validate-cis.sh:138:        local owner=$(stat -c %U "$etcd_dir")
 platforms/infrastructure/rke2/scripts/validate-cis.sh:139:        if [ "$owner" = "etcd" ]; then
@@ -741,11 +741,11 @@ platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/README.md:5
 platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/configs/folding-config.yaml:4:# @ECO-audit-trail: gl-enterprise-architecture/governance/audit-trails/GL00_09-audit.json
 platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/configs/folding-config.yaml:7:# GL Root Semantic Anchor: gl-enterprise-architecture/governance/ECO-ROOT-SEMANTIC-ANCHOR.yaml
 platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/configs/folding-config.yaml:8:# GL Unified Naming Charter: gl-enterprise-architecture/governance/ECO-UNIFIED-NAMING-CHARTER.yaml
-platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/deployment.yaml:18:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/ingress.yaml:25:    eco-base/owner: eco-system
+platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/deployment.yaml:18:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/ingress.yaml:25:    softwareos-base/owner: eco-system
 platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/ingress.yaml:41:  - host: spec-core.gl-enterprise-architecture.example.com
-platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/service.yaml:20:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/service.yaml:64:    eco-base/owner: eco-system
+platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/service.yaml:20:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/service.yaml:64:    softwareos-base/owner: eco-system
 platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/src/semantic-folding/engine.py:4:# @ECO-audit-trail: gl-enterprise-architecture/gl-platform.governance/audit-trails/GL00_09-audit.json
 platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/src/semantic-folding/engine.py:7:# GL Root Semantic Anchor: gl-enterprise-architecture/gl-platform.governance/ECO-ROOT-SEMANTIC-ANCHOR.yaml
 platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/src/semantic-folding/engine.py:8:# GL Unified Naming Charter: gl-enterprise-architecture/gl-platform.governance/ECO-UNIFIED-NAMING-CHARTER.yaml
@@ -769,35 +769,35 @@ platforms/ng-era-platforms/ng-cross-era-platforms/meta/specifications/README.md:
 platforms/ng-era-platforms/ng-cross-era-platforms/meta/specifications/README.md:56:│   ├── architecture/            # Architecture docs
 platforms/ng-era-platforms/ng-cross-era-platforms/meta/specifications/README.md:93:  architecture: gl-meta-specifications/standards/architecture.yaml
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/README.md:38:gl-enterprise-architecture/
-platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/README.md:82:   from gl_enterprise_architecture.governance.contracts import layer_standards
+platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/README.md:82:   from gl_enterprise_architecture.governance.softwareos-contracts import layer_standards
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/boundary-enforcement-rules.md:132:    if not file_path.startswith('gl-enterprise-architecture/'):
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/boundary-enforcement-rules.md:403:- enterprise-architecture
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/boundary-enforcement-rules.md:80:ALLOWED: gl-platform-services depends on gl-enterprise-architecture
-platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/boundary-reference-matrix.md:440:| gl-enterprise-architecture/contracts/ | Any | Read | File system | N/A |
+platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/boundary-reference-matrix.md:440:| gl-enterprise-architecture/softwareos-contracts/ | Any | Read | File system | N/A |
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/boundary-reference-matrix.md:636:**Document Status**: CONSTITUTIONAL - This matrix is foundational to GL architecture governance.
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-complete.md:10:**Location**: `gl-enterprise-architecture/governance/directory-boundary-specification.md`
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-complete.md:278:The comprehensive directory boundary definition provides a complete framework for maintaining architectural integrity across the 8-layer GL enterprise architecture. With clear boundary definitions, dependency rules, interaction protocols, and enforcement mechanisms, the project now has:
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-complete.md:32:**Location**: `gl-enterprise-architecture/governance/boundary-reference-matrix.md`
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-complete.md:50:**Location**: `gl-enterprise-architecture/governance/boundary-enforcement-rules.md`
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-complete.md:5:Successfully completed comprehensive directory boundary definition for the MachineNativeOps project, establishing clear responsibility boundaries, interaction protocols, and enforcement mechanisms across all 8 layers of the GL enterprise architecture.
-platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:130:- gl-enterprise-architecture (GL00-09) - governance contracts only
+platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:130:- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts only
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:154:- **Dependencies**: gl-enterprise-architecture (governance only)
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:15:This document defines comprehensive boundary specifications for all directories within the MachineNativeOps project. It establishes clear responsibility boundaries, interaction protocols, and architectural principles governing the 8-layer GL enterprise architecture.
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:160:- **Dependencies**: gl-enterprise-architecture (governance only)
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:166:- **Dependencies**: gl-enterprise-architecture (governance only)
-platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:196:- gl-enterprise-architecture (GL00-09) - governance contracts
+platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:196:- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:221:- **Dependencies**: gl-enterprise-architecture, gl-platform-services
-platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:251:- gl-enterprise-architecture (GL00-09) - governance contracts
+platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:251:- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:277:- **Dependencies**: gl-enterprise-architecture, gl-platform-services, gl-data-processing
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:283:- **Dependencies**: gl-enterprise-architecture, gl-platform-services, gl-data-processing
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:28:- GL00-09: gl-enterprise-architecture
-platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:359:- gl-enterprise-architecture (GL00-09) - governance contracts
-platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:383:- **Dependencies**: gl-enterprise-architecture (governance contracts)
+platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:359:- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts
+platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:383:- **Dependencies**: gl-enterprise-architecture (governance softwareos-contracts)
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:406:- Plugin architecture implementation
-platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:412:- gl-enterprise-architecture (GL00-09) - governance contracts
+platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:412:- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:72:### 3.1 GL00-09: gl-enterprise-architecture (Enterprise Governance Layer)
 platforms/ng-era-platforms/ng-era1-platforms/enterprise-architecture/governance/directory-boundary-specification.md:776:**Document Status**: CONSTITUTIONAL - This specification is foundational to the GL architecture and cannot be violated without formal architectural review and approval.
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/.governance/monitoring/prometheus-rules.yaml:207:    eco-base/owner: eco-system
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/.governance/monitoring/prometheus-rules.yaml:207:    softwareos-base/owner: eco-system
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/.governance/monitoring/prometheus-rules.yaml:21:        runbook_url: https://docs.gl.io/governance/naming/runbook
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/GL90-99-semantic-engine/__init__.py:7:# GL Root Semantic Anchor: gl-enterprise-architecture/governance/engine/governance/gl-artifacts/meta/semantic/ECO-ROOT-SEMANTIC-ANCHOR.yaml
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/GL90-99-semantic-engine/__init__.py:8:# GL Unified Naming Charter: gl-enterprise-architecture/governance/engine/governance/gl-artifacts/meta/naming-charter/gl-unified-naming-charter.yaml
@@ -815,7 +815,7 @@ platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Met
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/GL90-99-semantic-engine/semantic_models.py:8:# GL Unified Naming Charter: gl-enterprise-architecture/governance/engine/governance/gl-artifacts/meta/naming-charter/gl-unified-naming-charter.yaml
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/GL90-99-semantic-engine/semantic_parameterization.py:7:# GL Root Semantic Anchor: gl-enterprise-architecture/governance/engine/governance/gl-artifacts/meta/semantic/ECO-ROOT-SEMANTIC-ANCHOR.yaml
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/GL90-99-semantic-engine/semantic_parameterization.py:8:# GL Unified Naming Charter: gl-enterprise-architecture/governance/engine/governance/gl-artifacts/meta/naming-charter/gl-unified-naming-charter.yaml
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/GL90-99-semantic-engine/test_engine.py:50:    spec_file = "/workspace/machine-native-ops/gl-enterprise-architecture/contracts/semantic-unification-spec.yaml"
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/GL90-99-semantic-engine/test_engine.py:50:    spec_file = "/workspace/machine-native-ops/gl-enterprise-architecture/softwareos-contracts/semantic-unification-spec.yaml"
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/GL90-99-semantic-engine/test_engine.py:7:# GL Root Semantic Anchor: gl-enterprise-architecture/governance/engine/governance/gl-artifacts/meta/semantic/ECO-ROOT-SEMANTIC-ANCHOR.yaml
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/GL90-99-semantic-engine/test_engine.py:8:# GL Unified Naming Charter: gl-enterprise-architecture/governance/engine/governance/gl-artifacts/meta/naming-charter/gl-unified-naming-charter.yaml
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/GOVERNANCE-ARCHITECTURE-OVERVIEW.md:10:1. [Architecture Overview](#architecture-overview)
@@ -1179,11 +1179,11 @@ platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Met
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/config/naming-governance-v2.0.0.yaml:151:          runbook: "/repair/quantum-realignment-v4"
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/config/naming-governance-v2.0.0.yaml:158:          runbook: "/repair/quantum-entanglement-v3"
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/config/naming-governance-v2.0.0.yaml:165:          runbook: "/repair/quantum-violation-resolution-v5"
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/deployment/quantum-deployment-manifest.yaml:164:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/deployment/quantum-deployment-manifest.yaml:190:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/deployment/quantum-deployment-manifest.yaml:213:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/deployment/quantum-deployment-manifest.yaml:333:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/deployment/quantum-deployment-manifest.yaml:578:    eco-base/owner: eco-system
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/deployment/quantum-deployment-manifest.yaml:164:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/deployment/quantum-deployment-manifest.yaml:190:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/deployment/quantum-deployment-manifest.yaml:213:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/deployment/quantum-deployment-manifest.yaml:333:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/deployment/quantum-deployment-manifest.yaml:578:    softwareos-base/owner: eco-system
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/docs/PROJECT-SUMMARY.md:351:3. **🔒 Security**: Post-quantum cryptography and zero-trust architecture
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/docs/README.md:220:    runbook: "/repair/quantum-realignment-v4"
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/quantum-naming-v4.0.0/docs/README.md:229:    runbook: "/repair/quantum-re-entanglement-v4"
@@ -1216,39 +1216,39 @@ platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Met
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/gl-unified-naming-charter.yaml:17:  owner: governance-committee
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/gl-unified-naming-charter.yaml:63:  three_layer_architecture:
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/README.md:38:gl-enterprise-architecture/
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/README.md:82:   from gl_enterprise_architecture.governance.contracts import layer_standards
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/README.md:82:   from gl_enterprise_architecture.governance.softwareos-contracts import layer_standards
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/boundary-enforcement-rules.md:132:    if not file_path.startswith('gl-enterprise-architecture/'):
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/boundary-enforcement-rules.md:403:- enterprise-architecture
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/boundary-enforcement-rules.md:80:ALLOWED: gl-platform-services depends on gl-enterprise-architecture
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/boundary-reference-matrix.md:440:| gl-enterprise-architecture/contracts/ | Any | Read | File system | N/A |
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/boundary-reference-matrix.md:440:| gl-enterprise-architecture/softwareos-contracts/ | Any | Read | File system | N/A |
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/boundary-reference-matrix.md:636:**Document Status**: CONSTITUTIONAL - This matrix is foundational to GL architecture governance.
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-complete.md:10:**Location**: `gl-enterprise-architecture/governance/directory-boundary-specification.md`
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-complete.md:278:The comprehensive directory boundary definition provides a complete framework for maintaining architectural integrity across the 8-layer GL enterprise architecture. With clear boundary definitions, dependency rules, interaction protocols, and enforcement mechanisms, the project now has:
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-complete.md:32:**Location**: `gl-enterprise-architecture/governance/boundary-reference-matrix.md`
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-complete.md:50:**Location**: `gl-enterprise-architecture/governance/boundary-enforcement-rules.md`
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-complete.md:5:Successfully completed comprehensive directory boundary definition for the MachineNativeOps project, establishing clear responsibility boundaries, interaction protocols, and enforcement mechanisms across all 8 layers of the GL enterprise architecture.
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:130:- gl-enterprise-architecture (GL00-09) - governance contracts only
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:130:- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts only
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:154:- **Dependencies**: gl-enterprise-architecture (governance only)
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:15:This document defines comprehensive boundary specifications for all directories within the MachineNativeOps project. It establishes clear responsibility boundaries, interaction protocols, and architectural principles governing the 8-layer GL enterprise architecture.
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:160:- **Dependencies**: gl-enterprise-architecture (governance only)
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:166:- **Dependencies**: gl-enterprise-architecture (governance only)
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:196:- gl-enterprise-architecture (GL00-09) - governance contracts
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:196:- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:221:- **Dependencies**: gl-enterprise-architecture, gl-platform-services
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:251:- gl-enterprise-architecture (GL00-09) - governance contracts
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:251:- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:277:- **Dependencies**: gl-enterprise-architecture, gl-platform-services, gl-data-processing
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:283:- **Dependencies**: gl-enterprise-architecture, gl-platform-services, gl-data-processing
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:28:- GL00-09: gl-enterprise-architecture
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:359:- gl-enterprise-architecture (GL00-09) - governance contracts
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:383:- **Dependencies**: gl-enterprise-architecture (governance contracts)
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:359:- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:383:- **Dependencies**: gl-enterprise-architecture (governance softwareos-contracts)
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:406:- Plugin architecture implementation
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:412:- gl-enterprise-architecture (GL00-09) - governance contracts
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:412:- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:72:### 3.1 GL00-09: gl-enterprise-architecture (Enterprise Governance Layer)
 platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/directory-boundary-specification.md:776:**Document Status**: CONSTITUTIONAL - This specification is foundational to the GL architecture and cannot be violated without formal architectural review and approval.
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/contracts/directory-standards.yaml:144:        - gl-enterprise-architecture
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/contracts/directory-standards.yaml:16:  namespace: gl-enterprise-architecture
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/contracts/directory-standards.yaml:208:        - docs/architecture/
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/contracts/directory-standards.yaml:258:      - gl-enterprise-architecture/    # 治理層
-platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/contracts/directory-standards.yaml:29:    - name: gl-enterprise-architecture
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/softwareos-contracts/directory-standards.yaml:144:        - gl-enterprise-architecture
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/softwareos-contracts/directory-standards.yaml:16:  namespace: gl-enterprise-architecture
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/softwareos-contracts/directory-standards.yaml:208:        - docs/architecture/
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/softwareos-contracts/directory-standards.yaml:258:      - gl-enterprise-architecture/    # 治理層
+platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/softwareos-contracts/directory-standards.yaml:29:    - name: gl-enterprise-architecture
 platforms/ng-era-platforms/ng-era1-platforms/platform-services/README.md:175:- [Directory Boundary Specification](../gl-enterprise-architecture/governance/directory-boundary-specification.md)
 platforms/ng-era-platforms/ng-era1-platforms/platform-services/README.md:176:- [Boundary Reference Matrix](../gl-enterprise-architecture/governance/boundary-reference-matrix.md)
 platforms/ng-era-platforms/ng-era1-platforms/platform-services/README.md:177:- [Platform Architecture Documentation](docs/architecture.md)
@@ -1496,8 +1496,8 @@ platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/depl
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/deployments/deploy/platform/alertmanager/configmap.yaml:33:    \ {{ .Annotations.description }}\n      \n      *Runbook:* {{ .Annotations.runbook_url\
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/deployments/deploy/platform/alertmanager/configmap.yaml:39:    \ }}</p>\n      <p><strong>Runbook:</strong> <a href=\"{{ .Annotations.runbook_url\
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/deployments/deploy/platform/alertmanager/configmap.yaml:40:    \ }}\">{{ .Annotations.runbook_url }}</a></p>\n      {{ end }}\n  \n  pagerduty_configs:\n\
-platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/deployments/deploy/platform/alertmanager/configmap.yaml:70:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/deployments/deploy/platform/alertmanager/configmap.yaml:94:    eco-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/deployments/deploy/platform/alertmanager/configmap.yaml:70:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/deployments/deploy/platform/alertmanager/configmap.yaml:94:    softwareos-base/owner: eco-system
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/governance/naming/ng-era1-namespace.yaml:16:    architecture_level:
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/scripts/boundary-checker-implementation-complete.md:369:- [Directory Boundary Specification](../gl-enterprise-architecture/governance/directory-boundary-specification.md)
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/scripts/boundary-checker-implementation-complete.md:370:- [Boundary Reference Matrix](../gl-enterprise-architecture/governance/boundary-reference-matrix.md)
@@ -1545,7 +1545,7 @@ platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/scri
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/scripts/version_audit.py:7:# GL Root Semantic Anchor: gl-enterprise-architecture/governance/ECO-ROOT-SEMANTIC-ANCHOR.yaml
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/scripts/version_audit.py:8:# GL Unified Naming Charter: gl-enterprise-architecture/governance/ECO-UNIFIED-NAMING-CHARTER.yaml
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance-platform/scripts/zero-residue-execution.sh:108:        "architecture_validation": "internal_only"
-platforms/ng-era-platforms/ng-era2-platforms/governance/compliance/contracts/gl_contract.py:290:    contract.add_governance('gl-enterprise-architecture')
+platforms/ng-era-platforms/ng-era2-platforms/governance/compliance/softwareos-contracts/gl_contract.py:290:    contract.add_governance('gl-enterprise-architecture')
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance/data/evolution/gl-evolution-data/executions/analyzed/05a65738-f8e8-4e40-88a9-484e81458e0d-analysis.yaml:38:  owner: knowledge-team
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance/data/evolution/gl-evolution-data/executions/analyzed/1d86e97a-96c1-4d5d-bede-0fd283643b01-analysis.yaml:38:  owner: knowledge-team
 platforms/ng-era-platforms/ng-era2-platforms/governance/compliance/data/evolution/gl-evolution-data/executions/analyzed/ce140863-b63f-4094-a82c-ebc7ab1274b6-analysis.yaml:45:  owner: governance-team
@@ -2451,22 +2451,22 @@ platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/baselin
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/baseline/modules/module-manifest.schema.json:4:# @ECO-audit-trail: gl-enterprise-architecture/governance/audit-trails/GL30_49-audit.json
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/baseline/modules/module-manifest.schema.json:7:# GL Root Semantic Anchor: gl-enterprise-architecture/governance/ECO-ROOT-SEMANTIC-ANCHOR.yaml
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/baseline/modules/module-manifest.schema.json:8:# GL Unified Naming Charter: gl-enterprise-architecture/governance/ECO-UNIFIED-NAMING-CHARTER.yaml
-platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.config.yaml:213:    eco-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.config.yaml:213:    softwareos-base/owner: eco-system
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.devices.map:15:# 格式: logical_name:physical_path:device_type:permissions:owner:description
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.devices.map:20:# owner: 設備擁有者
-platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.governance.yaml:432:    eco-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.governance.yaml:432:    softwareos-base/owner: eco-system
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.integrity.yaml:100:    - file_ownership
-platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.integrity.yaml:488:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.modules.yaml:599:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.provenance.yaml:551:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.super-execution.yaml:489:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.trust.yaml:429:    eco-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.integrity.yaml:488:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.modules.yaml:599:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.provenance.yaml:551:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.super-execution.yaml:489:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.trust.yaml:429:    softwareos-base/owner: eco-system
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/documentation/README.md:19:- **Architectural Decisions**: ADRs (Architecture Decision Records) for controlplane
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/documentation/README.md:21:- **Reference Materials**: Reference documentation for operators and maintainers
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/documentation/README.md:29:├── architecture/          # Architecture decision records
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/governance/policies/README.md:209:- [Governance Architecture](/docs/architecture/governance.md)
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/validation/root.validator.schema.yaml:16:  owner: "system-architect"
-platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/design/FileX-standard-template-v1.yaml:278:    eco-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/design/FileX-standard-template-v1.yaml:278:    softwareos-base/owner: eco-system
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/engine/.governance/audit-reports/global-governance-audit-report.json:4:# @ECO-audit-trail: gl-enterprise-architecture/governance/audit-trails/GL90_99-audit.json
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/engine/.governance/audit-reports/global-governance-audit-report.json:7:# GL Root Semantic Anchor: gl-enterprise-architecture/governance/ECO-ROOT-SEMANTIC-ANCHOR.yaml
 platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/engine/.governance/audit-reports/global-governance-audit-report.json:8:# GL Unified Naming Charter: gl-enterprise-architecture/governance/ECO-UNIFIED-NAMING-CHARTER.yaml
@@ -3996,19 +3996,19 @@ platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/t
 platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/governance/validate_governance_matrix.py:63:    """Validate ownership map"""
 platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/governance/validate_governance_matrix.py:64:    file_path = "gl-platform.governance/ownership-map.yaml"
 platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/governance/validate_governance_matrix.py:74:        print(f"✅ Modules with ownership: {len(modules)}")
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/quantum/backend-service.yaml:18:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/quantum/configmap.yaml:36:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/quantum/frontend-service.yaml:18:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/quantum/ingress.yaml:22:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/quantum/secret.yaml:18:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/dynamic-validator-deployment.yaml:157:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/dynamic-validator-deployment.yaml:18:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/dynamic-validator-deployment.yaml:202:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/hybrid-decider-service.yaml:183:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/hybrid-decider-service.yaml:18:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/hybrid-decider-service.yaml:58:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/quantum-scanner-daemonset.yaml:146:    eco-base/owner: eco-system
-platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/quantum-scanner-daemonset.yaml:18:    eco-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/quantum/backend-service.yaml:18:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/quantum/configmap.yaml:36:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/quantum/frontend-service.yaml:18:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/quantum/ingress.yaml:22:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/quantum/secret.yaml:18:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/dynamic-validator-deployment.yaml:157:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/dynamic-validator-deployment.yaml:18:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/dynamic-validator-deployment.yaml:202:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/hybrid-decider-service.yaml:183:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/hybrid-decider-service.yaml:18:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/hybrid-decider-service.yaml:58:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/quantum-scanner-daemonset.yaml:146:    softwareos-base/owner: eco-system
+platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/infrastructure/kubernetes/validation/quantum-scanner-daemonset.yaml:18:    softwareos-base/owner: eco-system
 platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/language-dashboard-data.yaml:20:  architecture_compliance: 0
 platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/language-dashboard-data.yaml:29:    architecture: 0
 platforms/ng-era-platforms/ng-era2-platforms/runtime/execution-platform/engine/tools-legacy/language_health_score.py:109:def calculate_architecture_score(governance_report: dict[str, Any]) -> float:

@@ -1,13 +1,13 @@
-# eco-base v1.0 - Grafana Dashboard
+# softwareos-base v1.0 - Grafana Dashboard
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: grafana
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app.kubernetes.io/name: grafana
     app.kubernetes.io/component: monitoring
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
 spec:
   replicas: 1
   selector:
@@ -32,7 +32,7 @@ spec:
             - name: GF_USERS_ALLOW_SIGN_UP
               value: "false"
             - name: GF_SERVER_ROOT_URL
-              value: "https://grafana.autoecoops.io"
+              value: "https://grafana.softwareos.io"
           resources:
             requests:
               cpu: "100m"
@@ -62,7 +62,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: grafana-datasources
-  namespace: eco-base
+  namespace: softwareos-base
 data:
   datasources.yaml: |
     apiVersion: 1
@@ -78,14 +78,14 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: grafana-dashboards
-  namespace: eco-base
+  namespace: softwareos-base
 data:
   dashboards.yaml: |
     apiVersion: 1
     providers:
       - name: default
         orgId: 1
-        folder: eco-base
+        folder: softwareos-base
         type: file
         disableDeletion: false
         editable: true
@@ -97,7 +97,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: grafana-data
-  namespace: eco-base
+  namespace: softwareos-base
 spec:
   accessModes: ["ReadWriteOnce"]
   storageClassName: standard
@@ -109,7 +109,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: grafana-svc
-  namespace: eco-base
+  namespace: softwareos-base
 spec:
   type: ClusterIP
   ports:
@@ -121,8 +121,8 @@ spec:
 # YAML Toolkit v8 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "eco-gf-0001-0001-000000000001"
-  uri: "eco-base://k8s/eco-base/deployment/grafana"
-  urn: "urn:eco-base:k8s:eco-base:deployment:grafana:eco-gf-0001-0001-000000000001"
+  uri: "softwareos-base://k8s/softwareos-base/deployment/grafana"
+  urn: "urn:softwareos-base:k8s:softwareos-base:deployment:grafana:eco-gf-0001-0001-000000000001"
   target_system: gke-production
   cross_layer_binding: [prometheus]
   schema_version: v8
@@ -134,7 +134,7 @@ governance_info:
   compliance_tags: [zero-trust, soc2, internal, monitoring, dashboard]
   lifecycle_policy: active
 registry_binding:
-  service_endpoint: "http://grafana-svc.eco-base.svc.cluster.local:3000"
+  service_endpoint: "http://grafana-svc.softwareos-base.svc.cluster.local:3000"
   discovery_protocol: k8s-dns
   health_check_path: "/api/health"
   registry_ttl: 30

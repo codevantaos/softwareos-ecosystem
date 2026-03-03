@@ -12,7 +12,7 @@ metadata:
 spec:
   description: "Critical infrastructure components — restricted prune, manual sync required for destructive changes"
   sourceRepos:
-    - "https://github.com/indestructibleorg/eco-base"
+    - "https://github.com/indestructibleorg/softwareos-base"
     - "https://helm.goharbor.io"
     - "https://kyverno.github.io/kyverno"
     - "https://open-policy-agent.github.io/gatekeeper/charts"
@@ -96,7 +96,7 @@ metadata:
 spec:
   description: "ECO business platforms — auto-sync with prune enabled, diff gate required on PR"
   sourceRepos:
-    - "https://github.com/indestructibleorg/eco-base"
+    - "https://github.com/indestructibleorg/softwareos-base"
   destinations:
     - namespace: eco-core
       server: https://kubernetes.default.svc

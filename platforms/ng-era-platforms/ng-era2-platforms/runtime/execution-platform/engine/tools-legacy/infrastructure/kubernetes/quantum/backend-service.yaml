@@ -3,21 +3,21 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/quantumflow-backend
-    eco-base/urn: urn:eco-base:k8s:core:service:quantumflow-backend:sha256-62f79b76639f10299a1096f62d7dfb7601b69e5ce30687275c0210f435a5cc7a
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/quantumflow-backend
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:quantumflow-backend:sha256-62f79b76639f10299a1096f62d7dfb7601b69e5ce30687275c0210f435a5cc7a
   labels:
     app.kubernetes.io/component: backend
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: quantumflow
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: quantumflow-backend
   namespace: quantumflow
 spec:

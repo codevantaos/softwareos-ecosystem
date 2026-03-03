@@ -1,7 +1,7 @@
 {
-  "name": "@eco-base/yaml-toolkit",
+  "name": "@softwareos-base/yaml-toolkit",
   "version": "1.0.0",
-  "description": "eco-base YAML Governance Toolkit v1 — generate, validate, lint .qyaml manifests",
+  "description": "softwareos-base YAML Governance Toolkit v1 — generate, validate, lint .qyaml manifests",
   "bin": {
     "yaml-toolkit": "./bin/cli.js"
   },

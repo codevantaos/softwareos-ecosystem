@@ -1,4 +1,4 @@
-// eco-base://supabase/functions/audit-log
+// softwareos-base://supabase/functions/audit-log
 // Audit log ingestion endpoint for governance compliance
 // Accepts structured audit events and writes to governance_records table
 // Supports: SOC2, ISO27001 audit trail requirements
@@ -72,8 +72,8 @@ Deno.serve(async (req) => {
         source: "edge-function",
       },
       compliance_tags: event.compliance_tags || [],
-      uri: `eco-base://audit/${event.resource_type}/${event.resource_id}/${Date.now()}`,
-      urn: `urn:eco-base:audit:${event.resource_type}:${event.resource_id}`,
+      uri: `softwareos-base://audit/${event.resource_type}/${event.resource_id}/${Date.now()}`,
+      urn: `urn:softwareos-base:audit:${event.resource_type}:${event.resource_id}`,
     }));
 
     const { data, error } = await supabase
@@ -97,8 +97,8 @@ Deno.serve(async (req) => {
         status: "success",
         inserted: data?.length ?? 0,
         records: data,
-        uri: "eco-base://supabase/functions/audit-log",
-        urn: "urn:eco-base:supabase:functions:audit-log:v1",
+        uri: "softwareos-base://supabase/functions/audit-log",
+        urn: "urn:softwareos-base:supabase:functions:audit-log:v1",
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );

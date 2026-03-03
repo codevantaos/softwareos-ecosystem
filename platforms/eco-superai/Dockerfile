@@ -6,10 +6,10 @@ FROM python:3.11.9-slim AS base
 LABEL org.opencontainers.image.title="superai-platform"
 LABEL org.opencontainers.image.description="SuperAI Quantum-Enhanced Operations Platform"
 LABEL app.kubernetes.io/name="superai-platform"
-LABEL app.kubernetes.io/part-of="eco-base"
+LABEL app.kubernetes.io/part-of="softwareos-base"
 LABEL app.kubernetes.io/managed-by="argocd"
-LABEL eco-base/platform="platform-superai"
-LABEL eco-base/namespace="eco-superai"
+LABEL softwareos-base/platform="platform-superai"
+LABEL softwareos-base/namespace="eco-superai"
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \

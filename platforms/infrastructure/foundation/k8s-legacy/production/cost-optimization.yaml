@@ -79,18 +79,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/cost-optimization-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:cost-optimization-config:sha256-22a300a69eb77045b3a173829d77967792365395a72342b61d23ceca0d871457
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/cost-optimization-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:cost-optimization-config:sha256-22a300a69eb77045b3a173829d77967792365395a72342b61d23ceca0d871457
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: cost-optimization-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: cost-optimization-config
   namespace: production

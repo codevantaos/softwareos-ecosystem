@@ -2,7 +2,7 @@
 
 ## Overview
 
-The GL Governance Compliance layer (GL60-80) provides governance policy execution, compliance validation, and audit trail management for the MachineNativeOps project. This layer depends only on GL00-09 (Enterprise Architecture) for governance contracts.
+The GL Governance Compliance layer (GL60-80) provides governance policy execution, compliance validation, and audit trail management for the MachineNativeOps project. This layer depends only on GL00-09 (Enterprise Architecture) for governance softwareos-contracts.
 
 ## Purpose
 
@@ -52,7 +52,7 @@ gl-governance-compliance/
 │   ├── helm/                    # Helm charts
 │   └── kubernetes/              # Kubernetes manifests
 ├── governance/                   # Governance compliance
-│   ├── contracts/               # Layer contracts
+│   ├── softwareos-contracts/               # Layer softwareos-contracts
 │   ├── policies/                # Enforcement policies
 │   └── validators/              # Validation rules
 ├── src/                         # Source code
@@ -118,11 +118,11 @@ report = generator.generate_audit_report(scope)
 
 ## Dependencies
 
-**Incoming**: GL00-09 (Enterprise Architecture) - governance contracts only
+**Incoming**: GL00-09 (Enterprise Architecture) - governance softwareos-contracts only
 **Outgoing**: GL50-59 (Observability) - read-only monitoring
 
 **Allowed Dependencies**:
-- ✅ GL00-09 (Enterprise Architecture) - governance contracts
+- ✅ GL00-09 (Enterprise Architecture) - governance softwareos-contracts
 - ✅ GL50-59 (Observability) - read-only monitoring for compliance purposes
 
 **Forbidden Dependencies**:
@@ -134,7 +134,7 @@ report = generator.generate_audit_report(scope)
 ## Interaction Rules
 
 ### Allowed Interactions
-- ✅ Read governance contracts from GL00-09
+- ✅ Read governance softwareos-contracts from GL00-09
 - ✅ Validate compliance across all layers
 - ✅ Enforce governance policies
 - ✅ Generate audit reports
@@ -234,7 +234,7 @@ python3 gl-governance-compliance/scripts/boundary_checker.py --report
 - External dependencies
 
 ### Regulatory (E1)
-- Interface contracts
+- Interface softwareos-contracts
 - Leaky abstractions
 - Direct file access
 - Observability read-only

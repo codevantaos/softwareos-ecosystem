@@ -7,10 +7,10 @@ FROM python:3.11.9-slim AS base
 LABEL org.opencontainers.image.title="seccompops-platform"
 LABEL org.opencontainers.image.description="Security & Compliance Operations Platform"
 LABEL app.kubernetes.io/name="seccompops-platform"
-LABEL app.kubernetes.io/part-of="eco-base"
+LABEL app.kubernetes.io/part-of="softwareos-base"
 LABEL app.kubernetes.io/managed-by="argocd"
-LABEL eco-base/platform="platform-seccompops"
-LABEL eco-base/namespace="eco-seccompops"
+LABEL softwareos-base/platform="platform-seccompops"
+LABEL softwareos-base/namespace="eco-seccompops"
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \

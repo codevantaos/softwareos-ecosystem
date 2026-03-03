@@ -3,7 +3,7 @@
 """
 GL Contract Implementation
 
-This module provides the GLContract class for managing GL contracts
+This module provides the GLContract class for managing GL softwareos-contracts
 with support for validation, serialization, and metadata management.
 """
 
@@ -61,7 +61,7 @@ class GLContractMetadata:
 
 class GLContract:
     """
-    GL Contract - Base class for all GL contracts
+    GL Contract - Base class for all GL softwareos-contracts
     
     Attributes:
         id: Contract unique identifier (format: gl.contract.{name})
@@ -86,13 +86,13 @@ class GLContract:
     }
     
     CONTRACT_CATEGORIES = [
-        'core',      # Core contracts (naming ontology, governance layers)
-        'platform',  # Platform contracts (platform definition, index)
-        'validation',  # Validation contracts (validation rules, validators)
-        'governance',  # Governance contracts (governance layers, placement rules)
-        'extension',  # Extension contracts (extension points)
-        'generator',  # Generator contracts (generator specs)
-        'reasoning'   # Reasoning contracts (reasoning rules)
+        'core',      # Core softwareos-contracts (naming ontology, governance layers)
+        'platform',  # Platform softwareos-contracts (platform definition, index)
+        'validation',  # Validation softwareos-contracts (validation rules, validators)
+        'governance',  # Governance softwareos-contracts (governance layers, placement rules)
+        'extension',  # Extension softwareos-contracts (extension points)
+        'generator',  # Generator softwareos-contracts (generator specs)
+        'reasoning'   # Reasoning softwareos-contracts (reasoning rules)
     ]
     
     def __init__(

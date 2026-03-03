@@ -1,6 +1,6 @@
 # CircleCI Self-Hosted Runner Setup Guide
 
-**Project**: eco-base
+**Project**: softwareos-base
 **Resource Class**: `eco/base`
 **Runner Type**: Container Runner on GKE
 
@@ -83,7 +83,7 @@ export CIRCLECI_API_TOKEN="your-api-token-here"  # Optional
 ### Step 2: Run the Deployment Script
 
 ```bash
-cd /workspaces/eco-base
+cd /workspaces/softwareos-base
 ./scripts/deploy-circleci-runner.sh
 ```
 
@@ -306,7 +306,7 @@ kubectl delete namespace circleci-runner
 - [CircleCI Runner Documentation](https://circleci.com/docs/runner-overview/)
 - [CircleCI Container Runner for Kubernetes](https://circleci.com/docs/container-runner/)
 - [GKE Documentation](https://cloud.google.com/kubernetes-engine/docs)
-- [Project Repository](https://github.com/indestructibleorg/eco-base)
+- [Project Repository](https://github.com/indestructibleorg/softwareos-base)
 
 ---
 

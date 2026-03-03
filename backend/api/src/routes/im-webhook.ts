@@ -1,6 +1,6 @@
 /**
- * eco-base — IM Webhook Routes
- * URI: eco-base://backend/api/routes/im-webhook
+ * softwareos-base — IM Webhook Routes
+ * URI: softwareos-base://backend/api/routes/im-webhook
  *
  * Receives normalized webhook payloads forwarded by the Cloudflare
  * webhook-router worker. Routes messages to AI service via ai-proxy,
@@ -121,8 +121,8 @@ imWebhookRouter.post("/webhook", async (req: Request, res: Response, next: NextF
           channel: payload.channel,
           conversation_id: conversationId,
         },
-        uri: `eco-base://ai/job/${jobId}`,
-        urn: `urn:eco-base:ai:job:${jobId}`,
+        uri: `softwareos-base://ai/job/${jobId}`,
+        urn: `urn:softwareos-base:ai:job:${jobId}`,
       });
     } catch (dbErr) {
       // Non-fatal: log but continue processing
@@ -163,8 +163,8 @@ imWebhookRouter.post("/webhook", async (req: Request, res: Response, next: NextF
       conversation_id: conversationId,
       idempotency_key: payload.idempotency_key || "",
       latency_ms: latencyMs,
-      uri: `eco-base://im/${payload.channel}/response/${payload.message_id}`,
-      urn: `urn:eco-base:im:${payload.channel}:response:${payload.sender_id}:${payload.message_id}`,
+      uri: `softwareos-base://im/${payload.channel}/response/${payload.message_id}`,
+      urn: `urn:softwareos-base:im:${payload.channel}:response:${payload.sender_id}:${payload.message_id}`,
     };
 
     logger.info({
@@ -188,7 +188,7 @@ imWebhookRouter.get("/health", (_req: Request, res: Response): void => {
     service: "im-webhook",
     version: "1.0.0",
     channels: ["whatsapp", "telegram", "line", "messenger"],
-    uri: "eco-base://backend/api/im-webhook/health",
+    uri: "softwareos-base://backend/api/im-webhook/health",
     timestamp: new Date().toISOString(),
   });
 });

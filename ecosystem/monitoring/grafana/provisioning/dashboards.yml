@@ -1,9 +1,9 @@
 apiVersion: 1
 
 providers:
-  - name: eco-base
+  - name: softwareos-base
     orgId: 1
-    folder: eco-base
+    folder: softwareos-base
     type: file
     disableDeletion: false
     updateIntervalSeconds: 30

@@ -1,5 +1,5 @@
 # ECO Platform Integration Master Document
-# eco-base 平台整合主文件
+# softwareos-base 平台整合主文件
 
 **版本**: 1.0.0  
 **日期**: 2026-02-26  
@@ -10,7 +10,7 @@
 ## 1. 平台目錄結構
 
 ```
-eco-base-platforms/
+softwareos-base-platforms/
 ├── platform-core/          # 共享內核 (_shared kernel)
 ├── platform-govops/        # GovOps — 治理工作流程平台 (port: 8091/9091)
 ├── platform-dataops/       # DataOps — 資料與證據操作平台 (port: 8093/9093)
@@ -45,14 +45,14 @@ eco-base-platforms/
 | 平台 | 差距類型 | 現有值 | ECO 規範要求值 |
 |------|---------|--------|--------------|
 | govops | K8s 命名空間名稱 | `govops` | `eco-govops` |
-| govops | 標籤缺失 | 無 `eco-base/platform` | `eco-base/platform: platform-govops` |
-| govops | 標籤缺失 | 無 `eco-base/environment` | `eco-base/environment: production` |
-| govops | 標籤缺失 | 無 `eco-base/owner` | `eco-base/owner: governance-operations-team` |
+| govops | 標籤缺失 | 無 `softwareos-base/platform` | `softwareos-base/platform: platform-govops` |
+| govops | 標籤缺失 | 無 `softwareos-base/environment` | `softwareos-base/environment: production` |
+| govops | 標籤缺失 | 無 `softwareos-base/owner` | `softwareos-base/owner: governance-operations-team` |
 | govops | 標籤缺失 | 無 `app.kubernetes.io/instance` | `app.kubernetes.io/instance: govops-engine-prod` |
-| govops | 註解缺失 | 無 `eco-base/uri` | `eco-base://k8s/platform-govops/deployment/govops-engine` |
-| govops | 註解缺失 | 無 `eco-base/urn` | `urn:eco-base:k8s:platform-govops:deployment:govops-engine:<uuid>` |
-| govops | 註解缺失 | 無 `eco-base/governance-policy` | `eco-govops-governance.rego` |
-| govops | 註解缺失 | 無 `eco-base/audit-log-level` | `full` |
+| govops | 註解缺失 | 無 `softwareos-base/uri` | `softwareos-base://k8s/platform-govops/deployment/govops-engine` |
+| govops | 註解缺失 | 無 `softwareos-base/urn` | `urn:softwareos-base:k8s:platform-govops:deployment:govops-engine:<uuid>` |
+| govops | 註解缺失 | 無 `softwareos-base/governance-policy` | `eco-govops-governance.rego` |
+| govops | 註解缺失 | 無 `softwareos-base/audit-log-level` | `full` |
 | dataops | K8s 命名空間名稱 | `dataops` | `eco-dataops` |
 | dataops | 標籤/註解缺失 | 同 govops | 同 govops 規範 |
 | seccompops | K8s 命名空間名稱 | `seccompops` | `eco-seccompops` |
@@ -88,17 +88,17 @@ metadata:
   name: eco-<platform-name>
   labels:
     app.kubernetes.io/name: <platform-name>-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/managed-by: argocd
-    eco-base/platform: platform-<platform-name>
-    eco-base/environment: production
-    eco-base/owner: <platform-name>-team
+    softwareos-base/platform: platform-<platform-name>
+    softwareos-base/environment: production
+    softwareos-base/owner: <platform-name>-team
     governance.io/managed: "true"
   annotations:
-    eco-base/uri: "eco-base://k8s/platform-<platform-name>/namespace/eco-<platform-name>"
-    eco-base/urn: "urn:eco-base:k8s:platform-<platform-name>:namespace:eco-<platform-name>:<uuid>"
-    eco-base/governance-policy: "eco-<platform-name>-governance.rego"
-    eco-base/audit-log-level: "full"
+    softwareos-base/uri: "softwareos-base://k8s/platform-<platform-name>/namespace/eco-<platform-name>"
+    softwareos-base/urn: "urn:softwareos-base:k8s:platform-<platform-name>:namespace:eco-<platform-name>:<uuid>"
+    softwareos-base/governance-policy: "eco-<platform-name>-governance.rego"
+    softwareos-base/audit-log-level: "full"
     description: "<Platform DisplayName> — <description>"
 ```
 
@@ -158,7 +158,7 @@ Phase 4 — AI/量子補充層 (P3)
 env:
   ECO_PLATFORM_ID: platform-<name>
   ECO_NAMESPACE: eco-<name>
-  ECO_REGISTRY: asia-east1-docker.pkg.dev/eco-base/eco-registry
+  ECO_REGISTRY: asia-east1-docker.pkg.dev/softwareos-base/eco-registry
 
 # 強制步驟
 steps:

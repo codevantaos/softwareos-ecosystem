@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Skill Validator — Validates skill.json manifests against eco-base governance spec.
+Skill Validator — Validates skill.json manifests against softwareos-base governance spec.
 
 Usage:
     quick_validate.py <skill-name>
@@ -28,8 +28,8 @@ VALID_LIFECYCLE = ["active", "deprecated", "sunset", "archived"]
 UUID_V1_PATTERN = re.compile(
     r"^[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
 )
-URI_PATTERN = re.compile(r"^eco-base://")
-URN_PATTERN = re.compile(r"^urn:eco-base:")
+URI_PATTERN = re.compile(r"^softwareos-base://")
+URN_PATTERN = re.compile(r"^urn:softwareos-base:")
 
 
 def resolve_skill_path(skill_path_or_name: str) -> Path:
@@ -182,13 +182,13 @@ def validate_skill(skill_path_or_name: str) -> tuple[bool, list[str], list[str]]
         if not uri:
             errors.append("Metadata: missing uri")
         elif not URI_PATTERN.match(uri):
-            errors.append(f"Metadata: uri must start with 'eco-base://', got '{uri}'")
+            errors.append(f"Metadata: uri must start with 'softwareos-base://', got '{uri}'")
 
         urn = meta.get("urn", "")
         if not urn:
             errors.append("Metadata: missing urn")
         elif not URN_PATTERN.match(urn):
-            errors.append(f"Metadata: urn must start with 'urn:eco-base:', got '{urn}'")
+            errors.append(f"Metadata: urn must start with 'urn:softwareos-base:', got '{urn}'")
 
         if not meta.get("schema_version"):
             warnings.append("Metadata: missing schema_version")

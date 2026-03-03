@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # CircleCI Self-Hosted Runner Deployment Script for GKE
-# Project: eco-base
+# Project: softwareos-base
 
 set -e
 

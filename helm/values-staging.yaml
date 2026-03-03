@@ -1,6 +1,6 @@
-# eco-base Staging Values Override
+# softwareos-base Staging Values Override
 global:
-  namespace: eco-base-staging
+  namespace: softwareos-base-staging
   imageRegistry: "ghcr.io/indestructibleorg"
 
 api:
@@ -38,7 +38,7 @@ ai:
 
 ingress:
   enabled: true
-  host: staging.autoecoops.io
+  host: staging.softwareos.io
   tls:
     enabled: true
     secretName: eco-staging-tls

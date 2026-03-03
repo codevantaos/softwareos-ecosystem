@@ -667,7 +667,7 @@ GL30-49:
           role: "audit_team"
           usage: "審計契約執行"
       skill_mapping: ["contract_specification"]
-      capability_mapping: ["specify_behavior_contracts"]
+      capability_mapping: ["specify_behavior_softwareos-contracts"]
       responsibility_mapping: ["contract_enforcement"]
     - artifact_id: "ART-30-06"
       type: "rule-definition"

@@ -837,8 +837,8 @@ GL50-59_templates:
             description: "{{ this.description }}"
             unit: "{{ this.unit }}"
             labels:
-              eco-base/part-of: eco-base
-              eco-base/governance: aligned
+              softwareos-base/part-of: softwareos-base
+              softwareos-base/governance: aligned
               {{#each this.labels}}
       - "{{ this }}"
               {{/each}}
@@ -894,8 +894,8 @@ GL50-59_templates:
               threshold: {{ this.condition.threshold }}
               duration: "{{ this.condition.duration }}"
             labels:
-              eco-base/part-of: eco-base
-              eco-base/governance: aligned
+              softwareos-base/part-of: softwareos-base
+              softwareos-base/governance: aligned
               {{#each this.labels}}
               {{ @key }}: "{{ this }}"
               {{/each}}

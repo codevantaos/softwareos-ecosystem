@@ -132,7 +132,7 @@ generate_sla_report() {
 {
   "timestamp": "$TIMESTAMP",
   "version": "1.0",
-  "service": "contracts-service",
+  "service": "softwareos-contracts-service",
   "targets": {
     "availability": "99.95%",
     "p99_latency_ms": 100,

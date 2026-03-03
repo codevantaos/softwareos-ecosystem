@@ -73,19 +73,19 @@ def validate_ownership_map(verbose: bool = False) -> bool:
     if verbose:
         print(f"✅ Modules with ownership: {len(modules)}")
     return True
-def validate_behavior_contracts(verbose: bool = False) -> bool:
-    """Validate behavior contracts"""
-    contracts_dir = "gl-platform.governance/behavior-contracts"
-    if not os.path.exists(contracts_dir):
+def validate_behavior_softwareos-contracts(verbose: bool = False) -> bool:
+    """Validate behavior softwareos-contracts"""
+    softwareos-contracts_dir = "gl-platform.governance/behavior-softwareos-contracts"
+    if not os.path.exists(softwareos-contracts_dir):
         print(
-            f"Warning: {contracts_dir} not found, skipping validation", file=sys.stderr
+            f"Warning: {softwareos-contracts_dir} not found, skipping validation", file=sys.stderr
         )
         return True
-    contracts = list(Path(contracts_dir).rglob("*.yaml"))
+    softwareos-contracts = list(Path(softwareos-contracts_dir).rglob("*.yaml"))
     if verbose:
-        print(f"✅ Behavior contracts found: {len(contracts)}")
+        print(f"✅ Behavior softwareos-contracts found: {len(softwareos-contracts)}")
     # Validate each contract
-    for contract_path in contracts:
+    for contract_path in softwareos-contracts:
         data = load_yaml_safe(str(contract_path))
         if not data:
             print(f"Warning: Invalid contract: {contract_path}", file=sys.stderr)
@@ -142,7 +142,7 @@ def main():
     checks = [
         ("Layers & Domains", validate_layers_domains),
         ("Ownership Map", validate_ownership_map),
-        ("Behavior Contracts", validate_behavior_contracts),
+        ("Behavior Contracts", validate_behavior_softwareos-contracts),
         ("Schemas", validate_schemas),
         ("Policies", validate_policies),
     ]

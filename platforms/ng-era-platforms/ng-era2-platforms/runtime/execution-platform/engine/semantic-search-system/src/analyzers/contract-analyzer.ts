@@ -44,30 +44,30 @@ export class ContractAnalyzer {
     };
   }
 
-  compareContracts(contracts: AnalysisResult[]): AnalysisResult {
-    const comparison = this.generateComparisonTable(contracts);
-    const discrepancies = this.identifyDiscrepancies(contracts);
-    const flaggedClauses = this.flagRiskyClauses(contracts);
+  compareContracts(softwareos-contracts: AnalysisResult[]): AnalysisResult {
+    const comparison = this.generateComparisonTable(softwareos-contracts);
+    const discrepancies = this.identifyDiscrepancies(softwareos-contracts);
+    const flaggedClauses = this.flagRiskyClauses(softwareos-contracts);
 
     return {
       type: 'contract',
-      summary: `Contract comparison: ${contracts.length} contracts compared, ${discrepancies.length} discrepancies found`,
+      summary: `Contract comparison: ${softwareos-contracts.length} softwareos-contracts compared, ${discrepancies.length} discrepancies found`,
       findings: [
         { type: 'comparison', data: comparison },
         { type: 'discrepancies', count: discrepancies.length },
         { type: 'flaggedClauses', count: flaggedClauses.length }
       ],
       insights: [
-        'Payment terms vary across contracts',
+        'Payment terms vary across softwareos-contracts',
         'Liability limits show inconsistency',
         'Termination clauses need standardization'
       ],
       recommendations: [
-        'Standardize payment terms across all contracts',
+        'Standardize payment terms across all softwareos-contracts',
         'Align liability limits to policy',
-        'Create template for future contracts'
+        'Create template for future softwareos-contracts'
       ],
-      sourceDocuments: contracts.flatMap(c => c.sourceDocuments),
+      sourceDocuments: softwareos-contracts.flatMap(c => c.sourceDocuments),
       generatedAt: new Date()
     };
   }
@@ -189,10 +189,10 @@ export class ContractAnalyzer {
     return conditions.length > 0 ? conditions : ['No special conditions identified'];
   }
 
-  private generateComparisonTable(contracts: AnalysisResult[]): any {
+  private generateComparisonTable(softwareos-contracts: AnalysisResult[]): any {
     return {
       headers: ['Contract', 'Parties', 'Payment Terms', 'Liability Limit', 'Termination'],
-      rows: contracts.map(c => ({
+      rows: softwareos-contracts.map(c => ({
         contract: c.sourceDocuments[0]?.filename || 'Unknown',
         parties: c.findings[0]?.value?.length || 0,
         paymentTerms: c.findings[2]?.value || 'N/A',
@@ -202,22 +202,22 @@ export class ContractAnalyzer {
     };
   }
 
-  private identifyDiscrepancies(contracts: AnalysisResult[]): any[] {
+  private identifyDiscrepancies(softwareos-contracts: AnalysisResult[]): any[] {
     return [
       {
         field: 'Payment Terms',
-        issue: 'Inconsistent across contracts',
-        contracts: ['Contract A uses Net 30', 'Contract B uses Net 60']
+        issue: 'Inconsistent across softwareos-contracts',
+        softwareos-contracts: ['Contract A uses Net 30', 'Contract B uses Net 60']
       },
       {
         field: 'Liability Limits',
         issue: 'Varying limits detected',
-        contracts: ['Contract A: $1M', 'Contract B: $500K']
+        softwareos-contracts: ['Contract A: $1M', 'Contract B: $500K']
       }
     ];
   }
 
-  private flagRiskyClauses(contracts: AnalysisResult[]): any[] {
+  private flagRiskyClauses(softwareos-contracts: AnalysisResult[]): any[] {
     return [
       {
         risk: 'High',

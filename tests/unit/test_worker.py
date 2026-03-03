@@ -34,7 +34,7 @@ class TestInferenceJob:
         assert d["status"] == "pending"
         assert "uri" in d
         assert "urn" in d
-        assert d["uri"].startswith("eco-base://")
+        assert d["uri"].startswith("softwareos-base://")
 
     def test_job_from_dict(self):
         job = InferenceJob(model_id="test-model", prompt="Hello", priority=JobPriority.HIGH)

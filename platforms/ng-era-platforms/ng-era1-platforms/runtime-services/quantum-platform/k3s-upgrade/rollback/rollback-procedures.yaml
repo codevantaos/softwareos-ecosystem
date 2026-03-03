@@ -15,8 +15,8 @@ metadata:
   name: gl-quantum-k3s-rollback
   namespace: k3s-upgrade
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     gl-version: v10.0.0
     tier: quantum-upgrade
 spec:

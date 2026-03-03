@@ -2,7 +2,7 @@
 # https://supabase.com/docs/guides/local-development/cli/config
 # A string used to distinguish different Supabase projects on the same host. Defaults to the
 # working directory name when running `supabase init`.
-project_id = "eco-base"
+project_id = "softwareos-base"
 
 [api]
 enabled = true
@@ -118,11 +118,11 @@ max_indexes = 5
 enabled = true
 # The base URL of your website. Used as an allow-list for redirects and for constructing URLs used
 # in emails.
-site_url = "https://eco-base.pages.dev"
+site_url = "https://softwareos-base.pages.dev"
 # A list of *exact* URLs that auth providers are permitted to redirect to post authentication.
 additional_redirect_urls = [
-  "https://eco-base.pages.dev/auth/callback",
-  "https://api.autoecoops.io/auth/callback",
+  "https://softwareos-base.pages.dev/auth/callback",
+  "https://api.softwareos.io/auth/callback",
   "http://localhost:3000/auth/callback",
   "http://127.0.0.1:3000/auth/callback"
 ]

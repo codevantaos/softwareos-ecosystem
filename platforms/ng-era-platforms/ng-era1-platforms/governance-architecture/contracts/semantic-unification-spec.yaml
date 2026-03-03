@@ -16,8 +16,8 @@ metadata:
   description: "GL Semantic Unification Specification - 語意統一規範"
   namespace: gl-platform-ecosystem
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     unification.level: L1
     unification.type: semantic
     governance.layer: constitutional
@@ -241,8 +241,8 @@ spec:
     
     ## Label Spec
     labels:
-      eco-base/part-of: eco-base
-      eco-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
+      softwareos-base/governance: aligned
       - label_id: baseline.component
         description: "基線組件標籤"
         semantics:

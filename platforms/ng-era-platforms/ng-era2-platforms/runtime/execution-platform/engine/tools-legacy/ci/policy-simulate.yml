@@ -86,9 +86,9 @@ jobs:
           fi
           
           # 測試其他 manifests
-          if [ -d "core/contract_service/contracts-L1/contracts/src/autonomous/deployment/k8s" ]; then
+          if [ -d "core/contract_service/softwareos-contracts-L1/softwareos-contracts/src/autonomous/deployment/k8s" ]; then
             echo "📦 測試 Contracts L1 manifests..."
-            find core/contract_service/contracts-L1/contracts/src/autonomous/deployment/k8s -name "*.yaml" | while read file; do
+            find core/contract_service/softwareos-contracts-L1/softwareos-contracts/src/autonomous/deployment/k8s -name "*.yaml" | while read file; do
               echo "測試: $file"
               conftest test "$file" -p policy/ --output json > "reports/$(basename $file .yaml)-test.json" || true
             done

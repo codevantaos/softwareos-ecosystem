@@ -1,7 +1,7 @@
 /**
  * Message Normalizer — unified message format across all IM channels.
  *
- * Converts channel-specific payloads into a common eco-base
+ * Converts channel-specific payloads into a common softwareos-base
  * message format for routing, session management, and AI processing.
  */
 
@@ -43,8 +43,8 @@ export function normalizeWhatsApp(payload: Record<string, any>): NormalizedMessa
     timestamp: new Date(parseInt(msg?.timestamp || "0") * 1000).toISOString(),
     replyTo: msg?.context?.id || null,
     metadata: { messageType: msg?.type, phoneNumberId: change?.metadata?.phone_number_id },
-    uri: `eco-base://im/whatsapp/message/${id}`,
-    urn: `urn:eco-base:im:whatsapp:message:${msg?.from}:${id}`,
+    uri: `softwareos-base://im/whatsapp/message/${id}`,
+    urn: `urn:softwareos-base:im:whatsapp:message:${msg?.from}:${id}`,
   };
 }
 
@@ -61,8 +61,8 @@ export function normalizeTelegram(payload: Record<string, any>): NormalizedMessa
     timestamp: new Date((msg?.date || 0) * 1000).toISOString(),
     replyTo: msg?.reply_to_message ? String(msg.reply_to_message.message_id) : null,
     metadata: { chatId: msg?.chat?.id, chatType: msg?.chat?.type },
-    uri: `eco-base://im/telegram/message/${id}`,
-    urn: `urn:eco-base:im:telegram:message:${msg?.from?.id}:${id}`,
+    uri: `softwareos-base://im/telegram/message/${id}`,
+    urn: `urn:softwareos-base:im:telegram:message:${msg?.from?.id}:${id}`,
   };
 }
 
@@ -79,8 +79,8 @@ export function normalizeLINE(payload: Record<string, any>): NormalizedMessage {
     timestamp: new Date(event?.timestamp || 0).toISOString(),
     replyTo: null,
     metadata: { replyToken: event?.replyToken, sourceType: event?.source?.type },
-    uri: `eco-base://im/line/message/${id}`,
-    urn: `urn:eco-base:im:line:message:${event?.source?.userId}:${id}`,
+    uri: `softwareos-base://im/line/message/${id}`,
+    urn: `urn:softwareos-base:im:line:message:${event?.source?.userId}:${id}`,
   };
 }
 
@@ -99,8 +99,8 @@ export function normalizeMessenger(payload: Record<string, any>): NormalizedMess
     timestamp: new Date(messaging?.timestamp || 0).toISOString(),
     replyTo: msg?.reply_to?.mid || null,
     metadata: { pageId: entry?.id },
-    uri: `eco-base://im/messenger/message/${id}`,
-    urn: `urn:eco-base:im:messenger:message:${messaging?.sender?.id}:${id}`,
+    uri: `softwareos-base://im/messenger/message/${id}`,
+    urn: `urn:softwareos-base:im:messenger:message:${messaging?.sender?.id}:${id}`,
   };
 }
 

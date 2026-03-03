@@ -1,5 +1,5 @@
 {
-  "name": "eco-base",
+  "name": "softwareos-base",
   "version": "1.0.0",
   "private": true,
   "description": "Enterprise cloud-native platform \u2014 mono-repository",
@@ -18,7 +18,7 @@
     "tools/*"
   ],
   "scripts": {
-    "dev": "pnpm --filter @eco-base/backend-api dev & pnpm --filter @eco-base/web dev",
+    "dev": "pnpm --filter @softwareos-base/backend-api dev & pnpm --filter @softwareos-base/web dev",
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",

@@ -7,8 +7,8 @@ metadata:
   configuration
   machinenativeops.io/last-modified: '2025-12-20T22:00:00Z'
   labels:
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     machinenativeops.io/component: provenance-configuration
     machinenativeops.io/tier: provenance
     machinenativeops.io/version: v1.0.0
@@ -537,18 +537,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/provenance-schema
-    eco-base/urn: urn:eco-base:k8s:core:configmap:provenance-schema:sha256-cc3be94ce333f5371cfc2f6ea7f5cf3e67e513710549c18347a88658b5ea4797
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/provenance-schema
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:provenance-schema:sha256-cc3be94ce333f5371cfc2f6ea7f5cf3e67e513710549c18347a88658b5ea4797
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: provenance-schema
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: provenance-schema
   namespace: machinenativenops-provenance

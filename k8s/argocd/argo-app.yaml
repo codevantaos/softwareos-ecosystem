@@ -1,5 +1,5 @@
-# eco-base v1.0 — Argo CD Application (Production)
-# URI: eco-base://k8s/argocd/application/production
+# softwareos-base v1.0 — Argo CD Application (Production)
+# URI: softwareos-base://k8s/argocd/application/production
 # This manifest defines the main Argo CD Application that watches the k8s/ directory
 # and auto-syncs all .qyaml manifests to the production namespace.
 #
@@ -7,17 +7,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eco-base
+  name: softwareos-base
   namespace: argocd
   labels:
-    app.kubernetes.io/name: eco-base
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/name: softwareos-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/managed-by: argocd
   annotations:
   # Governance traceability
-  eco-base/uri: "eco-base://k8s/argocd/application/production"
-  eco-base/owner: "platform-team"
-  eco-base/compliance: "soc2,zero-trust,gitops"
+  softwareos-base/uri: "softwareos-base://k8s/argocd/application/production"
+  softwareos-base/owner: "platform-team"
+  softwareos-base/compliance: "soc2,zero-trust,gitops"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -25,7 +25,7 @@ spec:
 
   # ── Source: GitHub repository ──────────────────────────────
   source:
-    repoURL: https://github.com/indestructibleorg/eco-base
+    repoURL: https://github.com/indestructibleorg/softwareos-base
     targetRevision: main
     path: k8s
     # Only sync .qyaml files (governance-validated manifests)
@@ -36,7 +36,7 @@ spec:
   # ── Destination: Production cluster ────────────────────────
   destination:
     server: https://kubernetes.default.svc
-    namespace: eco-base
+    namespace: softwareos-base
 
   # ── Sync Policy: Fully automated GitOps ────────────────────
   syncPolicy:

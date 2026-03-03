@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * Skill Validator — Validates skill.json manifests against eco-base governance spec.
+ * Skill Validator — Validates skill.json manifests against softwareos-base governance spec.
  * Usage: node validate.js [skill-dir]
  *
- * URI: eco-base://tools/skill-creator/validate
+ * URI: softwareos-base://tools/skill-creator/validate
  */
 const fs = require("fs");
 const path = require("path");
@@ -14,8 +14,8 @@ const VALID_ACTION_TYPES = ["shell", "api", "transform", "validate", "deploy"];
 const VALID_PARAM_TYPES = ["string", "number", "boolean", "object", "array"];
 const VALID_LIFECYCLE = ["active", "deprecated", "sunset", "archived"];
 const UUID_V1_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
-const URI_RE = /^eco-base:\/\//;
-const URN_RE = /^urn:eco-base:/;
+const URI_RE = /^softwareos-base:\/\//;
+const URN_RE = /^urn:softwareos-base:/;
 
 function validate(skillDir) {
   const errors = [];
@@ -158,10 +158,10 @@ function validate(skillDir) {
     else if (!UUID_V1_RE.test(m.unique_id)) warnings.push(`Metadata: unique_id does not match UUID v1 pattern`);
 
     if (!m.uri) errors.push("Metadata: missing uri");
-    else if (!URI_RE.test(m.uri)) errors.push(`Metadata: uri must start with 'eco-base://'`);
+    else if (!URI_RE.test(m.uri)) errors.push(`Metadata: uri must start with 'softwareos-base://'`);
 
     if (!m.urn) errors.push("Metadata: missing urn");
-    else if (!URN_RE.test(m.urn)) errors.push(`Metadata: urn must start with 'urn:eco-base:'`);
+    else if (!URN_RE.test(m.urn)) errors.push(`Metadata: urn must start with 'urn:softwareos-base:'`);
 
     if (!m.schema_version) warnings.push("Metadata: missing schema_version");
     if (!m.generated_by) warnings.push("Metadata: missing generated_by");

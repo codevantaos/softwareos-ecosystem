@@ -17,7 +17,7 @@ For complex tasks, break operations into clear, sequential steps with explicit d
 }
 ```
 
-This maps directly to the eco-base execution methodology:
+This maps directly to the softwareos-base execution methodology:
 Understanding → Retrieval → Analysis → Reasoning → One-Stop Repair
 
 ## Conditional Workflows

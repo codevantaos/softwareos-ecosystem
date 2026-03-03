@@ -1,5 +1,5 @@
 # Workflow Validation Rules
-# URI: eco-base://tools/ci-validator/rules/workflow
+# URI: softwareos-base://tools/ci-validator/rules/workflow
 
 required_top_level:
   - name

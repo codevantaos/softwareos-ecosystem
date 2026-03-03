@@ -38,7 +38,7 @@ spec:
           attestors:
             - entries:
                 - keyless:
-                    subject: "https://github.com/indestructibleorg/eco-base/.github/workflows/supply-chain-gate.yml@refs/heads/main"
+                    subject: "https://github.com/indestructibleorg/softwareos-base/.github/workflows/supply-chain-gate.yml@refs/heads/main"
                     issuer: "https://token.actions.githubusercontent.com"
                     rekor:
                       url: https://rekor.sigstore.dev

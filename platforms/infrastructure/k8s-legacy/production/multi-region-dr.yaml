@@ -57,18 +57,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/multi-region-dr-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:multi-region-dr-config:sha256-96c43d248b1d8c664d59473da08f3451db9fb2cc448ad5fed9f8fd2d6e25af24
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/multi-region-dr-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:multi-region-dr-config:sha256-96c43d248b1d8c664d59473da08f3451db9fb2cc448ad5fed9f8fd2d6e25af24
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: multi-region-dr-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: multi-region-dr-config
   namespace: production

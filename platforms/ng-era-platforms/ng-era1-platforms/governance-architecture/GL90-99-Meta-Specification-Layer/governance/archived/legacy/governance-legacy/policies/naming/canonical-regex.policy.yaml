@@ -12,8 +12,8 @@ kind: NamingPolicy
 metadata:
   name: canonical-regex-policy
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     category: naming
     module: canonical-naming
     enforcement: strict

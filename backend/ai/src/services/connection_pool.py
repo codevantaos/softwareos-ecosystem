@@ -4,7 +4,7 @@ Each engine adapter gets a dedicated pool with configurable limits,
 timeouts, and keep-alive. Pools are created lazily and cleaned up
 on shutdown.
 
-URI: eco-base://backend/ai/services/connection_pool
+URI: softwareos-base://backend/ai/services/connection_pool
 """
 
 from __future__ import annotations

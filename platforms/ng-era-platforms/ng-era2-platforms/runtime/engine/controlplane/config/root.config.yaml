@@ -7,8 +7,8 @@ metadata:
   system
   machinenativeops.io/last-modified: '2025-12-20T22:00:00Z'
   labels:
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     machinenativeops.io/component: global-configuration
     machinenativeops.io/tier: baseline
     machinenativeops.io/version: v1.0.0
@@ -199,18 +199,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/root-config-schema
-    eco-base/urn: urn:eco-base:k8s:core:configmap:root-config-schema:sha256-64c3d70d0159bb210ce3bcf8f1489245afa1648218f47e609e30d717ed0164c5
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/root-config-schema
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:root-config-schema:sha256-64c3d70d0159bb210ce3bcf8f1489245afa1648218f47e609e30d717ed0164c5
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: root-config-schema
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: root-config-schema
   namespace: machinenativenops-root

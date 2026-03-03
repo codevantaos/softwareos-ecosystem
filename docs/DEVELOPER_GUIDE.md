@@ -1,11 +1,11 @@
-# eco-base Developer Guide
+# softwareos-base Developer Guide
 
-URI: eco-base://docs/DEVELOPER_GUIDE
+URI: softwareos-base://docs/DEVELOPER_GUIDE
 
 ## Repository Structure
 
 ```
-eco-base/
+softwareos-base/
 ├── src/                          # Root gateway (FastAPI)
 │   ├── app.py                    # Application factory + proxy routing (359 LOC)
 │   ├── schemas/                  # Pydantic v2 schemas (auth, inference, models)
@@ -149,10 +149,10 @@ test -f tests/unit/test_your_new_test.py
 - Pydantic v2 for all request/response schemas
 - All identifiers use UUID v1 (`uuid.uuid1()`)
 - All resources have `uri` + `urn` fields:
-  - URI: `eco-base://service/resource/id`
-  - URN: `urn:eco-base:service:resource:id`
+  - URI: `softwareos-base://service/resource/id`
+  - URN: `urn:softwareos-base:service:resource:id`
 - Environment variables use `ECO_*` prefix
-- Module docstrings include URI: `eco-base://module/path`
+- Module docstrings include URI: `softwareos-base://module/path`
 - Logging via `logging.getLogger(__name__)`
 - Async functions for all I/O operations
 
@@ -175,10 +175,10 @@ Every `.qyaml` manifest must contain 4 governance blocks. See [.qyaml Governance
 |--------|-----------|---------|
 | Container names | `eco-*` | `eco-ai-service` |
 | Image registry | `ghcr.io/indestructibleorg/*` | `ghcr.io/indestructibleorg/ai:1.0.0` |
-| Namespace | `eco-base` | `eco-base`, `eco-base-staging` |
+| Namespace | `softwareos-base` | `softwareos-base`, `softwareos-base-staging` |
 | Config prefix | `ECO_*` | `ECO_AI_HTTP_PORT` |
-| URI scheme | `eco-base://` | `eco-base://backend/ai/health` |
-| URN namespace | `urn:eco-base:` | `urn:eco-base:ai:job:uuid` |
+| URI scheme | `softwareos-base://` | `softwareos-base://backend/ai/health` |
+| URN namespace | `urn:softwareos-base:` | `urn:softwareos-base:ai:job:uuid` |
 
 ## Adding a New Inference Engine
 

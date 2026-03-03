@@ -26,11 +26,11 @@ function uuidV1() {
 
 // ─── URI / URN Builders ───
 function buildURI(namespace, kind, name) {
-  return `eco-base://k8s/${namespace}/${kind}/${name}`;
+  return `softwareos-base://k8s/${namespace}/${kind}/${name}`;
 }
 
 function buildURN(namespace, kind, name, uid) {
-  return `urn:eco-base:k8s:${namespace}:${kind}:${name}:${uid}`;
+  return `urn:softwareos-base:k8s:${namespace}:${kind}:${name}:${uid}`;
 }
 
 // ─── Schema: Mandatory .qyaml Governance Blocks ───
@@ -76,7 +76,7 @@ const REQUIRED_VECTOR_FIELDS = [
 // ─── Generator ───
 function generateQYAML(input, targetSystem) {
   const uid = uuidV1();
-  const namespace = input.namespace || "eco-base";
+  const namespace = input.namespace || "softwareos-base";
   const kind = input.kind || "Deployment";
   const name = input.name;
   const uri = buildURI(namespace, kind.toLowerCase(), name);
@@ -147,8 +147,8 @@ function generateDeployment(input, uid, uri, urn, namespace) {
     "    generated-by: yaml-toolkit-v8",
     `    unique-id: "${uid}"`,
     "  annotations:",
-    `    eco-base/uri: "${uri}"`,
-    `    eco-base/urn: "${urn}"`,
+    `    softwareos-base/uri: "${uri}"`,
+    `    softwareos-base/urn: "${urn}"`,
     "spec:",
     `  replicas: ${input.replicas || 3}`,
     "  selector:",
@@ -202,8 +202,8 @@ function generateService(input, uid, uri, urn, namespace) {
     "    generated-by: yaml-toolkit-v8",
     `    unique-id: "${uid}"`,
     "  annotations:",
-    `    eco-base/uri: "${uri}"`,
-    `    eco-base/urn: "${urn}"`,
+    `    softwareos-base/uri: "${uri}"`,
+    `    softwareos-base/urn: "${urn}"`,
     "spec:",
     "  type: ClusterIP",
     "  selector:",
@@ -224,8 +224,8 @@ function generateNamespace(input, uid, uri, urn) {
     "    generated-by: yaml-toolkit-v8",
     `    unique-id: "${uid}"`,
     "  annotations:",
-    `    eco-base/uri: "${uri}"`,
-    `    eco-base/urn: "${urn}"`,
+    `    softwareos-base/uri: "${uri}"`,
+    `    softwareos-base/urn: "${urn}"`,
   ];
 }
 
@@ -244,8 +244,8 @@ function generateConfigMap(input, uid, uri, urn, namespace) {
     "    generated-by: yaml-toolkit-v8",
     `    unique-id: "${uid}"`,
     "  annotations:",
-    `    eco-base/uri: "${uri}"`,
-    `    eco-base/urn: "${urn}"`,
+    `    softwareos-base/uri: "${uri}"`,
+    `    softwareos-base/urn: "${urn}"`,
     "data:",
     ...dataEntries,
   ];
@@ -263,18 +263,18 @@ function generateIngress(input, uid, uri, urn, namespace) {
     "    generated-by: yaml-toolkit-v8",
     `    unique-id: "${uid}"`,
     "  annotations:",
-    `    eco-base/uri: "${uri}"`,
-    `    eco-base/urn: "${urn}"`,
+    `    softwareos-base/uri: "${uri}"`,
+    `    softwareos-base/urn: "${urn}"`,
     '    nginx.ingress.kubernetes.io/ssl-redirect: "true"',
     "    cert-manager.io/cluster-issuer: letsencrypt-prod",
     "spec:",
     "  ingressClassName: nginx",
     "  tls:",
     `  - hosts:`,
-    `    - ${input.host || "api.eco-base.io"}`,
+    `    - ${input.host || "api.softwareos-base.io"}`,
     `    secretName: ${input.name}-tls`,
     "  rules:",
-    `  - host: ${input.host || "api.eco-base.io"}`,
+    `  - host: ${input.host || "api.softwareos-base.io"}`,
     "    http:",
     "      paths:",
     "      - path: /",
@@ -306,10 +306,10 @@ function validateQYAML(content) {
   if (!content.includes("unique-id:") && !content.includes("unique_id:")) {
     errors.push({ path: "metadata", message: "No UUID v1 identifier found", severity: "error" });
   }
-  if (!content.includes("eco-base://")) {
+  if (!content.includes("softwareos-base://")) {
     errors.push({ path: "metadata", message: "No URI identifier found", severity: "warning" });
   }
-  if (!content.includes("urn:eco-base:")) {
+  if (!content.includes("urn:softwareos-base:")) {
     errors.push({ path: "metadata", message: "No URN identifier found", severity: "warning" });
   }
   return { valid: errors.filter((e) => e.severity === "error").length === 0, errors };
@@ -444,7 +444,7 @@ switch (command) {
     break;
   }
   default:
-    console.log("eco-base YAML Toolkit v8");
+    console.log("softwareos-base YAML Toolkit v8");
     console.log("Commands: gen | validate | validate-schema | lint | convert");
     console.log("  gen              --input=module.json [--target=gke-production] [--output=output/]");
     console.log("  validate         <file.qyaml> [--strict]");

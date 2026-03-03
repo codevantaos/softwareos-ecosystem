@@ -404,7 +404,7 @@ def main():
     parser = argparse.ArgumentParser(description="Instant Execution Manifest Validator")
     parser.add_argument(
         "--manifest",
-        default="contracts/INSTANT-EXECUTION-MANIFEST.yaml",
+        default="softwareos-contracts/INSTANT-EXECUTION-MANIFEST.yaml",
         help="Path to the instant execution manifest file",
     )
     parser.add_argument(

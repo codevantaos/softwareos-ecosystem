@@ -55,7 +55,7 @@ resource "google_compute_subnetwork" "eco_subnet" {
 
 # Create GKE cluster
 resource "google_container_cluster" "eco_gke" {
-  name     = "eco-base-gke"
+  name     = "softwareos-base-gke"
   location = var.region
 
   remove_default_node_pool = true
@@ -142,7 +142,7 @@ resource "google_container_node_pool" "eco_nodes" {
       managed_by  = "terraform"
     }
 
-    tags = ["gke-node", "eco-base"]
+    tags = ["gke-node", "softwareos-base"]
   }
 
   management {
@@ -214,8 +214,8 @@ resource "kubernetes_namespace_v1" "platform_03" {
 # Create Artifact Registry repository
 resource "google_artifact_registry_repository" "eco_repo" {
   location      = var.region
-  repository_id = "eco-base"
-  description   = "Docker repository for eco-base images"
+  repository_id = "softwareos-base"
+  description   = "Docker repository for softwareos-base images"
   format        = "DOCKER"
 
   docker_config {

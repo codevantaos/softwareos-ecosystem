@@ -1,10 +1,10 @@
-# eco-base Architecture
+# softwareos-base Architecture
 
-URI: eco-base://docs/ARCHITECTURE
+URI: softwareos-base://docs/ARCHITECTURE
 
 ## System Overview
 
-eco-base is an enterprise cloud-native AI platform built as a mono-repository. It provides multi-engine inference routing across 7 engine backends, .qyaml governance enforcement, Argo CD GitOps deployment, and a full observability stack. The platform is designed for high availability with circuit breakers, connection pooling, automatic failover, and self-healing infrastructure.
+softwareos-base is an enterprise cloud-native AI platform built as a mono-repository. It provides multi-engine inference routing across 7 engine backends, .qyaml governance enforcement, Argo CD GitOps deployment, and a full observability stack. The platform is designed for high availability with circuit breakers, connection pooling, automatic failover, and self-healing infrastructure.
 
 ## High-Level Architecture
 
@@ -53,7 +53,7 @@ The system is organized into six dependency layers. Each layer depends only on l
 
 ### Layer 0: Schema & Types
 
-Shared data contracts that all other layers depend on. Changes here propagate everywhere.
+Shared data softwareos-contracts that all other layers depend on. Changes here propagate everywhere.
 
 | Component | Path | Language | Description |
 |-----------|------|----------|-------------|

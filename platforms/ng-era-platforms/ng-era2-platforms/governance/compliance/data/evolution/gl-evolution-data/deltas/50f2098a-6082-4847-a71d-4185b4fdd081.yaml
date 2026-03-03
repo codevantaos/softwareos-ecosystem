@@ -2,8 +2,8 @@
 # @ECO-governed
 version: \"1.0.0\"
 labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
 
 base_execution: 1d86e97a-96c1-4d5d-bede-0fd283643b01
 comparison_id: 50f2098a-6082-4847-a71d-4185b4fdd081

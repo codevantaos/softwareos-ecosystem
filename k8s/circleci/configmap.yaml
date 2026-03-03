@@ -2,7 +2,7 @@
 apiVersion: v1
 data:
   CIRCLECI_RUNNER_MODE: single-task
-  CIRCLECI_RUNNER_NAME: eco-base-gke-runner
+  CIRCLECI_RUNNER_NAME: softwareos-base-gke-runner
   CIRCLECI_RUNNER_RESOURCE_CLASS: eco/base
   CLEANUP_WORKSPACE: 'true'
   LOG_FORMAT: json
@@ -13,19 +13,19 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/circleci-agent-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:circleci-agent-config:sha256-21a44144da79099d2158e98d693d2b3e4f2fddf27d493c95aacfde800b450fce
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/circleci-agent-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:circleci-agent-config:sha256-21a44144da79099d2158e98d693d2b3e4f2fddf27d493c95aacfde800b450fce
   labels:
     app: circleci-runner
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: circleci-agent-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: circleci-agent-config
   namespace: circleci-runner

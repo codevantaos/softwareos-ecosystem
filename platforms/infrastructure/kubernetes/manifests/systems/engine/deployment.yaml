@@ -12,8 +12,8 @@ metadata:
   name: aep-engine
   namespace: platform-03
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: aep-engine
     app.kubernetes.io/app.kubernetes.io/component: engine
     app.kubernetes.io/part-of: machine-native-ops
@@ -27,8 +27,8 @@ spec:
   template:
     
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         app.kubernetes.io/name: aep-engine
         app.kubernetes.io/app.kubernetes.io/component: engine
         governance.machinenativeops.io/layer: "governance"

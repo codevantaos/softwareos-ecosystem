@@ -1,6 +1,6 @@
-"""Generated gRPC stubs for eco-base services.
+"""Generated gRPC stubs for softwareos-base services.
 
-URI: eco-base://backend/shared/proto/generated
+URI: softwareos-base://backend/shared/proto/generated
 
 These stubs are generated from .proto files. In CI/test environments
 where grpcio-tools is not available, we provide lightweight dataclass

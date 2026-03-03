@@ -9,8 +9,8 @@ metadata:
   name: k8s-deployment-standard
   description: "Kubernetes Deployment 资源的标准命名规范"
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     category: "kubernetes"
     resourceType: "deployment"
     team: "platform"

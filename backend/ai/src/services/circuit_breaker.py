@@ -5,7 +5,7 @@ State machine: CLOSED → OPEN → HALF_OPEN → CLOSED
 - OPEN: requests rejected immediately; timer running
 - HALF_OPEN: single probe request allowed; success → CLOSED, failure → OPEN
 
-URI: eco-base://backend/ai/services/circuit_breaker
+URI: softwareos-base://backend/ai/services/circuit_breaker
 """
 
 from __future__ import annotations

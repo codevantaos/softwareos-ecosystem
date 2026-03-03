@@ -23,13 +23,13 @@ providers:
       path: /etc/grafana/provisioning/dashboards/kubernetes
       foldersFromFilesStructure: true
 
-  - name: 'eco-base Dashboards'
+  - name: 'softwareos-base Dashboards'
     orgId: 1
-    folder: 'eco-base'
+    folder: 'softwareos-base'
     type: file
     disableDeletion: false
     updateIntervalSeconds: 10
     allowUiUpdates: true
     options:
-      path: /etc/grafana/provisioning/dashboards/eco-base
+      path: /etc/grafana/provisioning/dashboards/softwareos-base
       foldersFromFilesStructure: true

@@ -64,18 +64,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/cross-region-failover-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:cross-region-failover-config:sha256-71cb53ae50e6814e88d0f4bc7133308edab8344de244b232d8038940fce9bb29
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/cross-region-failover-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:cross-region-failover-config:sha256-71cb53ae50e6814e88d0f4bc7133308edab8344de244b232d8038940fce9bb29
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: cross-region-failover-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: cross-region-failover-config
   namespace: production

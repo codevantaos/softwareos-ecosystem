@@ -52,8 +52,8 @@ spec:
         type: "gauge"
         unit: "score"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "layer_id"
           - "layer_name"
         thresholds:
@@ -69,8 +69,8 @@ spec:
         type: "gauge"
         unit: "count"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "layer_id"
           - "artifact_kind"
           - "status"
@@ -83,8 +83,8 @@ spec:
         type: "gauge"
         unit: "percentage"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "layer_id"
           - "compliance_type"
         thresholds:
@@ -104,8 +104,8 @@ spec:
         type: "gauge"
         unit: "count"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "layer_id"
           - "kind"
           - "owner"
@@ -119,8 +119,8 @@ spec:
         type: "gauge"
         unit: "days"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "layer_id"
           - "artifact_name"
           - "kind"
@@ -136,8 +136,8 @@ spec:
         type: "gauge"
         unit: "updates_per_month"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "layer_id"
           - "artifact_name"
         collection_interval: "1d"
@@ -149,8 +149,8 @@ spec:
         type: "counter"
         unit: "count"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "layer_id"
           - "artifact_name"
           - "error_type"
@@ -168,8 +168,8 @@ spec:
         type: "counter"
         unit: "count"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "workflow_name"
           - "status"
           - "trigger_type"
@@ -182,8 +182,8 @@ spec:
         type: "histogram"
         unit: "seconds"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "workflow_name"
           - "status"
         buckets: [10, 30, 60, 120, 300, 600, 1800]
@@ -196,8 +196,8 @@ spec:
         type: "gauge"
         unit: "percentage"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "workflow_name"
         thresholds:
           critical: 80
@@ -216,8 +216,8 @@ spec:
         type: "counter"
         unit: "count"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "check_type"
           - "result"
           - "layer_id"
@@ -230,8 +230,8 @@ spec:
         type: "gauge"
         unit: "count"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "layer_id"
           - "violation_type"
           - "severity"
@@ -247,8 +247,8 @@ spec:
         type: "gauge"
         unit: "percentage"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "layer_id"
           - "policy_type"
         thresholds:
@@ -268,8 +268,8 @@ spec:
         type: "counter"
         unit: "count"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "event_type"
           - "layer_id"
           - "actor"
@@ -283,8 +283,8 @@ spec:
         type: "gauge"
         unit: "count"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "finding_type"
           - "severity"
           - "status"
@@ -301,8 +301,8 @@ spec:
         type: "histogram"
         unit: "seconds"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "validation_type"
           - "layer_id"
         buckets: [0.1, 0.5, 1, 2, 5, 10, 30]
@@ -315,8 +315,8 @@ spec:
         type: "histogram"
         unit: "seconds"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "report_type"
           - "format"
         buckets: [1, 5, 10, 30, 60, 120, 300]
@@ -349,8 +349,8 @@ spec:
       severity: "critical"
       for: "5m"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "governance"
       annotations:
         summary: "GL層級 {{ $labels.layer_id }} 健康分數過低"
@@ -362,8 +362,8 @@ spec:
       severity: "warning"
       for: "15m"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "governance"
       annotations:
         summary: "GL層級 {{ $labels.layer_id }} 合規率偏低"
@@ -375,8 +375,8 @@ spec:
       severity: "warning"
       for: "10m"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "platform"
       annotations:
         summary: "工作流程 {{ $labels.workflow_name }} 成功率偏低"
@@ -388,8 +388,8 @@ spec:
       severity: "warning"
       for: "1d"
       labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         team: "governance"
       annotations:
         summary: "Artifact {{ $labels.artifact_name }} 已過期"

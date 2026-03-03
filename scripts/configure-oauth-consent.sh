@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-# eco-base OAuth Consent Screen Configuration Script
+# softwareos-base OAuth Consent Screen Configuration Script
 # Guides through OAuth consent screen setup in GCP Console
 
 ECO_SCRIPT_VERSION="1.0.0"
@@ -78,9 +78,9 @@ open_oauth_config() {
     echo "2. Select 'External' user type (for production)"
     echo "3. Click 'Create'"
     echo "4. Fill in required information:"
-    echo "   - App name: eco-base"
-    echo "   - User support email: your-email@eco-base.io"
-    echo "   - Developer contact: your-email@eco-base.io"
+    echo "   - App name: softwareos-base"
+    echo "   - User support email: your-email@softwareos-base.io"
+    echo "   - Developer contact: your-email@softwareos-base.io"
     echo "5. Add required scopes:"
     echo "   - openid"
     echo "   - email"

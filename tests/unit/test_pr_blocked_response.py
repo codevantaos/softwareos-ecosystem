@@ -130,7 +130,7 @@ def test_upsert_anomaly_issue_includes_source_observed_at_and_markers(monkeypatc
     assert "Trigger Source" in captured["body"]
     assert "workflow_run: Security Gates — Trivy + Checkov + Gitleaks" in captured["body"]
     assert "Observed At" in captured["body"]
-    assert "<!-- autoecoops:dkey=280:abc123:Security Gates — Trivy + Checkov + Gitleaks -->" in captured["body"]
+    assert "<!-- softwareos:dkey=280:abc123:Security Gates — Trivy + Checkov + Gitleaks -->" in captured["body"]
 
 
 def test_upsert_anomaly_issue_dedups_same_key(monkeypatch):
@@ -140,9 +140,9 @@ def test_upsert_anomaly_issue_dedups_same_key(monkeypatch):
     signature = diagnose.build_anomaly_signature([("canary-gate", "failure")])
     issue_body = (
         "x\n"
-        f"<!-- autoecoops:dkey={dedup_key} -->\n"
-        f"<!-- autoecoops:asig={signature} -->\n"
-        "<!-- autoecoops:acount=2 -->\n"
+        f"<!-- softwareos:dkey={dedup_key} -->\n"
+        f"<!-- softwareos:asig={signature} -->\n"
+        "<!-- softwareos:acount=2 -->\n"
     )
     monkeypatch.setattr(
         diagnose,

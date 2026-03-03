@@ -89,7 +89,7 @@ export default function ChatScreen() {
       const assistantMsg: Message = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
-        content: `[${selectedEngine.name}] Processing via eco-base AI Service (port ${selectedEngine.port}). This is a simulated response. Connect to your API Gateway at port 3000 to enable live inference.`,
+        content: `[${selectedEngine.name}] Processing via softwareos-base AI Service (port ${selectedEngine.port}). This is a simulated response. Connect to your API Gateway at port 3000 to enable live inference.`,
         engine: selectedEngine.id,
         tokens: Math.floor(Math.random() * 80) + 20,
         timestamp: Date.now(),
@@ -136,7 +136,7 @@ export default function ChatScreen() {
       <View style={[styles.header, { borderBottomColor: colors.border, backgroundColor: colors.background }]}>
         <View>
           <Text style={[styles.headerTitle, { color: colors.foreground }]}>AI Inference</Text>
-          <Text style={[styles.headerSub, { color: colors.muted }]}>eco-base · port 8001</Text>
+          <Text style={[styles.headerSub, { color: colors.muted }]}>softwareos-base · port 8001</Text>
         </View>
         {/* Engine selector button */}
         <TouchableOpacity
@@ -176,7 +176,7 @@ export default function ChatScreen() {
             style={[styles.input, { color: colors.foreground, backgroundColor: colors.background, borderColor: colors.border }]}
             value={input}
             onChangeText={setInput}
-            placeholder="Message eco-base AI..."
+            placeholder="Message softwareos-base AI..."
             placeholderTextColor={colors.muted}
             multiline
             maxLength={2000}

@@ -32,7 +32,7 @@
     {
       "test": "gcs-bucket-exists",
       "status": "PASS",
-      "detail": "GCS bucket eco-base-loki-chunks-my-project-ops-1991 accessible"
+      "detail": "GCS bucket softwareos-base-loki-chunks-my-project-ops-1991 accessible"
     },
     {
       "test": "gcs-lifecycle-policy",

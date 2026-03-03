@@ -1,24 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: eco-base-envs
+  name: softwareos-base-envs
   namespace: argocd
   labels:
-    app.kubernetes.io/name: eco-base
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/name: softwareos-base
+    app.kubernetes.io/part-of: softwareos-base
 spec:
   generators:
     - list:
         elements:
           - env: staging
-            namespace: eco-base-staging
+            namespace: softwareos-base-staging
             cluster: https://kubernetes.default.svc
             revision: develop
             values_file: values-staging.yaml
             auto_sync: "true"
             prune: "true"
           - env: production
-            namespace: eco-base
+            namespace: softwareos-base
             cluster: https://kubernetes.default.svc
             revision: main
             values_file: values.yaml
@@ -29,7 +29,7 @@ spec:
       name: "eco-{{env}}"
       namespace: argocd
       labels:
-        app.kubernetes.io/name: eco-base
+        app.kubernetes.io/name: softwareos-base
         app.kubernetes.io/instance: "eco-{{env}}"
         environment: "{{env}}"
       annotations:
@@ -38,7 +38,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/indestructibleorg/eco-base.git
+        repoURL: https://github.com/indestructibleorg/softwareos-base.git
         targetRevision: "{{revision}}"
         path: helm
         helm:

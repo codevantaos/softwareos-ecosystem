@@ -44,8 +44,8 @@ All skill outputs must carry governance metadata:
 {
   "governance_stamp": {
     "unique_id": "UUID v1",
-    "uri": "eco-base://skills/<skill-id>/output/<run-id>",
-    "urn": "urn:eco-base:skills:<skill-id>:output:<run-id>:<uuid>",
+    "uri": "softwareos-base://skills/<skill-id>/output/<run-id>",
+    "urn": "urn:softwareos-base:skills:<skill-id>:output:<run-id>:<uuid>",
     "generated_by": "skill-creator-v1",
     "created_at": "ISO 8601",
     "schema_version": "1.0.0"

@@ -19,8 +19,8 @@ branch = f"bot/auto-fix-{ts}"
 print(f"Creating branch: {branch}")
 
 if not dry_run:
-    subprocess.run(["git", "config", "user.name", "eco-base-bot"], check=True)
-    subprocess.run(["git", "config", "user.email", "bot@eco-base.io"], check=True)
+    subprocess.run(["git", "config", "user.name", "softwareos-base-bot"], check=True)
+    subprocess.run(["git", "config", "user.email", "bot@softwareos-base.io"], check=True)
     subprocess.run(["git", "checkout", "-b", branch], check=True)
 
 fixes_applied = []

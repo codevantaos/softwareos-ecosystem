@@ -160,12 +160,12 @@ install_node_dependencies() {
     fi
     
     # 安裝工作區依賴
-    if [ -d "core/contracts/contracts-L1/contracts" ]; then
-        log_info "安裝 contracts-L1 依賴..."
-        cd core/contracts/contracts-L1/contracts
+    if [ -d "core/softwareos-contracts/softwareos-contracts-L1/softwareos-contracts" ]; then
+        log_info "安裝 softwareos-contracts-L1 依賴..."
+        cd core/softwareos-contracts/softwareos-contracts-L1/softwareos-contracts
         npm install
         cd - > /dev/null
-        log_success "contracts-L1 依賴安裝完成"
+        log_success "softwareos-contracts-L1 依賴安裝完成"
     fi
 }
 

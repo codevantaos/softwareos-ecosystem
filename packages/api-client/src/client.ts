@@ -1,6 +1,6 @@
 /**
- * eco-base API Client — typed HTTP client with retry + interceptors.
- * URI: eco-base://packages/api-client/client
+ * softwareos-base API Client — typed HTTP client with retry + interceptors.
+ * URI: softwareos-base://packages/api-client/client
  */
 
 export interface RetryConfig {

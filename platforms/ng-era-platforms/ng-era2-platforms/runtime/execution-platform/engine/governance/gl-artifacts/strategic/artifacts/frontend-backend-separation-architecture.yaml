@@ -292,7 +292,7 @@ spec:
           coverage_target: "All API endpoints"
         - type: "Contract Testing"
           tools: ["Pact"]
-          coverage_target: "All API contracts"
+          coverage_target: "All API softwareos-contracts"
       
       integration:
         - type: "API Contract Testing"

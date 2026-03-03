@@ -3,14 +3,14 @@ apiVersion: v1
 kind: Service
 metadata:
   name: ai-svc
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app: ai
     generated-by: yaml-toolkit-v1
     unique-id: "6ba7b813-9dad-11d1-80b4-00c04fd430c8"
   annotations:
-    eco-base/uri: "eco-base://k8s/eco-base/service/ai-svc"
-    eco-base/urn: "urn:eco-base:k8s:eco-base:service:ai-svc:6ba7b813-9dad-11d1-80b4-00c04fd430c8"
+    softwareos-base/uri: "softwareos-base://k8s/softwareos-base/service/ai-svc"
+    softwareos-base/urn: "urn:softwareos-base:k8s:softwareos-base:service:ai-svc:6ba7b813-9dad-11d1-80b4-00c04fd430c8"
 spec:
   type: ClusterIP
   selector:
@@ -28,8 +28,8 @@ spec:
 # YAML Toolkit v8 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "6ba7b813-9dad-11d1-80b4-00c04fd430c8"
-  uri: "eco-base://k8s/eco-base/service/ai-svc"
-  urn: "urn:eco-base:k8s:eco-base:service:ai-svc:6ba7b813-9dad-11d1-80b4-00c04fd430c8"
+  uri: "softwareos-base://k8s/softwareos-base/service/ai-svc"
+  urn: "urn:softwareos-base:k8s:softwareos-base:service:ai-svc:6ba7b813-9dad-11d1-80b4-00c04fd430c8"
   target_system: gke-production
   cross_layer_binding: [ai-service]
   schema_version: v8
@@ -41,7 +41,7 @@ governance_info:
   compliance_tags: [zero-trust, soc2, internal, gpu-workload]
   lifecycle_policy: active
 registry_binding:
-  service_endpoint: "http://ai-svc.eco-base.svc.cluster.local:8001"
+  service_endpoint: "http://ai-svc.softwareos-base.svc.cluster.local:8001"
   discovery_protocol: consul
   health_check_path: "/health"
   registry_ttl: 30

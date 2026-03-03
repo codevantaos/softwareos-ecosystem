@@ -1,10 +1,10 @@
 # .qyaml Governance Specification
 
-URI: eco-base://docs/QYAML_GOVERNANCE
+URI: softwareos-base://docs/QYAML_GOVERNANCE
 
 ## Overview
 
-`.qyaml` is the eco-base governance-enhanced YAML format for Kubernetes manifests. Every `.qyaml` file extends standard Kubernetes YAML with four mandatory governance blocks that enable traceability, compliance enforcement, service discovery integration, and vector space alignment.
+`.qyaml` is the softwareos-base governance-enhanced YAML format for Kubernetes manifests. Every `.qyaml` file extends standard Kubernetes YAML with four mandatory governance blocks that enable traceability, compliance enforcement, service discovery integration, and vector space alignment.
 
 ## File Extension
 
@@ -25,8 +25,8 @@ Identity and traceability information for the manifest document.
 ```yaml
 document_metadata:
   unique_id: "550e8400-e29b-41d4-a716-446655440000"   # UUID v1 (required)
-  uri: "eco-base://k8s/deployment/eco-ai"      # URI (required)
-  urn: "urn:eco-base:k8s:deployment:eco-ai"    # URN (required)
+  uri: "softwareos-base://k8s/deployment/eco-ai"      # URI (required)
+  urn: "urn:softwareos-base:k8s:deployment:eco-ai"    # URN (required)
   target_system: "k8s"                                   # Target platform (required)
   schema_version: "v8"                                   # Schema version (required)
   generated_by: "yaml-toolkit-v8"                        # Generator tool (required)
@@ -36,8 +36,8 @@ document_metadata:
 
 **Validation Rules:**
 - `unique_id` must be a valid UUID v1 (time-based)
-- `uri` must start with `eco-base://`
-- `urn` must start with `urn:eco-base:`
+- `uri` must start with `softwareos-base://`
+- `urn` must start with `urn:softwareos-base:`
 - `schema_version` must match pattern `v\d+`
 
 ### 2. governance_info
@@ -67,7 +67,7 @@ registry_binding:
   discovery_protocol: "consul"                   # Discovery protocol (optional)
   health_check_path: "/health"                   # Health check path (required)
   registry_ttl: 30                               # TTL in seconds (optional)
-  k8s_namespace: "eco-base"             # Kubernetes namespace (optional)
+  k8s_namespace: "softwareos-base"             # Kubernetes namespace (optional)
 ```
 
 ### 4. vector_alignment_map
@@ -91,15 +91,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: eco-api-gateway
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app.kubernetes.io/name: eco-api-gateway
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
 
 document_metadata:
   unique_id: "6ba7b810-9dad-11d1-80b4-00c04fd430c8"
-  uri: "eco-base://k8s/deployment/eco-api-gateway"
-  urn: "urn:eco-base:k8s:deployment:eco-api-gateway"
+  uri: "softwareos-base://k8s/deployment/eco-api-gateway"
+  urn: "urn:softwareos-base:k8s:deployment:eco-api-gateway"
   target_system: "k8s"
   schema_version: "v8"
   generated_by: "yaml-toolkit-v8"
@@ -124,7 +124,7 @@ registry_binding:
   discovery_protocol: "consul"
   health_check_path: "/health"
   registry_ttl: 30
-  k8s_namespace: "eco-base"
+  k8s_namespace: "softwareos-base"
 
 vector_alignment_map:
   alignment_model: "quantum-bert-xxl-v1"
@@ -252,7 +252,7 @@ Every governance validation produces an audit entry persisted to the append-only
   "timestamp": "2026-02-20T10:00:00.000000+00:00",
   "action": "validate_qyaml",
   "document_id": "550e8400-e29b-41d4-a716-446655440000",
-  "uri": "eco-base://k8s/deployment/eco-ai",
+  "uri": "softwareos-base://k8s/deployment/eco-ai",
   "result": "pass",
   "phases_passed": 5,
   "warnings": []

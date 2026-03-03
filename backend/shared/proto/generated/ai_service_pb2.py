@@ -1,6 +1,6 @@
 """Lightweight AI Service proto stubs (no grpc dependency required).
 
-URI: eco-base://backend/shared/proto/generated/ai_service_pb2
+URI: softwareos-base://backend/shared/proto/generated/ai_service_pb2
 
 Matches the message definitions in backend/shared/proto/ai_service.proto.
 """

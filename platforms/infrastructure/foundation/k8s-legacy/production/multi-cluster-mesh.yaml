@@ -77,20 +77,20 @@ spec:
   subsets:
   - labels:
       cluster: cluster1
-      eco-base/governance: aligned
-      eco-base/part-of: eco-base
+      softwareos-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
       topology.istio.io/network: network1
     name: cluster1
   - labels:
       cluster: cluster2
-      eco-base/governance: aligned
-      eco-base/part-of: eco-base
+      softwareos-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
       topology.istio.io/network: network2
     name: cluster2
   - labels:
       cluster: cluster3
-      eco-base/governance: aligned
-      eco-base/part-of: eco-base
+      softwareos-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
       topology.istio.io/network: network3
     name: cluster3
   trafficPolicy:
@@ -182,19 +182,19 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/istio
-    eco-base/urn: urn:eco-base:k8s:core:configmap:istio:sha256-d97c2d3877508ffdcaa9cea53c9b0c6f08e8919b10d1c23801a7fb12ee4a1a2c
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/istio
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:istio:sha256-d97c2d3877508ffdcaa9cea53c9b0c6f08e8919b10d1c23801a7fb12ee4a1a2c
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: istio
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: istio
   namespace: istio-system
 ---
@@ -210,18 +210,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/multi-cluster-health-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:multi-cluster-health-config:sha256-74ebf2bed6edace44feeba2fd5033dd9d76d4ee6a7828b416c5c1d68f1c432a8
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/multi-cluster-health-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:multi-cluster-health-config:sha256-74ebf2bed6edace44feeba2fd5033dd9d76d4ee6a7828b416c5c1d68f1c432a8
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: multi-cluster-health-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: multi-cluster-health-config
   namespace: production

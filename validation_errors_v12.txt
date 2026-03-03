@@ -96,27 +96,27 @@ expected <block end>, but found '-'
   in "platforms/infrastructure/foundation/kubernetes/manifests/systems/elasticsearch-search-system/deployment.yaml", line 23, column 3
 expected <block end>, but found '<block mapping start>'
   in "platforms/infrastructure/foundation/kubernetes/manifests/systems/elasticsearch-search-system/deployment.yaml", line 35, column 5
-[ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/elasticsearch-search-system/service.yaml: Service/elasticsearch-search-service: app.kubernetes.io/part-of must be 'eco-base'
+[ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/elasticsearch-search-system/service.yaml: Service/elasticsearch-search-service: app.kubernetes.io/part-of must be 'softwareos-base'
 [ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/engine/deployment.yaml: yaml parse error: while parsing a block mapping
   in "platforms/infrastructure/foundation/kubernetes/manifests/systems/engine/deployment.yaml", line 23, column 3
 expected <block end>, but found '<block mapping start>'
   in "platforms/infrastructure/foundation/kubernetes/manifests/systems/engine/deployment.yaml", line 35, column 5
-[ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/engine/service.yaml: Service/aep-engine-service: app.kubernetes.io/part-of must be 'eco-base'
+[ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/engine/service.yaml: Service/aep-engine-service: app.kubernetes.io/part-of must be 'softwareos-base'
 [ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/esync-platform/deployment.yaml: yaml parse error: while parsing a block mapping
   in "platforms/infrastructure/foundation/kubernetes/manifests/systems/esync-platform/deployment.yaml", line 23, column 3
 expected <block end>, but found '<block mapping start>'
   in "platforms/infrastructure/foundation/kubernetes/manifests/systems/esync-platform/deployment.yaml", line 35, column 5
-[ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/esync-platform/service.yaml: Service/esync-platform-service: app.kubernetes.io/part-of must be 'eco-base'
+[ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/esync-platform/service.yaml: Service/esync-platform-service: app.kubernetes.io/part-of must be 'softwareos-base'
 [ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/file-organizer-system/deployment.yaml: yaml parse error: while parsing a block mapping
   in "platforms/infrastructure/foundation/kubernetes/manifests/systems/file-organizer-system/deployment.yaml", line 23, column 3
 expected <block end>, but found '<block mapping start>'
   in "platforms/infrastructure/foundation/kubernetes/manifests/systems/file-organizer-system/deployment.yaml", line 35, column 5
-[ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/file-organizer-system/service.yaml: Service/file-organizer-service: app.kubernetes.io/part-of must be 'eco-base'
+[ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/file-organizer-system/service.yaml: Service/file-organizer-service: app.kubernetes.io/part-of must be 'softwareos-base'
 [ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/instant/deployment.yaml: yaml parse error: while parsing a block mapping
   in "platforms/infrastructure/foundation/kubernetes/manifests/systems/instant/deployment.yaml", line 23, column 3
 expected <block end>, but found '<block mapping start>'
   in "platforms/infrastructure/foundation/kubernetes/manifests/systems/instant/deployment.yaml", line 35, column 5
-[ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/instant/service.yaml: Service/instant-service: app.kubernetes.io/part-of must be 'eco-base'
+[ECO-SPEC-FAIL] platforms/infrastructure/foundation/kubernetes/manifests/systems/instant/service.yaml: Service/instant-service: app.kubernetes.io/part-of must be 'softwareos-base'
 [ECO-SPEC-FAIL] platforms/infrastructure/foundation/redis-stack/docker-compose.yaml: yaml parse error: while parsing a block mapping
   in "platforms/infrastructure/foundation/redis-stack/docker-compose.yaml", line 8, column 1
 expected <block end>, but found '<block mapping start>'
@@ -159,27 +159,27 @@ expected <block end>, but found '-'
   in "platforms/infrastructure/kubernetes/manifests/systems/elasticsearch-search-system/deployment.yaml", line 23, column 3
 expected <block end>, but found '<block mapping start>'
   in "platforms/infrastructure/kubernetes/manifests/systems/elasticsearch-search-system/deployment.yaml", line 35, column 5
-[ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/elasticsearch-search-system/service.yaml: Service/elasticsearch-search-service: app.kubernetes.io/part-of must be 'eco-base'
+[ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/elasticsearch-search-system/service.yaml: Service/elasticsearch-search-service: app.kubernetes.io/part-of must be 'softwareos-base'
 [ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/engine/deployment.yaml: yaml parse error: while parsing a block mapping
   in "platforms/infrastructure/kubernetes/manifests/systems/engine/deployment.yaml", line 23, column 3
 expected <block end>, but found '<block mapping start>'
   in "platforms/infrastructure/kubernetes/manifests/systems/engine/deployment.yaml", line 35, column 5
-[ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/engine/service.yaml: Service/aep-engine-service: app.kubernetes.io/part-of must be 'eco-base'
+[ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/engine/service.yaml: Service/aep-engine-service: app.kubernetes.io/part-of must be 'softwareos-base'
 [ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/esync-platform/deployment.yaml: yaml parse error: while parsing a block mapping
   in "platforms/infrastructure/kubernetes/manifests/systems/esync-platform/deployment.yaml", line 23, column 3
 expected <block end>, but found '<block mapping start>'
   in "platforms/infrastructure/kubernetes/manifests/systems/esync-platform/deployment.yaml", line 35, column 5
-[ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/esync-platform/service.yaml: Service/esync-platform-service: app.kubernetes.io/part-of must be 'eco-base'
+[ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/esync-platform/service.yaml: Service/esync-platform-service: app.kubernetes.io/part-of must be 'softwareos-base'
 [ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/file-organizer-system/deployment.yaml: yaml parse error: while parsing a block mapping
   in "platforms/infrastructure/kubernetes/manifests/systems/file-organizer-system/deployment.yaml", line 23, column 3
 expected <block end>, but found '<block mapping start>'
   in "platforms/infrastructure/kubernetes/manifests/systems/file-organizer-system/deployment.yaml", line 35, column 5
-[ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/file-organizer-system/service.yaml: Service/file-organizer-service: app.kubernetes.io/part-of must be 'eco-base'
+[ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/file-organizer-system/service.yaml: Service/file-organizer-service: app.kubernetes.io/part-of must be 'softwareos-base'
 [ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/instant/deployment.yaml: yaml parse error: while parsing a block mapping
   in "platforms/infrastructure/kubernetes/manifests/systems/instant/deployment.yaml", line 23, column 3
 expected <block end>, but found '<block mapping start>'
   in "platforms/infrastructure/kubernetes/manifests/systems/instant/deployment.yaml", line 35, column 5
-[ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/instant/service.yaml: Service/instant-service: app.kubernetes.io/part-of must be 'eco-base'
+[ECO-SPEC-FAIL] platforms/infrastructure/kubernetes/manifests/systems/instant/service.yaml: Service/instant-service: app.kubernetes.io/part-of must be 'softwareos-base'
 [ECO-SPEC-FAIL] platforms/infrastructure/redis-stack/docker-compose.yaml: yaml parse error: while parsing a block mapping
   in "platforms/infrastructure/redis-stack/docker-compose.yaml", line 8, column 1
 expected <block end>, but found '<block mapping start>'
@@ -360,20 +360,20 @@ expected <block end>, but found '-'
   in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/policies/security/info-security-policy-reference.yaml", line 21, column 3
 expected <block end>, but found '<block sequence start>'
   in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/GL90-99-Meta-Specification-Layer/governance/archived/legacy/governance-legacy/policies/security/info-security-policy-reference.yaml", line 292, column 7
-[ECO-SPEC-FAIL] platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/contracts/semantic-unification-spec.yaml: yaml parse error: while parsing a block mapping
-  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/contracts/semantic-unification-spec.yaml", line 244, column 7
+[ECO-SPEC-FAIL] platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/softwareos-contracts/semantic-unification-spec.yaml: yaml parse error: while parsing a block mapping
+  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/softwareos-contracts/semantic-unification-spec.yaml", line 244, column 7
 expected <block end>, but found '-'
-  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/contracts/semantic-unification-spec.yaml", line 246, column 7
-[ECO-SPEC-FAIL] platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/contracts/unified-naming-governance-contract.yaml: yaml parse error: while parsing a block mapping
-  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/contracts/unified-naming-governance-contract.yaml", line 520, column 5
+  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/softwareos-contracts/semantic-unification-spec.yaml", line 246, column 7
+[ECO-SPEC-FAIL] platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/softwareos-contracts/unified-naming-governance-contract.yaml: yaml parse error: while parsing a block mapping
+  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/softwareos-contracts/unified-naming-governance-contract.yaml", line 520, column 5
 expected <block end>, but found '-'
-  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/contracts/unified-naming-governance-contract.yaml", line 522, column 5
-[ECO-SPEC-FAIL] platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/contracts/directory-standards.yaml: yaml parse error: while parsing a block collection
-  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/contracts/directory-standards.yaml", line 104, column 7
+  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/softwareos-contracts/unified-naming-governance-contract.yaml", line 522, column 5
+[ECO-SPEC-FAIL] platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/softwareos-contracts/directory-standards.yaml: yaml parse error: while parsing a block collection
+  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/softwareos-contracts/directory-standards.yaml", line 104, column 7
 expected <block end>, but found '?'
-  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/contracts/directory-standards.yaml", line 105, column 7
-[ECO-SPEC-FAIL] platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/contracts/naming-conventions.yaml: yaml parse error: mapping values are not allowed here
-  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/contracts/naming-conventions.yaml", line 4, column 13
+  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/softwareos-contracts/directory-standards.yaml", line 105, column 7
+[ECO-SPEC-FAIL] platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/softwareos-contracts/naming-conventions.yaml: yaml parse error: mapping values are not allowed here
+  in "platforms/ng-era-platforms/ng-era1-platforms/governance-architecture/governance/naming-governance/softwareos-contracts/naming-conventions.yaml", line 4, column 13
 [ECO-SPEC-FAIL] platforms/ng-era-platforms/ng-era1-platforms/runtime-services/esync-platform/.github/workflows/auto-fix-bot.yaml: yaml parse error: mapping values are not allowed here
   in "platforms/ng-era-platforms/ng-era1-platforms/runtime-services/esync-platform/.github/workflows/auto-fix-bot.yaml", line 52, column 16
 [ECO-SPEC-FAIL] platforms/ng-era-platforms/ng-era1-platforms/runtime-services/esync-platform/.github/workflows/ci.yaml: yaml parse error: mapping values are not allowed here

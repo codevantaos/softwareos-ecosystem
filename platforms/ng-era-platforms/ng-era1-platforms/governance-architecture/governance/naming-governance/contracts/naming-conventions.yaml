@@ -93,7 +93,7 @@ spec:
       - tests/
       - docs/
       - configs/
-      - contracts/
+      - softwareos-contracts/
       - governance/
       version: v1.0.0
     env-naming:

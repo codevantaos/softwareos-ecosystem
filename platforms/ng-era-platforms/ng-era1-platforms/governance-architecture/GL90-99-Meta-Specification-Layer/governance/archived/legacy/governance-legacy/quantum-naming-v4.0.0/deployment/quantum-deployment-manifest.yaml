@@ -5,8 +5,8 @@ metadata:
   labels:
     app.kubernetes.io/part-of: machine-native-ops
     app.kubernetes.io/version: v4.0.0-quantum
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
   name: quantum-governance
   name: quantum-governance
 ---
@@ -16,8 +16,8 @@ metadata:
   labels:
     app.kubernetes.io/component: service-account
     app.kubernetes.io/name: quantum-governance
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
   name: quantum-governance-sa
   namespace: quantum-governance
 ---
@@ -27,8 +27,8 @@ metadata:
   labels:
     app.kubernetes.io/component: rbac
     app.kubernetes.io/name: quantum-governance
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
   name: quantum-governance-role
 rules:
 - apiGroups:
@@ -104,8 +104,8 @@ metadata:
   labels:
     app.kubernetes.io/component: rbac
     app.kubernetes.io/name: quantum-governance
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
   name: quantum-governance-binding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -149,21 +149,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/quantum-governance-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:quantum-governance-config:sha256-10858296bc9ce11da9e4a979f5b66e1d97366a1a8996179852918c7e1a6618c6
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/quantum-governance-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:quantum-governance-config:sha256-10858296bc9ce11da9e4a979f5b66e1d97366a1a8996179852918c7e1a6618c6
   labels:
     app.kubernetes.io/component: config
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: quantum-governance
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: quantum-governance-config
   namespace: quantum-governance
 ---
@@ -175,21 +175,21 @@ data:
 kind: Secret
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/secret/quantum-governance-secrets
-    eco-base/urn: urn:eco-base:k8s:core:secret:quantum-governance-secrets:sha256-ac9c194530f865e54b6e6db91f2a83ad7b979083b40668ec21452b973b7eb2bb
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/secret/quantum-governance-secrets
+    softwareos-base/urn: urn:softwareos-base:k8s:core:secret:quantum-governance-secrets:sha256-ac9c194530f865e54b6e6db91f2a83ad7b979083b40668ec21452b973b7eb2bb
   labels:
     app.kubernetes.io/component: secrets
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: quantum-governance
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: quantum-governance-secrets
   namespace: quantum-governance
 type: Opaque
@@ -198,21 +198,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/quantum-governance-service
-    eco-base/urn: urn:eco-base:k8s:core:deployment:quantum-governance-service:sha256-7039d81d85924f9d55155dcf160309d38172b4058e374de795eeb6fcec39a7c5
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/quantum-governance-service
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:quantum-governance-service:sha256-7039d81d85924f9d55155dcf160309d38172b4058e374de795eeb6fcec39a7c5
   labels:
     app.kubernetes.io/component: service
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: quantum-governance
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: v4.0.0-quantum
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: quantum-governance-service
   namespace: quantum-governance
 spec:
@@ -231,8 +231,8 @@ spec:
     app.kubernetes.io/component: service
     app.kubernetes.io/name: quantum-governance
     app.kubernetes.io/version: v4.0.0-quantum
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     spec:
       containers:
       - env:
@@ -316,23 +316,23 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/quantum-governance-service
-    eco-base/urn: urn:eco-base:k8s:core:service:quantum-governance-service:sha256-0a6e0517fbd62087bc722852a27153053eb770482f38477bbca27527c4491b4d
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/quantum-governance-service
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:quantum-governance-service:sha256-0a6e0517fbd62087bc722852a27153053eb770482f38477bbca27527c4491b4d
     prometheus.io/port: '9090'
     prometheus.io/scrape: 'true'
   labels:
     app.kubernetes.io/component: service
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: quantum-governance
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: quantum-governance-service
   namespace: quantum-governance
 spec:
@@ -409,8 +409,8 @@ metadata:
   labels:
     app.kubernetes.io/component: monitoring
     app.kubernetes.io/name: quantum-governance
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     release: prometheus
   name: quantum-governance-monitor
   namespace: quantum-governance
@@ -437,8 +437,8 @@ metadata:
   labels:
     app.kubernetes.io/component: monitoring
     app.kubernetes.io/name: quantum-governance
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     release: prometheus
   name: quantum-governance-rules
   namespace: quantum-governance
@@ -453,8 +453,8 @@ spec:
       expr: quantum_coherence < 0.999
       for: 2m
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
         severity: critical
     - alert: QuantumEntanglementWeak
       annotations:
@@ -463,8 +463,8 @@ spec:
       expr: quantum_entanglement_strength < 0.95
       for: 3m
       labels:
-        eco-base/governance: aligned
-        eco-base/part-of: eco-base
+        softwareos-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
         severity: warning
 ---
 apiVersion: networking.k8s.io/v1
@@ -473,8 +473,8 @@ metadata:
   labels:
     app.kubernetes.io/component: network
     app.kubernetes.io/name: quantum-governance
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
   name: quantum-governance-netpol
   namespace: quantum-governance
 spec:
@@ -521,8 +521,8 @@ metadata:
   labels:
     app.kubernetes.io/component: availability
     app.kubernetes.io/name: quantum-governance
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
   name: quantum-governance-pdb
   namespace: quantum-governance
 spec:
@@ -538,8 +538,8 @@ metadata:
   labels:
     app.kubernetes.io/component: certificate
     app.kubernetes.io/name: quantum-governance
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
   name: quantum-governance-tls
   namespace: quantum-governance
 spec:
@@ -558,10 +558,10 @@ kind: Ingress
 metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/ingress/quantum-governance-ingress
-    eco-base/urn: urn:eco-base:k8s:core:ingress:quantum-governance-ingress:sha256-8053130ac0c2eda107bca4879caa75e55c363ada053f39913ce09daa5e8b32cf
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/ingress/quantum-governance-ingress
+    softwareos-base/urn: urn:softwareos-base:k8s:core:ingress:quantum-governance-ingress:sha256-8053130ac0c2eda107bca4879caa75e55c363ada053f39913ce09daa5e8b32cf
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/proxy-body-size: 10m
     nginx.ingress.kubernetes.io/ssl-redirect: 'true'
@@ -571,13 +571,13 @@ metadata:
     app.kubernetes.io/component: ingress
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: quantum-governance
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: quantum-governance-ingress
   namespace: quantum-governance
 spec:

@@ -4,10 +4,10 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/machine-native-ops
-    eco-base/urn: urn:eco-base:k8s:core:service:machine-native-ops:sha256-376797a973deaa454a431e8e60d5e9692f53b9187d8f627af9dca32271987b08
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/machine-native-ops
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:machine-native-ops:sha256-376797a973deaa454a431e8e60d5e9692f53b9187d8f627af9dca32271987b08
     prometheus.io/port: '9090'
     prometheus.io/scrape: 'true'
     service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: 'true'
@@ -23,13 +23,13 @@ metadata:
     app.kubernetes.io/component: application
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: machine-native-ops
   namespace: platform-03
 spec:
@@ -59,23 +59,23 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/machine-native-ops-api
-    eco-base/urn: urn:eco-base:k8s:core:service:machine-native-ops-api:sha256-11da0696acaefa96e97329bf33a229444bd39c27994c99b011f988d45eeb94b0
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/machine-native-ops-api
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:machine-native-ops-api:sha256-11da0696acaefa96e97329bf33a229444bd39c27994c99b011f988d45eeb94b0
     prometheus.io/port: '9090'
     prometheus.io/scrape: 'true'
   labels:
     app.kubernetes.io/component: api
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops-api
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: machine-native-ops-api
   namespace: platform-03
 spec:
@@ -96,21 +96,21 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/machine-native-ops-worker
-    eco-base/urn: urn:eco-base:k8s:core:service:machine-native-ops-worker:sha256-edad0b9abe0f08069df5a3102dfc464e7a8537610d3ff8f6cc3131f02b3ea5f5
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/machine-native-ops-worker
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:machine-native-ops-worker:sha256-edad0b9abe0f08069df5a3102dfc464e7a8537610d3ff8f6cc3131f02b3ea5f5
   labels:
     app.kubernetes.io/component: worker
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops-worker
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: machine-native-ops-worker
   namespace: platform-03
 spec:
@@ -128,21 +128,21 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/redis-cluster
-    eco-base/urn: urn:eco-base:k8s:core:service:redis-cluster:sha256-089470f0056bc756151ff59dbf40525e57a5406d6c9c660bb43d9e96ec7a6df3
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/redis-cluster
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:redis-cluster:sha256-089470f0056bc756151ff59dbf40525e57a5406d6c9c660bb43d9e96ec7a6df3
   labels:
     app.kubernetes.io/component: cache
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: redis-cluster
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: redis-cluster
   namespace: platform-03
 spec:
@@ -163,23 +163,23 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/postgres
-    eco-base/urn: urn:eco-base:k8s:core:service:postgres:sha256-3e7a93da3fb2009cf37f9fcee21181cff03304f2b49f23f5d28317d5d2b2b20e
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/postgres
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:postgres:sha256-3e7a93da3fb2009cf37f9fcee21181cff03304f2b49f23f5d28317d5d2b2b20e
     prometheus.io/port: '9187'
     prometheus.io/scrape: 'true'
   labels:
     app.kubernetes.io/component: database
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: postgres
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: postgres
   namespace: platform-03
 spec:
@@ -200,21 +200,21 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/monitoring
-    eco-base/urn: urn:eco-base:k8s:core:service:monitoring:sha256-c782c32349d2c8a919851a01bc0dfa8cd2267f925338457f0f5399c04f63a312
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/monitoring
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:monitoring:sha256-c782c32349d2c8a919851a01bc0dfa8cd2267f925338457f0f5399c04f63a312
   labels:
     app.kubernetes.io/component: observability
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: monitoring
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: monitoring
   namespace: monitoring
 spec:
@@ -237,8 +237,8 @@ kind: ServiceMonitor
 metadata:
   labels:
     app.kubernetes.io/name: machine-native-ops
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     release: prometheus
   name: machine-native-ops
   namespace: platform-03
@@ -257,8 +257,8 @@ kind: ServiceMonitor
 metadata:
   labels:
     app.kubernetes.io/name: machine-native-ops-api
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     release: prometheus
   name: machine-native-ops-api
   namespace: platform-03
@@ -277,8 +277,8 @@ kind: ServiceMonitor
 metadata:
   labels:
     app.kubernetes.io/name: machine-native-ops-worker
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     release: prometheus
   name: machine-native-ops-worker
   namespace: platform-03
@@ -297,8 +297,8 @@ kind: ServiceMonitor
 metadata:
   labels:
     app.kubernetes.io/name: redis-cluster
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     release: prometheus
   name: redis-cluster
   namespace: platform-03
@@ -317,8 +317,8 @@ kind: ServiceMonitor
 metadata:
   labels:
     app.kubernetes.io/name: postgres
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     release: prometheus
   name: postgres
   namespace: platform-03
@@ -395,13 +395,13 @@ spec:
   host: machine-native-ops
   subsets:
   - labels:
-      eco-base/governance: aligned
-      eco-base/part-of: eco-base
+      softwareos-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
       version: v1.0.0
     name: stable
   - labels:
-      eco-base/governance: aligned
-      eco-base/part-of: eco-base
+      softwareos-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
       version: v1.1.0
     name: canary
   trafficPolicy:

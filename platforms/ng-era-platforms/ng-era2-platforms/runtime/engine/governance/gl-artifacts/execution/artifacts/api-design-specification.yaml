@@ -23,7 +23,7 @@ metadata:
   - rest
   - design
   - specification
-  - contracts
+  - softwareos-contracts
   annotations:
     governance.machinenativeops.io/initiative: "INIT-2026-Q1-001"
     governance.machinenativeops.io/priority: "P0"

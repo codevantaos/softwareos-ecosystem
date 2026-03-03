@@ -1,6 +1,6 @@
 /**
- * eco-base — AI Service Proxy
- * URI: eco-base://backend/api/services/ai-proxy
+ * softwareos-base — AI Service Proxy
+ * URI: softwareos-base://backend/api/services/ai-proxy
  *
  * HTTP proxy to backend/ai FastAPI service with:
  * - Configurable timeout per endpoint

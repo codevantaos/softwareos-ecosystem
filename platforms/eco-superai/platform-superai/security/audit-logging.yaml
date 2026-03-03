@@ -27,21 +27,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/audit-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:audit-config:sha256-fef788507df0a86732572415c18cf9a2c383eaa281b2b49c9c286951994c4a6e
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/audit-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:audit-config:sha256-fef788507df0a86732572415c18cf9a2c383eaa281b2b49c9c286951994c4a6e
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: audit-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: audit
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: audit-config
   namespace: default
 ---
@@ -49,21 +49,21 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/daemonset/audit-log-sidecar
-    eco-base/urn: urn:eco-base:k8s:core:daemonset:audit-log-sidecar:sha256-47d679904b1a75e4b243b41b3f2739403bd9e44ec8ccd02133ed04d98e067c1a
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/daemonset/audit-log-sidecar
+    softwareos-base/urn: urn:softwareos-base:k8s:core:daemonset:audit-log-sidecar:sha256-47d679904b1a75e4b243b41b3f2739403bd9e44ec8ccd02133ed04d98e067c1a
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: audit-log-sidecar
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: audit
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: audit-log-sidecar
   namespace: default
 spec:
@@ -125,21 +125,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/audit-log-rotation
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:audit-log-rotation:sha256-0d5c5c8a00952ec3deafd8a1f9bdf95d2c3756b2ec0e2e0178d5b66a8f41eda2
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/audit-log-rotation
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:audit-log-rotation:sha256-0d5c5c8a00952ec3deafd8a1f9bdf95d2c3756b2ec0e2e0178d5b66a8f41eda2
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: audit-log-rotation
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: audit
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: audit-log-rotation
   namespace: default
 spec:
@@ -202,21 +202,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/audit-log-analyzer
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:audit-log-analyzer:sha256-6dbbebd2eb55342b17fd624cfbe61f5b91dc5c0fa946ac9e78ecc2ed24b62eda
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/audit-log-analyzer
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:audit-log-analyzer:sha256-6dbbebd2eb55342b17fd624cfbe61f5b91dc5c0fa946ac9e78ecc2ed24b62eda
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: audit-log-analyzer
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: audit
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: audit-log-analyzer
   namespace: default
 spec:
@@ -304,21 +304,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/audit-retention-policy
-    eco-base/urn: urn:eco-base:k8s:core:configmap:audit-retention-policy:sha256-feaa2fdf8c5d1c487e2264b50b099ea9863347c54deb71d4846108b788034fa0
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/audit-retention-policy
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:audit-retention-policy:sha256-feaa2fdf8c5d1c487e2264b50b099ea9863347c54deb71d4846108b788034fa0
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: audit-retention-policy
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: audit
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: audit-retention-policy
   namespace: default
 ---
@@ -353,21 +353,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/grafana-dashboard-audit
-    eco-base/urn: urn:eco-base:k8s:core:configmap:grafana-dashboard-audit:sha256-0e7782e488b6d8b6ca92b0837d97d38ddbda5281f1d5a75c7262ea56461a6e10
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/grafana-dashboard-audit
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:grafana-dashboard-audit:sha256-0e7782e488b6d8b6ca92b0837d97d38ddbda5281f1d5a75c7262ea56461a6e10
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: grafana-dashboard-audit
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: audit
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
     grafana_dashboard: '1'
   name: grafana-dashboard-audit
   namespace: monitoring

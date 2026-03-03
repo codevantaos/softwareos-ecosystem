@@ -9,8 +9,8 @@ description: "MachineNativeOps quantum-powered naming governance with full obser
 version: "v4.0.0-quantum"
 
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
 
 
 on:
@@ -355,6 +355,6 @@ jobs:
               title: `Quantum Governance Results - ${new Date().toISOString()}`,
               body: results,
               labels:
-                eco-base/part-of: eco-base
-                eco-base/governance: aligned
+                softwareos-base/part-of: softwareos-base
+                softwareos-base/governance: aligned
             });

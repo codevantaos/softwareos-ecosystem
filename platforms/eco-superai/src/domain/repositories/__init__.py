@@ -1,4 +1,4 @@
-"""Domain repository interfaces (ports) — abstract contracts for persistence."""
+"""Domain repository interfaces (ports) — abstract softwareos-contracts for persistence."""
 from __future__ import annotations
 
 from abc import ABC, abstractmethod

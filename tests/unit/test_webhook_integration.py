@@ -63,8 +63,8 @@ def build_whatsapp_normalized_payload(text: str = "Hello from WhatsApp", sender:
         },
         "signature_valid": True,
         "idempotency_key": hashlib.sha256(f"whatsapp:{msg_id}".encode()).hexdigest(),
-        "uri": f"eco-base://im/whatsapp/webhook/{msg_id}",
-        "urn": f"urn:eco-base:im:whatsapp:webhook:{sender}:{msg_id}",
+        "uri": f"softwareos-base://im/whatsapp/webhook/{msg_id}",
+        "urn": f"urn:softwareos-base:im:whatsapp:webhook:{sender}:{msg_id}",
     }
 
 
@@ -89,8 +89,8 @@ def build_telegram_normalized_payload(text: str = "Hello from Telegram", sender:
         },
         "signature_valid": True,
         "idempotency_key": hashlib.sha256(f"telegram:{msg_id}".encode()).hexdigest(),
-        "uri": f"eco-base://im/telegram/webhook/{msg_id}",
-        "urn": f"urn:eco-base:im:telegram:webhook:{sender}:{msg_id}",
+        "uri": f"softwareos-base://im/telegram/webhook/{msg_id}",
+        "urn": f"urn:softwareos-base:im:telegram:webhook:{sender}:{msg_id}",
     }
 
 
@@ -115,8 +115,8 @@ def build_line_normalized_payload(text: str = "Hello from LINE", sender: str = "
         },
         "signature_valid": True,
         "idempotency_key": hashlib.sha256(f"line:{msg_id}".encode()).hexdigest(),
-        "uri": f"eco-base://im/line/webhook/{msg_id}",
-        "urn": f"urn:eco-base:im:line:webhook:{sender}:{msg_id}",
+        "uri": f"softwareos-base://im/line/webhook/{msg_id}",
+        "urn": f"urn:softwareos-base:im:line:webhook:{sender}:{msg_id}",
     }
 
 
@@ -142,8 +142,8 @@ def build_messenger_normalized_payload(text: str = "Hello from Messenger", sende
         },
         "signature_valid": True,
         "idempotency_key": hashlib.sha256(f"messenger:{msg_id}".encode()).hexdigest(),
-        "uri": f"eco-base://im/messenger/webhook/{msg_id}",
-        "urn": f"urn:eco-base:im:messenger:webhook:{sender}:{msg_id}",
+        "uri": f"softwareos-base://im/messenger/webhook/{msg_id}",
+        "urn": f"urn:softwareos-base:im:messenger:webhook:{sender}:{msg_id}",
     }
 
 
@@ -169,7 +169,7 @@ class TestWebhookToAIFlow:
         assert "request_id" in data
         assert "engine" in data
         assert "uri" in data
-        assert data["uri"].startswith("eco-base://")
+        assert data["uri"].startswith("softwareos-base://")
 
     def test_generate_from_telegram_context(self, ai_client):
         resp = ai_client.post("/api/v1/generate", json={
@@ -216,8 +216,8 @@ class TestPayloadNormalization:
         assert payload["sender_id"] == "15551234567"
         assert payload["text"] == "Hello from WhatsApp"
         assert payload["signature_valid"] is True
-        assert payload["uri"].startswith("eco-base://im/whatsapp/")
-        assert payload["urn"].startswith("urn:eco-base:im:whatsapp:")
+        assert payload["uri"].startswith("softwareos-base://im/whatsapp/")
+        assert payload["urn"].startswith("urn:softwareos-base:im:whatsapp:")
         assert len(payload["idempotency_key"]) == 64
 
     def test_telegram_payload_structure(self):
@@ -227,7 +227,7 @@ class TestPayloadNormalization:
         assert payload["sender_id"] == "123456789"
         assert payload["text"] == "Hello from Telegram"
         assert payload["signature_valid"] is True
-        assert payload["uri"].startswith("eco-base://im/telegram/")
+        assert payload["uri"].startswith("softwareos-base://im/telegram/")
 
     def test_line_payload_structure(self):
         payload = build_line_normalized_payload()
@@ -236,7 +236,7 @@ class TestPayloadNormalization:
         assert payload["sender_id"] == "U1234567890abcdef"
         assert payload["text"] == "Hello from LINE"
         assert payload["signature_valid"] is True
-        assert payload["uri"].startswith("eco-base://im/line/")
+        assert payload["uri"].startswith("softwareos-base://im/line/")
 
     def test_messenger_payload_structure(self):
         payload = build_messenger_normalized_payload()
@@ -245,7 +245,7 @@ class TestPayloadNormalization:
         assert payload["sender_id"] == "9876543210"
         assert payload["text"] == "Hello from Messenger"
         assert payload["signature_valid"] is True
-        assert payload["uri"].startswith("eco-base://im/messenger/")
+        assert payload["uri"].startswith("softwareos-base://im/messenger/")
 
     def test_idempotency_keys_unique_per_message(self):
         p1 = build_whatsapp_normalized_payload("Message A")

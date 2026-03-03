@@ -35,7 +35,7 @@ authRouter.post("/signup", async (req: Request, res: Response, next: NextFunctio
       user: {
         id: data.user?.id,
         email: data.user?.email,
-        urn: `urn:eco-base:iam:user:${data.user?.id}`,
+        urn: `urn:softwareos-base:iam:user:${data.user?.id}`,
       },
       session: data.session
         ? {
@@ -75,7 +75,7 @@ authRouter.post("/login", async (req: Request, res: Response, next: NextFunction
         id: data.user.id,
         email: data.user.email,
         role: data.user.role || "member",
-        urn: `urn:eco-base:iam:user:${data.user.id}`,
+        urn: `urn:softwareos-base:iam:user:${data.user.id}`,
       },
       session: {
         access_token: data.session.access_token,
@@ -142,6 +142,6 @@ authRouter.get("/me", requireAuth, async (req: Request, res: Response): Promise<
   const authReq = req as AuthenticatedRequest;
   res.status(200).json({
     user: authReq.user,
-    uri: "eco-base://backend/api/auth/me",
+    uri: "softwareos-base://backend/api/auth/me",
   });
 });

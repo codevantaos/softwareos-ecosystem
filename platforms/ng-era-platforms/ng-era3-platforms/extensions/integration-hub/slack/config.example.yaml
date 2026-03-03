@@ -10,8 +10,8 @@ metadata:
   name: gl-platform-slack
   namespace: gl-platform
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: gl-platform
     app.kubernetes.io/component: slack-integration
     tier: notifications

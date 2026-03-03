@@ -55,21 +55,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/alertmanager
-    eco-base/urn: urn:eco-base:k8s:core:configmap:alertmanager:sha256-1958a0dcca9706452891a4611e5ee39771b87e62e7b307fe5b1d224ba8c526bb
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/alertmanager
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:alertmanager:sha256-1958a0dcca9706452891a4611e5ee39771b87e62e7b307fe5b1d224ba8c526bb
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: alertmanager
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: dev
     managed-by: gl-platform
     version: 1.0.0
@@ -80,19 +80,19 @@ apiVersion: v1
 kind: Secret
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/secret/alertmanager-secrets
-    eco-base/urn: urn:eco-base:k8s:core:secret:alertmanager-secrets:sha256-c94d8af7aa6b39a32f3481bcf6c1a828851a72c1c48e32c6ac039cff658f31ee
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/secret/alertmanager-secrets
+    softwareos-base/urn: urn:softwareos-base:k8s:core:secret:alertmanager-secrets:sha256-c94d8af7aa6b39a32f3481bcf6c1a828851a72c1c48e32c6ac039cff658f31ee
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: alertmanager-secrets
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: alertmanager-secrets
   namespace: monitoring
 stringData:

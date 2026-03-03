@@ -4,7 +4,7 @@
  * Redis-backed conversation state per user/channel.
  * Uses ECO_* environment variables for configuration.
  *
- * URI: eco-base://platforms/im-integration/shared/router
+ * URI: softwareos-base://platforms/im-integration/shared/router
  */
 
 import Redis from "ioredis";

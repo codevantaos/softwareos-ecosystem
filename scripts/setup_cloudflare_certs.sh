@@ -1,5 +1,5 @@
 #!/bin/bash
-# Cloudflare Certificate Setup Script for eco-base
+# Cloudflare Certificate Setup Script for softwareos-base
 # This script helps you create Kubernetes secrets from Cloudflare certificates
 
 set -e
@@ -68,7 +68,7 @@ echo -e "${GREEN}Updating Ingress resources to use Cloudflare certificate...${NC
 kubectl patch ingress prometheus-ingress -n monitoring -p '{
   "spec": {
     "tls": [{
-      "hosts": ["prometheus._cf-custom-hostname.autoecoops.io"],
+      "hosts": ["prometheus._cf-custom-hostname.softwareos.io"],
       "secretName": "cloudflare-origin-cert"
     }]
   }
@@ -78,7 +78,7 @@ kubectl patch ingress prometheus-ingress -n monitoring -p '{
 kubectl patch ingress grafana-ingress -n monitoring -p '{
   "spec": {
     "tls": [{
-      "hosts": ["grafana._cf-custom-hostname.autoecoops.io"],
+      "hosts": ["grafana._cf-custom-hostname.softwareos.io"],
       "secretName": "cloudflare-origin-cert"
     }]
   }
@@ -90,8 +90,8 @@ echo ""
 echo "Cloudflare certificates have been configured successfully!"
 echo ""
 echo "Access URLs:"
-echo "  Prometheus: https://prometheus._cf-custom-hostname.autoecoops.io"
-echo "  Grafana:    https://grafana._cf-custom-hostname.autoecoops.io"
+echo "  Prometheus: https://prometheus._cf-custom-hostname.softwareos.io"
+echo "  Grafana:    https://grafana._cf-custom-hostname.softwareos.io"
 echo ""
 echo -e "${YELLOW}Next Steps:${NC}"
 echo "1. Verify the certificates are working by accessing the URLs above"
@@ -100,6 +100,6 @@ echo "3. Update Cloudflare DNS to point to your Kubernetes ingress IP"
 echo ""
 echo -e "${YELLOW}Note:${NC}"
 echo "Make sure your Cloudflare DNS records point to your Kubernetes ingress IP:"
-echo "  prometheus._cf-custom-hostname.autoecoops.io → <INGRESS_IP>"
-echo "  grafana._cf-custom-hostname.autoecoops.io → <INGRESS_IP>"
+echo "  prometheus._cf-custom-hostname.softwareos.io → <INGRESS_IP>"
+echo "  grafana._cf-custom-hostname.softwareos.io → <INGRESS_IP>"
 echo ""

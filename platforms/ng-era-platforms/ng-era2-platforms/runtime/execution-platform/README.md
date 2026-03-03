@@ -80,7 +80,7 @@ gl-execution-runtime/
 │   ├── governance/              # Governance compliance
 │   └── server/                  # Server implementation
 ├── governance/                   # Governance compliance
-│   ├── contracts/               # Layer contracts
+│   ├── softwareos-contracts/               # Layer softwareos-contracts
 │   ├── policies/                # Enforcement policies
 │   └── validators/              # Validation rules
 ├── src/                         # Source code
@@ -155,7 +155,7 @@ organizer.organize_file(file_path, rules)
 ## Interaction Rules
 
 ### Allowed Interactions
-- ✅ Consume governance contracts from GL00-09
+- ✅ Consume governance softwareos-contracts from GL00-09
 - ✅ Use platform services from GL10-29
 - ✅ Consume data services from GL20-29
 - ✅ Execute tasks and workflows
@@ -207,7 +207,7 @@ spec:
 
 ## Compliance
 
-This layer is **REGULATORY** - all execution must follow defined contracts and policies.
+This layer is **REGULATORY** - all execution must follow defined softwareos-contracts and policies.
 
 ## Version
 

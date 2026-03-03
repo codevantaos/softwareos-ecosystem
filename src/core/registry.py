@@ -1,6 +1,6 @@
 """Model Registry — central model lifecycle management.
 
-URI: eco-base://src/core/registry
+URI: softwareos-base://src/core/registry
 
 Contracts defined by: tests/unit/test_registry.py
 """

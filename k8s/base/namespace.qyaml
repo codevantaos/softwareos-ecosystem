@@ -1,25 +1,25 @@
-# eco-base v1.0 - Namespace & RBAC
+# softwareos-base v1.0 - Namespace & RBAC
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: eco-base
+  name: softwareos-base
   labels:
-    app.kubernetes.io/name: eco-base-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/name: softwareos-base-platform
+    app.kubernetes.io/part-of: softwareos-base
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: eco-sa
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
-    app.kubernetes.io/name: eco-base-platform
+    app.kubernetes.io/name: softwareos-base-platform
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: eco-role
-  namespace: eco-base
+  namespace: softwareos-base
 rules:
   - apiGroups: [""]
     resources: ["pods", "services", "configmaps", "secrets"]
@@ -32,11 +32,11 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: eco-rolebinding
-  namespace: eco-base
+  namespace: softwareos-base
 subjects:
   - kind: ServiceAccount
     name: eco-sa
-    namespace: eco-base
+    namespace: softwareos-base
 roleRef:
   kind: Role
   name: eco-role
@@ -45,8 +45,8 @@ roleRef:
 # YAML Toolkit v8 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "eco-ns-0001-0001-000000000001"
-  uri: "eco-base://k8s/cluster/namespace/eco-base"
-  urn: "urn:eco-base:k8s:cluster:namespace:eco-base:eco-ns-0001-0001-000000000001"
+  uri: "softwareos-base://k8s/cluster/namespace/softwareos-base"
+  urn: "urn:softwareos-base:k8s:cluster:namespace:softwareos-base:eco-ns-0001-0001-000000000001"
   target_system: gke-production
   cross_layer_binding: []
   schema_version: v8
@@ -66,4 +66,4 @@ vector_alignment_map:
   alignment_model: BAAI/bge-large-en-v1.5
   coherence_vector_dim: 1024
   function_keyword: [namespace, platform, cluster, rbac]
-  contextual_binding: "eco-base -> []"
+  contextual_binding: "softwareos-base -> []"

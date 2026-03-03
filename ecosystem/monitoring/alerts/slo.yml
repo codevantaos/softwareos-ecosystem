@@ -1,5 +1,5 @@
 groups:
-  - name: eco-base.slo
+  - name: softwareos-base.slo
     interval: 30s
     rules:
       - alert: APIHighErrorRate

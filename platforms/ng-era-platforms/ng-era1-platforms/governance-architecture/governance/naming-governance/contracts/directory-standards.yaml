@@ -224,7 +224,7 @@ spec:
       # 治理目錄
       governance/:
         - governance/policies/
-        - governance/contracts/
+        - governance/softwareos-contracts/
         - governance/validators/
 
   ## 5. 多平台並行架構支援
@@ -270,7 +270,7 @@ spec:
     mid_level:
       - src/                         # 源代碼
       - api/                         # API 定義
-      - contracts/                   # 契約定義
+      - softwareos-contracts/                   # 契約定義
       - configs/                     # 配置
       - deployments/                 # 部署
       - tests/                       # 測試

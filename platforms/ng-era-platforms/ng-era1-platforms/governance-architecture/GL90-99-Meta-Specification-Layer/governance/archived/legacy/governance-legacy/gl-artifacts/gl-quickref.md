@@ -12,9 +12,9 @@
 |----------|-------|------|-------------|
 | GL00-09 | 00-09 | Strategic Layer | Vision, architecture, decision, risk, compliance, security |
 | GL10-29 | 10-29 | Operational Layer | Policy, culture, metrics, improvement, quality |
-| GL30-49 | 30-49 | Execution Layer | Schemas, templates, contracts, automation, tools |
+| GL30-49 | 30-49 | Execution Layer | Schemas, templates, softwareos-contracts, automation, tools |
 | GL50-59 | 50-59 | Observability Layer | Monitoring, alerting, insights |
-| GL60-80 | 60-80 | Advanced/Feedback Layer | AI, contracts, audit, optimization, feedback |
+| GL60-80 | 60-80 | Advanced/Feedback Layer | AI, softwareos-contracts, audit, optimization, feedback |
 | GL81-83 | 81-83 | Extended Layer | Auto-comment, stakeholder, integration |
 | GL90-99 | 90-99 | Meta-Specification Layer | Naming conventions, meta-governance |
 
@@ -58,7 +58,7 @@ Policy, culture, metrics, improvement, quality
 - 29-docs
 
 ### GL30-49: Execution Layer
-Schemas, templates, contracts, automation, tools
+Schemas, templates, softwareos-contracts, automation, tools
 
 **Dimensions:**
 - 26-tools
@@ -70,7 +70,7 @@ Schemas, templates, contracts, automation, tools
 - 34-config
 - 35-scripts
 - 36-modules
-- 37-behavior-contracts
+- 37-behavior-softwareos-contracts
 - 38-sbom
 - 39-automation
 - 40-self-healing
@@ -82,11 +82,11 @@ Monitoring, alerting, insights
 - (To be populated)
 
 ### GL60-80: Advanced/Feedback Layer
-AI, contracts, audit, optimization, feedback
+AI, softwareos-contracts, audit, optimization, feedback
 
 **Dimensions:**
 - 07-audit
-- 60-contracts
+- 60-softwareos-contracts
 - 70-audit
 - 80-feedback
 

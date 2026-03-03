@@ -81,18 +81,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/performance-auto-tuning-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:performance-auto-tuning-config:sha256-5cc33c5e257e34bc015aef532f6dd37ee967702d5abfd542a5d2b424ce38d523
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/performance-auto-tuning-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:performance-auto-tuning-config:sha256-5cc33c5e257e34bc015aef532f6dd37ee967702d5abfd542a5d2b424ce38d523
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: performance-auto-tuning-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: performance-auto-tuning-config
   namespace: production

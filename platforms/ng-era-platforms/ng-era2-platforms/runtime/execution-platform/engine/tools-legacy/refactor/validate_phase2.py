@@ -37,10 +37,10 @@ class Phase2Validator:
             "min_size": 500,
             "required_sections": ["Responsibilities", "Boundaries"],
         },
-        "interface_contracts.yaml": {
+        "interface_softwareos-contracts.yaml": {
             "type": "yaml",
             "description": "API contract definitions",
-            "required_keys": ["contracts", "version"],
+            "required_keys": ["softwareos-contracts", "version"],
         },
         "integration_strategy.md": {
             "type": "markdown",

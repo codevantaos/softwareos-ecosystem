@@ -99,7 +99,7 @@ class PipelineValidator:
             'var/evidence',
             'root-policy',
             'root-policy/naming-convention',
-            'root-contracts',
+            'root-softwareos-contracts',
             'root-evidence',
             'tools'
         ]

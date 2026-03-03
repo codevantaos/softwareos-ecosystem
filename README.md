@@ -1,8 +1,8 @@
-# eco-base v1.0
+# softwareos-base v1.0
 
 > Enterprise cloud-native AI platform -- mono-repository
 
-[![CI](https://github.com/indestructibleorg/eco-base/actions/workflows/ci.yaml/badge.svg)](https://github.com/indestructibleorg/eco-base/actions/workflows/ci.yaml)
+[![CI](https://github.com/indestructibleorg/softwareos-base/actions/workflows/ci.yaml/badge.svg)](https://github.com/indestructibleorg/softwareos-base/actions/workflows/ci.yaml)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-500%20passing-brightgreen.svg)]()
 [![Python](https://img.shields.io/badge/python-3.11+-blue.svg)]()
@@ -10,7 +10,7 @@
 
 ## Overview
 
-eco-base is a production-grade AI inference platform that routes requests across 7 engine backends (vLLM, TGI, Ollama, SGLang, TensorRT-LLM, DeepSpeed, LMDeploy) with automatic failover, circuit breaking, and connection pooling. It provides OpenAI-compatible endpoints, .qyaml governance enforcement, and Argo CD GitOps deployment.
+softwareos-base is a production-grade AI inference platform that routes requests across 7 engine backends (vLLM, TGI, Ollama, SGLang, TensorRT-LLM, DeepSpeed, LMDeploy) with automatic failover, circuit breaking, and connection pooling. It provides OpenAI-compatible endpoints, .qyaml governance enforcement, and Argo CD GitOps deployment.
 
 **Key capabilities:**
 
@@ -27,8 +27,8 @@ eco-base is a production-grade AI inference platform that routes requests across
 
 ```bash
 # Clone
-git clone https://github.com/indestructibleorg/eco-base.git
-cd eco-base
+git clone https://github.com/indestructibleorg/softwareos-base.git
+cd softwareos-base
 
 # Install Python deps
 pip install pydantic fastapi httpx pytest pytest-asyncio jsonschema pyyaml numpy
@@ -52,7 +52,7 @@ open http://localhost:5173          # Web frontend
 ## Architecture
 
 ```
-eco-base/
+softwareos-base/
 +-- src/                          # Root gateway (FastAPI, port 8000)
 |   +-- app.py                    # Application factory + proxy routing
 |   +-- schemas/                  # Pydantic v2 schemas (auth, inference, models)
@@ -126,7 +126,7 @@ All adapters implement a unified interface (`BaseInferenceAdapter`) with `genera
 | 5 | auto-fix | Autonomous repair engine (L1-L5) |
 
 ### Autonomous Closed-Loop System
-eco-base implements a **100% human-free** CI failure resolution system:
+softwareos-base implements a **100% human-free** CI failure resolution system:
 1. **Detection**: `ci-failure-to-issue.yaml` detects failed gates and creates tracked issues with log hashes.
 2. **Diagnosis**: `ci-issue-repair-engine.py` (L2 AI) analyzes logs and identifies root causes.
 3. **Repair**: Automated fix commits are pushed to a repair branch, and a fix PR is created.

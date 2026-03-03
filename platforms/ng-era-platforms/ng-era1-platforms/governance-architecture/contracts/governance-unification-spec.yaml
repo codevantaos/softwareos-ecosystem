@@ -16,8 +16,8 @@ metadata:
   description: "GL Governance Unification Specification - 治理統一規範"
   namespace: gl-platform-ecosystem
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     unification.level: L1
     unification.type: governance
     governance.layer: constitutional
@@ -302,7 +302,7 @@ spec:
             - status
             - version
           response:
-            - contracts[]
+            - softwareos-contracts[]
             - total
       
       ## Platform Governance APIs

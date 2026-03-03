@@ -6,10 +6,10 @@ FROM python:3.11.9-slim AS base
 LABEL org.opencontainers.image.title="govops-platform"
 LABEL org.opencontainers.image.description="Governance Operations Platform"
 LABEL app.kubernetes.io/name="govops-platform"
-LABEL app.kubernetes.io/part-of="eco-base"
+LABEL app.kubernetes.io/part-of="softwareos-base"
 LABEL app.kubernetes.io/managed-by="argocd"
-LABEL eco-base/platform="platform-govops"
-LABEL eco-base/namespace="eco-govops"
+LABEL softwareos-base/platform="platform-govops"
+LABEL softwareos-base/namespace="eco-govops"
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \

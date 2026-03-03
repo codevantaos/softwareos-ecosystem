@@ -39,8 +39,8 @@ naming:
   naming_template: "{{ .environment }}-{{ .app }}-{{ .resource_type }}-{{ .version }}{{ if .suffix }}-{{ .suffix }}{{ end }}"
 
 required_labels:
-  eco-base/part-of: eco-base
-  eco-base/governance: aligned
+  softwareos-base/part-of: softwareos-base
+  softwareos-base/governance: aligned
   - name: "app.kubernetes.io/name"
     value_from: "app"
   - name: "app.kubernetes.io/managed-by"

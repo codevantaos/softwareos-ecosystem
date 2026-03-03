@@ -26,7 +26,7 @@ class ReasoningPipeline:
     Handles user requests through dual-path retrieval and arbitration
     """
     
-    def __init__(self, config_path: str = "ecosystem/contracts/reasoning/dual_path_spec.yaml"):
+    def __init__(self, config_path: str = "ecosystem/softwareos-contracts/reasoning/dual_path_spec.yaml"):
         """Initialize reasoning pipeline"""
         self.config_path = config_path
         

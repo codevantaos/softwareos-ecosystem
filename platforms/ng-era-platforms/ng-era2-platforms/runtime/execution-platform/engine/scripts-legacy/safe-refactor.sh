@@ -46,9 +46,9 @@ create_backup() {
         log_info "已備份：workspace/src/core/"
     fi
     
-    if [ -d "workspace/src/contracts" ]; then
-        cp -r workspace/src/contracts "$BACKUP_DIR/"
-        log_info "已備份：workspace/src/contracts/"
+    if [ -d "workspace/src/softwareos-contracts" ]; then
+        cp -r workspace/src/softwareos-contracts "$BACKUP_DIR/"
+        log_info "已備份：workspace/src/softwareos-contracts/"
     fi
     
     if [ -d "workspace/src/web" ]; then
@@ -143,37 +143,37 @@ EOF
 phase2() {
     log_info "開始 Phase 2：解決重複..."
     
-    # 1. 合併 contracts/
-    if [ -d "workspace/src/core/contracts" ]; then
-        log_warn "發現重複的 contracts/ 目錄"
+    # 1. 合併 softwareos-contracts/
+    if [ -d "workspace/src/core/softwareos-contracts" ]; then
+        log_warn "發現重複的 softwareos-contracts/ 目錄"
         
         # 檢查引用
-        log_info "檢查 contracts 引用..."
-        grep -r "from core\.contracts" workspace/src/ > "$BACKUP_DIR/contracts-imports.txt" || true
-        grep -r "import.*core\.contracts" workspace/src/ >> "$BACKUP_DIR/contracts-imports.txt" || true
+        log_info "檢查 softwareos-contracts 引用..."
+        grep -r "from core\.softwareos-contracts" workspace/src/ > "$BACKUP_DIR/softwareos-contracts-imports.txt" || true
+        grep -r "import.*core\.softwareos-contracts" workspace/src/ >> "$BACKUP_DIR/softwareos-contracts-imports.txt" || true
         
-        if [ -s "$BACKUP_DIR/contracts-imports.txt" ]; then
-            log_info "發現 $(wc -l < "$BACKUP_DIR/contracts-imports.txt") 個引用"
+        if [ -s "$BACKUP_DIR/softwareos-contracts-imports.txt" ]; then
+            log_info "發現 $(wc -l < "$BACKUP_DIR/softwareos-contracts-imports.txt") 個引用"
         fi
         
         # 比較差異
-        log_info "比較 contracts/ 目錄差異..."
-        diff -r workspace/src/contracts/ workspace/src/core/contracts/ > "$BACKUP_DIR/contracts-diff.txt" || true
+        log_info "比較 softwareos-contracts/ 目錄差異..."
+        diff -r workspace/src/softwareos-contracts/ workspace/src/core/softwareos-contracts/ > "$BACKUP_DIR/softwareos-contracts-diff.txt" || true
         
         # 備份並刪除
         log_info "備份舊目錄..."
-        mv workspace/src/core/contracts workspace/src/core/contracts.backup
+        mv workspace/src/core/softwareos-contracts workspace/src/core/softwareos-contracts.backup
         
         # 更新引用
-        log_info "更新 contracts 引用..."
-        find workspace/src/ -name "*.py" -exec sed -i 's/from core\.contracts/from contracts/g' {} \;
-        find workspace/src/ -name "*.py" -exec sed -i 's/import core\.contracts/import contracts/g' {} \;
+        log_info "更新 softwareos-contracts 引用..."
+        find workspace/src/ -name "*.py" -exec sed -i 's/from core\.softwareos-contracts/from softwareos-contracts/g' {} \;
+        find workspace/src/ -name "*.py" -exec sed -i 's/import core\.softwareos-contracts/import softwareos-contracts/g' {} \;
         
-        log_info "✅ 已備份並刪除 core/contracts/"
-        log_warn "請人工審查並更新 contracts 相關的導入引用"
-        log_info "引用清單已保存到：$BACKUP_DIR/contracts-imports.txt"
+        log_info "✅ 已備份並刪除 core/softwareos-contracts/"
+        log_warn "請人工審查並更新 softwareos-contracts 相關的導入引用"
+        log_info "引用清單已保存到：$BACKUP_DIR/softwareos-contracts-imports.txt"
     else
-        log_warn "core/contracts/ 不存在，跳過"
+        log_warn "core/softwareos-contracts/ 不存在，跳過"
     fi
     
     # 2. 整合 contract_service/
@@ -311,10 +311,10 @@ rollback() {
         cp -r "$BACKUP_DIR/core" workspace/src/
     fi
     
-    if [ -d "$BACKUP_DIR/contracts" ]; then
-        log_info "恢復 workspace/src/contracts/..."
-        rm -rf workspace/src/contracts
-        cp -r "$BACKUP_DIR/contracts" workspace/src/
+    if [ -d "$BACKUP_DIR/softwareos-contracts" ]; then
+        log_info "恢復 workspace/src/softwareos-contracts/..."
+        rm -rf workspace/src/softwareos-contracts
+        cp -r "$BACKUP_DIR/softwareos-contracts" workspace/src/
     fi
     
     if [ -d "$BACKUP_DIR/web" ]; then

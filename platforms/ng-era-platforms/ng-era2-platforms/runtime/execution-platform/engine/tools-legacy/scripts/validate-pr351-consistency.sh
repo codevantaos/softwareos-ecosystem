@@ -22,7 +22,7 @@ echo "✓ Test 1: Checking policy ID references..."
 POLICY_IDS=("SEC-PATH-001" "SEC-LOG-001" "SEC-CRYPTO-001")
 REQUIRED_FILES=(
   "governance/10-policy/base-policies/security-policies.yaml"
-  "governance/37-behavior-contracts/core.slsa_provenance.yaml"
+  "governance/37-behavior-softwareos-contracts/core.slsa_provenance.yaml"
   "config/unified-config-index.yaml"
   "${CONFIG_TARGET}"
 )
@@ -46,7 +46,7 @@ echo ""
 echo "✓ Test 2: Checking SAFE_ROOT_PATH references..."
 SAFE_ROOT_FILES=(
   ".env.example"
-  "core/contract_service/contracts-L1/contracts/src/services/provenance.ts"
+  "core/contract_service/softwareos-contracts-L1/softwareos-contracts/src/services/provenance.ts"
   "docs/security/PR351_SECURITY_ENHANCEMENTS.md"
 )
 
@@ -92,7 +92,7 @@ echo ""
 # Test 4: Error Class Consistency
 # ═══════════════════════════════════════════════════════════════════════════
 echo "✓ Test 4: Checking error class consistency..."
-ERROR_FILE="${PROJECT_ROOT}/core/contract_service/contracts-L1/contracts/src/errors/AppError.ts"
+ERROR_FILE="${PROJECT_ROOT}/core/contract_service/softwareos-contracts-L1/softwareos-contracts/src/errors/AppError.ts"
 
 if [ ! -f "${ERROR_FILE}" ]; then
   echo "  ✗ FAIL: AppError.ts not found"
@@ -114,7 +114,7 @@ echo ""
 # Test 5: Service Method Consistency
 # ═══════════════════════════════════════════════════════════════════════════
 echo "✓ Test 5: Checking service method consistency..."
-PROVENANCE_FILE="${PROJECT_ROOT}/core/contract_service/contracts-L1/contracts/src/services/provenance.ts"
+PROVENANCE_FILE="${PROJECT_ROOT}/core/contract_service/softwareos-contracts-L1/softwareos-contracts/src/services/provenance.ts"
 
 if [ ! -f "${PROVENANCE_FILE}" ]; then
   echo "  ✗ FAIL: provenance.ts not found"

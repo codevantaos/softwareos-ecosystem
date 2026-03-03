@@ -4,7 +4,7 @@ Runs as a background asyncio task during the application lifespan.
 Periodically re-probes engines, recovers half-open circuits, syncs
 model registry with engine availability, and cleans up stale worker jobs.
 
-URI: eco-base://backend/ai/services/health_monitor
+URI: softwareos-base://backend/ai/services/health_monitor
 """
 
 from __future__ import annotations

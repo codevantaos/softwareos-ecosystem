@@ -1,7 +1,7 @@
-# eco-base - Complete Token Manifest
+# softwareos-base - Complete Token Manifest
 
 **Date**: February 21, 2026
-**Project**: eco-base
+**Project**: softwareos-base
 **Environment**: Production
 
 ---
@@ -11,7 +11,7 @@
 ### Service Account Details
 
 - **Email**: `eco-deployer@my-project-ops-1991.iam.gserviceaccount.com`
-- **Name**: eco-base Deployer
+- **Name**: softwareos-base Deployer
 - **Key ID**: `YOUR_GCP_SA_KEY_ID`
 
 ### Permissions
@@ -46,7 +46,7 @@
 
 ### Project Details
 
-- **Project Name**: eco-base
+- **Project Name**: softwareos-base
 - **Project Reference**: `yrfxijooswpvdpdseswy`
 - **Project URL**: `https://yrfxijooswpvdpdseswy.supabase.co`
 - **Region**: ap-south-1
@@ -116,7 +116,7 @@ postgresql://postgres:YOUR_PASSWORD@db.yrfxijooswpvdpdseswy.supabase.co:5432/pos
 
 - **Endpoint**: `https://yrfxijooswpvdpdseswy.storage.supabase.co/storage/v1/s3`
 - **Region**: `ap-south-1`
-- **Bucket**: `autoecoops_keys`
+- **Bucket**: `softwareos_keys`
 - **Access Key**: `YOUR_S3_ACCESS_KEY`
 
 ### Edge Functions
@@ -140,7 +140,7 @@ curl -L -X POST 'https://YOUR_PROJECT_REF.supabase.co/functions/v1/hello-world' 
 
 ### Custom Hostname
 
-- **Hostname**: `_cf-custom-hostname.autoecoops.io`
+- **Hostname**: `_cf-custom-hostname.softwareos.io`
 - **Hostname ID**: `21c5d22a-4512-485b-9557-8aa9fa7c96ed`
 
 ### SSL/TLS Certificates
@@ -202,14 +202,14 @@ export SUPABASE_PROJECT_REF="yrfxijooswpvdpdseswy"
 ### Cloudflare Environment Variables
 
 ```bash
-export CLOUDFLARE_CUSTOM_HOSTNAME="_cf-custom-hostname.autoecoops.io"
+export CLOUDFLARE_CUSTOM_HOSTNAME="_cf-custom-hostname.softwareos.io"
 export CLOUDFLARE_HOSTNAME_ID="21c5d22a-4512-485b-9557-8aa9fa7c96ed"
 ```
 
 ### Monitoring Environment Variables
 ```bash
-export PROMETHEUS_URL="https://prometheus._cf-custom-hostname.autoecoops.io"
-export GRAFANA_URL="https://grafana._cf-custom-hostname.autoecoops.io"
+export PROMETHEUS_URL="https://prometheus._cf-custom-hostname.softwareos.io"
+export GRAFANA_URL="https://grafana._cf-custom-hostname.softwareos.io"
 export GRAFANA_ADMIN_USER="admin"
 export GRAFANA_ADMIN_PASSWORD="YOUR_SECURE_PASSWORD"
 ```
@@ -253,14 +253,14 @@ export GRAFANA_ADMIN_PASSWORD="YOUR_SECURE_PASSWORD"
 
 ### Supabase Support
 
-- **Project**: eco-base
+- **Project**: softwareos-base
 - **Reference**: yrfxijooswpvdpdseswy
 - **Dashboard**: https://supabase.com/dashboard/project/yrfxijooswpvdpdseswy
 
 ### Cloudflare Support
 
 - **Account**: indestructibleorg
-- **Custom Hostname**: _cf-custom-hostname.autoecoops.io
+- **Custom Hostname**: _cf-custom-hostname.softwareos.io
 
 ---
 

@@ -7,12 +7,12 @@ metadata:
     generated-by: yaml-toolkit-v1
     unique-id: "6ba7b81c-9dad-11d1-80b4-00c04fd430c8"
   annotations:
-    eco-base/uri: "eco-base://k8s/cluster/clusterissuer/letsencrypt-prod"
-    eco-base/urn: "urn:eco-base:k8s:cluster:clusterissuer:letsencrypt-prod:6ba7b81c-9dad-11d1-80b4-00c04fd430c8"
+    softwareos-base/uri: "softwareos-base://k8s/cluster/clusterissuer/letsencrypt-prod"
+    softwareos-base/urn: "urn:softwareos-base:k8s:cluster:clusterissuer:letsencrypt-prod:6ba7b81c-9dad-11d1-80b4-00c04fd430c8"
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: platform-team@autoecoops.io
+    email: platform-team@softwareos.io
     privateKeySecretRef:
       name: letsencrypt-prod-key
     solvers:
@@ -23,15 +23,15 @@ spec:
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: eco-base-mtls-ca
-  namespace: eco-base
+  name: softwareos-base-mtls-ca
+  namespace: softwareos-base
   labels:
     generated-by: yaml-toolkit-v1
   annotations:
-    eco-base/uri: "eco-base://k8s/eco-base/certificate/mtls-ca"
+    softwareos-base/uri: "softwareos-base://k8s/softwareos-base/certificate/mtls-ca"
 spec:
   isCA: true
-  commonName: eco-base-mtls-ca
+  commonName: softwareos-base-mtls-ca
   secretName: mtls-ca-secret
   privateKey:
     algorithm: ECDSA
@@ -47,7 +47,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: api-service-mtls
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     generated-by: yaml-toolkit-v1
     app: api
@@ -55,22 +55,22 @@ spec:
   secretName: api-mtls-cert
   duration: 2160h
   renewBefore: 360h
-  commonName: api-service.eco-base.svc.cluster.local
+  commonName: api-service.softwareos-base.svc.cluster.local
   dnsNames:
   - api-service
-  - api-service.eco-base
-  - api-service.eco-base.svc
-  - api-service.eco-base.svc.cluster.local
-  - api-svc.eco-base.svc.cluster.local
+  - api-service.softwareos-base
+  - api-service.softwareos-base.svc
+  - api-service.softwareos-base.svc.cluster.local
+  - api-svc.softwareos-base.svc.cluster.local
   issuerRef:
-    name: eco-base-mtls-ca
+    name: softwareos-base-mtls-ca
     kind: Issuer
 ---
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: ai-service-mtls
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     generated-by: yaml-toolkit-v1
     app: ai
@@ -78,22 +78,22 @@ spec:
   secretName: ai-mtls-cert
   duration: 2160h
   renewBefore: 360h
-  commonName: ai-service.eco-base.svc.cluster.local
+  commonName: ai-service.softwareos-base.svc.cluster.local
   dnsNames:
   - ai-service
-  - ai-service.eco-base
-  - ai-service.eco-base.svc
-  - ai-service.eco-base.svc.cluster.local
-  - ai-svc.eco-base.svc.cluster.local
+  - ai-service.softwareos-base
+  - ai-service.softwareos-base.svc
+  - ai-service.softwareos-base.svc.cluster.local
+  - ai-svc.softwareos-base.svc.cluster.local
   issuerRef:
-    name: eco-base-mtls-ca
+    name: softwareos-base-mtls-ca
     kind: Issuer
 ---
 # YAML Toolkit v8 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "6ba7b81c-9dad-11d1-80b4-00c04fd430c8"
-  uri: "eco-base://k8s/cluster/clusterissuer/letsencrypt-prod"
-  urn: "urn:eco-base:k8s:cluster:clusterissuer:letsencrypt-prod:6ba7b81c-9dad-11d1-80b4-00c04fd430c8"
+  uri: "softwareos-base://k8s/cluster/clusterissuer/letsencrypt-prod"
+  urn: "urn:softwareos-base:k8s:cluster:clusterissuer:letsencrypt-prod:6ba7b81c-9dad-11d1-80b4-00c04fd430c8"
   target_system: gke-production
   cross_layer_binding: [cert-manager, api-service, ai-service, ingress-nginx]
   schema_version: v8

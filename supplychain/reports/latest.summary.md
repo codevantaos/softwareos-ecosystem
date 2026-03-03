@@ -16,7 +16,7 @@
 
 | 資源名稱 (Name) | 種類 (Kind) | 平台 (Platform) | 內容哈希 (SHA256) |
 | :--- | :--- | :--- | :--- |
-| argocd-repo-eco-base | Secret | core | `3f9b3a50d8d4f341...` |
+| argocd-repo-softwareos-base | Secret | core | `3f9b3a50d8d4f341...` |
 | circleci-agent-config | ConfigMap | core | `21a44144da79099d...` |
 | circleci-agent | Deployment | core | `24065a84b17e8cb2...` |
 | circleci-runner-secrets | Secret | core | `25ee2bd7d74f8b81...` |

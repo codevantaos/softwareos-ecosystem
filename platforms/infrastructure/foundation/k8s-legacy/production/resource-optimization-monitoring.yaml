@@ -4,11 +4,11 @@ data:
   resource-optimization.yaml: "# Resource utilization monitoring configuration\nresourceOptimization:\n\
     \  enabled: true\n  \n  # CPU optimization\n  cpu:\n    enabled: true\n    interval:\
     \ 1m\n    \n    monitoring:\n      - name: cpu-utilization\n        metric: container_cpu_usage_seconds_total\n\
-    \        labels:\neco-base/part-of: eco-base\neco-base/governance: aligned\n \
+    \        labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n \
     \         - pod\n          - container\n          - namespace\n        aggregation:\
     \ rate\n        window: 5m\n      \n      - name: cpu-throttling\n        metric:\
-    \ container_cpu_cfs_throttled_seconds_total\n        labels:\neco-base/part-of:\
-    \ eco-base\neco-base/governance: aligned\n          - pod\n          - container\n\
+    \ container_cpu_cfs_throttled_seconds_total\n        labels:\nsoftwareos-base/part-of:\
+    \ softwareos-base\nsoftwareos-base/governance: aligned\n          - pod\n          - container\n\
     \        aggregation: rate\n        window: 5m\n      \n      - name: cpu-request-utilization\n\
     \        metric: container_cpu_usage_seconds_total / kube_pod_container_resource_requests{resource=\"\
     cpu\"}\n        aggregation: rate\n        window: 5m\n    \n    thresholds:\n\
@@ -21,13 +21,13 @@ data:
     \        minIncrease: 10%\n        maxIncrease: 50%\n  \n  # Memory optimization\n\
     \  memory:\n    enabled: true\n    interval: 1m\n    \n    monitoring:\n     \
     \ - name: memory-utilization\n        metric: container_memory_working_set_bytes\n\
-    \        labels:\neco-base/part-of: eco-base\neco-base/governance: aligned\n \
+    \        labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n \
     \         - pod\n          - container\n          - namespace\n        aggregation:\
     \ avg\n        window: 5m\n      \n      - name: memory-request-utilization\n\
     \        metric: container_memory_working_set_bytes / kube_pod_container_resource_requests{resource=\"\
     memory\"}\n        aggregation: avg\n        window: 5m\n      \n      - name:\
     \ memory-usage-by-component\n        metric: go_memstats_heap_inuse_bytes\n  \
-    \      labels:\neco-base/part-of: eco-base\neco-base/governance: aligned\n   \
+    \      labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n   \
     \       - pod\n          - component\n        aggregation: avg\n        window:\
     \ 5m\n    \n    thresholds:\n      optimal:\n        min: 70\n        max: 90\n\
     \      warning:\n        min: 50\n        max: 95\n      critical:\n        min:\
@@ -38,14 +38,14 @@ data:
     \   action: increase-limits\n        minIncrease: 20%\n        maxIncrease: 100%\n\
     \  \n  # Storage optimization\n  storage:\n    enabled: true\n    interval: 5m\n\
     \    \n    monitoring:\n      - name: disk-utilization\n        metric: kubelet_volume_stats_used_bytes\
-    \ / kubelet_volume_stats_capacity_bytes\n        labels:\neco-base/part-of: eco-base\n\
-    eco-base/governance: aligned\n          - pod\n          - namespace\n       \
+    \ / kubelet_volume_stats_capacity_bytes\n        labels:\nsoftwareos-base/part-of: softwareos-base\n\
+    softwareos-base/governance: aligned\n          - pod\n          - namespace\n       \
     \   - persistentvolumeclaim\n        aggregation: avg\n        window: 5m\n  \
     \    \n      - name: disk-io\n        metric: node_disk_io_time_seconds_total\n\
-    \        labels:\neco-base/part-of: eco-base\neco-base/governance: aligned\n \
+    \        labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n \
     \         - node\n          - device\n        aggregation: rate\n        window:\
     \ 5m\n      \n      - name: disk-throughput\n        metric: node_disk_io_time_seconds_total\n\
-    \        labels:\neco-base/part-of: eco-base\neco-base/governance: aligned\n \
+    \        labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n \
     \         - node\n          - device\n        aggregation: rate\n        window:\
     \ 5m\n    \n    thresholds:\n      optimal:\n        min: 40\n        max: 80\n\
     \      warning:\n        min: 30\n        max: 85\n      critical:\n        min:\
@@ -57,15 +57,15 @@ data:
     \        strategies:\n          - increase-iops\n          - enable-caching\n\
     \          - distribute-io\n  \n  # Network optimization\n  network:\n    enabled:\
     \ true\n    interval: 1m\n    \n    monitoring:\n      - name: network-inbound\n\
-    \        metric: container_network_receive_bytes_total\n        labels:\neco-base/part-of:\
-    \ eco-base\neco-base/governance: aligned\n          - pod\n          - namespace\n\
+    \        metric: container_network_receive_bytes_total\n        labels:\nsoftwareos-base/part-of:\
+    \ softwareos-base\nsoftwareos-base/governance: aligned\n          - pod\n          - namespace\n\
     \          - interface\n        aggregation: rate\n        window: 5m\n      \n\
     \      - name: network-outbound\n        metric: container_network_transmit_bytes_total\n\
-    \        labels:\neco-base/part-of: eco-base\neco-base/governance: aligned\n \
+    \        labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n \
     \         - pod\n          - namespace\n          - interface\n        aggregation:\
     \ rate\n        window: 5m\n      \n      - name: network-connections\n      \
-    \  metric: net_conntrack_bytes\n        labels:\neco-base/part-of: eco-base\n\
-    eco-base/governance: aligned\n          - node\n        aggregation: avg\n   \
+    \  metric: net_conntrack_bytes\n        labels:\nsoftwareos-base/part-of: softwareos-base\n\
+    softwareos-base/governance: aligned\n          - node\n        aggregation: avg\n   \
     \     window: 5m\n    \n    thresholds:\n      optimal:\n        min: 10\n   \
     \     max: 70\n        unit: Mbps\n      warning:\n        min: 5\n        max:\
     \ 85\n        unit: Mbps\n      critical:\n        min: 0\n        max: 95\n \
@@ -76,13 +76,13 @@ data:
     \     - increase-bandwidth\n          - distribute-load\n          - enable-cdn\n\
     \  \n  # Pod optimization\n  pods:\n    enabled: true\n    interval: 2m\n    \n\
     \    monitoring:\n      - name: pod-count\n        metric: kube_pod_status_phase{phase=\"\
-    Running\"}\n        labels:\neco-base/part-of: eco-base\neco-base/governance:\
+    Running\"}\n        labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance:\
     \ aligned\n          - namespace\n        aggregation: count\n        window:\
     \ 5m\n      \n      - name: pod-restart-rate\n        metric: increase(kube_pod_container_status_restarts_total[1h])\n\
-    \        labels:\neco-base/part-of: eco-base\neco-base/governance: aligned\n \
+    \        labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n \
     \         - pod\n          - namespace\n        aggregation: sum\n        window:\
     \ 1h\n      \n      - name: pod-age\n        metric: kube_pod_created\n      \
-    \  labels:\neco-base/part-of: eco-base\neco-base/governance: aligned\n       \
+    \  labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n       \
     \   - pod\n          - namespace\n        aggregation: avg\n        window: 24h\n\
     \    \n    thresholds:\n      optimal:\n        minPods: 9\n        maxPods: 30\n\
     \        maxRestarts: 5\n      warning:\n        minPods: 6\n        maxPods:\
@@ -115,18 +115,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/resource-optimization-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:resource-optimization-config:sha256-323baafa13fca6bea58acd4c93ea683f64827e3d5799dd102268379513252138
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/resource-optimization-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:resource-optimization-config:sha256-323baafa13fca6bea58acd4c93ea683f64827e3d5799dd102268379513252138
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: resource-optimization-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: resource-optimization-config
   namespace: production

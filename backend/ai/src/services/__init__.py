@@ -1,7 +1,7 @@
-"""eco-base AI Services — Engine management, connection pooling, circuit breaking,
+"""softwareos-base AI Services — Engine management, connection pooling, circuit breaking,
 async worker, gRPC server, embedding.
 
-URI: eco-base://backend/ai/services
+URI: softwareos-base://backend/ai/services
 """
 
 from .circuit_breaker import CircuitBreaker, CircuitState

@@ -3,19 +3,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/seccompops-engine
-    eco-base/urn: urn:eco-base:k8s:core:deployment:seccompops-engine:sha256-8e40d1908de4e66965da5ba64c8991913bae0028c8ca6f7798340dfc558b443c
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/seccompops-engine
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:seccompops-engine:sha256-8e40d1908de4e66965da5ba64c8991913bae0028c8ca6f7798340dfc558b443c
   labels:
     app.kubernetes.io/component: api
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: seccompops-engine
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: seccompops-engine
   namespace: eco-seccompops
 spec:
@@ -94,19 +94,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/seccompops-enforcer
-    eco-base/urn: urn:eco-base:k8s:core:deployment:seccompops-enforcer:sha256-9d2a05ac02a7cc2de5ebb12e35a13d9194f2f3e78662c1850b5e676739a4ca8e
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/seccompops-enforcer
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:seccompops-enforcer:sha256-9d2a05ac02a7cc2de5ebb12e35a13d9194f2f3e78662c1850b5e676739a4ca8e
   labels:
     app.kubernetes.io/component: worker
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: seccompops-enforcer
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: seccompops-enforcer
   namespace: eco-seccompops
 spec:
@@ -148,19 +148,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/seccompops-auditor
-    eco-base/urn: urn:eco-base:k8s:core:deployment:seccompops-auditor:sha256-5db736596024c3f491211c9a7135a584cf8d83843116cc679cf7fadcb58550a3
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/seccompops-auditor
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:seccompops-auditor:sha256-5db736596024c3f491211c9a7135a584cf8d83843116cc679cf7fadcb58550a3
   labels:
     app.kubernetes.io/component: worker
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: seccompops-auditor
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: seccompops-auditor
   namespace: eco-seccompops
 spec:

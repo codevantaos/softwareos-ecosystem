@@ -16,7 +16,7 @@
 set -euo pipefail
 
 : "${PROBLEM_DESCRIPTION:?PROBLEM_DESCRIPTION is required}"
-: "${MEMORY_HUB_URL:=http://memory-hub.eco-base.svc.cluster.local:8080}"
+: "${MEMORY_HUB_URL:=http://codevantaos-memory.softwareos-base.svc.cluster.local:8080}"
 : "${AUTH_TOKEN:?AUTH_TOKEN is required}"
 
 echo "=== Phase 2b: Retrieve Knowledge ==="

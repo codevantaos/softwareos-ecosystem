@@ -45,14 +45,14 @@ gl-data-processing/
 │   ├── .governance/             # Governance artifacts
 │   ├── controlplane/            # Control plane operations
 │   ├── governance/              # Governance compliance
-│   ├── root-contracts/          # Root contracts
+│   ├── root-softwareos-contracts/          # Root softwareos-contracts
 │   ├── root-evidence/           # Evidence artifacts
 │   ├── root-policy/             # Policy definitions
 │   ├── tools/                   # Data processing tools
 │   ├── var/                     # Variable data
 │   └── workspace/               # Workspace files
 ├── governance/                   # Governance compliance
-│   ├── contracts/               # Layer contracts
+│   ├── softwareos-contracts/               # Layer softwareos-contracts
 │   ├── policies/                # Enforcement policies
 │   └── validators/              # Validation rules
 ├── src/                         # Source code
@@ -125,7 +125,7 @@ The execution layer can use data processing services:
 ## Interaction Rules
 
 ### Allowed Interactions
-- ✅ Consume governance contracts from GL00-09
+- ✅ Consume governance softwareos-contracts from GL00-09
 - ✅ Use platform services from GL10-29
 - ✅ Provide data services to execution layer
 - ✅ Publish metrics to observability
@@ -190,7 +190,7 @@ spec:
 
 ## Compliance
 
-This layer is **REGULATORY** - all data operations must follow defined contracts and quality standards.
+This layer is **REGULATORY** - all data operations must follow defined softwareos-contracts and quality standards.
 
 ## Version
 

@@ -1,4 +1,4 @@
-# GKE Operations Guide — eco-base
+# GKE Operations Guide — softwareos-base
 
 ## Cluster Information
 
@@ -26,8 +26,8 @@ All application pods use standardized resources:
 
 ### Endpoints
 
-- `http://staging.autoecoops.io` → Web frontend
-- `http://api-staging.autoecoops.io` → API gateway
+- `http://staging.softwareos.io` → Web frontend
+- `http://api-staging.softwareos.io` → API gateway
 - SSL certificate: Provisioning via GKE ManagedCertificate
 
 ### Static IPs
@@ -118,7 +118,7 @@ Once the ManagedCertificate status is `Active`, re-enable Cloudflare proxy for p
 
 ## Cloudflare DNS Configuration
 
-### Zone: autoecoops.io (ID: YOUR_CLOUDFLARE_ZONE_ID)
+### Zone: softwareos.io (ID: YOUR_CLOUDFLARE_ZONE_ID)
 
 | Record | Type | Value | Proxied | Purpose |
 |--------|------|-------|---------|---------|
@@ -126,7 +126,7 @@ Once the ManagedCertificate status is `Active`, re-enable Cloudflare proxy for p
 | api-staging | A | 34.102.242.107 | No (DNS-only) | GKE staging API |
 | production | A | 34.107.200.53 | Yes | GKE production ingress |
 | api-production | A | 34.107.200.53 | Yes | GKE production API |
-| autoecoops.io | A×4 | 185.199.108-111.153 | No | GitHub Pages |
+| softwareos.io | A×4 | 185.199.108-111.153 | No | GitHub Pages |
 | www | CNAME | indestructibleorg.github.io | No | GitHub Pages |
 
 **Note**: Staging DNS records are set to DNS-only (not proxied) to allow GKE ManagedCertificate domain verification. Once certificates are active, re-enable Cloudflare proxy.

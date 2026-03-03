@@ -3,41 +3,41 @@ apiVersion: v1
 data:
   custom-metrics.yaml: "# Custom metrics configuration for enhanced observability\n\
     metrics:\n# Request latency metrics\n- name: request_latency_ms\n  kind: GAUGE\n\
-    \  description: Request latency in milliseconds\n  labels:\neco-base/part-of:\
-    \ eco-base\neco-base/governance: aligned\n    - source_service\n    - destination_service\n\
+    \  description: Request latency in milliseconds\n  labels:\nsoftwareos-base/part-of:\
+    \ softwareos-base\nsoftwareos-base/governance: aligned\n    - source_service\n    - destination_service\n\
     \    - response_code\n    - method\n    - path\n# Traffic metrics\n- name: request_count\n\
-    \  kind: COUNTER\n  description: Total request count\n  labels:\neco-base/part-of:\
-    \ eco-base\neco-base/governance: aligned\n    - source_service\n    - destination_service\n\
+    \  kind: COUNTER\n  description: Total request count\n  labels:\nsoftwareos-base/part-of:\
+    \ softwareos-base\nsoftwareos-base/governance: aligned\n    - source_service\n    - destination_service\n\
     \    - response_code\n    - method\n# Error rate metrics\n- name: error_rate\n\
-    \  kind: GAUGE\n  description: Error rate percentage\n  labels:\neco-base/part-of:\
-    \ eco-base\neco-base/governance: aligned\n    - source_service\n    - destination_service\n\
+    \  kind: GAUGE\n  description: Error rate percentage\n  labels:\nsoftwareos-base/part-of:\
+    \ softwareos-base\nsoftwareos-base/governance: aligned\n    - source_service\n    - destination_service\n\
     \    - error_type\n# Circuit breaker metrics\n- name: circuit_breaker_state\n\
-    \  kind: GAUGE\n  description: Circuit breaker state\n  labels:\neco-base/part-of:\
-    \ eco-base\neco-base/governance: aligned\n    - destination_service\n    - state\n\
+    \  kind: GAUGE\n  description: Circuit breaker state\n  labels:\nsoftwareos-base/part-of:\
+    \ softwareos-base\nsoftwareos-base/governance: aligned\n    - destination_service\n    - state\n\
     # Retry metrics\n- name: retry_count\n  kind: COUNTER\n  description: Total retry\
-    \ attempts\n  labels:\neco-base/part-of: eco-base\neco-base/governance: aligned\n\
+    \ attempts\n  labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n\
     \    - source_service\n    - destination_service\n    - reason\n# Connection pool\
     \ metrics\n- name: active_connections\n  kind: GAUGE\n  description: Active connections\
-    \ count\n  labels:\neco-base/part-of: eco-base\neco-base/governance: aligned\n\
+    \ count\n  labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n\
     \    - destination_service\n- name: pending_requests\n  kind: GAUGE\n  description:\
-    \ Pending requests count\n  labels:\neco-base/part-of: eco-base\neco-base/governance:\
+    \ Pending requests count\n  labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance:\
     \ aligned\n    - destination_service\n"
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/istio-custom-metrics
-    eco-base/urn: urn:eco-base:k8s:core:configmap:istio-custom-metrics:sha256-5b8d9d41b67859b331b019d8575ef58ac2960f39dde34b2c59c4d5bbf7182e35
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/istio-custom-metrics
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:istio-custom-metrics:sha256-5b8d9d41b67859b331b019d8575ef58ac2960f39dde34b2c59c4d5bbf7182e35
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: istio-custom-metrics
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: istio-custom-metrics
   namespace: istio-system
 ---
@@ -45,12 +45,12 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   annotations:
-    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/service-observability.yaml
-    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:service-observability.yaml
+    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/service-observability.yaml
+    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:service-observability.yaml
   labels:
     app.kubernetes.io/name: istio-pilot
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
   name: istio-custom-metrics-monitor
   namespace: istio-system
 spec:
@@ -92,21 +92,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/service-mesh-dashboard
-    eco-base/urn: urn:eco-base:k8s:core:configmap:service-mesh-dashboard:sha256-7641c9114a1ed544fae10dc5510ccd49ce40ec8b0437d458e5e02e8ecea36680
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/service-mesh-dashboard
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:service-mesh-dashboard:sha256-7641c9114a1ed544fae10dc5510ccd49ce40ec8b0437d458e5e02e8ecea36680
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: service-mesh-dashboard
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     grafana_dashboard: '1'
   name: service-mesh-dashboard
   namespace: istio-system
@@ -115,8 +115,8 @@ apiVersion: telemetry.istio.io/v1alpha1
 kind: Telemetry
 metadata:
   annotations:
-    eco-base/uri: eco-base://platform/resource/infrastructure/foundation/k8s-legacy/production/service-observability.yaml
-    eco-base/urn: urn:eco-base:platform:resource:infrastructure:foundation:k8s-legacy:production:service-observability.yaml
+    softwareos-base/uri: softwareos-base://platform/resource/infrastructure/foundation/k8s-legacy/production/service-observability.yaml
+    softwareos-base/urn: urn:softwareos-base:platform:resource:infrastructure:foundation:k8s-legacy:production:service-observability.yaml
   name: mesh-default
   namespace: istio-system
 spec:

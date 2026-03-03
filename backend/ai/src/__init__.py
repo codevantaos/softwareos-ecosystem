@@ -1,2 +1,2 @@
-"""eco-base AI Engine Service."""
+"""softwareos-base AI Engine Service."""
 __version__ = "1.0.0"

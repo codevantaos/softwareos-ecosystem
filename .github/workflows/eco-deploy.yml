@@ -8,10 +8,10 @@ on:
 
 env:
   REGISTRY: asia-east1-docker.pkg.dev
-  IMAGE_NAME: eco-base/app
+  IMAGE_NAME: softwareos-base/app
   GCP_PROJECT_ID: my-project-ops-1991
   GCP_REGION: asia-east1
-  GKE_CLUSTER: eco-base-gke
+  GKE_CLUSTER: softwareos-base-gke
 
 jobs:
   # Stage 1: Code Quality & Security Scanning
@@ -51,7 +51,7 @@ jobs:
             curl -sSLo sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-6.2.1.4610-linux-x64.zip
             unzip -q sonar-scanner.zip
             ./sonar-scanner-6.2.1.4610-linux-x64/bin/sonar-scanner \
-              -Dsonar.projectKey=indestructibleorg_eco-base \
+              -Dsonar.projectKey=indestructibleorg_softwareos-base \
               -Dsonar.organization=indestructibleorg \
               -Dsonar.host.url=https://sonarcloud.io \
               -Dsonar.token="$SONAR_TOKEN"

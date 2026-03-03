@@ -47,7 +47,7 @@ platforms/
 │   │   │   ├── resource.py        # ResourceLimits, ResourceMonitor
 │   │   │   ├── network.py         # NetworkPolicy, NetworkNamespace
 │   │   │   └── storage.py         # VolumeManager, VolumeMount
-│   │   ├── protocols/             # Cross-cutting contracts
+│   │   ├── protocols/             # Cross-cutting softwareos-contracts
 │   │   │   ├── engine.py          # Engine protocol
 │   │   │   ├── event_bus.py       # EventBus + LocalEventBus
 │   │   │   ├── health.py          # HealthCheck + HealthReport

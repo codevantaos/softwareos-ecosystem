@@ -49,7 +49,7 @@ from typing import Any, Optional
 
 # ─── Configuration ────────────────────────────────────────────────────────────
 
-REPO = os.environ.get("GITHUB_REPOSITORY", "indestructibleorg/eco-base")
+REPO = os.environ.get("GITHUB_REPOSITORY", "indestructibleorg/softwareos-base")
 TOKEN = os.environ.get("GH_TOKEN", os.environ.get("GITHUB_TOKEN", ""))
 DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
 ARTIFACTS_DIR = Path(os.environ.get("ARTIFACTS_DIR", "artifacts"))
@@ -546,7 +546,7 @@ def write_audit_trail(
             "tools": [{"name": "autoecops-issues-engine", "version": "1.0"}],
             "component": {
                 "type": "application",
-                "name": "eco-base",
+                "name": "softwareos-base",
                 "version": run_id,
             },
         },

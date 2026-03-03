@@ -1,6 +1,6 @@
-# eco-base — Argo CD GitOps Guide
+# softwareos-base — Argo CD GitOps Guide
 
-**URI:** `eco-base://docs/argocd-gitops-guide`
+**URI:** `softwareos-base://docs/argocd-gitops-guide`
 **Version:** 1.0.0
 **Last Updated:** 2025-02-20
 
@@ -23,7 +23,7 @@
 
 ## Overview
 
-eco-base uses Argo CD as its GitOps continuous delivery engine. Every change pushed to the `main` branch is automatically synchronized to the Kubernetes cluster, ensuring the cluster state always matches the Git repository — the single source of truth.
+softwareos-base uses Argo CD as its GitOps continuous delivery engine. Every change pushed to the `main` branch is automatically synchronized to the Kubernetes cluster, ensuring the cluster state always matches the Git repository — the single source of truth.
 
 The GitOps loop operates as follows: a developer pushes a commit to `main`, which triggers the CI/CD pipeline (GitHub Actions 4-gate validation). Once all gates pass, a GitHub webhook notifies Argo CD, which detects the change in the `k8s/` directory and automatically syncs all `.qyaml` manifests to the target cluster. If the cluster state drifts from Git (manual kubectl edits, pod restarts, etc.), Argo CD's self-heal mechanism automatically corrects the drift back to the Git-defined state.
 
@@ -33,7 +33,7 @@ This approach eliminates manual `kubectl apply` operations, provides full audit 
 
 ## Architecture
 
-The eco-base GitOps architecture consists of three layers working in concert. The source layer is the GitHub repository containing all Kubernetes manifests in the `k8s/` directory as `.qyaml` files (governance-validated YAML). The orchestration layer is Argo CD, which watches the repository and manages synchronization. The target layer is the Kubernetes cluster with two namespaces: `eco-base` for production and `ecosystem-staging` for pre-production validation.
+The softwareos-base GitOps architecture consists of three layers working in concert. The source layer is the GitHub repository containing all Kubernetes manifests in the `k8s/` directory as `.qyaml` files (governance-validated YAML). The orchestration layer is Argo CD, which watches the repository and manages synchronization. The target layer is the Kubernetes cluster with two namespaces: `softwareos-base` for production and `ecosystem-staging` for pre-production validation.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -55,7 +55,7 @@ The eco-base GitOps architecture consists of three layers working in concert. Th
 
 ### Argo CD Applications
 
-Two Argo CD Applications are defined for the eco-base platform. The production application (`eco-base`) syncs to the `eco-base` namespace and is the primary deployment target. The staging application (`eco-base-staging`) syncs to the `ecosystem-staging` namespace and serves as the pre-production validation environment. Both applications watch the same `k8s/` directory on the `main` branch, with staging receiving changes first for validation before production promotion.
+Two Argo CD Applications are defined for the softwareos-base platform. The production application (`softwareos-base`) syncs to the `softwareos-base` namespace and is the primary deployment target. The staging application (`softwareos-base-staging`) syncs to the `ecosystem-staging` namespace and serves as the pre-production validation environment. Both applications watch the same `k8s/` directory on the `main` branch, with staging receiving changes first for validation before production promotion.
 
 ### File Structure
 
@@ -168,8 +168,8 @@ kubectl get pods -n argocd
 kubectl get applications -n argocd
 
 # Expected output:
-# eco-base          Synced  Healthy
-# eco-base-staging  Synced  Healthy
+# softwareos-base          Synced  Healthy
+# softwareos-base-staging  Synced  Healthy
 ```
 
 ---
@@ -183,9 +183,9 @@ For private repositories, Argo CD needs credentials to access the Git repository
 **HTTPS with Personal Access Token (recommended for simplicity):**
 
 ```bash
-kubectl create secret generic argocd-repo-eco-base \
+kubectl create secret generic argocd-repo-softwareos-base \
   --from-literal=type=git \
-  --from-literal=url=https://github.com/indestructibleorg/eco-base \
+  --from-literal=url=https://github.com/indestructibleorg/softwareos-base \
   --from-literal=username=<GITHUB_USERNAME> \
   --from-literal=password=<GITHUB_PAT> \
   -n argocd
@@ -194,9 +194,9 @@ kubectl create secret generic argocd-repo-eco-base \
 **SSH Key (recommended for production):**
 
 ```bash
-kubectl create secret generic argocd-repo-eco-base \
+kubectl create secret generic argocd-repo-softwareos-base \
   --from-literal=type=git \
-  --from-literal=url=git@github.com:indestructibleorg/eco-base.git \
+  --from-literal=url=git@github.com:indestructibleorg/softwareos-base.git \
   --from-file=sshPrivateKey=~/.ssh/id_ed25519 \
   -n argocd
 ```
@@ -204,9 +204,9 @@ kubectl create secret generic argocd-repo-eco-base \
 **GitHub App (recommended for enterprise):**
 
 ```bash
-kubectl create secret generic argocd-repo-eco-base \
+kubectl create secret generic argocd-repo-softwareos-base \
   --from-literal=type=git \
-  --from-literal=url=https://github.com/indestructibleorg/eco-base \
+  --from-literal=url=https://github.com/indestructibleorg/softwareos-base \
   --from-literal=githubAppID=<APP_ID> \
   --from-literal=githubAppInstallationID=<INSTALLATION_ID> \
   --from-file=githubAppPrivateKey=<PATH_TO_PEM> \
@@ -297,7 +297,7 @@ git add -A && git commit -m "test: verify Argo CD sync" && git push
 kubectl get applications -n argocd -w
 
 # Or via CLI
-argocd app get eco-base
+argocd app get softwareos-base
 ```
 
 ### Test 2: Self-Heal Verification
@@ -306,10 +306,10 @@ Manually modify a resource in the cluster and verify Argo CD reverts it:
 
 ```bash
 # Manually scale a deployment
-kubectl scale deployment eco-api-gateway -n eco-base --replicas=5
+kubectl scale deployment eco-api-gateway -n softwareos-base --replicas=5
 
 # Wait 30-60 seconds, then check
-kubectl get deployment eco-api-gateway -n eco-base
+kubectl get deployment eco-api-gateway -n softwareos-base
 # Replicas should revert to the Git-defined value
 ```
 
@@ -340,7 +340,7 @@ The dashboard shows all applications with their sync status (Synced/OutOfSync), 
 
 ### Slack Notifications
 
-When configured, the notification system sends messages to the `#eco-base-deployments` Slack channel for all sync events. Green messages indicate successful syncs, red messages indicate failures with error details, and orange messages indicate health degradation.
+When configured, the notification system sends messages to the `#softwareos-base-deployments` Slack channel for all sync events. Green messages indicate successful syncs, red messages indicate failures with error details, and orange messages indicate health degradation.
 
 ### Prometheus Metrics
 
@@ -362,8 +362,8 @@ Argo CD exposes Prometheus metrics on port 8082. The ecosystem monitoring stack 
 This usually indicates a resource that cannot reach ready state. Check the application details:
 
 ```bash
-argocd app get eco-base --show-operation
-kubectl get events -n eco-base --sort-by='.lastTimestamp'
+argocd app get softwareos-base --show-operation
+kubectl get events -n softwareos-base --sort-by='.lastTimestamp'
 ```
 
 ### Sync Failed with "ComparisonError"

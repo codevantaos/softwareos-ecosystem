@@ -105,43 +105,43 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/argo-events-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:argo-events-config:sha256-f8a48c072fde98bc956ab72a01007ce2ac33068cd6f8c142eb1603becfd69894
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/argo-events-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:argo-events-config:sha256-f8a48c072fde98bc956ab72a01007ce2ac33068cd6f8c142eb1603becfd69894
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: argo-events-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: argo-events-config
   namespace: infra
 ---
 apiVersion: v1
 data:
-  artifact-registry: asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base
+  artifact-registry: asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base
   build-timeout: '3600'
   max-concurrent-builds: '5'
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/tekton-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:tekton-config:sha256-28b62190e97105d654088701a45f7a24dea51f570fd22327b67cfbaae5b8e1ba
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/tekton-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:tekton-config:sha256-28b62190e97105d654088701a45f7a24dea51f570fd22327b67cfbaae5b8e1ba
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: tekton-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: tekton-config
   namespace: infra
 ---
@@ -153,19 +153,19 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/argocd-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:argocd-config:sha256-f5cc2f5429b7b1baa4b97f645aab7156adbbe301cd8971da91599942b848d662
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/argocd-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:argocd-config:sha256-f5cc2f5429b7b1baa4b97f645aab7156adbbe301cd8971da91599942b848d662
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: argocd-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: argocd-config
   namespace: infra
 ---
@@ -181,19 +181,19 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/prometheus-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:prometheus-config:sha256-2b8e9a4d49443a37e571bdb5b45fb5337a9f385a67dbcc1b554378264083b32d
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/prometheus-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:prometheus-config:sha256-2b8e9a4d49443a37e571bdb5b45fb5337a9f385a67dbcc1b554378264083b32d
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: prometheus-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: prometheus-config
   namespace: infra
 ---
@@ -348,20 +348,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/app
-    eco-base/urn: urn:eco-base:k8s:core:deployment:app:sha256-65cd420861c9063e1363abae5bdd080a7ee02f08b1b2dc138f2ebe8e7bdc317d
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/app
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:app:sha256-65cd420861c9063e1363abae5bdd080a7ee02f08b1b2dc138f2ebe8e7bdc317d
   labels:
-    app: eco-base-app
+    app: softwareos-base-app
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: app
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
     tier: application
   name: app
   namespace: platform-01
@@ -369,11 +369,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: eco-base-app
+      app: softwareos-base-app
   template:
     metadata:
       labels:
-        app: eco-base-app
+        app: softwareos-base-app
     spec:
       containers:
       - env:
@@ -381,7 +381,7 @@ spec:
           value: production
         - name: LOG_LEVEL
           value: info
-        image: asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base/app:latest
+        image: asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base/app:latest
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -414,20 +414,20 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/app
-    eco-base/urn: urn:eco-base:k8s:core:service:app:sha256-6607ea75053886e94a98946d786ddc4e2eb7afc8fd2ff3879066c1d5662ec1f7
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/app
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:app:sha256-6607ea75053886e94a98946d786ddc4e2eb7afc8fd2ff3879066c1d5662ec1f7
   labels:
-    app: eco-base-app
+    app: softwareos-base-app
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: app
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: app
   namespace: platform-01
 spec:
@@ -437,7 +437,7 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: eco-base-app
+    app: softwareos-base-app
   type: LoadBalancer
 ---
 apiVersion: networking.k8s.io/v1
@@ -445,20 +445,20 @@ kind: Ingress
 metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/ingress/app-ingress
-    eco-base/urn: urn:eco-base:k8s:core:ingress:app-ingress:sha256-c409b9fef2a0ab0828c73d3689026fb55ae7f50c9eb939b507b1c8622c1210e7
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/ingress/app-ingress
+    softwareos-base/urn: urn:softwareos-base:k8s:core:ingress:app-ingress:sha256-c409b9fef2a0ab0828c73d3689026fb55ae7f50c9eb939b507b1c8622c1210e7
     kubernetes.io/ingress.class: nginx
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: app-ingress
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: app-ingress
   namespace: platform-01
 spec:

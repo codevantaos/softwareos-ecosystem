@@ -7,15 +7,15 @@ metadata:
     app.kubernetes.io/instance: seccompops-platform-prod
     app.kubernetes.io/version: "1.0.0"
     app.kubernetes.io/component: security-compliance
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/managed-by: argocd
-    eco-base/platform: platform-seccompops
-    eco-base/environment: production
-    eco-base/owner: security-compliance-team
+    softwareos-base/platform: platform-seccompops
+    softwareos-base/environment: production
+    softwareos-base/owner: security-compliance-team
     governance.io/managed: "true"
   annotations:
-    eco-base/uri: "eco-base://k8s/platform-seccompops/namespace/eco-seccompops"
-    eco-base/urn: "urn:eco-base:k8s:platform-seccompops:namespace:eco-seccompops:gl.sec-ops.compliance-platform"
-    eco-base/governance-policy: "eco-seccompops-governance.rego"
-    eco-base/audit-log-level: "full"
+    softwareos-base/uri: "softwareos-base://k8s/platform-seccompops/namespace/eco-seccompops"
+    softwareos-base/urn: "urn:softwareos-base:k8s:platform-seccompops:namespace:eco-seccompops:gl.sec-ops.compliance-platform"
+    softwareos-base/governance-policy: "eco-seccompops-governance.rego"
+    softwareos-base/audit-log-level: "full"
     description: "SecCompOps Platform — Security & Compliance Operations"

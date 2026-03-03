@@ -6,7 +6,7 @@
     "timestamp": "2025-02-20T00:00:00Z",
     "component": {
       "type": "application",
-      "name": "eco-base",
+      "name": "softwareos-base",
       "version": "1.0.0",
       "description": "Enterprise Cloud-Native AI Platform",
       "licenses": [
@@ -19,17 +19,17 @@
       "externalReferences": [
         {
           "type": "vcs",
-          "url": "https://github.com/indestructibleorg/eco-base"
+          "url": "https://github.com/indestructibleorg/softwareos-base"
         },
         {
           "type": "website",
-          "url": "https://autoecoops.io"
+          "url": "https://softwareos.io"
         }
       ]
     },
     "tools": [
       {
-        "name": "eco-base-sbom-gen",
+        "name": "softwareos-base-sbom-gen",
         "version": "1.0.0"
       }
     ]

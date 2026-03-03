@@ -1,5 +1,5 @@
-# eco-base Prometheus Alert Rules
-# URI: eco-base://ecosystem/monitoring/alertmanager/alert-rules
+# softwareos-base Prometheus Alert Rules
+# URI: softwareos-base://ecosystem/monitoring/alertmanager/alert-rules
 
 groups:
   - name: eco-inference-alerts
@@ -13,7 +13,7 @@ groups:
         annotations:
           summary: "High inference latency on {{ $labels.engine }}"
           description: "p95 latency is {{ $value }}s (threshold: 5s) for engine {{ $labels.engine }}"
-          runbook_url: "https://docs.autoecoops.io/runbooks/high-latency"
+          runbook_url: "https://docs.softwareos.io/runbooks/high-latency"
 
       - alert: CriticalInferenceLatency
         expr: histogram_quantile(0.99, rate(eco_inference_latency_seconds_bucket[5m])) > 15
@@ -34,7 +34,7 @@ groups:
         annotations:
           summary: "Inference engine {{ $labels.engine }} is down"
           description: "Engine {{ $labels.engine }} has been unhealthy for >1m"
-          runbook_url: "https://docs.autoecoops.io/runbooks/engine-down"
+          runbook_url: "https://docs.softwareos.io/runbooks/engine-down"
 
       - alert: AllEnginesDown
         expr: count(eco_engine_health_status == 1) == 0
@@ -124,7 +124,7 @@ groups:
   - name: eco-resource-alerts
     rules:
       - alert: HighMemoryUsage
-        expr: container_memory_working_set_bytes{namespace="eco-base"} / container_spec_memory_limit_bytes > 0.85
+        expr: container_memory_working_set_bytes{namespace="softwareos-base"} / container_spec_memory_limit_bytes > 0.85
         for: 5m
         labels:
           severity: warning
@@ -134,7 +134,7 @@ groups:
           description: "Memory usage is {{ $value | humanizePercentage }} of limit."
 
       - alert: HighCPUUsage
-        expr: rate(container_cpu_usage_seconds_total{namespace="eco-base"}[5m]) / container_spec_cpu_quota * 100000 > 0.85
+        expr: rate(container_cpu_usage_seconds_total{namespace="softwareos-base"}[5m]) / container_spec_cpu_quota * 100000 > 0.85
         for: 5m
         labels:
           severity: warning
@@ -144,7 +144,7 @@ groups:
           description: "CPU usage is {{ $value | humanizePercentage }} of limit."
 
       - alert: PodRestartLoop
-        expr: increase(kube_pod_container_status_restarts_total{namespace="eco-base"}[1h]) > 3
+        expr: increase(kube_pod_container_status_restarts_total{namespace="softwareos-base"}[1h]) > 3
         for: 0s
         labels:
           severity: critical

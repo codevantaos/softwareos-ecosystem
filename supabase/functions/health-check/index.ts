@@ -1,4 +1,4 @@
-// eco-base://supabase/functions/health-check
+// softwareos-base://supabase/functions/health-check
 // Health check endpoint for monitoring and SLO validation
 // Checks: database connectivity, auth service, storage service, edge runtime
 
@@ -107,8 +107,8 @@ Deno.serve(async (req) => {
     status: overallStatus,
     timestamp: new Date().toISOString(),
     total_latency_ms: totalLatency,
-    uri: "eco-base://supabase/functions/health-check",
-    urn: "urn:eco-base:supabase:functions:health-check:v1",
+    uri: "softwareos-base://supabase/functions/health-check",
+    urn: "urn:softwareos-base:supabase:functions:health-check:v1",
     checks,
     slo: {
       availability_target: "99.99%",

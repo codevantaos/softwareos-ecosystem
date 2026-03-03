@@ -10,8 +10,8 @@ kind: Namespace
 metadata:
   name: production
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
   name: production
     environment: production
     pod-security.kubernetes.io/enforce: restricted

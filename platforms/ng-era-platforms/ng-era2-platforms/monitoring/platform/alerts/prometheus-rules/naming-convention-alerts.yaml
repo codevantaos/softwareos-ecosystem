@@ -4,8 +4,8 @@ metadata:
   name: naming-convention-alerts
   namespace: monitoring
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/name: prometheus-operator
     app.kubernetes.io/component: rules
   # @ECO-governed
@@ -23,8 +23,8 @@ spec:
             naming_violations_total > 10
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             priority: P0
             category: governance
@@ -44,8 +44,8 @@ spec:
             naming_violations_total > 5 and naming_violations_total <= 10
           for: 15m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             priority: P1
             category: governance
@@ -63,8 +63,8 @@ spec:
             naming_violations_total > 0 and naming_violations_total <= 5
           for: 30m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: info
             priority: P2
             category: governance
@@ -82,8 +82,8 @@ spec:
             naming_compliance_rate < 95
           for: 1h
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             priority: P3
             category: governance
@@ -101,8 +101,8 @@ spec:
             naming_compliance_rate < 80
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             priority: P0
             category: governance
@@ -120,8 +120,8 @@ spec:
             auto_fix_success_total / (auto_fix_success_total + auto_fix_failure_total) < 0.9
           for: 1h
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             priority: P2
             category: automation
@@ -139,8 +139,8 @@ spec:
             pull_requests_with_violations > 5
           for: 1h
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             priority: P2
             category: governance
@@ -173,8 +173,8 @@ spec:
             naming_sla:auto_fix_latency > 300
           for: 10m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             priority: P2
             category: sla
@@ -191,8 +191,8 @@ spec:
             naming_sla:compliance_rate_1h < 99
           for: 15m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             priority: P1
             category: sla

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# eco-base v1.0 — Manual GKE Deployment Script
+# softwareos-base v1.0 — Manual GKE Deployment Script
 # Target: GKE eco-staging cluster (asia-east1)
 # Project: my-project-ops-1991
 #
@@ -67,7 +67,7 @@ ensure_registry() {
             --repository-format=docker \
             --location="${GAR_LOCATION}" \
             --project="${GCP_PROJECT}" \
-            --description="eco-base container images"
+            --description="softwareos-base container images"
         ok "Registry created"
     else
         ok "Registry already exists"

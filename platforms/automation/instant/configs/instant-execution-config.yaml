@@ -149,8 +149,8 @@ infrastructure:
     tls_version: "1.3"              # TLS 1.3 required
 
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
 
     ddos_protection: true           # DDoS protection enabled
     rate_limiting:

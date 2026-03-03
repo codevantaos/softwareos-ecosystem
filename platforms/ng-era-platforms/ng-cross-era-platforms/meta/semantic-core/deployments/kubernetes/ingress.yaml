@@ -3,10 +3,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/ingress/gl-spec-core-ingress
-    eco-base/urn: urn:eco-base:k8s:core:ingress:gl-spec-core-ingress:sha256-981efda0b2490167f83345981d16939d948606894d2d522d736875cd3c684c70
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/ingress/gl-spec-core-ingress
+    softwareos-base/urn: urn:softwareos-base:k8s:core:ingress:gl-spec-core-ingress:sha256-981efda0b2490167f83345981d16939d948606894d2d522d736875cd3c684c70
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/configuration-snippet: 'more_set_headers "ECO-Platform:
       spec-core";
@@ -18,13 +18,13 @@ metadata:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: spec-core
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     platform: gl-platform-services
   name: gl-spec-core-ingress
   namespace: gl-platform-spec-core

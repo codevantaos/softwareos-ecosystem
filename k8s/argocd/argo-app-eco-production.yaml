@@ -1,4 +1,4 @@
-# eco-base v1.0 — Argo CD Application (eco-production on GKE)
+# softwareos-base v1.0 — Argo CD Application (eco-production on GKE)
 # Target: GKE eco-production cluster, asia-east1
 # Project: my-project-ops-1991
 apiVersion: argoproj.io/v1alpha1
@@ -8,13 +8,13 @@ metadata:
   namespace: argocd
   labels:
     app.kubernetes.io/name: eco-production
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/managed-by: argocd
     environment: production
   annotations:
-    eco-base/uri: "eco-base://k8s/argocd/application/eco-production"
-    eco-base/owner: "platform-team"
-    eco-base/compliance: "soc2,zero-trust,gitops"
+    softwareos-base/uri: "softwareos-base://k8s/argocd/application/eco-production"
+    softwareos-base/owner: "platform-team"
+    softwareos-base/compliance: "soc2,zero-trust,gitops"
     notifications.argoproj.io/subscribe.on-sync-succeeded.slack: eco-deployments
     notifications.argoproj.io/subscribe.on-sync-failed.slack: eco-alerts
     notifications.argoproj.io/subscribe.on-health-degraded.slack: eco-alerts
@@ -23,7 +23,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/indestructibleorg/eco-base.git
+    repoURL: https://github.com/indestructibleorg/softwareos-base.git
     targetRevision: main
     path: k8s/production
     directory:

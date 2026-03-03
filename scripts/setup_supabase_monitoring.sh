@@ -1,5 +1,5 @@
 #!/bin/bash
-# Supabase Monitoring Setup Script for eco-base
+# Supabase Monitoring Setup Script for softwareos-base
 # This script deploys Prometheus and Grafana for Supabase Pro monitoring
 
 set -e
@@ -93,8 +93,8 @@ echo ""
 echo "Monitoring stack deployed successfully!"
 echo ""
 echo "Access URLs:"
-echo "  Prometheus: https://prometheus._cf-custom-hostname.autoecoops.io"
-echo "  Grafana:    https://grafana._cf-custom-hostname.autoecoops.io"
+echo "  Prometheus: https://prometheus._cf-custom-hostname.softwareos.io"
+echo "  Grafana:    https://grafana._cf-custom-hostname.softwareos.io"
 echo ""
 echo "Grafana Credentials:"
 echo "  Username: admin"
@@ -103,7 +103,7 @@ echo ""
 echo "Supabase Project: $SUPABASE_PROJECT_REF"
 echo ""
 echo -e "${YELLOW}Next Steps:${NC}"
-echo "1. Access Grafana at http://grafana.eco-base.io"
+echo "1. Access Grafana at http://grafana.softwareos-base.io"
 echo "2. Login with the credentials above"
 echo "3. Navigate to Dashboards → Supabase → Supabase Overview"
 echo "4. Verify metrics are being collected"

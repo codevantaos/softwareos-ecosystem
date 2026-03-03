@@ -1,5 +1,5 @@
 # ╔══════════════════════════════════════════════════════════════════════════════╗
-# ║  eco-base v1.0 — docker-compose.ecosystem.yml                     ║
+# ║  softwareos-base v1.0 — docker-compose.ecosystem.yml                     ║
 # ║  Observability & Service Discovery Stack                                    ║
 # ║                                                                              ║
 # ║  Usage:                                                                      ║
@@ -206,7 +206,7 @@ services:
     environment:
       DATA_SOURCE_NAME: >-
         postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}
-        @postgres:5432/${POSTGRES_DB:-eco-base}?sslmode=disable
+        @postgres:5432/${POSTGRES_DB:-softwareos-base}?sslmode=disable
     networks:
       - observability
       - backend

@@ -4,10 +4,10 @@ kind: Ingress
 metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/ingress/superai-ingress
-    eco-base/urn: urn:eco-base:k8s:core:ingress:superai-ingress:sha256-7a9350cbff556cc31520dcfb4b372a7d989eb17b52aa9232bf428ab6900075a5
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/ingress/superai-ingress
+    softwareos-base/urn: urn:softwareos-base:k8s:core:ingress:superai-ingress:sha256-7a9350cbff556cc31520dcfb4b372a7d989eb17b52aa9232bf428ab6900075a5
     nginx.ingress.kubernetes.io/configuration-snippet: 'more_set_headers "X-Frame-Options:
       DENY";
 
@@ -39,11 +39,11 @@ metadata:
     app.kubernetes.io/component: ingress
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: superai-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: superai-ingress
   namespace: eco-superai
 spec:

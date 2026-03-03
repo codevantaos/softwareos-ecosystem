@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-# eco-base GKE Security Hardening Script
+# softwareos-base GKE Security Hardening Script
 # Removes 0.0.0.0/0 from master authorized networks
 
 ECO_SCRIPT_VERSION="1.0.0"

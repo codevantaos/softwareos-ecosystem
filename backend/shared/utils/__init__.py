@@ -1,4 +1,4 @@
-"""Shared utilities for eco-base platform."""
+"""Shared utilities for softwareos-base platform."""
 
 from uuid import UUID, uuid1
 from datetime import datetime
@@ -18,37 +18,37 @@ def new_uuid_str() -> str:
 
 
 def build_uri(domain: str, kind: str, name: str) -> str:
-    """Build eco-base URI.
+    """Build softwareos-base URI.
 
-    Format: eco-base://{domain}/{kind}/{name}
-    Example: eco-base://k8s/deployment/api-service
+    Format: softwareos-base://{domain}/{kind}/{name}
+    Example: softwareos-base://k8s/deployment/api-service
     """
-    return f"eco-base://{domain}/{kind}/{name}"
+    return f"softwareos-base://{domain}/{kind}/{name}"
 
 
 def build_urn(domain: str, kind: str, name: str, uid: UUID) -> str:
-    """Build eco-base URN.
+    """Build softwareos-base URN.
 
-    Format: urn:eco-base:{domain}:{kind}:{name}:{uuid}
-    Example: urn:eco-base:k8s:deployment:api-service:550e8400-e29b-41d4-a716-446655440000
+    Format: urn:softwareos-base:{domain}:{kind}:{name}:{uuid}
+    Example: urn:softwareos-base:k8s:deployment:api-service:550e8400-e29b-41d4-a716-446655440000
     """
-    return f"urn:eco-base:{domain}:{kind}:{name}:{uid}"
+    return f"urn:softwareos-base:{domain}:{kind}:{name}:{uid}"
 
 
 def build_k8s_uri(namespace: str, kind: str, name: str) -> str:
     """Build K8s resource URI.
 
-    Format: eco-base://k8s/{namespace}/{kind}/{name}
+    Format: softwareos-base://k8s/{namespace}/{kind}/{name}
     """
-    return f"eco-base://k8s/{namespace}/{kind}/{name}"
+    return f"softwareos-base://k8s/{namespace}/{kind}/{name}"
 
 
 def build_k8s_urn(namespace: str, kind: str, name: str, uid: UUID) -> str:
     """Build K8s resource URN.
 
-    Format: urn:eco-base:k8s:{namespace}:{kind}:{name}:{uuid}
+    Format: urn:softwareos-base:k8s:{namespace}:{kind}:{name}:{uuid}
     """
-    return f"urn:eco-base:k8s:{namespace}:{kind}:{name}:{uid}"
+    return f"urn:softwareos-base:k8s:{namespace}:{kind}:{name}:{uid}"
 
 
 def governance_stamp() -> Dict[str, Any]:

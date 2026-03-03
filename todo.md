@@ -1,4 +1,4 @@
-# eco-base — CircleCI Self-Hosted Runner Setup
+# softwareos-base — CircleCI Self-Hosted Runner Setup
 
 ## Phase 1: Create CircleCI Configuration
 - [x] Create `.circleci/config.yml` with self-hosted runner configuration

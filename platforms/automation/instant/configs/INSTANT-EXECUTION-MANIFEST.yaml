@@ -10,8 +10,8 @@
 
 version: \"1.0.0\"
 labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
 
 status: ACTIVE
 updated: "2025-12-11T12:58:00Z"

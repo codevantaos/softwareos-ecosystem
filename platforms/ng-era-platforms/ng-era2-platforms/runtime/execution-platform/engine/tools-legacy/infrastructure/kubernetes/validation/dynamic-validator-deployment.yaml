@@ -3,21 +3,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/dynamic-validator-core
-    eco-base/urn: urn:eco-base:k8s:core:deployment:dynamic-validator-core:sha256-d71379dce864f4cfe34378315e3b5b45499d6aab80a4761f43f087233433293c
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/dynamic-validator-core
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:dynamic-validator-core:sha256-d71379dce864f4cfe34378315e3b5b45499d6aab80a4761f43f087233433293c
   labels:
     app.kubernetes.io/component: dynamic-validator
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: validation-system
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     version: v1.0.0
   name: dynamic-validator-core
   namespace: gl-runtime-verification
@@ -28,8 +28,8 @@ spec:
     prometheus.io/scrape: 'true'
   labels:
     app.kubernetes.io/name: dynamic-validator
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     spec:
       affinity:
         podAntiAffinity:
@@ -142,21 +142,21 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/service/dynamic-validator-service
-    eco-base/urn: urn:eco-base:k8s:core:service:dynamic-validator-service:sha256-9687d76709e08a0925e74d7d8d3e5893ae234b1e70ac89fd4c8e75fa2ddabd37
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/service/dynamic-validator-service
+    softwareos-base/urn: urn:softwareos-base:k8s:core:service:dynamic-validator-service:sha256-9687d76709e08a0925e74d7d8d3e5893ae234b1e70ac89fd4c8e75fa2ddabd37
   labels:
     app.kubernetes.io/component: dynamic-validator
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: validation-system
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: dynamic-validator-service
   namespace: gl-runtime-verification
 spec:
@@ -187,21 +187,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/validation-system-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:validation-system-config:sha256-f65cb13c3bdf030c9f1c15d51f6f40892b34c5b48832209296f627491cdc903a
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/validation-system-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:validation-system-config:sha256-f65cb13c3bdf030c9f1c15d51f6f40892b34c5b48832209296f627491cdc903a
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: validation-system
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: validation-system-config
   namespace: gl-runtime-verification
 ---
@@ -210,8 +210,8 @@ kind: PersistentVolumeClaim
 metadata:
   labels:
     app.kubernetes.io/name: validation-system
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
   name: evidence-storage-pvc
   namespace: gl-runtime-verification
 spec:

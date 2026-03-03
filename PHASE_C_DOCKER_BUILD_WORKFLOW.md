@@ -4,7 +4,7 @@
 Phase C requires building and pushing Docker images to GCP Artifact Registry before deploying to GKE.
 
 ## Prerequisites
-- GCP Artifact Registry: `asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base`
+- GCP Artifact Registry: `asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base`
 - GKE Cluster: `eco-production` (currently being created)
 - GitHub Actions Workflow: `.github/workflows/build-images.yaml`
 
@@ -14,28 +14,28 @@ Phase C requires building and pushing Docker images to GCP Artifact Registry bef
 - **Source**: `platforms/web/`
 - **Dockerfile**: `platforms/web/Dockerfile`
 - **Context**: `platforms/web/`
-- **Image**: `asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base/web:v1.0.0`
+- **Image**: `asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base/web:v1.0.0`
 - **Port**: 80
 
 ### 2. API Service (api:v1.0.0)
 - **Source**: `backend/api/`
 - **Dockerfile**: `backend/api/Dockerfile` (stub needs to be created)
 - **Context**: `backend/api/`
-- **Image**: `asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base/api:v1.0.0`
+- **Image**: `asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base/api:v1.0.0`
 - **Port**: 3000
 
 ### 3. AI Service (ai:v1.0.0)
 - **Source**: `backend/ai/`
 - **Dockerfile**: `backend/ai/Dockerfile`
 - **Context**: `backend/ai/`
-- **Image**: `asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base/ai:v1.0.0`
+- **Image**: `asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base/ai:v1.0.0`
 - **Port**: 8001
 
 ### 4. API Gateway (gateway:v1.0.0)
 - **Source**: Repository root
 - **Dockerfile**: `docker/Dockerfile`
 - **Context**: `.`
-- **Image**: `asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base/gateway:v1.0.0`
+- **Image**: `asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base/gateway:v1.0.0`
 - **Port**: 8000
 
 ## Build Methods
@@ -52,15 +52,15 @@ Or navigate to:
 ### Method 2: Cloud Build
 ```bash
 gcloud builds submit \
-  --tag asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base/web:v1.0.0 \
+  --tag asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base/web:v1.0.0 \
   platforms/web/
 ```
 
 ### Method 3: Local Docker + gcloud auth
 ```bash
 gcloud auth configure-docker asia-east1-docker.pkg.dev
-docker build -t asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base/web:v1.0.0 platforms/web/
-docker push asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base/web:v1.0.0
+docker build -t asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base/web:v1.0.0 platforms/web/
+docker push asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base/web:v1.0.0
 ```
 
 ## Current Status
@@ -93,7 +93,7 @@ docker push asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base/web:v1.0.0
 gcloud container operations list --project=my-project-ops-1991 --filter="status!=DONE"
 
 # List built images
-gcloud artifacts images list --repository=eco-base --location=asia-east1
+gcloud artifacts images list --repository=softwareos-base --location=asia-east1
 
 # Verify cluster
 gcloud container clusters list --project=my-project-ops-1991

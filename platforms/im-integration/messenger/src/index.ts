@@ -1,5 +1,5 @@
 /**
- * eco-base Facebook Messenger Adapter
+ * softwareos-base Facebook Messenger Adapter
  *
  * Production-grade adapter for Facebook Messenger Platform.
  * Uses shared normalizer for message parsing, shared router for
@@ -15,7 +15,7 @@
  * - Graceful shutdown
  * - Health + metrics endpoints
  *
- * URI: eco-base://platforms/im-integration/messenger
+ * URI: softwareos-base://platforms/im-integration/messenger
  */
 
 import express from "express";
@@ -275,7 +275,7 @@ app.get("/health", (_req, res) =>
     version: "2.0.0",
     api: process.env.ECO_API_URL || "http://localhost:3000",
     page_token: PAGE_ACCESS_TOKEN ? "configured" : "missing",
-    uri: "eco-base://platforms/im-integration/messenger/health",
+    uri: "softwareos-base://platforms/im-integration/messenger/health",
     timestamp: new Date().toISOString(),
   })
 );
@@ -283,7 +283,7 @@ app.get("/health", (_req, res) =>
 app.get("/metrics", (_req, res) =>
   res.json({
     ...metrics,
-    uri: "eco-base://platforms/im-integration/messenger/metrics",
+    uri: "softwareos-base://platforms/im-integration/messenger/metrics",
     timestamp: new Date().toISOString(),
   })
 );
@@ -307,7 +307,7 @@ server = app.listen(PORT, () => {
   logger.info({
     msg: "Messenger adapter started",
     port: PORT,
-    uri: "eco-base://platforms/im-integration/messenger",
+    uri: "softwareos-base://platforms/im-integration/messenger",
   });
 });
 

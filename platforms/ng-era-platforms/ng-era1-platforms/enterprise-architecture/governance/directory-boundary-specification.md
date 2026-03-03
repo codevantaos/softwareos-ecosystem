@@ -44,9 +44,9 @@ This specification applies to all 8 GL layers and their subdirectories:
    - Lower layers cannot depend on upper layers
 
 2. **Explicit Interface Definition**
-   - All cross-directory interactions must have explicit contracts
-   - API contracts define allowed method signatures
-   - Event contracts define allowed message formats
+   - All cross-directory interactions must have explicit softwareos-contracts
+   - API softwareos-contracts define allowed method signatures
+   - Event softwareos-contracts define allowed message formats
 
 3. **Autonomous Operation Capability**
    - Each directory must be capable of independent operation
@@ -77,15 +77,15 @@ This specification applies to all 8 GL layers and their subdirectories:
 - Governance framework definition
 - Architecture standards and specifications
 - Naming conventions and standards
-- Enterprise-level contracts and policies
+- Enterprise-level softwareos-contracts and policies
 - Meta-specifications for all layers
 
 **Allowed Dependencies**:
 - None (self-contained governance definitions)
 
 **Provided Interfaces**:
-- Governance contracts (contracts/)
-- Naming standards (naming-governance/contracts/)
+- Governance softwareos-contracts (softwareos-contracts/)
+- Naming standards (naming-governance/softwareos-contracts/)
 - Architecture specifications (GL90-99-Meta-Specification-Layer/)
 
 **Allowed Interactions**:
@@ -102,7 +102,7 @@ This specification applies to all 8 GL layers and their subdirectories:
 **Boundary Example**:
 ```
 ALLOWED:
-  - Reading governance contracts
+  - Reading governance softwareos-contracts
   - Providing naming standards
   - Defining architectural rules
 
@@ -127,7 +127,7 @@ FORBIDDEN:
 - External integration services
 
 **Allowed Dependencies**:
-- gl-enterprise-architecture (GL00-09) - governance contracts only
+- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts only
 
 **Provided Interfaces**:
 - Platform service APIs (esync-platform/, quantum-platform/)
@@ -144,7 +144,7 @@ FORBIDDEN:
 - Direct execution of business logic
 - Direct data processing operations
 - Accessing execution runtime internals
-- Modifying governance contracts
+- Modifying governance softwareos-contracts
 
 **Subdirectory Boundaries**:
 
@@ -193,7 +193,7 @@ FORBIDDEN:
 - Data transformation services
 
 **Allowed Dependencies**:
-- gl-enterprise-architecture (GL00-09) - governance contracts
+- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts
 - gl-platform-services (GL10-29) - service coordination
 
 **Provided Interfaces**:
@@ -248,7 +248,7 @@ FORBIDDEN:
 - Execution lifecycle management
 
 **Allowed Dependencies**:
-- gl-enterprise-architecture (GL00-09) - governance contracts
+- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts
 - gl-platform-services (GL10-29) - platform services
 - gl-data-processing (GL20-29) - data services
 
@@ -356,7 +356,7 @@ FORBIDDEN:
 - Naming convention validation
 
 **Allowed Dependencies**:
-- gl-enterprise-architecture (GL00-09) - governance contracts
+- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts
 
 **Provided Interfaces**:
 - Compliance APIs (src/api/)
@@ -380,7 +380,7 @@ FORBIDDEN:
 #### scripts/
 - **Purpose**: Governance execution scripts
 - **Responsibilities**: Policy validation, compliance checking, audit generation
-- **Dependencies**: gl-enterprise-architecture (governance contracts)
+- **Dependencies**: gl-enterprise-architecture (governance softwareos-contracts)
 - **Interfaces**: Validation APIs, audit APIs
 
 **Boundary Example**:
@@ -409,7 +409,7 @@ FORBIDDEN:
 - Plugin lifecycle management
 
 **Allowed Dependencies**:
-- gl-enterprise-architecture (GL00-09) - governance contracts
+- gl-enterprise-architecture (GL00-09) - governance softwareos-contracts
 - All other layers (for extension purposes)
 
 **Provided Interfaces**:
@@ -508,25 +508,25 @@ Legend:
 
 #### 4.2.1 Synchronous API Calls
 - Used for request/response interactions
-- Must have explicit interface contracts
+- Must have explicit interface softwareos-contracts
 - Timeout requirements defined
 - Error handling mandatory
 
 #### 4.2.2 Asynchronous Event Messaging
 - Used for decoupled communication
-- Event contracts define message structure
+- Event softwareos-contracts define message structure
 - Event sourcing for reliability
 - Dead letter queue for failed events
 
 #### 4.2.3 Shared Data Access
 - Used for read-only data sharing
-- Data contracts define access patterns
+- Data softwareos-contracts define access patterns
 - No direct modification across boundaries
 - Copy-on-write for isolation
 
 #### 4.2.4 Service Discovery
 - Used for dynamic service location
-- Registration contracts defined
+- Registration softwareos-contracts defined
 - Health checking mandatory
 - Load balancing support
 
@@ -572,7 +572,7 @@ Every cross-boundary interface must define:
 **Example**: GL20-49 exposing GL20-49 internals to GL10-29
 **Detection**: Interface compliance checking
 **Impact**: Tight coupling, reduced autonomy
-**Prevention**: Strict interface contracts, encapsulation
+**Prevention**: Strict interface softwareos-contracts, encapsulation
 
 #### 5.1.3 Responsibility Creep
 **Example**: GL10-29 implementing GL60-49 functionality
@@ -634,7 +634,7 @@ Extension services can:
 - Integrate third-party capabilities
 
 **Restrictions**:
-- Must follow governance contracts
+- Must follow governance softwareos-contracts
 - Must pass compliance checks
 - Cannot bypass security boundaries
 - Must be validated before loading
@@ -649,7 +649,7 @@ Governance compliance can:
 **Restrictions**:
 - Cannot execute business logic
 - Cannot process operational data
-- Must read governance contracts from GL00-09 only
+- Must read governance softwareos-contracts from GL00-09 only
 - Cannot modify operational behavior
 
 ## 7. Documentation Requirements
@@ -701,7 +701,7 @@ When creating a new layer:
 When modifying an existing layer:
 1. Assess boundary impact
 2. Update dependency matrix
-3. Revise interface contracts
+3. Revise interface softwareos-contracts
 4. Document changes
 5. Validate no violations introduced
 6. Update related layers if needed
@@ -738,7 +738,7 @@ Automated verification includes:
 ### 9.3 Audit Requirements
 
 Regular audits must verify:
-- All cross-boundary interactions have contracts
+- All cross-boundary interactions have softwareos-contracts
 - All dependencies follow matrix rules
 - All boundaries are properly documented
 - All violations are detected and resolved

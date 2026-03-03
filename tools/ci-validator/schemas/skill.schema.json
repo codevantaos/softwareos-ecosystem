@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "eco-base Skill Manifest Schema",
-  "description": "Schema for skill.json manifests within the eco-base platform",
+  "title": "softwareos-base Skill Manifest Schema",
+  "description": "Schema for skill.json manifests within the softwareos-base platform",
   "type": "object",
   "required": ["id", "name", "version", "description", "category", "triggers", "actions", "inputs", "outputs", "governance", "metadata"],
   "properties": {
@@ -94,8 +94,8 @@
       "required": ["unique_id", "uri", "urn", "schema_version", "generated_by", "created_at"],
       "properties": {
         "unique_id": { "type": "string" },
-        "uri": { "type": "string", "pattern": "^eco-base://" },
-        "urn": { "type": "string", "pattern": "^urn:eco-base:" },
+        "uri": { "type": "string", "pattern": "^softwareos-base://" },
+        "urn": { "type": "string", "pattern": "^urn:softwareos-base:" },
         "schema_version": { "type": "string" },
         "target_system": { "type": "string" },
         "generated_by": { "type": "string" },

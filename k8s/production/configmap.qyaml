@@ -4,8 +4,8 @@ metadata:
   name: eco-config
   namespace: eco-production
   labels:
-    app.kubernetes.io/name: eco-base
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/name: softwareos-base
+    app.kubernetes.io/part-of: softwareos-base
     environment: production
 data:
   ECO_ENVIRONMENT: production
@@ -19,7 +19,7 @@ data:
   ECO_POSTGRES_HOST: eco-postgres-svc.eco-production.svc.cluster.local
   ECO_POSTGRES_PORT: '5432'
   ECO_POSTGRES_DB: eco_production
-  ECO_CORS_ORIGINS: https://production.autoecoops.io,https://api-production.autoecoops.io
+  ECO_CORS_ORIGINS: https://production.softwareos.io,https://api-production.softwareos.io
   ECO_RATE_LIMIT_RPS: '200'
   ECO_RATE_LIMIT_BURST: '400'
   ECO_METRICS_ENABLED: 'true'
@@ -55,8 +55,8 @@ metadata:
   name: eco-secrets
   namespace: eco-production
   labels:
-    app.kubernetes.io/name: eco-base
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/name: softwareos-base
+    app.kubernetes.io/part-of: softwareos-base
     environment: production
 type: Opaque
 stringData:
@@ -73,8 +73,8 @@ stringData:
 ---
 document_metadata:
   unique_id: eco-prod-cm-0001-0001-000000000001
-  uri: eco-base://k8s/eco-production/configmap/eco-config
-  urn: urn:eco-base:k8s:eco-production:configmap:eco-config:eco-prod-cm-0001-0001-000000000001
+  uri: softwareos-base://k8s/eco-production/configmap/eco-config
+  urn: urn:softwareos-base:k8s:eco-production:configmap:eco-config:eco-prod-cm-0001-0001-000000000001
   target_system: gke-eco-production
   cross_layer_binding:
   - api-gateway

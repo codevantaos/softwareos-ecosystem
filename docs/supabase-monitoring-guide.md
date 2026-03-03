@@ -76,18 +76,18 @@ The scripts will:
 
 Create CNAME records in Cloudflare:
 
-- `prometheus._cf-custom-hostname.autoecoops.io` → `<INGRESS_IP>`
-- `grafana._cf-custom-hostname.autoecoops.io` → `<INGRESS_IP>`
+- `prometheus._cf-custom-hostname.softwareos.io` → `<INGRESS_IP>`
+- `grafana._cf-custom-hostname.softwareos.io` → `<INGRESS_IP>`
 
 ### 5. Access the Monitoring Stack
 
 After deployment, access the services:
 
-- **Grafana**: https://grafana._cf-custom-hostname.autoecoops.io
+- **Grafana**: https://grafana._cf-custom-hostname.softwareos.io
   - Username: `admin`
   - Password: (set via `GRAFANA_PASSWORD` environment variable, no default)
 
-- **Prometheus**: https://prometheus._cf-custom-hostname.autoecoops.io
+- **Prometheus**: https://prometheus._cf-custom-hostname.softwareos.io
 
 ## Manual Deployment
 
@@ -143,7 +143,7 @@ kubectl create secret tls cloudflare-origin-cert \
 kubectl patch ingress prometheus-ingress -n monitoring -p '{
   "spec": {
     "tls": [{
-      "hosts": ["prometheus._cf-custom-hostname.autoecoops.io"],
+      "hosts": ["prometheus._cf-custom-hostname.softwareos.io"],
       "secretName": "cloudflare-origin-cert"
     }]
   }
@@ -152,7 +152,7 @@ kubectl patch ingress prometheus-ingress -n monitoring -p '{
 kubectl patch ingress grafana-ingress -n monitoring -p '{
   "spec": {
     "tls": [{
-      "hosts": ["grafana._cf-custom-hostname.autoecoops.io"],
+      "hosts": ["grafana._cf-custom-hostname.softwareos.io"],
       "secretName": "cloudflare-origin-cert"
     }]
   }
@@ -165,9 +165,9 @@ kubectl patch ingress grafana-ingress -n monitoring -p '{
 
 The monitoring stack uses Cloudflare custom hostname:
 
-- **Base Domain**: `_cf-custom-hostname.autoecoops.io`
-- **Prometheus**: `prometheus._cf-custom-hostname.autoecoops.io`
-- **Grafana**: `grafana._cf-custom-hostname.autoecoops.io`
+- **Base Domain**: `_cf-custom-hostname.softwareos.io`
+- **Prometheus**: `prometheus._cf-custom-hostname.softwareos.io`
+- **Grafana**: `grafana._cf-custom-hostname.softwareos.io`
 
 ### Setting Up Cloudflare Certificates
 
@@ -191,8 +191,8 @@ The monitoring stack uses Cloudflare custom hostname:
 
 3. **Configure DNS Records**:
    - Create CNAME records in Cloudflare:
-     - `prometheus._cf-custom-hostname.autoecoops.io` → `<INGRESS_IP>`
-     - `grafana._cf-custom-hostname.autoecoops.io` → `<INGRESS_IP>`
+     - `prometheus._cf-custom-hostname.softwareos.io` → `<INGRESS_IP>`
+     - `grafana._cf-custom-hostname.softwareos.io` → `<INGRESS_IP>`
 
 ### Prometheus Configuration
 
@@ -230,7 +230,7 @@ Pre-configured dashboards include:
 
 1. **Supabase Overview**: Database health, API performance
 2. **Kubernetes Cluster**: Node and pod metrics
-3. **eco-base**: Application-specific metrics
+3. **softwareos-base**: Application-specific metrics
 
 ## Testing the Setup
 
@@ -245,13 +245,13 @@ Expected output: Prometheus metrics in text format
 
 ### Verify Prometheus Scraping
 
-1. Access Prometheus at https://prometheus._cf-custom-hostname.autoecoops.io
+1. Access Prometheus at https://prometheus._cf-custom-hostname.softwareos.io
 2. Go to **Status → Targets**
 3. Verify `supabase-production` job is **UP**
 
 ### Verify Grafana Dashboards
 
-1. Access Grafana at https://grafana._cf-custom-hostname.autoecoops.io
+1. Access Grafana at https://grafana._cf-custom-hostname.softwareos.io
 2. Login with admin credentials
 3. Navigate to **Dashboards → Supabase → Supabase Overview**
 4. Verify metrics are displaying
@@ -315,8 +315,8 @@ route:
 receivers:
   - name: 'default-receiver'
     email_configs:
-      - to: 'alerts@eco-base.io'
-        from: 'prometheus@eco-base.io'
+      - to: 'alerts@softwareos-base.io'
+        from: 'prometheus@softwareos-base.io'
         smarthost: 'smtp.gmail.com:587'
         auth_username: 'your-email@gmail.com'
         auth_password: 'your-app-password'
@@ -420,13 +420,13 @@ kubectl exec -n monitoring deployment/grafana -- \
 
 4. Test SSL certificate:
    ```bash
-   curl -v https://prometheus._cf-custom-hostname.autoecoops.io
-   curl -v https://grafana._cf-custom-hostname.autoecoops.io
+   curl -v https://prometheus._cf-custom-hostname.softwareos.io
+   curl -v https://grafana._cf-custom-hostname.softwareos.io
    ```
 
 5. Check certificate expiration:
    ```bash
-   echo | openssl s_client -connect prometheus._cf-custom-hostname.autoecoops.io:443 2>/dev/null | openssl x509 -noout -dates
+   echo | openssl s_client -connect prometheus._cf-custom-hostname.softwareos.io:443 2>/dev/null | openssl x509 -noout -dates
    ```
 
 ### No Metrics Displaying in Dashboards

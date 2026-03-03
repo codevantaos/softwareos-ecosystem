@@ -1,7 +1,7 @@
 name: Infrastructure Drift Detection & Auto-Sync
 
-# eco-base Drift Detection
-# URI: eco-base://github/workflows/drift-detection
+# softwareos-base Drift Detection
+# URI: softwareos-base://github/workflows/drift-detection
 #
 # Detects configuration drift between GitOps desired state (this repo)
 # and actual cluster state (GKE), then:

@@ -1,6 +1,6 @@
-"""eco-base v1.0 — Pydantic Schemas Package.
+"""softwareos-base v1.0 — Pydantic Schemas Package.
 
-URI: eco-base://src/schemas
+URI: softwareos-base://src/schemas
 """
 
 from .auth import APIKeyCreate, APIKeyInfo, APIKeyResult, UserRole

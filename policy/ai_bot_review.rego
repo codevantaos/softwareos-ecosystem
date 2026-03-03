@@ -1,7 +1,7 @@
 package eco_base.ai_bot_review
 
 # ── AI/Bot Review Governance Policy ──────────────────────────────────────────
-# URI: eco-base://policy/ai-bot-review
+# URI: softwareos-base://policy/ai-bot-review
 # Purpose: Define which AI/Bot review comments require action, which are
 #          informational only, and which trigger auto-fix vs human escalation.
 #

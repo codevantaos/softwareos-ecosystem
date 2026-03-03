@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-eco-base CI Auto-Fix Engine — Automated repair for known warning/error patterns.
+softwareos-base CI Auto-Fix Engine — Automated repair for known warning/error patterns.
 
-URI: eco-base://tools/ci-validator/auto-fix
+URI: softwareos-base://tools/ci-validator/auto-fix
 Usage:
     python3 tools/ci-validator/auto-fix.py [--dry-run] [--report=report.json]
 
@@ -83,7 +83,7 @@ def fix_path_correction(finding: dict, repo: Path, dry_run: bool = False) -> dic
 
 @register_fix("identity-replace")
 def fix_identity_replace(finding: dict, repo: Path, dry_run: bool = False) -> dict:
-    """Replace stale identity references (superai → eco/eco-base)."""
+    """Replace stale identity references (superai → eco/softwareos-base)."""
     result = {"strategy": "identity-replace", "applied": False, "details": ""}
     file_path = repo / finding.get("file", "")
 
@@ -96,10 +96,10 @@ def fix_identity_replace(finding: dict, repo: Path, dry_run: bool = False) -> di
 
     # Replacement map (order matters — longer patterns first)
     replacements = [
-        (r"superai-platform", "eco-base"),
+        (r"superai-platform", "softwareos-base"),
         (r"SUPERAI_", "ECO_"),
         (r"superai-", "eco-"),
-        (r"superai", "eco-base"),
+        (r"superai", "softwareos-base"),
     ]
 
     for pattern, replacement in replacements:
@@ -182,14 +182,14 @@ def fix_governance_block(finding: dict, repo: Path, dry_run: bool = False) -> di
     # Generate governance block
     rel = finding.get("file", "unknown")
     unique_id = f"eco-auto-{hash(rel) % 999999:06d}"
-    uri = f"eco-base://{rel.replace('.qyaml', '')}"
+    uri = f"softwareos-base://{rel.replace('.qyaml', '')}"
 
     block_template = f"""---
 # YAML Toolkit v1 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "{unique_id}"
   uri: "{uri}"
-  urn: "urn:eco-base:{rel.replace('/', ':').replace('.qyaml', '')}:{unique_id}"
+  urn: "urn:softwareos-base:{rel.replace('/', ':').replace('.qyaml', '')}:{unique_id}"
   target_system: gke-production
   cross_layer_binding: []
   schema_version: v8
@@ -258,9 +258,9 @@ def fix_schema_field(finding: dict, repo: Path, dry_run: bool = False) -> dict:
             if field == "id":
                 identity[field] = f"auto-{hash(str(file_path)) % 999999:06d}"
             elif field == "uri":
-                identity[field] = f"eco-base://skills/{file_path.parent.name}"
+                identity[field] = f"softwareos-base://skills/{file_path.parent.name}"
             elif field == "urn":
-                identity[field] = f"urn:eco-base:skill:{file_path.parent.name}"
+                identity[field] = f"urn:softwareos-base:skill:{file_path.parent.name}"
             fixes.append(f"added governance.identity.{field}")
 
     if fixes:
@@ -280,7 +280,7 @@ def run_auto_fix(repo: Path, dry_run: bool = False, report_path: str = None) -> 
     """Run the CI Validator, then apply fixes for all auto-fixable findings."""
 
     print("╔══════════════════════════════════════════════════════════╗")
-    print("║  eco-base CI Auto-Fix Engine                    ║")
+    print("║  softwareos-base CI Auto-Fix Engine                    ║")
     print(f"║  Mode: {'DRY RUN' if dry_run else 'LIVE FIX'}                                         ║")
     print("╚══════════════════════════════════════════════════════════╝")
     print()
@@ -574,8 +574,8 @@ def fix_inject_governance_field(file_path, finding, dry_run=False):
         # Default values for each field
         defaults = {
             "unique_id": f"eco-auto-{abs(hash(str(file_path)))%999999:06d}",
-            "uri": f"eco-base://{str(file_path).replace(str(file_path.parent.parent), '').lstrip('/')}",
-            "owner": "platform-team@eco-base.io",
+            "uri": f"softwareos-base://{str(file_path).replace(str(file_path.parent.parent), '').lstrip('/')}",
+            "owner": "platform-team@softwareos-base.io",
             "classification": "internal",
             "retention_policy": "3y",
             "compliance_tags": '["SOC2", "ISO27001"]',

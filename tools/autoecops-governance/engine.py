@@ -47,7 +47,7 @@ from typing import Any
 
 # ─── Configuration ────────────────────────────────────────────────────────────
 
-REPO = os.environ.get("GITHUB_REPOSITORY", "indestructibleorg/eco-base")
+REPO = os.environ.get("GITHUB_REPOSITORY", "indestructibleorg/softwareos-base")
 GH_TOKEN = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
 DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
 ARTIFACTS_DIR = Path(os.environ.get("ARTIFACTS_DIR", "artifacts"))

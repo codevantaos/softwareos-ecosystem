@@ -1,13 +1,13 @@
-# eco-base v1.0 - API Gateway Deployment
+# softwareos-base v1.0 - API Gateway Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: eco-api-gateway
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app.kubernetes.io/name: eco-api-gateway
     app.kubernetes.io/component: api-gateway
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
 spec:
   replicas: 3
   selector:
@@ -36,7 +36,7 @@ spec:
         fsGroup: 1000
       containers:
         - name: api
-          image: eco-base-platform/api:1.0.0
+          image: softwareos-base-platform/api:1.0.0
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -93,7 +93,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: eco-api-svc
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app.kubernetes.io/name: eco-api-gateway
 spec:
@@ -110,7 +110,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: eco-api-gateway-hpa
-  namespace: eco-base
+  namespace: softwareos-base
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
@@ -155,8 +155,8 @@ spec:
 # YAML Toolkit v8 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "eco-gw-0001-0001-000000000001"
-  uri: "eco-base://k8s/eco-base/deployment/api-gateway"
-  urn: "urn:eco-base:k8s:eco-base:deployment:api-gateway:eco-gw-0001-0001-000000000001"
+  uri: "softwareos-base://k8s/softwareos-base/deployment/api-gateway"
+  urn: "urn:softwareos-base:k8s:softwareos-base:deployment:api-gateway:eco-gw-0001-0001-000000000001"
   target_system: gke-production
   cross_layer_binding: [redis, postgres, vllm, tgi, sglang, ollama]
   schema_version: v8
@@ -168,7 +168,7 @@ governance_info:
   compliance_tags: [zero-trust, soc2, internal]
   lifecycle_policy: active
 registry_binding:
-  service_endpoint: "http://eco-api-svc.eco-base.svc.cluster.local:8000"
+  service_endpoint: "http://eco-api-svc.softwareos-base.svc.cluster.local:8000"
   discovery_protocol: consul
   health_check_path: "/health"
   registry_ttl: 30

@@ -15,8 +15,8 @@ metadata:
   name: k3s-upgrade-monitoring
   namespace: monitoring
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     gl-version: v10.0.0
     tier: quantum-upgrade
 spec:
@@ -29,8 +29,8 @@ spec:
             system_upgrade_plan_status{status="running"} > 0
           for: 1m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: info
             category: k3s-upgrade
           annotations:
@@ -42,8 +42,8 @@ spec:
             system_upgrade_plan_status{status="failed"} > 0
           for: 1m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             category: k3s-upgrade
           annotations:
@@ -55,8 +55,8 @@ spec:
             system_upgrade_plan_status{status="completed"} > 0
           for: 1m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: info
             category: k3s-upgrade
           annotations:
@@ -71,8 +71,8 @@ spec:
             kube_node_status_condition{condition="Ready",status="true"} == 0
           for: 5m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             category: k3s-health
           annotations:
@@ -84,8 +84,8 @@ spec:
             kube_pod_status_phase{phase!="Running",phase!="Succeeded"} > 0
           for: 10m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             category: k3s-health
           annotations:
@@ -100,8 +100,8 @@ spec:
             k3s_rollback_status{status="in_progress"} > 0
           for: 1m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: warning
             category: k3s-rollback
           annotations:
@@ -113,8 +113,8 @@ spec:
             k3s_rollback_status{status="failed"} > 0
           for: 1m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: critical
             category: k3s-rollback
           annotations:
@@ -126,8 +126,8 @@ spec:
             k3s_rollback_status{status="completed"} > 0
           for: 1m
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             severity: info
             category: k3s-rollback
           annotations:

@@ -34,18 +34,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/velero-enhanced-backup-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:velero-enhanced-backup-config:sha256-4433af84872e8e487a01e1f030a083e817b980fa2377757d8b9b5d3a1be5d17d
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/velero-enhanced-backup-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:velero-enhanced-backup-config:sha256-4433af84872e8e487a01e1f030a083e817b980fa2377757d8b9b5d3a1be5d17d
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: velero-enhanced-backup-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: velero-enhanced-backup-config
   namespace: velero

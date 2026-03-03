@@ -11,7 +11,7 @@ data:
       scrape_interval: 60s
       evaluation_interval: 60s
       external_labels:
-        cluster: 'eco-base'
+        cluster: 'softwareos-base'
         environment: 'production'
 
     alerting:
@@ -323,10 +323,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - prometheus._cf-custom-hostname.autoecoops.io
+    - prometheus._cf-custom-hostname.softwareos.io
     secretName: prometheus-tls
   rules:
-  - host: prometheus._cf-custom-hostname.autoecoops.io
+  - host: prometheus._cf-custom-hostname.softwareos.io
     http:
       paths:
       - path: /

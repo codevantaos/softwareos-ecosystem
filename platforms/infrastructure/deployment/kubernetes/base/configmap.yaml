@@ -12,19 +12,19 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/machine-native-ops-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:machine-native-ops-config:sha256-4d04a2a2fc05be448ad94f889c826c0a55062e2801e012cf5e76a0bcf9a5a24c
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/machine-native-ops-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:machine-native-ops-config:sha256-4d04a2a2fc05be448ad94f889c826c0a55062e2801e012cf5e76a0bcf9a5a24c
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: machine-native-ops-config
   namespace: platform-03
 ---
@@ -38,19 +38,19 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/monitoring-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:monitoring-config:sha256-0f2f57057e6a17147423ec1b79875d65f4a1478a83cf7a867808458ed9269fea
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/monitoring-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:monitoring-config:sha256-0f2f57057e6a17147423ec1b79875d65f4a1478a83cf7a867808458ed9269fea
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: monitoring-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: monitoring-config
   namespace: platform-03
 ---
@@ -63,18 +63,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/secrets-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:secrets-config:sha256-589853990d8635cd38904c7443ed74ffd5ab26363d07e891c62de50e6b08c47a
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/secrets-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:secrets-config:sha256-589853990d8635cd38904c7443ed74ffd5ab26363d07e891c62de50e6b08c47a
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: secrets-config
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: secrets-config
   namespace: platform-03

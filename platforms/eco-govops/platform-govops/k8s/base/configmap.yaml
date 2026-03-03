@@ -17,19 +17,19 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/govops-engine-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:govops-engine-config:sha256-7118f0706581cb28ad2a66ec8680c10d2a4c110734b418bcb9579dc55b5bc2eb
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/govops-engine-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:govops-engine-config:sha256-7118f0706581cb28ad2a66ec8680c10d2a4c110734b418bcb9579dc55b5bc2eb
   labels:
     app.kubernetes.io/component: engine
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: govops-engine
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
     governance.io/managed: 'true'
   name: govops-engine-config
   namespace: eco-govops

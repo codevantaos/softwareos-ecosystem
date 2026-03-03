@@ -42,7 +42,7 @@ The GL Extension Services layer (GL81-83) provides extension services and plugin
 ```
 gl-extension-services/
 ├── governance/                   # Governance compliance
-│   ├── contracts/               # Layer contracts
+│   ├── softwareos-contracts/               # Layer softwareos-contracts
 │   ├── policies/                # Enforcement policies
 │   └── validators/              # Validation rules
 ├── src/                         # Source code
@@ -109,11 +109,11 @@ manager.deactivate_plugin(plugin_id)
 
 ## Dependencies
 
-**Incoming**: GL00-09 (Enterprise Architecture) - governance contracts
+**Incoming**: GL00-09 (Enterprise Architecture) - governance softwareos-contracts
 **Outgoing**: All layers (extension capability)
 
 **Allowed Dependencies**:
-- ✅ GL00-09 (Enterprise Architecture) - governance contracts
+- ✅ GL00-09 (Enterprise Architecture) - governance softwareos-contracts
 - ✅ GL10-29 (Platform Services)
 - ✅ GL20-29 (Data Processing)
 - ✅ GL30-49 (Execution Runtime)
@@ -126,7 +126,7 @@ manager.deactivate_plugin(plugin_id)
 - ✅ Extend functionality of any layer
 - ✅ Provide plugins for any layer
 - ✅ Integrate third-party capabilities
-- ✅ Follow governance contracts
+- ✅ Follow governance softwareos-contracts
 - ✅ Pass compliance checks
 
 ### Forbidden Interactions
@@ -181,7 +181,7 @@ spec:
 
 ## Compliance
 
-This layer is **REGULATORY** - all extensions must follow governance contracts and pass compliance checks.
+This layer is **REGULATORY** - all extensions must follow governance softwareos-contracts and pass compliance checks.
 
 ## Version
 
@@ -244,7 +244,7 @@ class CustomAlertHandlerPlugin:
 ## Best Practices
 
 ### Plugin Development
-- Follow extension point contracts
+- Follow extension point softwareos-contracts
 - Implement proper error handling
 - Provide comprehensive documentation
 - Include unit tests

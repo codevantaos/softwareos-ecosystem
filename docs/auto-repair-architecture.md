@@ -1,6 +1,6 @@
-# eco-base — Auto-Repair Architecture
+# softwareos-base — Auto-Repair Architecture
 
-**URI:** `eco-base://docs/auto-repair-architecture`
+**URI:** `softwareos-base://docs/auto-repair-architecture`
 **Version:** 1.0.0
 **Last Updated:** 2025-02-20
 
@@ -21,7 +21,7 @@
 
 ## Overview
 
-The eco-base Auto-Repair system is a multi-layered defense mechanism that detects, diagnoses, and — where safe — automatically fixes issues in the CI/CD pipeline, Kubernetes manifests, and application configuration. It operates on the principle that automated repair should be applied only when the fix is deterministic, reversible, and cannot introduce new failures.
+The softwareos-base Auto-Repair system is a multi-layered defense mechanism that detects, diagnoses, and — where safe — automatically fixes issues in the CI/CD pipeline, Kubernetes manifests, and application configuration. It operates on the principle that automated repair should be applied only when the fix is deterministic, reversible, and cannot introduce new failures.
 
 The system consists of three tiers. The first tier is the CI Validator Engine (`tools/ci-validator/validate.py`), which detects issues across 7 validation categories. The second tier is the Auto-Fix Engine (`tools/ci-validator/auto-fix.py`), which applies deterministic fixes for known patterns. The third tier is Argo CD's self-heal mechanism, which ensures the Kubernetes cluster state always matches the Git-defined state.
 
@@ -37,13 +37,13 @@ AI systems operate on pattern matching and statistical inference, but many repai
 
 For example, when `docker/Dockerfile` contains `COPY src/ ./src/` but no `src/` directory exists at the repository root, the AI faces multiple valid interpretations. The directory might need to be created (structural gap), the path might need to be changed to `backend/ai/src/` (wrong reference), or the entire COPY instruction might be obsolete (dead code). Each interpretation leads to a fundamentally different fix, and choosing incorrectly could break the build or introduce subtle runtime errors.
 
-The eco-base approach to this limitation is the CI Validator Engine, which flags ambiguous issues as warnings rather than errors and provides the Auto-Fix Engine with enough context (file path, line number, build context) to make deterministic fixes only when the correct action is unambiguous.
+The softwareos-base approach to this limitation is the CI Validator Engine, which flags ambiguous issues as warnings rather than errors and provides the Auto-Fix Engine with enough context (file path, line number, build context) to make deterministic fixes only when the correct action is unambiguous.
 
 ### 2. Security and Compliance Boundaries
 
 Automated fixes that modify dependencies, update package versions, or change security configurations carry inherent risk. Upgrading a package to fix a vulnerability might introduce breaking API changes, incompatible behavior, or even new vulnerabilities in transitive dependencies. Enterprise environments operating under SOC2, HIPAA, or PCI-DSS compliance frameworks require human review for changes that affect the security posture.
 
-The eco-base platform enforces this boundary through governance blocks in every `.qyaml` file. Each manifest carries `compliance_tags` (e.g., `zero-trust`, `soc2`) and an `approval_chain` that defines who must review changes. The Auto-Fix Engine respects these boundaries by operating in dry-run mode in CI and requiring explicit human invocation for live fixes.
+The softwareos-base platform enforces this boundary through governance blocks in every `.qyaml` file. Each manifest carries `compliance_tags` (e.g., `zero-trust`, `soc2`) and an `approval_chain` that defines who must review changes. The Auto-Fix Engine respects these boundaries by operating in dry-run mode in CI and requiring explicit human invocation for live fixes.
 
 ### 3. Cascading Impact Assessment
 
@@ -101,7 +101,7 @@ The Auto-Fix Engine supports five fix strategies, each handling a specific categ
 
 ### 2. identity-replace
 
-**Scope:** Stale identity references (`superai`, `SUPERAI_`, `superai-platform`) that should be `eco`, `ECO_`, `eco-base`.
+**Scope:** Stale identity references (`superai`, `SUPERAI_`, `superai-platform`) that should be `eco`, `ECO_`, `softwareos-base`.
 
 **Logic:** Applies a prioritized replacement map (longer patterns first to avoid partial matches). Scans the entire file content and replaces all occurrences.
 

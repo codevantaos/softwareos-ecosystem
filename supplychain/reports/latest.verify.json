@@ -16,12 +16,12 @@
       "component": "secret",
       "contentSha256": "3f9b3a50d8d4f341cf7e86ac9d783f2387767980496e62d4e90d0365505fb273",
       "kind": "Secret",
-      "name": "argocd-repo-eco-base",
+      "name": "argocd-repo-softwareos-base",
       "namespace": "argocd",
       "platform": "core",
       "source": "k8s/argocd/argocd-repo-secret.yaml",
-      "uri": "eco-base://k8s/core/secret/argocd-repo-eco-base",
-      "urn": "urn:eco-base:k8s:core:secret:argocd-repo-eco-base:sha256-3f9b3a50d8d4f341cf7e86ac9d783f2387767980496e62d4e90d0365505fb273"
+      "uri": "softwareos-base://k8s/core/secret/argocd-repo-softwareos-base",
+      "urn": "urn:softwareos-base:k8s:core:secret:argocd-repo-softwareos-base:sha256-3f9b3a50d8d4f341cf7e86ac9d783f2387767980496e62d4e90d0365505fb273"
     },
     {
       "apiVersion": "v1",
@@ -32,8 +32,8 @@
       "namespace": "circleci-runner",
       "platform": "core",
       "source": "k8s/circleci/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/circleci-agent-config",
-      "urn": "urn:eco-base:k8s:core:configmap:circleci-agent-config:sha256-21a44144da79099d2158e98d693d2b3e4f2fddf27d493c95aacfde800b450fce"
+      "uri": "softwareos-base://k8s/core/configmap/circleci-agent-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:circleci-agent-config:sha256-21a44144da79099d2158e98d693d2b3e4f2fddf27d493c95aacfde800b450fce"
     },
     {
       "apiVersion": "apps/v1",
@@ -44,8 +44,8 @@
       "namespace": "circleci-runner",
       "platform": "core",
       "source": "k8s/circleci/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/circleci-agent",
-      "urn": "urn:eco-base:k8s:core:deployment:circleci-agent:sha256-24065a84b17e8cb2b1640fbabb73f90d28007fe228b8c5767a31172c3d42ca39"
+      "uri": "softwareos-base://k8s/core/deployment/circleci-agent",
+      "urn": "urn:softwareos-base:k8s:core:deployment:circleci-agent:sha256-24065a84b17e8cb2b1640fbabb73f90d28007fe228b8c5767a31172c3d42ca39"
     },
     {
       "apiVersion": "v1",
@@ -56,8 +56,8 @@
       "namespace": "circleci-runner",
       "platform": "core",
       "source": "k8s/circleci/secret.yaml",
-      "uri": "eco-base://k8s/core/secret/circleci-runner-secrets",
-      "urn": "urn:eco-base:k8s:core:secret:circleci-runner-secrets:sha256-25ee2bd7d74f8b8159733739ea95e845f739533cec71c7857ab6ac2163e4e812"
+      "uri": "softwareos-base://k8s/core/secret/circleci-runner-secrets",
+      "urn": "urn:softwareos-base:k8s:core:secret:circleci-runner-secrets:sha256-25ee2bd7d74f8b8159733739ea95e845f739533cec71c7857ab6ac2163e4e812"
     },
     {
       "apiVersion": "v1",
@@ -68,8 +68,8 @@
       "namespace": "infra",
       "platform": "core",
       "source": "k8s/k8s-manifests.yaml",
-      "uri": "eco-base://k8s/core/configmap/argo-events-config",
-      "urn": "urn:eco-base:k8s:core:configmap:argo-events-config:sha256-f8a48c072fde98bc956ab72a01007ce2ac33068cd6f8c142eb1603becfd69894"
+      "uri": "softwareos-base://k8s/core/configmap/argo-events-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:argo-events-config:sha256-f8a48c072fde98bc956ab72a01007ce2ac33068cd6f8c142eb1603becfd69894"
     },
     {
       "apiVersion": "v1",
@@ -80,8 +80,8 @@
       "namespace": "infra",
       "platform": "core",
       "source": "k8s/k8s-manifests.yaml",
-      "uri": "eco-base://k8s/core/configmap/argocd-config",
-      "urn": "urn:eco-base:k8s:core:configmap:argocd-config:sha256-f5cc2f5429b7b1baa4b97f645aab7156adbbe301cd8971da91599942b848d662"
+      "uri": "softwareos-base://k8s/core/configmap/argocd-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:argocd-config:sha256-f5cc2f5429b7b1baa4b97f645aab7156adbbe301cd8971da91599942b848d662"
     },
     {
       "apiVersion": "v1",
@@ -92,8 +92,8 @@
       "namespace": "infra",
       "platform": "core",
       "source": "k8s/k8s-manifests.yaml",
-      "uri": "eco-base://k8s/core/configmap/prometheus-config",
-      "urn": "urn:eco-base:k8s:core:configmap:prometheus-config:sha256-2b8e9a4d49443a37e571bdb5b45fb5337a9f385a67dbcc1b554378264083b32d"
+      "uri": "softwareos-base://k8s/core/configmap/prometheus-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:prometheus-config:sha256-2b8e9a4d49443a37e571bdb5b45fb5337a9f385a67dbcc1b554378264083b32d"
     },
     {
       "apiVersion": "v1",
@@ -104,8 +104,8 @@
       "namespace": "infra",
       "platform": "core",
       "source": "k8s/k8s-manifests.yaml",
-      "uri": "eco-base://k8s/core/configmap/tekton-config",
-      "urn": "urn:eco-base:k8s:core:configmap:tekton-config:sha256-28b62190e97105d654088701a45f7a24dea51f570fd22327b67cfbaae5b8e1ba"
+      "uri": "softwareos-base://k8s/core/configmap/tekton-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:tekton-config:sha256-28b62190e97105d654088701a45f7a24dea51f570fd22327b67cfbaae5b8e1ba"
     },
     {
       "apiVersion": "apps/v1",
@@ -116,8 +116,8 @@
       "namespace": "platform-01",
       "platform": "core",
       "source": "k8s/k8s-manifests.yaml",
-      "uri": "eco-base://k8s/core/deployment/app",
-      "urn": "urn:eco-base:k8s:core:deployment:app:sha256-65cd420861c9063e1363abae5bdd080a7ee02f08b1b2dc138f2ebe8e7bdc317d"
+      "uri": "softwareos-base://k8s/core/deployment/app",
+      "urn": "urn:softwareos-base:k8s:core:deployment:app:sha256-65cd420861c9063e1363abae5bdd080a7ee02f08b1b2dc138f2ebe8e7bdc317d"
     },
     {
       "apiVersion": "networking.k8s.io/v1",
@@ -128,8 +128,8 @@
       "namespace": "platform-01",
       "platform": "core",
       "source": "k8s/k8s-manifests.yaml",
-      "uri": "eco-base://k8s/core/ingress/app-ingress",
-      "urn": "urn:eco-base:k8s:core:ingress:app-ingress:sha256-c409b9fef2a0ab0828c73d3689026fb55ae7f50c9eb939b507b1c8622c1210e7"
+      "uri": "softwareos-base://k8s/core/ingress/app-ingress",
+      "urn": "urn:softwareos-base:k8s:core:ingress:app-ingress:sha256-c409b9fef2a0ab0828c73d3689026fb55ae7f50c9eb939b507b1c8622c1210e7"
     },
     {
       "apiVersion": "v1",
@@ -140,8 +140,8 @@
       "namespace": "platform-01",
       "platform": "core",
       "source": "k8s/k8s-manifests.yaml",
-      "uri": "eco-base://k8s/core/service/app",
-      "urn": "urn:eco-base:k8s:core:service:app:sha256-6607ea75053886e94a98946d786ddc4e2eb7afc8fd2ff3879066c1d5662ec1f7"
+      "uri": "softwareos-base://k8s/core/service/app",
+      "urn": "urn:softwareos-base:k8s:core:service:app:sha256-6607ea75053886e94a98946d786ddc4e2eb7afc8fd2ff3879066c1d5662ec1f7"
     },
     {
       "apiVersion": "v1",
@@ -152,8 +152,8 @@
       "namespace": "eco-dataops",
       "platform": "core",
       "source": "platforms/eco-dataops/k8s/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/dataops-config",
-      "urn": "urn:eco-base:k8s:core:configmap:dataops-config:sha256-edf9473121104475e620376f4bf782b9eb3e6f5f5386e52917635562329294ce"
+      "uri": "softwareos-base://k8s/core/configmap/dataops-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:dataops-config:sha256-edf9473121104475e620376f4bf782b9eb3e6f5f5386e52917635562329294ce"
     },
     {
       "apiVersion": "apps/v1",
@@ -164,8 +164,8 @@
       "namespace": "eco-dataops",
       "platform": "core",
       "source": "platforms/eco-dataops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/dataops-anomaly",
-      "urn": "urn:eco-base:k8s:core:deployment:dataops-anomaly:sha256-8612752457482b07bb1a5b5d51b338c48c9f852f9e69f6c74ecd3b0c37d29e7a"
+      "uri": "softwareos-base://k8s/core/deployment/dataops-anomaly",
+      "urn": "urn:softwareos-base:k8s:core:deployment:dataops-anomaly:sha256-8612752457482b07bb1a5b5d51b338c48c9f852f9e69f6c74ecd3b0c37d29e7a"
     },
     {
       "apiVersion": "apps/v1",
@@ -176,8 +176,8 @@
       "namespace": "eco-dataops",
       "platform": "core",
       "source": "platforms/eco-dataops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/dataops-engine",
-      "urn": "urn:eco-base:k8s:core:deployment:dataops-engine:sha256-cbdeca72b0172b83564e5f604f5d3591b543620e34bfabd153cd9378c0f6caf3"
+      "uri": "softwareos-base://k8s/core/deployment/dataops-engine",
+      "urn": "urn:softwareos-base:k8s:core:deployment:dataops-engine:sha256-cbdeca72b0172b83564e5f604f5d3591b543620e34bfabd153cd9378c0f6caf3"
     },
     {
       "apiVersion": "apps/v1",
@@ -188,8 +188,8 @@
       "namespace": "eco-dataops",
       "platform": "core",
       "source": "platforms/eco-dataops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/dataops-pipeline",
-      "urn": "urn:eco-base:k8s:core:deployment:dataops-pipeline:sha256-5b1385931c4d5e048c31f6765546bb4beecd7a67ccb240d87426f516e3f8191c"
+      "uri": "softwareos-base://k8s/core/deployment/dataops-pipeline",
+      "urn": "urn:softwareos-base:k8s:core:deployment:dataops-pipeline:sha256-5b1385931c4d5e048c31f6765546bb4beecd7a67ccb240d87426f516e3f8191c"
     },
     {
       "apiVersion": "v1",
@@ -200,8 +200,8 @@
       "namespace": "eco-dataops",
       "platform": "core",
       "source": "platforms/eco-dataops/k8s/base/service.yaml",
-      "uri": "eco-base://k8s/core/service/dataops-engine",
-      "urn": "urn:eco-base:k8s:core:service:dataops-engine:sha256-5a5abd610967958d878215a96ec78930656a72fd9733e5ce57c5887d32f25e01"
+      "uri": "softwareos-base://k8s/core/service/dataops-engine",
+      "urn": "urn:softwareos-base:k8s:core:service:dataops-engine:sha256-5a5abd610967958d878215a96ec78930656a72fd9733e5ce57c5887d32f25e01"
     },
     {
       "apiVersion": "v1",
@@ -212,8 +212,8 @@
       "namespace": "eco-dataops",
       "platform": "core",
       "source": "platforms/eco-dataops/platform-dataops/k8s/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/dataops-config",
-      "urn": "urn:eco-base:k8s:core:configmap:dataops-config:sha256-edf9473121104475e620376f4bf782b9eb3e6f5f5386e52917635562329294ce"
+      "uri": "softwareos-base://k8s/core/configmap/dataops-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:dataops-config:sha256-edf9473121104475e620376f4bf782b9eb3e6f5f5386e52917635562329294ce"
     },
     {
       "apiVersion": "apps/v1",
@@ -224,8 +224,8 @@
       "namespace": "eco-dataops",
       "platform": "core",
       "source": "platforms/eco-dataops/platform-dataops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/dataops-anomaly",
-      "urn": "urn:eco-base:k8s:core:deployment:dataops-anomaly:sha256-8612752457482b07bb1a5b5d51b338c48c9f852f9e69f6c74ecd3b0c37d29e7a"
+      "uri": "softwareos-base://k8s/core/deployment/dataops-anomaly",
+      "urn": "urn:softwareos-base:k8s:core:deployment:dataops-anomaly:sha256-8612752457482b07bb1a5b5d51b338c48c9f852f9e69f6c74ecd3b0c37d29e7a"
     },
     {
       "apiVersion": "apps/v1",
@@ -236,8 +236,8 @@
       "namespace": "eco-dataops",
       "platform": "core",
       "source": "platforms/eco-dataops/platform-dataops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/dataops-engine",
-      "urn": "urn:eco-base:k8s:core:deployment:dataops-engine:sha256-cbdeca72b0172b83564e5f604f5d3591b543620e34bfabd153cd9378c0f6caf3"
+      "uri": "softwareos-base://k8s/core/deployment/dataops-engine",
+      "urn": "urn:softwareos-base:k8s:core:deployment:dataops-engine:sha256-cbdeca72b0172b83564e5f604f5d3591b543620e34bfabd153cd9378c0f6caf3"
     },
     {
       "apiVersion": "apps/v1",
@@ -248,8 +248,8 @@
       "namespace": "eco-dataops",
       "platform": "core",
       "source": "platforms/eco-dataops/platform-dataops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/dataops-pipeline",
-      "urn": "urn:eco-base:k8s:core:deployment:dataops-pipeline:sha256-5b1385931c4d5e048c31f6765546bb4beecd7a67ccb240d87426f516e3f8191c"
+      "uri": "softwareos-base://k8s/core/deployment/dataops-pipeline",
+      "urn": "urn:softwareos-base:k8s:core:deployment:dataops-pipeline:sha256-5b1385931c4d5e048c31f6765546bb4beecd7a67ccb240d87426f516e3f8191c"
     },
     {
       "apiVersion": "v1",
@@ -260,8 +260,8 @@
       "namespace": "eco-dataops",
       "platform": "core",
       "source": "platforms/eco-dataops/platform-dataops/k8s/base/service.yaml",
-      "uri": "eco-base://k8s/core/service/dataops-engine",
-      "urn": "urn:eco-base:k8s:core:service:dataops-engine:sha256-5a5abd610967958d878215a96ec78930656a72fd9733e5ce57c5887d32f25e01"
+      "uri": "softwareos-base://k8s/core/service/dataops-engine",
+      "urn": "urn:softwareos-base:k8s:core:service:dataops-engine:sha256-5a5abd610967958d878215a96ec78930656a72fd9733e5ce57c5887d32f25e01"
     },
     {
       "apiVersion": "v1",
@@ -272,8 +272,8 @@
       "namespace": "eco-govops",
       "platform": "core",
       "source": "platforms/eco-govops/k8s/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/govops-engine-config",
-      "urn": "urn:eco-base:k8s:core:configmap:govops-engine-config:sha256-7118f0706581cb28ad2a66ec8680c10d2a4c110734b418bcb9579dc55b5bc2eb"
+      "uri": "softwareos-base://k8s/core/configmap/govops-engine-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:govops-engine-config:sha256-7118f0706581cb28ad2a66ec8680c10d2a4c110734b418bcb9579dc55b5bc2eb"
     },
     {
       "apiVersion": "apps/v1",
@@ -284,8 +284,8 @@
       "namespace": "eco-govops",
       "platform": "platform-govops",
       "source": "platforms/eco-govops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/platform-govops/deployment/govops-engine",
-      "urn": "urn:eco-base:k8s:platform-govops:deployment:govops-engine:sha256-93bd3db5421282af2faa26448b8d33be247a4bcf7a5466c454524b09166d4e26"
+      "uri": "softwareos-base://k8s/platform-govops/deployment/govops-engine",
+      "urn": "urn:softwareos-base:k8s:platform-govops:deployment:govops-engine:sha256-93bd3db5421282af2faa26448b8d33be247a4bcf7a5466c454524b09166d4e26"
     },
     {
       "apiVersion": "v1",
@@ -296,8 +296,8 @@
       "namespace": "eco-govops",
       "platform": "core",
       "source": "platforms/eco-govops/k8s/base/service.yaml",
-      "uri": "eco-base://k8s/core/service/govops-engine",
-      "urn": "urn:eco-base:k8s:core:service:govops-engine:sha256-125a0a083ba5b3a00de29537f9b2d3c5e25ba7a06e5fd8ae14debbe2530ec1f3"
+      "uri": "softwareos-base://k8s/core/service/govops-engine",
+      "urn": "urn:softwareos-base:k8s:core:service:govops-engine:sha256-125a0a083ba5b3a00de29537f9b2d3c5e25ba7a06e5fd8ae14debbe2530ec1f3"
     },
     {
       "apiVersion": "v1",
@@ -308,8 +308,8 @@
       "namespace": "eco-govops",
       "platform": "core",
       "source": "platforms/eco-govops/platform-govops/k8s/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/govops-engine-config",
-      "urn": "urn:eco-base:k8s:core:configmap:govops-engine-config:sha256-7118f0706581cb28ad2a66ec8680c10d2a4c110734b418bcb9579dc55b5bc2eb"
+      "uri": "softwareos-base://k8s/core/configmap/govops-engine-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:govops-engine-config:sha256-7118f0706581cb28ad2a66ec8680c10d2a4c110734b418bcb9579dc55b5bc2eb"
     },
     {
       "apiVersion": "apps/v1",
@@ -320,8 +320,8 @@
       "namespace": "eco-govops",
       "platform": "platform-govops",
       "source": "platforms/eco-govops/platform-govops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/platform-govops/deployment/govops-engine",
-      "urn": "urn:eco-base:k8s:platform-govops:deployment:govops-engine:sha256-93bd3db5421282af2faa26448b8d33be247a4bcf7a5466c454524b09166d4e26"
+      "uri": "softwareos-base://k8s/platform-govops/deployment/govops-engine",
+      "urn": "urn:softwareos-base:k8s:platform-govops:deployment:govops-engine:sha256-93bd3db5421282af2faa26448b8d33be247a4bcf7a5466c454524b09166d4e26"
     },
     {
       "apiVersion": "v1",
@@ -332,8 +332,8 @@
       "namespace": "eco-govops",
       "platform": "core",
       "source": "platforms/eco-govops/platform-govops/k8s/base/service.yaml",
-      "uri": "eco-base://k8s/core/service/govops-engine",
-      "urn": "urn:eco-base:k8s:core:service:govops-engine:sha256-125a0a083ba5b3a00de29537f9b2d3c5e25ba7a06e5fd8ae14debbe2530ec1f3"
+      "uri": "softwareos-base://k8s/core/service/govops-engine",
+      "urn": "urn:softwareos-base:k8s:core:service:govops-engine:sha256-125a0a083ba5b3a00de29537f9b2d3c5e25ba7a06e5fd8ae14debbe2530ec1f3"
     },
     {
       "apiVersion": "apps/v1",
@@ -344,8 +344,8 @@
       "namespace": "eco-observops",
       "platform": "platform-observops",
       "source": "platforms/eco-observops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/platform-observops/deployment/observops-engine",
-      "urn": "urn:eco-base:k8s:platform-observops:deployment:observops-engine:sha256-8842c6b6faf097d90a99cb44598b3af0ea0d45be62f22c9c97aa3fac8c0dfef5"
+      "uri": "softwareos-base://k8s/platform-observops/deployment/observops-engine",
+      "urn": "urn:softwareos-base:k8s:platform-observops:deployment:observops-engine:sha256-8842c6b6faf097d90a99cb44598b3af0ea0d45be62f22c9c97aa3fac8c0dfef5"
     },
     {
       "apiVersion": "v1",
@@ -356,8 +356,8 @@
       "namespace": "eco-observops",
       "platform": "platform-observops",
       "source": "platforms/eco-observops/k8s/base/service.yaml",
-      "uri": "eco-base://k8s/platform-observops/service/observops-engine",
-      "urn": "urn:eco-base:k8s:platform-observops:service:observops-engine:sha256-8118fc0d741c1dd884adc538319482decc26ba18a5287795a4e7fa549cdb9de1"
+      "uri": "softwareos-base://k8s/platform-observops/service/observops-engine",
+      "urn": "urn:softwareos-base:k8s:platform-observops:service:observops-engine:sha256-8118fc0d741c1dd884adc538319482decc26ba18a5287795a4e7fa549cdb9de1"
     },
     {
       "apiVersion": "apps/v1",
@@ -368,8 +368,8 @@
       "namespace": "eco-observops",
       "platform": "platform-observops",
       "source": "platforms/eco-observops/platform-observops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/platform-observops/deployment/observops-engine",
-      "urn": "urn:eco-base:k8s:platform-observops:deployment:observops-engine:sha256-8e09667c8ed80730a64e5a827ad8df8096e2880fe7d19e7b6838cd47c47d411b"
+      "uri": "softwareos-base://k8s/platform-observops/deployment/observops-engine",
+      "urn": "urn:softwareos-base:k8s:platform-observops:deployment:observops-engine:sha256-8e09667c8ed80730a64e5a827ad8df8096e2880fe7d19e7b6838cd47c47d411b"
     },
     {
       "apiVersion": "v1",
@@ -380,8 +380,8 @@
       "namespace": "eco-observops",
       "platform": "platform-observops",
       "source": "platforms/eco-observops/platform-observops/k8s/base/service.yaml",
-      "uri": "eco-base://k8s/platform-observops/service/observops-engine",
-      "urn": "urn:eco-base:k8s:platform-observops:service:observops-engine:sha256-8118fc0d741c1dd884adc538319482decc26ba18a5287795a4e7fa549cdb9de1"
+      "uri": "softwareos-base://k8s/platform-observops/service/observops-engine",
+      "urn": "urn:softwareos-base:k8s:platform-observops:service:observops-engine:sha256-8118fc0d741c1dd884adc538319482decc26ba18a5287795a4e7fa549cdb9de1"
     },
     {
       "apiVersion": "v1",
@@ -392,8 +392,8 @@
       "namespace": "eco-seccompops",
       "platform": "core",
       "source": "platforms/eco-seccompops/k8s/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/seccompops-config",
-      "urn": "urn:eco-base:k8s:core:configmap:seccompops-config:sha256-2be986c5dcf490ee0cf83206b6b9e42b67f0346ffb797f57980230ca2a65b93a"
+      "uri": "softwareos-base://k8s/core/configmap/seccompops-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:seccompops-config:sha256-2be986c5dcf490ee0cf83206b6b9e42b67f0346ffb797f57980230ca2a65b93a"
     },
     {
       "apiVersion": "apps/v1",
@@ -404,8 +404,8 @@
       "namespace": "eco-seccompops",
       "platform": "core",
       "source": "platforms/eco-seccompops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/seccompops-auditor",
-      "urn": "urn:eco-base:k8s:core:deployment:seccompops-auditor:sha256-5db736596024c3f491211c9a7135a584cf8d83843116cc679cf7fadcb58550a3"
+      "uri": "softwareos-base://k8s/core/deployment/seccompops-auditor",
+      "urn": "urn:softwareos-base:k8s:core:deployment:seccompops-auditor:sha256-5db736596024c3f491211c9a7135a584cf8d83843116cc679cf7fadcb58550a3"
     },
     {
       "apiVersion": "apps/v1",
@@ -416,8 +416,8 @@
       "namespace": "eco-seccompops",
       "platform": "core",
       "source": "platforms/eco-seccompops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/seccompops-enforcer",
-      "urn": "urn:eco-base:k8s:core:deployment:seccompops-enforcer:sha256-9d2a05ac02a7cc2de5ebb12e35a13d9194f2f3e78662c1850b5e676739a4ca8e"
+      "uri": "softwareos-base://k8s/core/deployment/seccompops-enforcer",
+      "urn": "urn:softwareos-base:k8s:core:deployment:seccompops-enforcer:sha256-9d2a05ac02a7cc2de5ebb12e35a13d9194f2f3e78662c1850b5e676739a4ca8e"
     },
     {
       "apiVersion": "apps/v1",
@@ -428,8 +428,8 @@
       "namespace": "eco-seccompops",
       "platform": "core",
       "source": "platforms/eco-seccompops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/seccompops-engine",
-      "urn": "urn:eco-base:k8s:core:deployment:seccompops-engine:sha256-8e40d1908de4e66965da5ba64c8991913bae0028c8ca6f7798340dfc558b443c"
+      "uri": "softwareos-base://k8s/core/deployment/seccompops-engine",
+      "urn": "urn:softwareos-base:k8s:core:deployment:seccompops-engine:sha256-8e40d1908de4e66965da5ba64c8991913bae0028c8ca6f7798340dfc558b443c"
     },
     {
       "apiVersion": "v1",
@@ -440,8 +440,8 @@
       "namespace": "eco-seccompops",
       "platform": "core",
       "source": "platforms/eco-seccompops/k8s/base/service.yaml",
-      "uri": "eco-base://k8s/core/service/seccompops-engine",
-      "urn": "urn:eco-base:k8s:core:service:seccompops-engine:sha256-de9d8fcd0ee02e6db32cf6019fa4857d1049a1f39ebc41b554778a28260241c1"
+      "uri": "softwareos-base://k8s/core/service/seccompops-engine",
+      "urn": "urn:softwareos-base:k8s:core:service:seccompops-engine:sha256-de9d8fcd0ee02e6db32cf6019fa4857d1049a1f39ebc41b554778a28260241c1"
     },
     {
       "apiVersion": "v1",
@@ -452,8 +452,8 @@
       "namespace": "eco-seccompops",
       "platform": "core",
       "source": "platforms/eco-seccompops/platform-seccompops/k8s/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/seccompops-config",
-      "urn": "urn:eco-base:k8s:core:configmap:seccompops-config:sha256-2be986c5dcf490ee0cf83206b6b9e42b67f0346ffb797f57980230ca2a65b93a"
+      "uri": "softwareos-base://k8s/core/configmap/seccompops-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:seccompops-config:sha256-2be986c5dcf490ee0cf83206b6b9e42b67f0346ffb797f57980230ca2a65b93a"
     },
     {
       "apiVersion": "apps/v1",
@@ -464,8 +464,8 @@
       "namespace": "eco-seccompops",
       "platform": "core",
       "source": "platforms/eco-seccompops/platform-seccompops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/seccompops-auditor",
-      "urn": "urn:eco-base:k8s:core:deployment:seccompops-auditor:sha256-5db736596024c3f491211c9a7135a584cf8d83843116cc679cf7fadcb58550a3"
+      "uri": "softwareos-base://k8s/core/deployment/seccompops-auditor",
+      "urn": "urn:softwareos-base:k8s:core:deployment:seccompops-auditor:sha256-5db736596024c3f491211c9a7135a584cf8d83843116cc679cf7fadcb58550a3"
     },
     {
       "apiVersion": "apps/v1",
@@ -476,8 +476,8 @@
       "namespace": "eco-seccompops",
       "platform": "core",
       "source": "platforms/eco-seccompops/platform-seccompops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/seccompops-enforcer",
-      "urn": "urn:eco-base:k8s:core:deployment:seccompops-enforcer:sha256-9d2a05ac02a7cc2de5ebb12e35a13d9194f2f3e78662c1850b5e676739a4ca8e"
+      "uri": "softwareos-base://k8s/core/deployment/seccompops-enforcer",
+      "urn": "urn:softwareos-base:k8s:core:deployment:seccompops-enforcer:sha256-9d2a05ac02a7cc2de5ebb12e35a13d9194f2f3e78662c1850b5e676739a4ca8e"
     },
     {
       "apiVersion": "apps/v1",
@@ -488,8 +488,8 @@
       "namespace": "eco-seccompops",
       "platform": "core",
       "source": "platforms/eco-seccompops/platform-seccompops/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/seccompops-engine",
-      "urn": "urn:eco-base:k8s:core:deployment:seccompops-engine:sha256-8e40d1908de4e66965da5ba64c8991913bae0028c8ca6f7798340dfc558b443c"
+      "uri": "softwareos-base://k8s/core/deployment/seccompops-engine",
+      "urn": "urn:softwareos-base:k8s:core:deployment:seccompops-engine:sha256-8e40d1908de4e66965da5ba64c8991913bae0028c8ca6f7798340dfc558b443c"
     },
     {
       "apiVersion": "v1",
@@ -500,8 +500,8 @@
       "namespace": "eco-seccompops",
       "platform": "core",
       "source": "platforms/eco-seccompops/platform-seccompops/k8s/base/service.yaml",
-      "uri": "eco-base://k8s/core/service/seccompops-engine",
-      "urn": "urn:eco-base:k8s:core:service:seccompops-engine:sha256-de9d8fcd0ee02e6db32cf6019fa4857d1049a1f39ebc41b554778a28260241c1"
+      "uri": "softwareos-base://k8s/core/service/seccompops-engine",
+      "urn": "urn:softwareos-base:k8s:core:service:seccompops-engine:sha256-de9d8fcd0ee02e6db32cf6019fa4857d1049a1f39ebc41b554778a28260241c1"
     },
     {
       "apiVersion": "v1",
@@ -512,8 +512,8 @@
       "namespace": "fleet-management",
       "platform": "core",
       "source": "platforms/eco-superai/infrastructure/federation/cluster-registry.yaml",
-      "uri": "eco-base://k8s/core/configmap/cluster-registry",
-      "urn": "urn:eco-base:k8s:core:configmap:cluster-registry:sha256-c84db3225631575c064e18c2b4d94f87567373e18ea386cb9b69ad70eb0a3294"
+      "uri": "softwareos-base://k8s/core/configmap/cluster-registry",
+      "urn": "urn:softwareos-base:k8s:core:configmap:cluster-registry:sha256-c84db3225631575c064e18c2b4d94f87567373e18ea386cb9b69ad70eb0a3294"
     },
     {
       "apiVersion": "apps/v1",
@@ -524,8 +524,8 @@
       "namespace": "fleet-management",
       "platform": "core",
       "source": "platforms/eco-superai/infrastructure/federation/cluster-registry.yaml",
-      "uri": "eco-base://k8s/core/deployment/cluster-registry-operator",
-      "urn": "urn:eco-base:k8s:core:deployment:cluster-registry-operator:sha256-d73075ea8db7e87dcf63ccfabca71b16aabe6bf21652e96871e9299c72b2d19f"
+      "uri": "softwareos-base://k8s/core/deployment/cluster-registry-operator",
+      "urn": "urn:softwareos-base:k8s:core:deployment:cluster-registry-operator:sha256-d73075ea8db7e87dcf63ccfabca71b16aabe6bf21652e96871e9299c72b2d19f"
     },
     {
       "apiVersion": "v1",
@@ -536,8 +536,8 @@
       "namespace": "fleet-management",
       "platform": "core",
       "source": "platforms/eco-superai/infrastructure/federation/cluster-registry.yaml",
-      "uri": "eco-base://k8s/core/secret/cluster-secrets",
-      "urn": "urn:eco-base:k8s:core:secret:cluster-secrets:sha256-d8c3cf05f18c943d82e4bba279be6d0ce7f553f4ce666b5c9191a51273c13445"
+      "uri": "softwareos-base://k8s/core/secret/cluster-secrets",
+      "urn": "urn:softwareos-base:k8s:core:secret:cluster-secrets:sha256-d8c3cf05f18c943d82e4bba279be6d0ce7f553f4ce666b5c9191a51273c13445"
     },
     {
       "apiVersion": "v1",
@@ -548,8 +548,8 @@
       "namespace": "fleet-management",
       "platform": "core",
       "source": "platforms/eco-superai/infrastructure/federation/cluster-registry.yaml",
-      "uri": "eco-base://k8s/core/service/cluster-registry-service",
-      "urn": "urn:eco-base:k8s:core:service:cluster-registry-service:sha256-667bba520f5e2d6518796041fc341f22dcbc7945101bf8b155b4f27067715a3f"
+      "uri": "softwareos-base://k8s/core/service/cluster-registry-service",
+      "urn": "urn:softwareos-base:k8s:core:service:cluster-registry-service:sha256-667bba520f5e2d6518796041fc341f22dcbc7945101bf8b155b4f27067715a3f"
     },
     {
       "apiVersion": "v1",
@@ -560,8 +560,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/k8s/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/superai-config",
-      "urn": "urn:eco-base:k8s:core:configmap:superai-config:sha256-bc0fc2c6caaec62f7b2431cd884bd623d1213bdf669a7b079cb28bfdef7239f5"
+      "uri": "softwareos-base://k8s/core/configmap/superai-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:superai-config:sha256-bc0fc2c6caaec62f7b2431cd884bd623d1213bdf669a7b079cb28bfdef7239f5"
     },
     {
       "apiVersion": "batch/v1",
@@ -572,8 +572,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/k8s/base/cronjob.yaml",
-      "uri": "eco-base://k8s/core/cronjob/superai-cleanup",
-      "urn": "urn:eco-base:k8s:core:cronjob:superai-cleanup:sha256-c733afd0ee9c5cd401202df51fd71afc45d02fd7d84c8c1169c1e6afaf5e54d6"
+      "uri": "softwareos-base://k8s/core/cronjob/superai-cleanup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:superai-cleanup:sha256-c733afd0ee9c5cd401202df51fd71afc45d02fd7d84c8c1169c1e6afaf5e54d6"
     },
     {
       "apiVersion": "batch/v1",
@@ -584,8 +584,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/k8s/base/cronjob.yaml",
-      "uri": "eco-base://k8s/core/cronjob/superai-db-backup",
-      "urn": "urn:eco-base:k8s:core:cronjob:superai-db-backup:sha256-eb1272e4e5e8ad09fb5d6c7d6e27d50ccc9fb63a5b35482038e664d8fe603e75"
+      "uri": "softwareos-base://k8s/core/cronjob/superai-db-backup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:superai-db-backup:sha256-eb1272e4e5e8ad09fb5d6c7d6e27d50ccc9fb63a5b35482038e664d8fe603e75"
     },
     {
       "apiVersion": "apps/v1",
@@ -596,8 +596,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/superai-app",
-      "urn": "urn:eco-base:k8s:core:deployment:superai-app:sha256-82853160c98f4dd4d138f51543692154681b8f7261a433f733f8840f6756bba4"
+      "uri": "softwareos-base://k8s/core/deployment/superai-app",
+      "urn": "urn:softwareos-base:k8s:core:deployment:superai-app:sha256-82853160c98f4dd4d138f51543692154681b8f7261a433f733f8840f6756bba4"
     },
     {
       "apiVersion": "apps/v1",
@@ -608,8 +608,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/superai-beat",
-      "urn": "urn:eco-base:k8s:core:deployment:superai-beat:sha256-202548d66d448e25515410054b619f8b85106cb71235ddc4505fee0894e20907"
+      "uri": "softwareos-base://k8s/core/deployment/superai-beat",
+      "urn": "urn:softwareos-base:k8s:core:deployment:superai-beat:sha256-202548d66d448e25515410054b619f8b85106cb71235ddc4505fee0894e20907"
     },
     {
       "apiVersion": "apps/v1",
@@ -620,8 +620,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/superai-worker",
-      "urn": "urn:eco-base:k8s:core:deployment:superai-worker:sha256-7ab7484d28106886a8e8684848f4ea0b4a7fbb32489d43f48ac589ab825a3316"
+      "uri": "softwareos-base://k8s/core/deployment/superai-worker",
+      "urn": "urn:softwareos-base:k8s:core:deployment:superai-worker:sha256-7ab7484d28106886a8e8684848f4ea0b4a7fbb32489d43f48ac589ab825a3316"
     },
     {
       "apiVersion": "networking.k8s.io/v1",
@@ -632,8 +632,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/k8s/base/ingress.yaml",
-      "uri": "eco-base://k8s/core/ingress/superai-ingress",
-      "urn": "urn:eco-base:k8s:core:ingress:superai-ingress:sha256-7a9350cbff556cc31520dcfb4b372a7d989eb17b52aa9232bf428ab6900075a5"
+      "uri": "softwareos-base://k8s/core/ingress/superai-ingress",
+      "urn": "urn:softwareos-base:k8s:core:ingress:superai-ingress:sha256-7a9350cbff556cc31520dcfb4b372a7d989eb17b52aa9232bf428ab6900075a5"
     },
     {
       "apiVersion": "v1",
@@ -644,8 +644,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/k8s/base/secret.yaml",
-      "uri": "eco-base://k8s/core/secret/superai-db-credentials",
-      "urn": "urn:eco-base:k8s:core:secret:superai-db-credentials:sha256-7eac4cd389dba18d0731216ddbdaa786be6ca19b4b68eff2f23617d2b5008e07"
+      "uri": "softwareos-base://k8s/core/secret/superai-db-credentials",
+      "urn": "urn:softwareos-base:k8s:core:secret:superai-db-credentials:sha256-7eac4cd389dba18d0731216ddbdaa786be6ca19b4b68eff2f23617d2b5008e07"
     },
     {
       "apiVersion": "v1",
@@ -656,8 +656,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/k8s/base/secret.yaml",
-      "uri": "eco-base://k8s/core/secret/superai-registry-credentials",
-      "urn": "urn:eco-base:k8s:core:secret:superai-registry-credentials:sha256-f16dc60d0104f1005f8e6ea51364bea19ded4eef3dcc060cf0f74f78118e7635"
+      "uri": "softwareos-base://k8s/core/secret/superai-registry-credentials",
+      "urn": "urn:softwareos-base:k8s:core:secret:superai-registry-credentials:sha256-f16dc60d0104f1005f8e6ea51364bea19ded4eef3dcc060cf0f74f78118e7635"
     },
     {
       "apiVersion": "v1",
@@ -668,8 +668,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/k8s/base/secret.yaml",
-      "uri": "eco-base://k8s/core/secret/superai-secrets",
-      "urn": "urn:eco-base:k8s:core:secret:superai-secrets:sha256-2b9f44a148fccedc45676a0d9b61e8ee952256f82645fe571977b8976d17eaac"
+      "uri": "softwareos-base://k8s/core/secret/superai-secrets",
+      "urn": "urn:softwareos-base:k8s:core:secret:superai-secrets:sha256-2b9f44a148fccedc45676a0d9b61e8ee952256f82645fe571977b8976d17eaac"
     },
     {
       "apiVersion": "v1",
@@ -680,8 +680,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/k8s/base/service.yaml",
-      "uri": "eco-base://k8s/core/service/superai-app",
-      "urn": "urn:eco-base:k8s:core:service:superai-app:sha256-ac71ff0686de6bbd8d89b01837f9c93743afb513670ee7ba04f05fa777d643e9"
+      "uri": "softwareos-base://k8s/core/service/superai-app",
+      "urn": "urn:softwareos-base:k8s:core:service:superai-app:sha256-ac71ff0686de6bbd8d89b01837f9c93743afb513670ee7ba04f05fa777d643e9"
     },
     {
       "apiVersion": "v1",
@@ -692,8 +692,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/k8s/base/service.yaml",
-      "uri": "eco-base://k8s/core/service/superai-app-headless",
-      "urn": "urn:eco-base:k8s:core:service:superai-app-headless:sha256-699298fab87ee797c4a30d0ccc48f6612f24f99f0387315cb07bd7f9f520c4e1"
+      "uri": "softwareos-base://k8s/core/service/superai-app-headless",
+      "urn": "urn:softwareos-base:k8s:core:service:superai-app-headless:sha256-699298fab87ee797c4a30d0ccc48f6612f24f99f0387315cb07bd7f9f520c4e1"
     },
     {
       "apiVersion": "v1",
@@ -704,8 +704,8 @@
       "namespace": "fleet-management",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/infrastructure/federation/cluster-registry.yaml",
-      "uri": "eco-base://k8s/core/configmap/cluster-registry",
-      "urn": "urn:eco-base:k8s:core:configmap:cluster-registry:sha256-c84db3225631575c064e18c2b4d94f87567373e18ea386cb9b69ad70eb0a3294"
+      "uri": "softwareos-base://k8s/core/configmap/cluster-registry",
+      "urn": "urn:softwareos-base:k8s:core:configmap:cluster-registry:sha256-c84db3225631575c064e18c2b4d94f87567373e18ea386cb9b69ad70eb0a3294"
     },
     {
       "apiVersion": "apps/v1",
@@ -716,8 +716,8 @@
       "namespace": "fleet-management",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/infrastructure/federation/cluster-registry.yaml",
-      "uri": "eco-base://k8s/core/deployment/cluster-registry-operator",
-      "urn": "urn:eco-base:k8s:core:deployment:cluster-registry-operator:sha256-d73075ea8db7e87dcf63ccfabca71b16aabe6bf21652e96871e9299c72b2d19f"
+      "uri": "softwareos-base://k8s/core/deployment/cluster-registry-operator",
+      "urn": "urn:softwareos-base:k8s:core:deployment:cluster-registry-operator:sha256-d73075ea8db7e87dcf63ccfabca71b16aabe6bf21652e96871e9299c72b2d19f"
     },
     {
       "apiVersion": "v1",
@@ -728,8 +728,8 @@
       "namespace": "fleet-management",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/infrastructure/federation/cluster-registry.yaml",
-      "uri": "eco-base://k8s/core/secret/cluster-secrets",
-      "urn": "urn:eco-base:k8s:core:secret:cluster-secrets:sha256-d8c3cf05f18c943d82e4bba279be6d0ce7f553f4ce666b5c9191a51273c13445"
+      "uri": "softwareos-base://k8s/core/secret/cluster-secrets",
+      "urn": "urn:softwareos-base:k8s:core:secret:cluster-secrets:sha256-d8c3cf05f18c943d82e4bba279be6d0ce7f553f4ce666b5c9191a51273c13445"
     },
     {
       "apiVersion": "v1",
@@ -740,8 +740,8 @@
       "namespace": "fleet-management",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/infrastructure/federation/cluster-registry.yaml",
-      "uri": "eco-base://k8s/core/service/cluster-registry-service",
-      "urn": "urn:eco-base:k8s:core:service:cluster-registry-service:sha256-667bba520f5e2d6518796041fc341f22dcbc7945101bf8b155b4f27067715a3f"
+      "uri": "softwareos-base://k8s/core/service/cluster-registry-service",
+      "urn": "urn:softwareos-base:k8s:core:service:cluster-registry-service:sha256-667bba520f5e2d6518796041fc341f22dcbc7945101bf8b155b4f27067715a3f"
     },
     {
       "apiVersion": "v1",
@@ -752,8 +752,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/k8s/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/superai-config",
-      "urn": "urn:eco-base:k8s:core:configmap:superai-config:sha256-bc0fc2c6caaec62f7b2431cd884bd623d1213bdf669a7b079cb28bfdef7239f5"
+      "uri": "softwareos-base://k8s/core/configmap/superai-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:superai-config:sha256-bc0fc2c6caaec62f7b2431cd884bd623d1213bdf669a7b079cb28bfdef7239f5"
     },
     {
       "apiVersion": "batch/v1",
@@ -764,8 +764,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/k8s/base/cronjob.yaml",
-      "uri": "eco-base://k8s/core/cronjob/superai-cleanup",
-      "urn": "urn:eco-base:k8s:core:cronjob:superai-cleanup:sha256-c733afd0ee9c5cd401202df51fd71afc45d02fd7d84c8c1169c1e6afaf5e54d6"
+      "uri": "softwareos-base://k8s/core/cronjob/superai-cleanup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:superai-cleanup:sha256-c733afd0ee9c5cd401202df51fd71afc45d02fd7d84c8c1169c1e6afaf5e54d6"
     },
     {
       "apiVersion": "batch/v1",
@@ -776,8 +776,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/k8s/base/cronjob.yaml",
-      "uri": "eco-base://k8s/core/cronjob/superai-db-backup",
-      "urn": "urn:eco-base:k8s:core:cronjob:superai-db-backup:sha256-eb1272e4e5e8ad09fb5d6c7d6e27d50ccc9fb63a5b35482038e664d8fe603e75"
+      "uri": "softwareos-base://k8s/core/cronjob/superai-db-backup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:superai-db-backup:sha256-eb1272e4e5e8ad09fb5d6c7d6e27d50ccc9fb63a5b35482038e664d8fe603e75"
     },
     {
       "apiVersion": "apps/v1",
@@ -788,8 +788,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/superai-app",
-      "urn": "urn:eco-base:k8s:core:deployment:superai-app:sha256-82853160c98f4dd4d138f51543692154681b8f7261a433f733f8840f6756bba4"
+      "uri": "softwareos-base://k8s/core/deployment/superai-app",
+      "urn": "urn:softwareos-base:k8s:core:deployment:superai-app:sha256-82853160c98f4dd4d138f51543692154681b8f7261a433f733f8840f6756bba4"
     },
     {
       "apiVersion": "apps/v1",
@@ -800,8 +800,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/superai-beat",
-      "urn": "urn:eco-base:k8s:core:deployment:superai-beat:sha256-202548d66d448e25515410054b619f8b85106cb71235ddc4505fee0894e20907"
+      "uri": "softwareos-base://k8s/core/deployment/superai-beat",
+      "urn": "urn:softwareos-base:k8s:core:deployment:superai-beat:sha256-202548d66d448e25515410054b619f8b85106cb71235ddc4505fee0894e20907"
     },
     {
       "apiVersion": "apps/v1",
@@ -812,8 +812,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/k8s/base/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/superai-worker",
-      "urn": "urn:eco-base:k8s:core:deployment:superai-worker:sha256-7ab7484d28106886a8e8684848f4ea0b4a7fbb32489d43f48ac589ab825a3316"
+      "uri": "softwareos-base://k8s/core/deployment/superai-worker",
+      "urn": "urn:softwareos-base:k8s:core:deployment:superai-worker:sha256-7ab7484d28106886a8e8684848f4ea0b4a7fbb32489d43f48ac589ab825a3316"
     },
     {
       "apiVersion": "networking.k8s.io/v1",
@@ -824,8 +824,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/k8s/base/ingress.yaml",
-      "uri": "eco-base://k8s/core/ingress/superai-ingress",
-      "urn": "urn:eco-base:k8s:core:ingress:superai-ingress:sha256-7a9350cbff556cc31520dcfb4b372a7d989eb17b52aa9232bf428ab6900075a5"
+      "uri": "softwareos-base://k8s/core/ingress/superai-ingress",
+      "urn": "urn:softwareos-base:k8s:core:ingress:superai-ingress:sha256-7a9350cbff556cc31520dcfb4b372a7d989eb17b52aa9232bf428ab6900075a5"
     },
     {
       "apiVersion": "v1",
@@ -836,8 +836,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/k8s/base/secret.yaml",
-      "uri": "eco-base://k8s/core/secret/superai-db-credentials",
-      "urn": "urn:eco-base:k8s:core:secret:superai-db-credentials:sha256-7eac4cd389dba18d0731216ddbdaa786be6ca19b4b68eff2f23617d2b5008e07"
+      "uri": "softwareos-base://k8s/core/secret/superai-db-credentials",
+      "urn": "urn:softwareos-base:k8s:core:secret:superai-db-credentials:sha256-7eac4cd389dba18d0731216ddbdaa786be6ca19b4b68eff2f23617d2b5008e07"
     },
     {
       "apiVersion": "v1",
@@ -848,8 +848,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/k8s/base/secret.yaml",
-      "uri": "eco-base://k8s/core/secret/superai-registry-credentials",
-      "urn": "urn:eco-base:k8s:core:secret:superai-registry-credentials:sha256-f16dc60d0104f1005f8e6ea51364bea19ded4eef3dcc060cf0f74f78118e7635"
+      "uri": "softwareos-base://k8s/core/secret/superai-registry-credentials",
+      "urn": "urn:softwareos-base:k8s:core:secret:superai-registry-credentials:sha256-f16dc60d0104f1005f8e6ea51364bea19ded4eef3dcc060cf0f74f78118e7635"
     },
     {
       "apiVersion": "v1",
@@ -860,8 +860,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/k8s/base/secret.yaml",
-      "uri": "eco-base://k8s/core/secret/superai-secrets",
-      "urn": "urn:eco-base:k8s:core:secret:superai-secrets:sha256-2b9f44a148fccedc45676a0d9b61e8ee952256f82645fe571977b8976d17eaac"
+      "uri": "softwareos-base://k8s/core/secret/superai-secrets",
+      "urn": "urn:softwareos-base:k8s:core:secret:superai-secrets:sha256-2b9f44a148fccedc45676a0d9b61e8ee952256f82645fe571977b8976d17eaac"
     },
     {
       "apiVersion": "v1",
@@ -872,8 +872,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/k8s/base/service.yaml",
-      "uri": "eco-base://k8s/core/service/superai-app",
-      "urn": "urn:eco-base:k8s:core:service:superai-app:sha256-ac71ff0686de6bbd8d89b01837f9c93743afb513670ee7ba04f05fa777d643e9"
+      "uri": "softwareos-base://k8s/core/service/superai-app",
+      "urn": "urn:softwareos-base:k8s:core:service:superai-app:sha256-ac71ff0686de6bbd8d89b01837f9c93743afb513670ee7ba04f05fa777d643e9"
     },
     {
       "apiVersion": "v1",
@@ -884,8 +884,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/k8s/base/service.yaml",
-      "uri": "eco-base://k8s/core/service/superai-app-headless",
-      "urn": "urn:eco-base:k8s:core:service:superai-app-headless:sha256-699298fab87ee797c4a30d0ccc48f6612f24f99f0387315cb07bd7f9f520c4e1"
+      "uri": "softwareos-base://k8s/core/service/superai-app-headless",
+      "urn": "urn:softwareos-base:k8s:core:service:superai-app-headless:sha256-699298fab87ee797c4a30d0ccc48f6612f24f99f0387315cb07bd7f9f520c4e1"
     },
     {
       "apiVersion": "v1",
@@ -896,8 +896,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/security/falco/falco-config.yaml",
-      "uri": "eco-base://k8s/core/configmap/falco-config",
-      "urn": "urn:eco-base:k8s:core:configmap:falco-config:sha256-8ef6d94cc0d7bb2a05342cbe132af3acd8c48ac267aacc9ceb803eb077df64b1"
+      "uri": "softwareos-base://k8s/core/configmap/falco-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:falco-config:sha256-8ef6d94cc0d7bb2a05342cbe132af3acd8c48ac267aacc9ceb803eb077df64b1"
     },
     {
       "apiVersion": "v1",
@@ -908,8 +908,8 @@
       "namespace": "monitoring",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/security/security-scanning.yaml",
-      "uri": "eco-base://k8s/core/configmap/grafana-dashboard-security-scan",
-      "urn": "urn:eco-base:k8s:core:configmap:grafana-dashboard-security-scan:sha256-d3f4b5c95bee6ebbc012e17695eb4e7cdf44f457d525c03c1e6ca5d41344a279"
+      "uri": "softwareos-base://k8s/core/configmap/grafana-dashboard-security-scan",
+      "urn": "urn:softwareos-base:k8s:core:configmap:grafana-dashboard-security-scan:sha256-d3f4b5c95bee6ebbc012e17695eb4e7cdf44f457d525c03c1e6ca5d41344a279"
     },
     {
       "apiVersion": "batch/v1",
@@ -920,8 +920,8 @@
       "namespace": "default",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/security/security-scanning.yaml",
-      "uri": "eco-base://k8s/core/cronjob/code-scanner",
-      "urn": "urn:eco-base:k8s:core:cronjob:code-scanner:sha256-b71ac73211066bda3e65a824a5d5b06226e23d5401348e74409f1eb9047765fd"
+      "uri": "softwareos-base://k8s/core/cronjob/code-scanner",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:code-scanner:sha256-b71ac73211066bda3e65a824a5d5b06226e23d5401348e74409f1eb9047765fd"
     },
     {
       "apiVersion": "batch/v1",
@@ -932,8 +932,8 @@
       "namespace": "default",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/security/security-scanning.yaml",
-      "uri": "eco-base://k8s/core/cronjob/kube-bench-scanner",
-      "urn": "urn:eco-base:k8s:core:cronjob:kube-bench-scanner:sha256-8b6917523b01506ad50fc7d163284a33042a3d9b806f51e77a81853e3a6e1d0c"
+      "uri": "softwareos-base://k8s/core/cronjob/kube-bench-scanner",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:kube-bench-scanner:sha256-8b6917523b01506ad50fc7d163284a33042a3d9b806f51e77a81853e3a6e1d0c"
     },
     {
       "apiVersion": "batch/v1",
@@ -944,8 +944,8 @@
       "namespace": "default",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/security/security-scanning.yaml",
-      "uri": "eco-base://k8s/core/cronjob/kube-hunter-scanner",
-      "urn": "urn:eco-base:k8s:core:cronjob:kube-hunter-scanner:sha256-5182984d63ff073570c56c4fb543d72967e443c3002583ed6073c5434aac1df1"
+      "uri": "softwareos-base://k8s/core/cronjob/kube-hunter-scanner",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:kube-hunter-scanner:sha256-5182984d63ff073570c56c4fb543d72967e443c3002583ed6073c5434aac1df1"
     },
     {
       "apiVersion": "batch/v1",
@@ -956,8 +956,8 @@
       "namespace": "default",
       "platform": "core",
       "source": "platforms/eco-superai/platform-superai/security/security-scanning.yaml",
-      "uri": "eco-base://k8s/core/cronjob/trivy-image-scanner",
-      "urn": "urn:eco-base:k8s:core:cronjob:trivy-image-scanner:sha256-d55d030e48ad22b5ff0d693664ffc8d5519c0561b5a9a4d1523ae8022f012dab"
+      "uri": "softwareos-base://k8s/core/cronjob/trivy-image-scanner",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:trivy-image-scanner:sha256-d55d030e48ad22b5ff0d693664ffc8d5519c0561b5a9a4d1523ae8022f012dab"
     },
     {
       "apiVersion": "v1",
@@ -968,8 +968,8 @@
       "namespace": "eco-superai",
       "platform": "core",
       "source": "platforms/eco-superai/security/falco/falco-config.yaml",
-      "uri": "eco-base://k8s/core/configmap/falco-config",
-      "urn": "urn:eco-base:k8s:core:configmap:falco-config:sha256-8ef6d94cc0d7bb2a05342cbe132af3acd8c48ac267aacc9ceb803eb077df64b1"
+      "uri": "softwareos-base://k8s/core/configmap/falco-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:falco-config:sha256-8ef6d94cc0d7bb2a05342cbe132af3acd8c48ac267aacc9ceb803eb077df64b1"
     },
     {
       "apiVersion": "v1",
@@ -980,8 +980,8 @@
       "namespace": "monitoring",
       "platform": "core",
       "source": "platforms/eco-superai/security/security-scanning.yaml",
-      "uri": "eco-base://k8s/core/configmap/grafana-dashboard-security-scan",
-      "urn": "urn:eco-base:k8s:core:configmap:grafana-dashboard-security-scan:sha256-d3f4b5c95bee6ebbc012e17695eb4e7cdf44f457d525c03c1e6ca5d41344a279"
+      "uri": "softwareos-base://k8s/core/configmap/grafana-dashboard-security-scan",
+      "urn": "urn:softwareos-base:k8s:core:configmap:grafana-dashboard-security-scan:sha256-d3f4b5c95bee6ebbc012e17695eb4e7cdf44f457d525c03c1e6ca5d41344a279"
     },
     {
       "apiVersion": "batch/v1",
@@ -992,8 +992,8 @@
       "namespace": "default",
       "platform": "core",
       "source": "platforms/eco-superai/security/security-scanning.yaml",
-      "uri": "eco-base://k8s/core/cronjob/code-scanner",
-      "urn": "urn:eco-base:k8s:core:cronjob:code-scanner:sha256-b71ac73211066bda3e65a824a5d5b06226e23d5401348e74409f1eb9047765fd"
+      "uri": "softwareos-base://k8s/core/cronjob/code-scanner",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:code-scanner:sha256-b71ac73211066bda3e65a824a5d5b06226e23d5401348e74409f1eb9047765fd"
     },
     {
       "apiVersion": "batch/v1",
@@ -1004,8 +1004,8 @@
       "namespace": "default",
       "platform": "core",
       "source": "platforms/eco-superai/security/security-scanning.yaml",
-      "uri": "eco-base://k8s/core/cronjob/kube-bench-scanner",
-      "urn": "urn:eco-base:k8s:core:cronjob:kube-bench-scanner:sha256-8b6917523b01506ad50fc7d163284a33042a3d9b806f51e77a81853e3a6e1d0c"
+      "uri": "softwareos-base://k8s/core/cronjob/kube-bench-scanner",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:kube-bench-scanner:sha256-8b6917523b01506ad50fc7d163284a33042a3d9b806f51e77a81853e3a6e1d0c"
     },
     {
       "apiVersion": "batch/v1",
@@ -1016,8 +1016,8 @@
       "namespace": "default",
       "platform": "core",
       "source": "platforms/eco-superai/security/security-scanning.yaml",
-      "uri": "eco-base://k8s/core/cronjob/kube-hunter-scanner",
-      "urn": "urn:eco-base:k8s:core:cronjob:kube-hunter-scanner:sha256-5182984d63ff073570c56c4fb543d72967e443c3002583ed6073c5434aac1df1"
+      "uri": "softwareos-base://k8s/core/cronjob/kube-hunter-scanner",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:kube-hunter-scanner:sha256-5182984d63ff073570c56c4fb543d72967e443c3002583ed6073c5434aac1df1"
     },
     {
       "apiVersion": "batch/v1",
@@ -1028,8 +1028,8 @@
       "namespace": "default",
       "platform": "core",
       "source": "platforms/eco-superai/security/security-scanning.yaml",
-      "uri": "eco-base://k8s/core/cronjob/trivy-image-scanner",
-      "urn": "urn:eco-base:k8s:core:cronjob:trivy-image-scanner:sha256-d55d030e48ad22b5ff0d693664ffc8d5519c0561b5a9a4d1523ae8022f012dab"
+      "uri": "softwareos-base://k8s/core/cronjob/trivy-image-scanner",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:trivy-image-scanner:sha256-d55d030e48ad22b5ff0d693664ffc8d5519c0561b5a9a4d1523ae8022f012dab"
     },
     {
       "apiVersion": "v1",
@@ -1040,8 +1040,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/deployment/kubernetes/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/machine-native-ops-config",
-      "urn": "urn:eco-base:k8s:core:configmap:machine-native-ops-config:sha256-4d04a2a2fc05be448ad94f889c826c0a55062e2801e012cf5e76a0bcf9a5a24c"
+      "uri": "softwareos-base://k8s/core/configmap/machine-native-ops-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:machine-native-ops-config:sha256-4d04a2a2fc05be448ad94f889c826c0a55062e2801e012cf5e76a0bcf9a5a24c"
     },
     {
       "apiVersion": "v1",
@@ -1052,8 +1052,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/deployment/kubernetes/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/monitoring-config",
-      "urn": "urn:eco-base:k8s:core:configmap:monitoring-config:sha256-0f2f57057e6a17147423ec1b79875d65f4a1478a83cf7a867808458ed9269fea"
+      "uri": "softwareos-base://k8s/core/configmap/monitoring-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:monitoring-config:sha256-0f2f57057e6a17147423ec1b79875d65f4a1478a83cf7a867808458ed9269fea"
     },
     {
       "apiVersion": "v1",
@@ -1064,8 +1064,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/deployment/kubernetes/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/secrets-config",
-      "urn": "urn:eco-base:k8s:core:configmap:secrets-config:sha256-589853990d8635cd38904c7443ed74ffd5ab26363d07e891c62de50e6b08c47a"
+      "uri": "softwareos-base://k8s/core/configmap/secrets-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:secrets-config:sha256-589853990d8635cd38904c7443ed74ffd5ab26363d07e891c62de50e6b08c47a"
     },
     {
       "apiVersion": "v1",
@@ -1076,8 +1076,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/deployment/kubernetes/base/secrets.yaml",
-      "uri": "eco-base://k8s/core/secret/machine-native-ops-secrets",
-      "urn": "urn:eco-base:k8s:core:secret:machine-native-ops-secrets:sha256-eac778b0563f5cd6d7cbd1bd4b9adf9cbaa8def7c7dc65e50e97cbd3e5b99748"
+      "uri": "softwareos-base://k8s/core/secret/machine-native-ops-secrets",
+      "urn": "urn:softwareos-base:k8s:core:secret:machine-native-ops-secrets:sha256-eac778b0563f5cd6d7cbd1bd4b9adf9cbaa8def7c7dc65e50e97cbd3e5b99748"
     },
     {
       "apiVersion": "v1",
@@ -1088,8 +1088,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/deployment/kubernetes/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/machine-native-ops-config",
-      "urn": "urn:eco-base:k8s:core:configmap:machine-native-ops-config:sha256-4d04a2a2fc05be448ad94f889c826c0a55062e2801e012cf5e76a0bcf9a5a24c"
+      "uri": "softwareos-base://k8s/core/configmap/machine-native-ops-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:machine-native-ops-config:sha256-4d04a2a2fc05be448ad94f889c826c0a55062e2801e012cf5e76a0bcf9a5a24c"
     },
     {
       "apiVersion": "v1",
@@ -1100,8 +1100,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/deployment/kubernetes/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/monitoring-config",
-      "urn": "urn:eco-base:k8s:core:configmap:monitoring-config:sha256-0f2f57057e6a17147423ec1b79875d65f4a1478a83cf7a867808458ed9269fea"
+      "uri": "softwareos-base://k8s/core/configmap/monitoring-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:monitoring-config:sha256-0f2f57057e6a17147423ec1b79875d65f4a1478a83cf7a867808458ed9269fea"
     },
     {
       "apiVersion": "v1",
@@ -1112,8 +1112,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/deployment/kubernetes/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/secrets-config",
-      "urn": "urn:eco-base:k8s:core:configmap:secrets-config:sha256-589853990d8635cd38904c7443ed74ffd5ab26363d07e891c62de50e6b08c47a"
+      "uri": "softwareos-base://k8s/core/configmap/secrets-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:secrets-config:sha256-589853990d8635cd38904c7443ed74ffd5ab26363d07e891c62de50e6b08c47a"
     },
     {
       "apiVersion": "v1",
@@ -1124,8 +1124,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/deployment/kubernetes/base/secrets.yaml",
-      "uri": "eco-base://k8s/core/secret/machine-native-ops-secrets",
-      "urn": "urn:eco-base:k8s:core:secret:machine-native-ops-secrets:sha256-eac778b0563f5cd6d7cbd1bd4b9adf9cbaa8def7c7dc65e50e97cbd3e5b99748"
+      "uri": "softwareos-base://k8s/core/secret/machine-native-ops-secrets",
+      "urn": "urn:softwareos-base:k8s:core:secret:machine-native-ops-secrets:sha256-eac778b0563f5cd6d7cbd1bd4b9adf9cbaa8def7c7dc65e50e97cbd3e5b99748"
     },
     {
       "apiVersion": "batch/v1",
@@ -1136,8 +1136,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml",
-      "uri": "eco-base://k8s/core/cronjob/backup-validation",
-      "urn": "urn:eco-base:k8s:core:cronjob:backup-validation:sha256-676403f5f6964e58d8671252063ef613e021f9255e5935c7ddd7f8adccaa4ae9"
+      "uri": "softwareos-base://k8s/core/cronjob/backup-validation",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:backup-validation:sha256-676403f5f6964e58d8671252063ef613e021f9255e5935c7ddd7f8adccaa4ae9"
     },
     {
       "apiVersion": "batch/v1",
@@ -1148,8 +1148,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml",
-      "uri": "eco-base://k8s/core/cronjob/config-backup",
-      "urn": "urn:eco-base:k8s:core:cronjob:config-backup:sha256-bd92beb2ddbc92612e106721a8a3e1dc3e121794fd5a435cf6ba166dd5635ae1"
+      "uri": "softwareos-base://k8s/core/cronjob/config-backup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:config-backup:sha256-bd92beb2ddbc92612e106721a8a3e1dc3e121794fd5a435cf6ba166dd5635ae1"
     },
     {
       "apiVersion": "batch/v1",
@@ -1160,8 +1160,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml",
-      "uri": "eco-base://k8s/core/cronjob/postgres-backup",
-      "urn": "urn:eco-base:k8s:core:cronjob:postgres-backup:sha256-ed3e39ac20a1c1881b5028f5c2bb009d6d5e56024f7425fecf97e0ec5da37b29"
+      "uri": "softwareos-base://k8s/core/cronjob/postgres-backup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:postgres-backup:sha256-ed3e39ac20a1c1881b5028f5c2bb009d6d5e56024f7425fecf97e0ec5da37b29"
     },
     {
       "apiVersion": "batch/v1",
@@ -1172,8 +1172,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml",
-      "uri": "eco-base://k8s/core/cronjob/redis-backup",
-      "urn": "urn:eco-base:k8s:core:cronjob:redis-backup:sha256-9e01c3b25fe54647e2146a0e72280fc154a252493af5b930b1375cb4d1893c23"
+      "uri": "softwareos-base://k8s/core/cronjob/redis-backup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:redis-backup:sha256-9e01c3b25fe54647e2146a0e72280fc154a252493af5b930b1375cb4d1893c23"
     },
     {
       "apiVersion": "apps/v1",
@@ -1184,8 +1184,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml",
-      "uri": "eco-base://k8s/core/deployment/machine-native-ops",
-      "urn": "urn:eco-base:k8s:core:deployment:machine-native-ops:sha256-57697a405d4bb1ca13338410ae862d3405693c1aee2035ac5f7373c7feb0856c"
+      "uri": "softwareos-base://k8s/core/deployment/machine-native-ops",
+      "urn": "urn:softwareos-base:k8s:core:deployment:machine-native-ops:sha256-57697a405d4bb1ca13338410ae862d3405693c1aee2035ac5f7373c7feb0856c"
     },
     {
       "apiVersion": "apps/v1",
@@ -1196,8 +1196,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml",
-      "uri": "eco-base://k8s/core/deployment/machine-native-ops-api",
-      "urn": "urn:eco-base:k8s:core:deployment:machine-native-ops-api:sha256-78d7be7fb36a5d992c8908fd62e80e8428d30c0fde829bb88c61eb7d31e1e9b1"
+      "uri": "softwareos-base://k8s/core/deployment/machine-native-ops-api",
+      "urn": "urn:softwareos-base:k8s:core:deployment:machine-native-ops-api:sha256-78d7be7fb36a5d992c8908fd62e80e8428d30c0fde829bb88c61eb7d31e1e9b1"
     },
     {
       "apiVersion": "apps/v1",
@@ -1208,8 +1208,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml",
-      "uri": "eco-base://k8s/core/deployment/machine-native-ops-worker",
-      "urn": "urn:eco-base:k8s:core:deployment:machine-native-ops-worker:sha256-8367ad752874e9a331351ee4e427c6b3ba2691048e8ced7fe63d0d5f351c6b00"
+      "uri": "softwareos-base://k8s/core/deployment/machine-native-ops-worker",
+      "urn": "urn:softwareos-base:k8s:core:deployment:machine-native-ops-worker:sha256-8367ad752874e9a331351ee4e427c6b3ba2691048e8ced7fe63d0d5f351c6b00"
     },
     {
       "apiVersion": "v1",
@@ -1220,8 +1220,8 @@
       "namespace": "monitoring",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml",
-      "uri": "eco-base://k8s/core/service/monitoring",
-      "urn": "urn:eco-base:k8s:core:service:monitoring:sha256-c782c32349d2c8a919851a01bc0dfa8cd2267f925338457f0f5399c04f63a312"
+      "uri": "softwareos-base://k8s/core/service/monitoring",
+      "urn": "urn:softwareos-base:k8s:core:service:monitoring:sha256-c782c32349d2c8a919851a01bc0dfa8cd2267f925338457f0f5399c04f63a312"
     },
     {
       "apiVersion": "v1",
@@ -1232,8 +1232,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml",
-      "uri": "eco-base://k8s/core/service/machine-native-ops",
-      "urn": "urn:eco-base:k8s:core:service:machine-native-ops:sha256-376797a973deaa454a431e8e60d5e9692f53b9187d8f627af9dca32271987b08"
+      "uri": "softwareos-base://k8s/core/service/machine-native-ops",
+      "urn": "urn:softwareos-base:k8s:core:service:machine-native-ops:sha256-376797a973deaa454a431e8e60d5e9692f53b9187d8f627af9dca32271987b08"
     },
     {
       "apiVersion": "v1",
@@ -1244,8 +1244,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml",
-      "uri": "eco-base://k8s/core/service/machine-native-ops-api",
-      "urn": "urn:eco-base:k8s:core:service:machine-native-ops-api:sha256-11da0696acaefa96e97329bf33a229444bd39c27994c99b011f988d45eeb94b0"
+      "uri": "softwareos-base://k8s/core/service/machine-native-ops-api",
+      "urn": "urn:softwareos-base:k8s:core:service:machine-native-ops-api:sha256-11da0696acaefa96e97329bf33a229444bd39c27994c99b011f988d45eeb94b0"
     },
     {
       "apiVersion": "v1",
@@ -1256,8 +1256,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml",
-      "uri": "eco-base://k8s/core/service/machine-native-ops-worker",
-      "urn": "urn:eco-base:k8s:core:service:machine-native-ops-worker:sha256-edad0b9abe0f08069df5a3102dfc464e7a8537610d3ff8f6cc3131f02b3ea5f5"
+      "uri": "softwareos-base://k8s/core/service/machine-native-ops-worker",
+      "urn": "urn:softwareos-base:k8s:core:service:machine-native-ops-worker:sha256-edad0b9abe0f08069df5a3102dfc464e7a8537610d3ff8f6cc3131f02b3ea5f5"
     },
     {
       "apiVersion": "v1",
@@ -1268,8 +1268,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml",
-      "uri": "eco-base://k8s/core/service/postgres",
-      "urn": "urn:eco-base:k8s:core:service:postgres:sha256-3e7a93da3fb2009cf37f9fcee21181cff03304f2b49f23f5d28317d5d2b2b20e"
+      "uri": "softwareos-base://k8s/core/service/postgres",
+      "urn": "urn:softwareos-base:k8s:core:service:postgres:sha256-3e7a93da3fb2009cf37f9fcee21181cff03304f2b49f23f5d28317d5d2b2b20e"
     },
     {
       "apiVersion": "v1",
@@ -1280,8 +1280,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/high-availability/services/multi-az-services.yaml",
-      "uri": "eco-base://k8s/core/service/redis-cluster",
-      "urn": "urn:eco-base:k8s:core:service:redis-cluster:sha256-089470f0056bc756151ff59dbf40525e57a5406d6c9c660bb43d9e96ec7a6df3"
+      "uri": "softwareos-base://k8s/core/service/redis-cluster",
+      "urn": "urn:softwareos-base:k8s:core:service:redis-cluster:sha256-089470f0056bc756151ff59dbf40525e57a5406d6c9c660bb43d9e96ec7a6df3"
     },
     {
       "apiVersion": "v1",
@@ -1292,8 +1292,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/jaeger/istio-config.yaml",
-      "uri": "eco-base://k8s/core/configmap/jaeger-tracing-config",
-      "urn": "urn:eco-base:k8s:core:configmap:jaeger-tracing-config:sha256-d556939865f74cf8fa53a1d9f42ad9f8cba5f929947da5f60ecd64315bd2ffde"
+      "uri": "softwareos-base://k8s/core/configmap/jaeger-tracing-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:jaeger-tracing-config:sha256-d556939865f74cf8fa53a1d9f42ad9f8cba5f929947da5f60ecd64315bd2ffde"
     },
     {
       "apiVersion": "v1",
@@ -1304,8 +1304,8 @@
       "namespace": "velero",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml",
-      "uri": "eco-base://k8s/core/configmap/backup-encryption-config",
-      "urn": "urn:eco-base:k8s:core:configmap:backup-encryption-config:sha256-6791345b55a7b6dcb7028fb32ed0eddabd721e7df78584a7750ed9ddb4572810"
+      "uri": "softwareos-base://k8s/core/configmap/backup-encryption-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:backup-encryption-config:sha256-6791345b55a7b6dcb7028fb32ed0eddabd721e7df78584a7750ed9ddb4572810"
     },
     {
       "apiVersion": "v1",
@@ -1316,8 +1316,8 @@
       "namespace": "velero",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/backup-encryption.yaml",
-      "uri": "eco-base://k8s/core/secret/velero-encryption-keys",
-      "urn": "urn:eco-base:k8s:core:secret:velero-encryption-keys:sha256-83a2b3367c935dbf1c3e979a26f7e02133a671d829ecfda51f4cb6f71891d704"
+      "uri": "softwareos-base://k8s/core/secret/velero-encryption-keys",
+      "urn": "urn:softwareos-base:k8s:core:secret:velero-encryption-keys:sha256-83a2b3367c935dbf1c3e979a26f7e02133a671d829ecfda51f4cb6f71891d704"
     },
     {
       "apiVersion": "v1",
@@ -1328,8 +1328,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/machine-native-ops-config",
-      "urn": "urn:eco-base:k8s:core:configmap:machine-native-ops-config:sha256-90ff022568070f64fb3ee049f70781892fed35a5ca55b6da5145ff89a3606b8b"
+      "uri": "softwareos-base://k8s/core/configmap/machine-native-ops-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:machine-native-ops-config:sha256-90ff022568070f64fb3ee049f70781892fed35a5ca55b6da5145ff89a3606b8b"
     },
     {
       "apiVersion": "batch/v1",
@@ -1340,8 +1340,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/disaster-recovery-job.yaml",
-      "uri": "eco-base://k8s/core/cronjob/dr-backup-verification",
-      "urn": "urn:eco-base:k8s:core:cronjob:dr-backup-verification:sha256-0c2a776e6129cecfe9327dbfb2d470afa5094f855eb613bc14f13156db26d147"
+      "uri": "softwareos-base://k8s/core/cronjob/dr-backup-verification",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:dr-backup-verification:sha256-0c2a776e6129cecfe9327dbfb2d470afa5094f855eb613bc14f13156db26d147"
     },
     {
       "apiVersion": "batch/v1",
@@ -1352,8 +1352,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/disaster-recovery-job.yaml",
-      "uri": "eco-base://k8s/core/cronjob/dr-health-check",
-      "urn": "urn:eco-base:k8s:core:cronjob:dr-health-check:sha256-aa9aac2987abb810a881e41cea4095a424c712970a69d9dc3fa38775ab762637"
+      "uri": "softwareos-base://k8s/core/cronjob/dr-health-check",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:dr-health-check:sha256-aa9aac2987abb810a881e41cea4095a424c712970a69d9dc3fa38775ab762637"
     },
     {
       "apiVersion": "v1",
@@ -1364,8 +1364,8 @@
       "namespace": "istio-system",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml",
-      "uri": "eco-base://k8s/core/configmap/jaeger-enhanced-config",
-      "urn": "urn:eco-base:k8s:core:configmap:jaeger-enhanced-config:sha256-5739178d638d17720aeafd8dd30a8ce3c96204126add48587503471de1ba5b9b"
+      "uri": "softwareos-base://k8s/core/configmap/jaeger-enhanced-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:jaeger-enhanced-config:sha256-5739178d638d17720aeafd8dd30a8ce3c96204126add48587503471de1ba5b9b"
     },
     {
       "apiVersion": "v1",
@@ -1376,8 +1376,8 @@
       "namespace": "istio-system",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml",
-      "uri": "eco-base://k8s/core/configmap/trace-retention-config",
-      "urn": "urn:eco-base:k8s:core:configmap:trace-retention-config:sha256-145b7674afd4f84e48b44213f4164eece7e5e1821861d6283bf375abdcd343d8"
+      "uri": "softwareos-base://k8s/core/configmap/trace-retention-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:trace-retention-config:sha256-145b7674afd4f84e48b44213f4164eece7e5e1821861d6283bf375abdcd343d8"
     },
     {
       "apiVersion": "v1",
@@ -1388,8 +1388,8 @@
       "namespace": "istio-system",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/enhanced-tracing.yaml",
-      "uri": "eco-base://k8s/core/configmap/tracing-context-config",
-      "urn": "urn:eco-base:k8s:core:configmap:tracing-context-config:sha256-2c665560aebdc905d357283af6f8fb7217a6808c4f44852950e001995fad6964"
+      "uri": "softwareos-base://k8s/core/configmap/tracing-context-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:tracing-context-config:sha256-2c665560aebdc905d357283af6f8fb7217a6808c4f44852950e001995fad6964"
     },
     {
       "apiVersion": "v1",
@@ -1400,8 +1400,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/gateway.yaml",
-      "uri": "eco-base://k8s/core/service/machine-native-ops-lb",
-      "urn": "urn:eco-base:k8s:core:service:machine-native-ops-lb:sha256-e311bd1d73ec1d0b416504be3d050fc57f4776a813539017cc57c7b5bebfe5b9"
+      "uri": "softwareos-base://k8s/core/service/machine-native-ops-lb",
+      "urn": "urn:softwareos-base:k8s:core:service:machine-native-ops-lb:sha256-e311bd1d73ec1d0b416504be3d050fc57f4776a813539017cc57c7b5bebfe5b9"
     },
     {
       "apiVersion": "v1",
@@ -1412,8 +1412,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/jaeger-config.yaml",
-      "uri": "eco-base://k8s/core/configmap/jaeger-config",
-      "urn": "urn:eco-base:k8s:core:configmap:jaeger-config:sha256-733c98be5e9d15a08ae07eaff1b8480ced6fb724387810ce10e6dc03c02b96a7"
+      "uri": "softwareos-base://k8s/core/configmap/jaeger-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:jaeger-config:sha256-733c98be5e9d15a08ae07eaff1b8480ced6fb724387810ce10e6dc03c02b96a7"
     },
     {
       "apiVersion": "v1",
@@ -1424,8 +1424,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/jaeger-config.yaml",
-      "uri": "eco-base://k8s/core/configmap/tracing-config",
-      "urn": "urn:eco-base:k8s:core:configmap:tracing-config:sha256-a97d02656b425927dd80c2acf76ed545eeb29a4f54f6467cd47473dd9e680737"
+      "uri": "softwareos-base://k8s/core/configmap/tracing-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:tracing-config:sha256-a97d02656b425927dd80c2acf76ed545eeb29a4f54f6467cd47473dd9e680737"
     },
     {
       "apiVersion": "v1",
@@ -1436,8 +1436,8 @@
       "namespace": "istio-system",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/multi-cluster-mesh.yaml",
-      "uri": "eco-base://k8s/core/configmap/istio",
-      "urn": "urn:eco-base:k8s:core:configmap:istio:sha256-d97c2d3877508ffdcaa9cea53c9b0c6f08e8919b10d1c23801a7fb12ee4a1a2c"
+      "uri": "softwareos-base://k8s/core/configmap/istio",
+      "urn": "urn:softwareos-base:k8s:core:configmap:istio:sha256-d97c2d3877508ffdcaa9cea53c9b0c6f08e8919b10d1c23801a7fb12ee4a1a2c"
     },
     {
       "apiVersion": "v1",
@@ -1448,8 +1448,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/multi-cluster-mesh.yaml",
-      "uri": "eco-base://k8s/core/configmap/multi-cluster-health-config",
-      "urn": "urn:eco-base:k8s:core:configmap:multi-cluster-health-config:sha256-74ebf2bed6edace44feeba2fd5033dd9d76d4ee6a7828b416c5c1d68f1c432a8"
+      "uri": "softwareos-base://k8s/core/configmap/multi-cluster-health-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:multi-cluster-health-config:sha256-74ebf2bed6edace44feeba2fd5033dd9d76d4ee6a7828b416c5c1d68f1c432a8"
     },
     {
       "apiVersion": "batch/v1",
@@ -1460,8 +1460,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-job.yaml",
-      "uri": "eco-base://k8s/core/cronjob/performance-benchmark-endurance",
-      "urn": "urn:eco-base:k8s:core:cronjob:performance-benchmark-endurance:sha256-b28e84b7204683ecca2de69b6cbfa26ef03ca9e4b600521435202544aaaca0e4"
+      "uri": "softwareos-base://k8s/core/cronjob/performance-benchmark-endurance",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:performance-benchmark-endurance:sha256-b28e84b7204683ecca2de69b6cbfa26ef03ca9e4b600521435202544aaaca0e4"
     },
     {
       "apiVersion": "batch/v1",
@@ -1472,8 +1472,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-job.yaml",
-      "uri": "eco-base://k8s/core/cronjob/performance-benchmark-load",
-      "urn": "urn:eco-base:k8s:core:cronjob:performance-benchmark-load:sha256-621d8db4a681c5af199849fbde671d502452fa5ebf0265a727b92a329be996b5"
+      "uri": "softwareos-base://k8s/core/cronjob/performance-benchmark-load",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:performance-benchmark-load:sha256-621d8db4a681c5af199849fbde671d502452fa5ebf0265a727b92a329be996b5"
     },
     {
       "apiVersion": "batch/v1",
@@ -1484,8 +1484,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-job.yaml",
-      "uri": "eco-base://k8s/core/cronjob/performance-benchmark-smoke",
-      "urn": "urn:eco-base:k8s:core:cronjob:performance-benchmark-smoke:sha256-15e7a473e1bfe270bc07648350dbb5ca013ca393137bfd4e05f672c70aed2795"
+      "uri": "softwareos-base://k8s/core/cronjob/performance-benchmark-smoke",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:performance-benchmark-smoke:sha256-15e7a473e1bfe270bc07648350dbb5ca013ca393137bfd4e05f672c70aed2795"
     },
     {
       "apiVersion": "batch/v1",
@@ -1496,8 +1496,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/performance-benchmark-job.yaml",
-      "uri": "eco-base://k8s/core/cronjob/performance-benchmark-stress",
-      "urn": "urn:eco-base:k8s:core:cronjob:performance-benchmark-stress:sha256-d013ae7efd38d8fc0fea299c4f709242800203689e0f6e6259a2da8d17841514"
+      "uri": "softwareos-base://k8s/core/cronjob/performance-benchmark-stress",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:performance-benchmark-stress:sha256-d013ae7efd38d8fc0fea299c4f709242800203689e0f6e6259a2da8d17841514"
     },
     {
       "apiVersion": "apps/v1",
@@ -1508,8 +1508,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/tracing-middleware-config.yaml",
-      "uri": "eco-base://k8s/core/deployment/machine-native-ops",
-      "urn": "urn:eco-base:k8s:core:deployment:machine-native-ops:sha256-97ba2fa390e47e9ea536cbc9d0a942e7a807c3899e1068a16d59567cc83c39a0"
+      "uri": "softwareos-base://k8s/core/deployment/machine-native-ops",
+      "urn": "urn:softwareos-base:k8s:core:deployment:machine-native-ops:sha256-97ba2fa390e47e9ea536cbc9d0a942e7a807c3899e1068a16d59567cc83c39a0"
     },
     {
       "apiVersion": "batch/v1",
@@ -1520,8 +1520,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml",
-      "uri": "eco-base://k8s/core/cronjob/postgres-backup",
-      "urn": "urn:eco-base:k8s:core:cronjob:postgres-backup:sha256-6589e3ff6f8a2d79b215ac6f548a61f998c5effe0878b4c4ff571b111322ed3a"
+      "uri": "softwareos-base://k8s/core/cronjob/postgres-backup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:postgres-backup:sha256-6589e3ff6f8a2d79b215ac6f548a61f998c5effe0878b4c4ff571b111322ed3a"
     },
     {
       "apiVersion": "batch/v1",
@@ -1532,8 +1532,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml",
-      "uri": "eco-base://k8s/core/cronjob/redis-backup",
-      "urn": "urn:eco-base:k8s:core:cronjob:redis-backup:sha256-a6968c53be52fd56bac05a89de74367d0526d229737cecaa8e0bed74db25a8e3"
+      "uri": "softwareos-base://k8s/core/cronjob/redis-backup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:redis-backup:sha256-a6968c53be52fd56bac05a89de74367d0526d229737cecaa8e0bed74db25a8e3"
     },
     {
       "apiVersion": "v1",
@@ -1544,8 +1544,8 @@
       "namespace": "velero",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/k8s-legacy/production/velero-config.yaml",
-      "uri": "eco-base://k8s/core/secret/velero-s3-credentials",
-      "urn": "urn:eco-base:k8s:core:secret:velero-s3-credentials:sha256-9d6d490ce31bbe56106b3fe7aa6d4c7e45d013f3effe076f1c99967d42a20315"
+      "uri": "softwareos-base://k8s/core/secret/velero-s3-credentials",
+      "urn": "urn:softwareos-base:k8s:core:secret:velero-s3-credentials:sha256-9d6d490ce31bbe56106b3fe7aa6d4c7e45d013f3effe076f1c99967d42a20315"
     },
     {
       "apiVersion": "v1",
@@ -1556,8 +1556,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/kubernetes/manifests/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/machine-native-ops-config",
-      "urn": "urn:eco-base:k8s:core:configmap:machine-native-ops-config:sha256-4101f767bb0d5bbc7b5eee121d6ec11b1b13b99590400a47447093ed1aa2f981"
+      "uri": "softwareos-base://k8s/core/configmap/machine-native-ops-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:machine-native-ops-config:sha256-4101f767bb0d5bbc7b5eee121d6ec11b1b13b99590400a47447093ed1aa2f981"
     },
     {
       "apiVersion": "networking.k8s.io/v1",
@@ -1568,8 +1568,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/kubernetes/manifests/base/ingress.yaml",
-      "uri": "eco-base://k8s/core/ingress/machine-native-ops-ingress",
-      "urn": "urn:eco-base:k8s:core:ingress:machine-native-ops-ingress:sha256-b2fbdef686c0368b866632d840f11c0fc72e861cca627bc55b1cc42520f15e96"
+      "uri": "softwareos-base://k8s/core/ingress/machine-native-ops-ingress",
+      "urn": "urn:softwareos-base:k8s:core:ingress:machine-native-ops-ingress:sha256-b2fbdef686c0368b866632d840f11c0fc72e861cca627bc55b1cc42520f15e96"
     },
     {
       "apiVersion": "v1",
@@ -1580,8 +1580,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/kubernetes/manifests/base/secret.yaml",
-      "uri": "eco-base://k8s/core/secret/machine-native-ops-secrets",
-      "urn": "urn:eco-base:k8s:core:secret:machine-native-ops-secrets:sha256-41c6fa08ae9de1bf260def158c93f76c208b8c2ff241cc134dcfe57fcfaa2d3a"
+      "uri": "softwareos-base://k8s/core/secret/machine-native-ops-secrets",
+      "urn": "urn:softwareos-base:k8s:core:secret:machine-native-ops-secrets:sha256-41c6fa08ae9de1bf260def158c93f76c208b8c2ff241cc134dcfe57fcfaa2d3a"
     },
     {
       "apiVersion": "v1",
@@ -1592,8 +1592,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/kubernetes/manifests/systems/elasticsearch-search-system/service.yaml",
-      "uri": "eco-base://k8s/core/service/elasticsearch-search-service",
-      "urn": "urn:eco-base:k8s:core:service:elasticsearch-search-service:sha256-2056d28592d7cfe87e5f2bbb0117521a72f1fb85489eca0380b4c1ca42ce5ded"
+      "uri": "softwareos-base://k8s/core/service/elasticsearch-search-service",
+      "urn": "urn:softwareos-base:k8s:core:service:elasticsearch-search-service:sha256-2056d28592d7cfe87e5f2bbb0117521a72f1fb85489eca0380b4c1ca42ce5ded"
     },
     {
       "apiVersion": "v1",
@@ -1604,8 +1604,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/kubernetes/manifests/systems/engine/service.yaml",
-      "uri": "eco-base://k8s/core/service/aep-engine-service",
-      "urn": "urn:eco-base:k8s:core:service:aep-engine-service:sha256-ae0bb7180adba0e3760bbd324927a036fc00601fc0f2c6893d250b87fc292226"
+      "uri": "softwareos-base://k8s/core/service/aep-engine-service",
+      "urn": "urn:softwareos-base:k8s:core:service:aep-engine-service:sha256-ae0bb7180adba0e3760bbd324927a036fc00601fc0f2c6893d250b87fc292226"
     },
     {
       "apiVersion": "v1",
@@ -1616,8 +1616,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/kubernetes/manifests/systems/esync-platform/service.yaml",
-      "uri": "eco-base://k8s/core/service/esync-platform-service",
-      "urn": "urn:eco-base:k8s:core:service:esync-platform-service:sha256-88e4a8a873f4b1ff1ed892c066886f409d0aee041594b7b4171fddecc7d72add"
+      "uri": "softwareos-base://k8s/core/service/esync-platform-service",
+      "urn": "urn:softwareos-base:k8s:core:service:esync-platform-service:sha256-88e4a8a873f4b1ff1ed892c066886f409d0aee041594b7b4171fddecc7d72add"
     },
     {
       "apiVersion": "v1",
@@ -1628,8 +1628,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/kubernetes/manifests/systems/file-organizer-system/service.yaml",
-      "uri": "eco-base://k8s/core/service/file-organizer-service",
-      "urn": "urn:eco-base:k8s:core:service:file-organizer-service:sha256-49285b9ac7a15142d367f91b79a79eab20da03ffc5a338d720d1ca7b30fde757"
+      "uri": "softwareos-base://k8s/core/service/file-organizer-service",
+      "urn": "urn:softwareos-base:k8s:core:service:file-organizer-service:sha256-49285b9ac7a15142d367f91b79a79eab20da03ffc5a338d720d1ca7b30fde757"
     },
     {
       "apiVersion": "v1",
@@ -1640,8 +1640,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/foundation/kubernetes/manifests/systems/instant/service.yaml",
-      "uri": "eco-base://k8s/core/service/instant-service",
-      "urn": "urn:eco-base:k8s:core:service:instant-service:sha256-c5d797cb1d344b0fd339296162bb737f8a8f076d42386e8cdb6ce968ddb51407"
+      "uri": "softwareos-base://k8s/core/service/instant-service",
+      "urn": "urn:softwareos-base:k8s:core:service:instant-service:sha256-c5d797cb1d344b0fd339296162bb737f8a8f076d42386e8cdb6ce968ddb51407"
     },
     {
       "apiVersion": "batch/v1",
@@ -1652,8 +1652,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml",
-      "uri": "eco-base://k8s/core/cronjob/backup-validation",
-      "urn": "urn:eco-base:k8s:core:cronjob:backup-validation:sha256-676403f5f6964e58d8671252063ef613e021f9255e5935c7ddd7f8adccaa4ae9"
+      "uri": "softwareos-base://k8s/core/cronjob/backup-validation",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:backup-validation:sha256-676403f5f6964e58d8671252063ef613e021f9255e5935c7ddd7f8adccaa4ae9"
     },
     {
       "apiVersion": "batch/v1",
@@ -1664,8 +1664,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml",
-      "uri": "eco-base://k8s/core/cronjob/config-backup",
-      "urn": "urn:eco-base:k8s:core:cronjob:config-backup:sha256-bd92beb2ddbc92612e106721a8a3e1dc3e121794fd5a435cf6ba166dd5635ae1"
+      "uri": "softwareos-base://k8s/core/cronjob/config-backup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:config-backup:sha256-bd92beb2ddbc92612e106721a8a3e1dc3e121794fd5a435cf6ba166dd5635ae1"
     },
     {
       "apiVersion": "batch/v1",
@@ -1676,8 +1676,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml",
-      "uri": "eco-base://k8s/core/cronjob/postgres-backup",
-      "urn": "urn:eco-base:k8s:core:cronjob:postgres-backup:sha256-ed3e39ac20a1c1881b5028f5c2bb009d6d5e56024f7425fecf97e0ec5da37b29"
+      "uri": "softwareos-base://k8s/core/cronjob/postgres-backup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:postgres-backup:sha256-ed3e39ac20a1c1881b5028f5c2bb009d6d5e56024f7425fecf97e0ec5da37b29"
     },
     {
       "apiVersion": "batch/v1",
@@ -1688,8 +1688,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/disaster-recovery/jobs/database-backup-jobs.yaml",
-      "uri": "eco-base://k8s/core/cronjob/redis-backup",
-      "urn": "urn:eco-base:k8s:core:cronjob:redis-backup:sha256-9e01c3b25fe54647e2146a0e72280fc154a252493af5b930b1375cb4d1893c23"
+      "uri": "softwareos-base://k8s/core/cronjob/redis-backup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:redis-backup:sha256-9e01c3b25fe54647e2146a0e72280fc154a252493af5b930b1375cb4d1893c23"
     },
     {
       "apiVersion": "apps/v1",
@@ -1700,8 +1700,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml",
-      "uri": "eco-base://k8s/core/deployment/machine-native-ops",
-      "urn": "urn:eco-base:k8s:core:deployment:machine-native-ops:sha256-57697a405d4bb1ca13338410ae862d3405693c1aee2035ac5f7373c7feb0856c"
+      "uri": "softwareos-base://k8s/core/deployment/machine-native-ops",
+      "urn": "urn:softwareos-base:k8s:core:deployment:machine-native-ops:sha256-57697a405d4bb1ca13338410ae862d3405693c1aee2035ac5f7373c7feb0856c"
     },
     {
       "apiVersion": "apps/v1",
@@ -1712,8 +1712,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml",
-      "uri": "eco-base://k8s/core/deployment/machine-native-ops-api",
-      "urn": "urn:eco-base:k8s:core:deployment:machine-native-ops-api:sha256-78d7be7fb36a5d992c8908fd62e80e8428d30c0fde829bb88c61eb7d31e1e9b1"
+      "uri": "softwareos-base://k8s/core/deployment/machine-native-ops-api",
+      "urn": "urn:softwareos-base:k8s:core:deployment:machine-native-ops-api:sha256-78d7be7fb36a5d992c8908fd62e80e8428d30c0fde829bb88c61eb7d31e1e9b1"
     },
     {
       "apiVersion": "apps/v1",
@@ -1724,8 +1724,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/high-availability/deployments/multi-az-deployments.yaml",
-      "uri": "eco-base://k8s/core/deployment/machine-native-ops-worker",
-      "urn": "urn:eco-base:k8s:core:deployment:machine-native-ops-worker:sha256-8367ad752874e9a331351ee4e427c6b3ba2691048e8ced7fe63d0d5f351c6b00"
+      "uri": "softwareos-base://k8s/core/deployment/machine-native-ops-worker",
+      "urn": "urn:softwareos-base:k8s:core:deployment:machine-native-ops-worker:sha256-8367ad752874e9a331351ee4e427c6b3ba2691048e8ced7fe63d0d5f351c6b00"
     },
     {
       "apiVersion": "v1",
@@ -1736,8 +1736,8 @@
       "namespace": "monitoring",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml",
-      "uri": "eco-base://k8s/core/service/monitoring",
-      "urn": "urn:eco-base:k8s:core:service:monitoring:sha256-c782c32349d2c8a919851a01bc0dfa8cd2267f925338457f0f5399c04f63a312"
+      "uri": "softwareos-base://k8s/core/service/monitoring",
+      "urn": "urn:softwareos-base:k8s:core:service:monitoring:sha256-c782c32349d2c8a919851a01bc0dfa8cd2267f925338457f0f5399c04f63a312"
     },
     {
       "apiVersion": "v1",
@@ -1748,8 +1748,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml",
-      "uri": "eco-base://k8s/core/service/machine-native-ops",
-      "urn": "urn:eco-base:k8s:core:service:machine-native-ops:sha256-376797a973deaa454a431e8e60d5e9692f53b9187d8f627af9dca32271987b08"
+      "uri": "softwareos-base://k8s/core/service/machine-native-ops",
+      "urn": "urn:softwareos-base:k8s:core:service:machine-native-ops:sha256-376797a973deaa454a431e8e60d5e9692f53b9187d8f627af9dca32271987b08"
     },
     {
       "apiVersion": "v1",
@@ -1760,8 +1760,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml",
-      "uri": "eco-base://k8s/core/service/machine-native-ops-api",
-      "urn": "urn:eco-base:k8s:core:service:machine-native-ops-api:sha256-11da0696acaefa96e97329bf33a229444bd39c27994c99b011f988d45eeb94b0"
+      "uri": "softwareos-base://k8s/core/service/machine-native-ops-api",
+      "urn": "urn:softwareos-base:k8s:core:service:machine-native-ops-api:sha256-11da0696acaefa96e97329bf33a229444bd39c27994c99b011f988d45eeb94b0"
     },
     {
       "apiVersion": "v1",
@@ -1772,8 +1772,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml",
-      "uri": "eco-base://k8s/core/service/machine-native-ops-worker",
-      "urn": "urn:eco-base:k8s:core:service:machine-native-ops-worker:sha256-edad0b9abe0f08069df5a3102dfc464e7a8537610d3ff8f6cc3131f02b3ea5f5"
+      "uri": "softwareos-base://k8s/core/service/machine-native-ops-worker",
+      "urn": "urn:softwareos-base:k8s:core:service:machine-native-ops-worker:sha256-edad0b9abe0f08069df5a3102dfc464e7a8537610d3ff8f6cc3131f02b3ea5f5"
     },
     {
       "apiVersion": "v1",
@@ -1784,8 +1784,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml",
-      "uri": "eco-base://k8s/core/service/postgres",
-      "urn": "urn:eco-base:k8s:core:service:postgres:sha256-3e7a93da3fb2009cf37f9fcee21181cff03304f2b49f23f5d28317d5d2b2b20e"
+      "uri": "softwareos-base://k8s/core/service/postgres",
+      "urn": "urn:softwareos-base:k8s:core:service:postgres:sha256-3e7a93da3fb2009cf37f9fcee21181cff03304f2b49f23f5d28317d5d2b2b20e"
     },
     {
       "apiVersion": "v1",
@@ -1796,8 +1796,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/high-availability/services/multi-az-services.yaml",
-      "uri": "eco-base://k8s/core/service/redis-cluster",
-      "urn": "urn:eco-base:k8s:core:service:redis-cluster:sha256-089470f0056bc756151ff59dbf40525e57a5406d6c9c660bb43d9e96ec7a6df3"
+      "uri": "softwareos-base://k8s/core/service/redis-cluster",
+      "urn": "urn:softwareos-base:k8s:core:service:redis-cluster:sha256-089470f0056bc756151ff59dbf40525e57a5406d6c9c660bb43d9e96ec7a6df3"
     },
     {
       "apiVersion": "v1",
@@ -1808,8 +1808,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/jaeger/istio-config.yaml",
-      "uri": "eco-base://k8s/core/configmap/jaeger-tracing-config",
-      "urn": "urn:eco-base:k8s:core:configmap:jaeger-tracing-config:sha256-d556939865f74cf8fa53a1d9f42ad9f8cba5f929947da5f60ecd64315bd2ffde"
+      "uri": "softwareos-base://k8s/core/configmap/jaeger-tracing-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:jaeger-tracing-config:sha256-d556939865f74cf8fa53a1d9f42ad9f8cba5f929947da5f60ecd64315bd2ffde"
     },
     {
       "apiVersion": "v1",
@@ -1820,8 +1820,8 @@
       "namespace": "velero",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml",
-      "uri": "eco-base://k8s/core/configmap/backup-encryption-config",
-      "urn": "urn:eco-base:k8s:core:configmap:backup-encryption-config:sha256-6791345b55a7b6dcb7028fb32ed0eddabd721e7df78584a7750ed9ddb4572810"
+      "uri": "softwareos-base://k8s/core/configmap/backup-encryption-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:backup-encryption-config:sha256-6791345b55a7b6dcb7028fb32ed0eddabd721e7df78584a7750ed9ddb4572810"
     },
     {
       "apiVersion": "v1",
@@ -1832,8 +1832,8 @@
       "namespace": "velero",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/backup-encryption.yaml",
-      "uri": "eco-base://k8s/core/secret/velero-encryption-keys",
-      "urn": "urn:eco-base:k8s:core:secret:velero-encryption-keys:sha256-83a2b3367c935dbf1c3e979a26f7e02133a671d829ecfda51f4cb6f71891d704"
+      "uri": "softwareos-base://k8s/core/secret/velero-encryption-keys",
+      "urn": "urn:softwareos-base:k8s:core:secret:velero-encryption-keys:sha256-83a2b3367c935dbf1c3e979a26f7e02133a671d829ecfda51f4cb6f71891d704"
     },
     {
       "apiVersion": "v1",
@@ -1844,8 +1844,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/machine-native-ops-config",
-      "urn": "urn:eco-base:k8s:core:configmap:machine-native-ops-config:sha256-90ff022568070f64fb3ee049f70781892fed35a5ca55b6da5145ff89a3606b8b"
+      "uri": "softwareos-base://k8s/core/configmap/machine-native-ops-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:machine-native-ops-config:sha256-90ff022568070f64fb3ee049f70781892fed35a5ca55b6da5145ff89a3606b8b"
     },
     {
       "apiVersion": "batch/v1",
@@ -1856,8 +1856,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/disaster-recovery-job.yaml",
-      "uri": "eco-base://k8s/core/cronjob/dr-backup-verification",
-      "urn": "urn:eco-base:k8s:core:cronjob:dr-backup-verification:sha256-0c2a776e6129cecfe9327dbfb2d470afa5094f855eb613bc14f13156db26d147"
+      "uri": "softwareos-base://k8s/core/cronjob/dr-backup-verification",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:dr-backup-verification:sha256-0c2a776e6129cecfe9327dbfb2d470afa5094f855eb613bc14f13156db26d147"
     },
     {
       "apiVersion": "batch/v1",
@@ -1868,8 +1868,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/disaster-recovery-job.yaml",
-      "uri": "eco-base://k8s/core/cronjob/dr-health-check",
-      "urn": "urn:eco-base:k8s:core:cronjob:dr-health-check:sha256-aa9aac2987abb810a881e41cea4095a424c712970a69d9dc3fa38775ab762637"
+      "uri": "softwareos-base://k8s/core/cronjob/dr-health-check",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:dr-health-check:sha256-aa9aac2987abb810a881e41cea4095a424c712970a69d9dc3fa38775ab762637"
     },
     {
       "apiVersion": "v1",
@@ -1880,8 +1880,8 @@
       "namespace": "istio-system",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml",
-      "uri": "eco-base://k8s/core/configmap/jaeger-enhanced-config",
-      "urn": "urn:eco-base:k8s:core:configmap:jaeger-enhanced-config:sha256-5739178d638d17720aeafd8dd30a8ce3c96204126add48587503471de1ba5b9b"
+      "uri": "softwareos-base://k8s/core/configmap/jaeger-enhanced-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:jaeger-enhanced-config:sha256-5739178d638d17720aeafd8dd30a8ce3c96204126add48587503471de1ba5b9b"
     },
     {
       "apiVersion": "v1",
@@ -1892,8 +1892,8 @@
       "namespace": "istio-system",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml",
-      "uri": "eco-base://k8s/core/configmap/trace-retention-config",
-      "urn": "urn:eco-base:k8s:core:configmap:trace-retention-config:sha256-145b7674afd4f84e48b44213f4164eece7e5e1821861d6283bf375abdcd343d8"
+      "uri": "softwareos-base://k8s/core/configmap/trace-retention-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:trace-retention-config:sha256-145b7674afd4f84e48b44213f4164eece7e5e1821861d6283bf375abdcd343d8"
     },
     {
       "apiVersion": "v1",
@@ -1904,8 +1904,8 @@
       "namespace": "istio-system",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/enhanced-tracing.yaml",
-      "uri": "eco-base://k8s/core/configmap/tracing-context-config",
-      "urn": "urn:eco-base:k8s:core:configmap:tracing-context-config:sha256-2c665560aebdc905d357283af6f8fb7217a6808c4f44852950e001995fad6964"
+      "uri": "softwareos-base://k8s/core/configmap/tracing-context-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:tracing-context-config:sha256-2c665560aebdc905d357283af6f8fb7217a6808c4f44852950e001995fad6964"
     },
     {
       "apiVersion": "v1",
@@ -1916,8 +1916,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/gateway.yaml",
-      "uri": "eco-base://k8s/core/service/machine-native-ops-lb",
-      "urn": "urn:eco-base:k8s:core:service:machine-native-ops-lb:sha256-e311bd1d73ec1d0b416504be3d050fc57f4776a813539017cc57c7b5bebfe5b9"
+      "uri": "softwareos-base://k8s/core/service/machine-native-ops-lb",
+      "urn": "urn:softwareos-base:k8s:core:service:machine-native-ops-lb:sha256-e311bd1d73ec1d0b416504be3d050fc57f4776a813539017cc57c7b5bebfe5b9"
     },
     {
       "apiVersion": "v1",
@@ -1928,8 +1928,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/jaeger-config.yaml",
-      "uri": "eco-base://k8s/core/configmap/jaeger-config",
-      "urn": "urn:eco-base:k8s:core:configmap:jaeger-config:sha256-733c98be5e9d15a08ae07eaff1b8480ced6fb724387810ce10e6dc03c02b96a7"
+      "uri": "softwareos-base://k8s/core/configmap/jaeger-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:jaeger-config:sha256-733c98be5e9d15a08ae07eaff1b8480ced6fb724387810ce10e6dc03c02b96a7"
     },
     {
       "apiVersion": "v1",
@@ -1940,8 +1940,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/jaeger-config.yaml",
-      "uri": "eco-base://k8s/core/configmap/tracing-config",
-      "urn": "urn:eco-base:k8s:core:configmap:tracing-config:sha256-a97d02656b425927dd80c2acf76ed545eeb29a4f54f6467cd47473dd9e680737"
+      "uri": "softwareos-base://k8s/core/configmap/tracing-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:tracing-config:sha256-a97d02656b425927dd80c2acf76ed545eeb29a4f54f6467cd47473dd9e680737"
     },
     {
       "apiVersion": "v1",
@@ -1952,8 +1952,8 @@
       "namespace": "istio-system",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/multi-cluster-mesh.yaml",
-      "uri": "eco-base://k8s/core/configmap/istio",
-      "urn": "urn:eco-base:k8s:core:configmap:istio:sha256-d97c2d3877508ffdcaa9cea53c9b0c6f08e8919b10d1c23801a7fb12ee4a1a2c"
+      "uri": "softwareos-base://k8s/core/configmap/istio",
+      "urn": "urn:softwareos-base:k8s:core:configmap:istio:sha256-d97c2d3877508ffdcaa9cea53c9b0c6f08e8919b10d1c23801a7fb12ee4a1a2c"
     },
     {
       "apiVersion": "v1",
@@ -1964,8 +1964,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/multi-cluster-mesh.yaml",
-      "uri": "eco-base://k8s/core/configmap/multi-cluster-health-config",
-      "urn": "urn:eco-base:k8s:core:configmap:multi-cluster-health-config:sha256-74ebf2bed6edace44feeba2fd5033dd9d76d4ee6a7828b416c5c1d68f1c432a8"
+      "uri": "softwareos-base://k8s/core/configmap/multi-cluster-health-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:multi-cluster-health-config:sha256-74ebf2bed6edace44feeba2fd5033dd9d76d4ee6a7828b416c5c1d68f1c432a8"
     },
     {
       "apiVersion": "batch/v1",
@@ -1976,8 +1976,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/performance-benchmark-job.yaml",
-      "uri": "eco-base://k8s/core/cronjob/performance-benchmark-endurance",
-      "urn": "urn:eco-base:k8s:core:cronjob:performance-benchmark-endurance:sha256-b28e84b7204683ecca2de69b6cbfa26ef03ca9e4b600521435202544aaaca0e4"
+      "uri": "softwareos-base://k8s/core/cronjob/performance-benchmark-endurance",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:performance-benchmark-endurance:sha256-b28e84b7204683ecca2de69b6cbfa26ef03ca9e4b600521435202544aaaca0e4"
     },
     {
       "apiVersion": "batch/v1",
@@ -1988,8 +1988,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/performance-benchmark-job.yaml",
-      "uri": "eco-base://k8s/core/cronjob/performance-benchmark-load",
-      "urn": "urn:eco-base:k8s:core:cronjob:performance-benchmark-load:sha256-621d8db4a681c5af199849fbde671d502452fa5ebf0265a727b92a329be996b5"
+      "uri": "softwareos-base://k8s/core/cronjob/performance-benchmark-load",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:performance-benchmark-load:sha256-621d8db4a681c5af199849fbde671d502452fa5ebf0265a727b92a329be996b5"
     },
     {
       "apiVersion": "batch/v1",
@@ -2000,8 +2000,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/performance-benchmark-job.yaml",
-      "uri": "eco-base://k8s/core/cronjob/performance-benchmark-smoke",
-      "urn": "urn:eco-base:k8s:core:cronjob:performance-benchmark-smoke:sha256-15e7a473e1bfe270bc07648350dbb5ca013ca393137bfd4e05f672c70aed2795"
+      "uri": "softwareos-base://k8s/core/cronjob/performance-benchmark-smoke",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:performance-benchmark-smoke:sha256-15e7a473e1bfe270bc07648350dbb5ca013ca393137bfd4e05f672c70aed2795"
     },
     {
       "apiVersion": "batch/v1",
@@ -2012,8 +2012,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/performance-benchmark-job.yaml",
-      "uri": "eco-base://k8s/core/cronjob/performance-benchmark-stress",
-      "urn": "urn:eco-base:k8s:core:cronjob:performance-benchmark-stress:sha256-d013ae7efd38d8fc0fea299c4f709242800203689e0f6e6259a2da8d17841514"
+      "uri": "softwareos-base://k8s/core/cronjob/performance-benchmark-stress",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:performance-benchmark-stress:sha256-d013ae7efd38d8fc0fea299c4f709242800203689e0f6e6259a2da8d17841514"
     },
     {
       "apiVersion": "apps/v1",
@@ -2024,8 +2024,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/tracing-middleware-config.yaml",
-      "uri": "eco-base://k8s/core/deployment/machine-native-ops",
-      "urn": "urn:eco-base:k8s:core:deployment:machine-native-ops:sha256-97ba2fa390e47e9ea536cbc9d0a942e7a807c3899e1068a16d59567cc83c39a0"
+      "uri": "softwareos-base://k8s/core/deployment/machine-native-ops",
+      "urn": "urn:softwareos-base:k8s:core:deployment:machine-native-ops:sha256-97ba2fa390e47e9ea536cbc9d0a942e7a807c3899e1068a16d59567cc83c39a0"
     },
     {
       "apiVersion": "batch/v1",
@@ -2036,8 +2036,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/velero-config.yaml",
-      "uri": "eco-base://k8s/core/cronjob/postgres-backup",
-      "urn": "urn:eco-base:k8s:core:cronjob:postgres-backup:sha256-6589e3ff6f8a2d79b215ac6f548a61f998c5effe0878b4c4ff571b111322ed3a"
+      "uri": "softwareos-base://k8s/core/cronjob/postgres-backup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:postgres-backup:sha256-6589e3ff6f8a2d79b215ac6f548a61f998c5effe0878b4c4ff571b111322ed3a"
     },
     {
       "apiVersion": "batch/v1",
@@ -2048,8 +2048,8 @@
       "namespace": "production",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/velero-config.yaml",
-      "uri": "eco-base://k8s/core/cronjob/redis-backup",
-      "urn": "urn:eco-base:k8s:core:cronjob:redis-backup:sha256-a6968c53be52fd56bac05a89de74367d0526d229737cecaa8e0bed74db25a8e3"
+      "uri": "softwareos-base://k8s/core/cronjob/redis-backup",
+      "urn": "urn:softwareos-base:k8s:core:cronjob:redis-backup:sha256-a6968c53be52fd56bac05a89de74367d0526d229737cecaa8e0bed74db25a8e3"
     },
     {
       "apiVersion": "v1",
@@ -2060,8 +2060,8 @@
       "namespace": "velero",
       "platform": "core",
       "source": "platforms/infrastructure/k8s-legacy/production/velero-config.yaml",
-      "uri": "eco-base://k8s/core/secret/velero-s3-credentials",
-      "urn": "urn:eco-base:k8s:core:secret:velero-s3-credentials:sha256-9d6d490ce31bbe56106b3fe7aa6d4c7e45d013f3effe076f1c99967d42a20315"
+      "uri": "softwareos-base://k8s/core/secret/velero-s3-credentials",
+      "urn": "urn:softwareos-base:k8s:core:secret:velero-s3-credentials:sha256-9d6d490ce31bbe56106b3fe7aa6d4c7e45d013f3effe076f1c99967d42a20315"
     },
     {
       "apiVersion": "v1",
@@ -2072,8 +2072,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/kubernetes/manifests/base/configmap.yaml",
-      "uri": "eco-base://k8s/core/configmap/machine-native-ops-config",
-      "urn": "urn:eco-base:k8s:core:configmap:machine-native-ops-config:sha256-4101f767bb0d5bbc7b5eee121d6ec11b1b13b99590400a47447093ed1aa2f981"
+      "uri": "softwareos-base://k8s/core/configmap/machine-native-ops-config",
+      "urn": "urn:softwareos-base:k8s:core:configmap:machine-native-ops-config:sha256-4101f767bb0d5bbc7b5eee121d6ec11b1b13b99590400a47447093ed1aa2f981"
     },
     {
       "apiVersion": "networking.k8s.io/v1",
@@ -2084,8 +2084,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/kubernetes/manifests/base/ingress.yaml",
-      "uri": "eco-base://k8s/core/ingress/machine-native-ops-ingress",
-      "urn": "urn:eco-base:k8s:core:ingress:machine-native-ops-ingress:sha256-b2fbdef686c0368b866632d840f11c0fc72e861cca627bc55b1cc42520f15e96"
+      "uri": "softwareos-base://k8s/core/ingress/machine-native-ops-ingress",
+      "urn": "urn:softwareos-base:k8s:core:ingress:machine-native-ops-ingress:sha256-b2fbdef686c0368b866632d840f11c0fc72e861cca627bc55b1cc42520f15e96"
     },
     {
       "apiVersion": "v1",
@@ -2096,8 +2096,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/kubernetes/manifests/base/secret.yaml",
-      "uri": "eco-base://k8s/core/secret/machine-native-ops-secrets",
-      "urn": "urn:eco-base:k8s:core:secret:machine-native-ops-secrets:sha256-41c6fa08ae9de1bf260def158c93f76c208b8c2ff241cc134dcfe57fcfaa2d3a"
+      "uri": "softwareos-base://k8s/core/secret/machine-native-ops-secrets",
+      "urn": "urn:softwareos-base:k8s:core:secret:machine-native-ops-secrets:sha256-41c6fa08ae9de1bf260def158c93f76c208b8c2ff241cc134dcfe57fcfaa2d3a"
     },
     {
       "apiVersion": "v1",
@@ -2108,8 +2108,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/kubernetes/manifests/systems/elasticsearch-search-system/service.yaml",
-      "uri": "eco-base://k8s/core/service/elasticsearch-search-service",
-      "urn": "urn:eco-base:k8s:core:service:elasticsearch-search-service:sha256-2056d28592d7cfe87e5f2bbb0117521a72f1fb85489eca0380b4c1ca42ce5ded"
+      "uri": "softwareos-base://k8s/core/service/elasticsearch-search-service",
+      "urn": "urn:softwareos-base:k8s:core:service:elasticsearch-search-service:sha256-2056d28592d7cfe87e5f2bbb0117521a72f1fb85489eca0380b4c1ca42ce5ded"
     },
     {
       "apiVersion": "v1",
@@ -2120,8 +2120,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/kubernetes/manifests/systems/engine/service.yaml",
-      "uri": "eco-base://k8s/core/service/aep-engine-service",
-      "urn": "urn:eco-base:k8s:core:service:aep-engine-service:sha256-ae0bb7180adba0e3760bbd324927a036fc00601fc0f2c6893d250b87fc292226"
+      "uri": "softwareos-base://k8s/core/service/aep-engine-service",
+      "urn": "urn:softwareos-base:k8s:core:service:aep-engine-service:sha256-ae0bb7180adba0e3760bbd324927a036fc00601fc0f2c6893d250b87fc292226"
     },
     {
       "apiVersion": "v1",
@@ -2132,8 +2132,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/kubernetes/manifests/systems/esync-platform/service.yaml",
-      "uri": "eco-base://k8s/core/service/esync-platform-service",
-      "urn": "urn:eco-base:k8s:core:service:esync-platform-service:sha256-88e4a8a873f4b1ff1ed892c066886f409d0aee041594b7b4171fddecc7d72add"
+      "uri": "softwareos-base://k8s/core/service/esync-platform-service",
+      "urn": "urn:softwareos-base:k8s:core:service:esync-platform-service:sha256-88e4a8a873f4b1ff1ed892c066886f409d0aee041594b7b4171fddecc7d72add"
     },
     {
       "apiVersion": "v1",
@@ -2144,8 +2144,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/kubernetes/manifests/systems/file-organizer-system/service.yaml",
-      "uri": "eco-base://k8s/core/service/file-organizer-service",
-      "urn": "urn:eco-base:k8s:core:service:file-organizer-service:sha256-49285b9ac7a15142d367f91b79a79eab20da03ffc5a338d720d1ca7b30fde757"
+      "uri": "softwareos-base://k8s/core/service/file-organizer-service",
+      "urn": "urn:softwareos-base:k8s:core:service:file-organizer-service:sha256-49285b9ac7a15142d367f91b79a79eab20da03ffc5a338d720d1ca7b30fde757"
     },
     {
       "apiVersion": "v1",
@@ -2156,8 +2156,8 @@
       "namespace": "platform-03",
       "platform": "core",
       "source": "platforms/infrastructure/kubernetes/manifests/systems/instant/service.yaml",
-      "uri": "eco-base://k8s/core/service/instant-service",
-      "urn": "urn:eco-base:k8s:core:service:instant-service:sha256-c5d797cb1d344b0fd339296162bb737f8a8f076d42386e8cdb6ce968ddb51407"
+      "uri": "softwareos-base://k8s/core/service/instant-service",
+      "urn": "urn:softwareos-base:k8s:core:service:instant-service:sha256-c5d797cb1d344b0fd339296162bb737f8a8f076d42386e8cdb6ce968ddb51407"
     },
     {
       "apiVersion": "apps/v1",
@@ -2168,8 +2168,8 @@
       "namespace": "gl-platform-spec-core",
       "platform": "core",
       "source": "platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/deployment.yaml",
-      "uri": "eco-base://k8s/core/deployment/gl-spec-core",
-      "urn": "urn:eco-base:k8s:core:deployment:gl-spec-core:sha256-5005eab389e0382e622562f7b80702cc96e516d43d33d4730fa2493cd8b94468"
+      "uri": "softwareos-base://k8s/core/deployment/gl-spec-core",
+      "urn": "urn:softwareos-base:k8s:core:deployment:gl-spec-core:sha256-5005eab389e0382e622562f7b80702cc96e516d43d33d4730fa2493cd8b94468"
     },
     {
       "apiVersion": "networking.k8s.io/v1",
@@ -2180,8 +2180,8 @@
       "namespace": "gl-platform-spec-core",
       "platform": "core",
       "source": "platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/ingress.yaml",
-      "uri": "eco-base://k8s/core/ingress/gl-spec-core-ingress",
-      "urn": "urn:eco-base:k8s:core:ingress:gl-spec-core-ingress:sha256-981efda0b2490167f83345981d16939d948606894d2d522d736875cd3c684c70"
+      "uri": "softwareos-base://k8s/core/ingress/gl-spec-core-ingress",
+      "urn": "urn:softwareos-base:k8s:core:ingress:gl-spec-core-ingress:sha256-981efda0b2490167f83345981d16939d948606894d2d522d736875cd3c684c70"
     },
     {
       "apiVersion": "v1",
@@ -2192,8 +2192,8 @@
       "namespace": "gl-platform-spec-core",
       "platform": "core",
       "source": "platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/service.yaml",
-      "uri": "eco-base://k8s/core/service/gl-spec-core-external",
-      "urn": "urn:eco-base:k8s:core:service:gl-spec-core-external:sha256-98e12697a9653b35253c7ca01871dc2c64a64d1a6e10c906b70c4a3b7f658507"
+      "uri": "softwareos-base://k8s/core/service/gl-spec-core-external",
+      "urn": "urn:softwareos-base:k8s:core:service:gl-spec-core-external:sha256-98e12697a9653b35253c7ca01871dc2c64a64d1a6e10c906b70c4a3b7f658507"
     },
     {
       "apiVersion": "v1",
@@ -2204,8 +2204,8 @@
       "namespace": "gl-platform-spec-core",
       "platform": "core",
       "source": "platforms/ng-era-platforms/ng-cross-era-platforms/meta/semantic-core/deployments/kubernetes/service.yaml",
-      "uri": "eco-base://k8s/core/service/gl-spec-core-service",
-      "urn": "urn:eco-base:k8s:core:service:gl-spec-core-service:sha256-7f04bcc3a9329cd9610147f3de0aa1ca237577892fad5e73b2284b9f17c60ab4"
+      "uri": "softwareos-base://k8s/core/service/gl-spec-core-service",
+      "urn": "urn:softwareos-base:k8s:core:service:gl-spec-core-service:sha256-7f04bcc3a9329cd9610147f3de0aa1ca237577892fad5e73b2284b9f17c60ab4"
     },
     {
       "apiVersion": "v1",
@@ -2216,8 +2216,8 @@
       "namespace": "machinenativenops-trust",
       "platform": "core",
       "source": "platforms/ng-era-platforms/ng-era2-platforms/runtime/engine/controlplane/config/root.trust.yaml",
-      "uri": "eco-base://k8s/core/configmap/trust-schema",
-      "urn": "urn:eco-base:k8s:core:configmap:trust-schema:sha256-45ac21df88c9d95de544798e4242e06209d29b9e198aede863b1c834088d8790"
+      "uri": "softwareos-base://k8s/core/configmap/trust-schema",
+      "urn": "urn:softwareos-base:k8s:core:configmap:trust-schema:sha256-45ac21df88c9d95de544798e4242e06209d29b9e198aede863b1c834088d8790"
     }
   ]
 }

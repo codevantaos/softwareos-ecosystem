@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "eco-base-ai"
+name = "softwareos-base-ai"
 version = "1.0.0"
-description = "AI generation + YAML governance service for eco-base platform"
-authors = ["eco-base Platform Team <platform-team@autoecoops.io>"]
+description = "AI generation + YAML governance service for softwareos-base platform"
+authors = ["softwareos-base Platform Team <platform-team@softwareos.io>"]
 license = "Apache-2.0"
 readme = "README.md"
-homepage = "https://github.com/indestructibleorg/eco-base"
-repository = "https://github.com/indestructibleorg/eco-base"
+homepage = "https://github.com/indestructibleorg/softwareos-base"
+repository = "https://github.com/indestructibleorg/softwareos-base"
 keywords = ["ai", "inference", "llm", "vllm", "governance"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",

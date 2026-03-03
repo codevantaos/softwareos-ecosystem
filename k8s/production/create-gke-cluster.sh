@@ -1,5 +1,5 @@
 #!/bin/bash
-# Create GKE cluster for eco-base Production
+# Create GKE cluster for softwareos-base Production
 
 set -e
 

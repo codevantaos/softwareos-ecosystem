@@ -95,13 +95,13 @@ spec:
   subsets:
   - name: v1
     labels:
-      eco-base/part-of: eco-base
-      eco-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
+      softwareos-base/governance: aligned
       version: v1
   - name: v2
     labels:
-      eco-base/part-of: eco-base
-      eco-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
+      softwareos-base/governance: aligned
       version: v2
 ---
 # Session affinity configuration

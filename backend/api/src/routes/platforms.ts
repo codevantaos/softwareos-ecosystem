@@ -1,6 +1,6 @@
 /**
- * eco-base — Platform Routes
- * URI: eco-base://backend/api/routes/platforms
+ * softwareos-base — Platform Routes
+ * URI: softwareos-base://backend/api/routes/platforms
  *
  * CRUD for platforms backed by Supabase.
  * Admin-only for create/update/delete; authenticated read for all.
@@ -47,9 +47,9 @@ platformRouter.post("/", adminOnly, async (req: AuthenticatedRequest, res: Respo
       config: platformConfig || {},
       capabilities: capabilities || [],
       owner_id: req.user!.id,
-      k8s_namespace: "eco-base",
+      k8s_namespace: "softwareos-base",
       deploy_target: deploy_target || "",
-      urn: `urn:eco-base:platform:module:${slug}:${uuidv1()}`,
+      urn: `urn:softwareos-base:platform:module:${slug}:${uuidv1()}`,
     });
 
     res.status(201).json({ platform });

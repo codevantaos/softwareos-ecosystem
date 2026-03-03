@@ -1,4 +1,4 @@
-name = "eco-base-workers"
+name = "softwareos-base-workers"
 main = "workers/webhook-router.ts"
 compatibility_date = "2024-06-01"
 compatibility_flags = ["nodejs_compat"]
@@ -10,8 +10,8 @@ DEDUP_TTL_SECONDS = "300"
 DEAD_LETTER_TTL_SECONDS = "86400"
 
 [[routes]]
-pattern = "api.autoecoops.io/webhook/*"
-zone_name = "autoecoops.io"
+pattern = "api.softwareos.io/webhook/*"
+zone_name = "softwareos.io"
 
 [[kv_namespaces]]
 binding = "WEBHOOK_KV"

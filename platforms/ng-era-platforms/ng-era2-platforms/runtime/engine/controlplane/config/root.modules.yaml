@@ -7,8 +7,8 @@ metadata:
   management
   machinenativeops.io/last-modified: '2025-12-20T22:00:00Z'
   labels:
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     machinenativeops.io/app.kubernetes.io/component: modules-registry
     machinenativeops.io/tier: modules
     machinenativeops.io/version: v1.0.0
@@ -585,18 +585,18 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/modules-schema
-    eco-base/urn: urn:eco-base:k8s:core:configmap:modules-schema:sha256-622e2f7831938f380f7f2162c6c34671a034f04600f9d8860cf410b6dca38027
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/modules-schema
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:modules-schema:sha256-622e2f7831938f380f7f2162c6c34671a034f04600f9d8860cf410b6dca38027
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: modules-schema
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: modules-schema
   namespace: machinenativenops-modules

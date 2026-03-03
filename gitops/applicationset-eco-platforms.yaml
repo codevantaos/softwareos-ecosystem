@@ -28,7 +28,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/indestructibleorg/eco-base
+        repoURL: https://github.com/indestructibleorg/softwareos-base
         targetRevision: main
         path: "platforms/{{platform}}"
       destination:
@@ -74,7 +74,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/indestructibleorg/eco-base
+        repoURL: https://github.com/indestructibleorg/softwareos-base
         targetRevision: main
         path: "gitops/infra/{{tool}}"
       destination:

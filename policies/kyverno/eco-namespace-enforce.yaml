@@ -35,10 +35,10 @@ spec:
     app.kubernetes.io/instance: "?*"
     app.kubernetes.io/version: "?*"
     app.kubernetes.io/component: "?*"
-    app.kubernetes.io/part-of: "eco-base"
-    eco-base/platform: "?*"
-    eco-base/environment: "?*"
-    eco-base/owner: "?*"
+    app.kubernetes.io/part-of: "softwareos-base"
+    softwareos-base/platform: "?*"
+    softwareos-base/environment: "?*"
+    softwareos-base/owner: "?*"
 
       - name: restrict-environment-values
   match:
@@ -53,11 +53,11 @@ spec:
       - Service
       - Ingress
   validate:
-  message: "eco-base/environment must be one of: production|staging|development"
+  message: "softwareos-base/environment must be one of: production|staging|development"
   deny:
   conditions:
   any:
-      - key: "{{ request.object.metadata.labels.\"eco-base/environment\" }}"
+      - key: "{{ request.object.metadata.labels.\"softwareos-base/environment\" }}"
   operator: AnyNotIn
   value:
       - production
@@ -81,10 +81,10 @@ spec:
   pattern:
           metadata:
   annotations:
-    eco-base/uri: "?*"
-    eco-base/urn: "?*"
-    eco-base/governance-policy: "?*"
-    eco-base/audit-log-level: "?*"
+    softwareos-base/uri: "?*"
+    softwareos-base/urn: "?*"
+    softwareos-base/governance-policy: "?*"
+    softwareos-base/audit-log-level: "?*"
 
       - name: restrict-audit-log-level
   match:
@@ -97,11 +97,11 @@ spec:
       - Job
       - CronJob
   validate:
-  message: "eco-base/audit-log-level must be full|minimal"
+  message: "softwareos-base/audit-log-level must be full|minimal"
   deny:
   conditions:
   any:
-      - key: "{{ request.object.metadata.annotations.\"eco-base/audit-log-level\" }}"
+      - key: "{{ request.object.metadata.annotations.\"softwareos-base/audit-log-level\" }}"
   operator: AnyNotIn
   value:
       - full
@@ -120,13 +120,13 @@ spec:
       - Service
       - Ingress
   validate:
-  message: "eco-base/urn must match: urn:eco-base:<type>:<platform>:<component>:<resource>:<uuidv1|sha256-...>"
+  message: "softwareos-base/urn must match: urn:softwareos-base:<type>:<platform>:<component>:<resource>:<uuidv1|sha256-...>"
   deny:
   conditions:
   any:
-      - key: "{{ request.object.metadata.annotations.\"eco-base/urn\" }}"
+      - key: "{{ request.object.metadata.annotations.\"softwareos-base/urn\" }}"
   operator: NotMatches
-  value: "^urn:eco-base:[a-z0-9-]+:[a-z0-9-]+:[a-z0-9-]+:[a-z0-9-]+:((?:[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12})|(?:sha256-[0-9a-f]{8,}))$"
+  value: "^urn:softwareos-base:[a-z0-9-]+:[a-z0-9-]+:[a-z0-9-]+:[a-z0-9-]+:((?:[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12})|(?:sha256-[0-9a-f]{8,}))$"
 
       - name: enforce-uri-format
   match:
@@ -141,10 +141,10 @@ spec:
       - Service
       - Ingress
   validate:
-  message: "eco-base/uri must match: eco-base://<type>/<platform>/<component>/<resource>[?...]."
+  message: "softwareos-base/uri must match: softwareos-base://<type>/<platform>/<component>/<resource>[?...]."
   deny:
   conditions:
   any:
-      - key: "{{ request.object.metadata.annotations.\"eco-base/uri\" }}"
+      - key: "{{ request.object.metadata.annotations.\"softwareos-base/uri\" }}"
   operator: NotMatches
-  value: "^eco-base://[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+/.+(\\?.*)?$"
+  value: "^softwareos-base://[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+/.+(\\?.*)?$"

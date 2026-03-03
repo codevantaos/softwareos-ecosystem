@@ -2,12 +2,12 @@
 # AutoEcoOps Governance Block (auto-injected)
 document_metadata:
   unique_id: "eco-test-service-k8s-001"
-  uri: "eco-base://backend/k8s/test/test-service"
-  owner: "platform-team@eco-base.io"
+  uri: "softwareos-base://backend/k8s/test/test-service"
+  owner: "platform-team@softwareos-base.io"
   classification: "internal"
   retention_policy: "3y"
   compliance_tags: ["SOC2", "ISO27001"]
-  urn: "urn:eco-base:backend:k8s:test:test-service:eco-test-service-k8s-001"
+  urn: "urn:softwareos-base:backend:k8s:test:test-service:eco-test-service-k8s-001"
   cross_layer_binding: []
   created_at: "2025-02-18T00:00:00.000Z"
   target_system: gke-staging
@@ -19,7 +19,7 @@ governance_info:
   compliance_tags: [zero-trust, internal]
   lifecycle_policy: active
 registry_binding:
-  service_endpoint: "http://test-service.eco-base.svc.cluster.local"
+  service_endpoint: "http://test-service.softwareos-base.svc.cluster.local"
   discovery_protocol: consul
   health_check_path: "/health"
   registry_ttl: 30
@@ -27,20 +27,20 @@ vector_alignment_map:
   alignment_model: BAAI/bge-large-en-v1.5
   coherence_vector_dim: 1024
   function_keyword: [test, service, validation]
-  contextual_binding: "test-service -> [eco-base]"
+  contextual_binding: "test-service -> [softwareos-base]"
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: test-service
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
     app: test
     generated-by: yaml-toolkit-v1
     unique-id: "test-0000-0000-0000-000000000001"
   annotations:
-    eco-base/uri: "eco-base://k8s/eco-base/service/test-service"
-    eco-base/urn: "urn:eco-base:k8s:eco-base:service:test-service:test-0000"
+    softwareos-base/uri: "softwareos-base://k8s/softwareos-base/service/test-service"
+    softwareos-base/urn: "urn:softwareos-base:k8s:softwareos-base:service:test-service:test-0000"
 spec:
   selector:
     app: test

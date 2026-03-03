@@ -1,5 +1,5 @@
 #!/bin/bash
-# Complete Infrastructure Deployment Script for eco-base
+# Complete Infrastructure Deployment Script for softwareos-base
 # This script deploys all infrastructure components
 
 set -e
@@ -11,7 +11,7 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}=== eco-base Complete Infrastructure Deployment ===${NC}"
+echo -e "${BLUE}=== softwareos-base Complete Infrastructure Deployment ===${NC}"
 echo ""
 
 # Check if kubectl is installed
@@ -27,7 +27,7 @@ if ! kubectl cluster-info &> /dev/null; then
 fi
 
 # Configuration
-NAMESPACE="eco-base"
+NAMESPACE="softwareos-base"
 MONITORING_NAMESPACE="monitoring"
 
 echo -e "${GREEN}Phase 1: Configuring Secrets${NC}"
@@ -95,8 +95,8 @@ echo ""
 echo -e "${YELLOW}Infrastructure deployed successfully!${NC}"
 echo ""
 echo -e "${BLUE}Access URLs:${NC}"
-echo "  Prometheus: https://prometheus._cf-custom-hostname.autoecoops.io"
-echo "  Grafana:    https://grafana._cf-custom-hostname.autoecoops.io"
+echo "  Prometheus: https://prometheus._cf-custom-hostname.softwareos.io"
+echo "  Grafana:    https://grafana._cf-custom-hostname.softwareos.io"
 echo ""
 echo -e "${BLUE}Grafana Credentials:${NC}"
 echo "  Username: admin"
@@ -104,8 +104,8 @@ echo "  Password: (see grafana-secrets Kubernetes secret in the monitoring names
 echo ""
 echo -e "${YELLOW}Next Steps:${NC}"
 echo "1. Configure Cloudflare DNS records:"
-echo "   - prometheus._cf-custom-hostname.autoecoops.io → <INGRESS_IP>"
-echo "   - grafana._cf-custom-hostname.autoecoops.io → <INGRESS_IP>"
+echo "   - prometheus._cf-custom-hostname.softwareos.io → <INGRESS_IP>"
+echo "   - grafana._cf-custom-hostname.softwareos.io → <INGRESS_IP>"
 echo ""
 echo "2. Get Ingress IP:"
 echo "   kubectl get ingress -n monitoring"

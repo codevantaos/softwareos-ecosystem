@@ -1,6 +1,6 @@
-# eco-base v1.0 — Ingress (eco-production)
+# softwareos-base v1.0 — Ingress (eco-production)
 # GKE eco-production cluster, asia-east1
-# Domains: autoecoops.io, api.autoecoops.io, ai.autoecoops.io
+# Domains: softwareos.io, api.softwareos.io, ai.softwareos.io
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -8,7 +8,7 @@ metadata:
   namespace: eco-production
   labels:
     app.kubernetes.io/name: eco-production-ingress
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     environment: production
   annotations:
     kubernetes.io/ingress.class: "gce"
@@ -20,7 +20,7 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
     nginx.ingress.kubernetes.io/proxy-buffering: "off"
     nginx.ingress.kubernetes.io/enable-cors: "true"
-    nginx.ingress.kubernetes.io/cors-allow-origin: "https://autoecoops.io,https://api.autoecoops.io,https://ai.autoecoops.io"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "https://softwareos.io,https://api.softwareos.io,https://ai.softwareos.io"
     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST, PUT, DELETE, OPTIONS"
     nginx.ingress.kubernetes.io/cors-allow-headers: "Authorization, Content-Type, X-API-Key"
     nginx.ingress.kubernetes.io/limit-rps: "200"
@@ -32,7 +32,7 @@ spec:
       port:
         number: 80
   rules:
-    - host: autoecoops.io
+    - host: softwareos.io
       http:
         paths:
           - path: /
@@ -42,7 +42,7 @@ spec:
                 name: eco-web-svc
                 port:
                   number: 80
-    - host: api.autoecoops.io
+    - host: api.softwareos.io
       http:
         paths:
           - path: /
@@ -52,7 +52,7 @@ spec:
                 name: eco-api-svc
                 port:
                   number: 3000
-    - host: ai.autoecoops.io
+    - host: ai.softwareos.io
       http:
         paths:
           - path: /
@@ -71,12 +71,12 @@ metadata:
   namespace: eco-production
   labels:
     app.kubernetes.io/name: eco-production-cert
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     environment: production
 spec:
   domains:
-    - api.autoecoops.io
-    - ai.autoecoops.io
+    - api.softwareos.io
+    - ai.softwareos.io
 ---
 # GKE Managed Certificate for Web
 apiVersion: networking.gke.io/v1
@@ -86,17 +86,17 @@ metadata:
   namespace: eco-production
   labels:
     app.kubernetes.io/name: eco-web-cert
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     environment: production
 spec:
   domains:
-    - autoecoops.io
+    - softwareos.io
 ---
 # YAML Toolkit v8 — Governance Block
 document_metadata:
   unique_id: "eco-prod-ig-0001-0001-000000000001"
-  uri: "eco-base://k8s/eco-production/ingress/main"
-  urn: "urn:eco-base:k8s:eco-production:ingress:main:eco-prod-ig-0001-000000000001"
+  uri: "softwareos-base://k8s/eco-production/ingress/main"
+  urn: "urn:softwareos-base:k8s:eco-production:ingress:main:eco-prod-ig-0001-000000000001"
   target_system: gke-eco-production
   cross_layer_binding: [api-gateway, api-service, web-frontend]
   schema_version: v8
@@ -108,7 +108,7 @@ governance_info:
   compliance_tags: [zero-trust, soc2, tls-required, edge, production]
   lifecycle_policy: active
 registry_binding:
-  service_endpoint: "https://autoecoops.io"
+  service_endpoint: "https://softwareos.io"
   discovery_protocol: gke-ingress
   health_check_path: "/health"
   registry_ttl: 30

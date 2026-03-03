@@ -1,6 +1,6 @@
-# eco-base × Cloudflare 全面整合計畫
+# softwareos-base × Cloudflare 全面整合計畫
 
-**域名：autoecoops.io | Zone ID: YOUR_CLOUDFLARE_ZONE_ID | Account ID: YOUR_CLOUDFLARE_ACCOUNT_ID**
+**域名：softwareos.io | Zone ID: YOUR_CLOUDFLARE_ZONE_ID | Account ID: YOUR_CLOUDFLARE_ACCOUNT_ID**
 
 ---
 
@@ -8,13 +8,13 @@
 
 ### ✅ 可直接借鑒（無衝突）
 
-| 草稿概念 | eco-base 對應實作 | 說明 |
+| 草稿概念 | softwareos-base 對應實作 | 說明 |
 |---------|-----------------|------|
-| Workers Custom Domain | `api.autoecoops.io` → Workers | 邊緣 API 代理 GKE |
-| Pages 前端部署 | `eco-base-web` Pages 專案 | 已有 deploy-web.yml |
-| R2 Storage | `eco-base-assets` bucket | 靜態資源 + 備份 |
+| Workers Custom Domain | `api.softwareos.io` → Workers | 邊緣 API 代理 GKE |
+| Pages 前端部署 | `softwareos-base-web` Pages 專案 | 已有 deploy-web.yml |
+| R2 Storage | `softwareos-base-assets` bucket | 靜態資源 + 備份 |
 | Workers KV | `ECO_CACHE` namespace | Session/Rate Limiting 快取 |
-| WAF + Rate Limiting | autoecoops.io 全域套用 | 保護 API 端點 |
+| WAF + Rate Limiting | softwareos.io 全域套用 | 保護 API 端點 |
 | Argo Smart Routing | Pro 方案已包含 | 減少 33% 延遲 |
 | Security Headers | HTTP Response Transform | HSTS/CSP/X-Frame |
 | GitHub Actions OIDC | 現有 deploy-web.yml | 無密碼認證 |
@@ -22,12 +22,12 @@
 
 ### ⚠️ 需要調整（有衝突）
 
-| 衝突點 | 草稿做法 | eco-base 正確做法 | 原因 |
+| 衝突點 | 草稿做法 | softwareos-base 正確做法 | 原因 |
 |--------|---------|-----------------|------|
-| 資料庫 | PlanetScale + Drizzle | **Supabase Pro + PostgreSQL** | eco-base 使用 Supabase，不用 PlanetScale |
-| 根域名 A record | GitHub Pages 185.199.x.x | **GKE Ingress IP** | eco-base 部署在 GKE，不是 GitHub Pages |
+| 資料庫 | PlanetScale + Drizzle | **Supabase Pro + PostgreSQL** | softwareos-base 使用 Supabase，不用 PlanetScale |
+| 根域名 A record | GitHub Pages 185.199.x.x | **GKE Ingress IP** | softwareos-base 部署在 GKE，不是 GitHub Pages |
 | 動態 IP 解決方案 | Cloudflare Tunnel | **GKE 固定 LoadBalancer IP** | GKE 有固定外部 IP，不需要 Tunnel |
-| 文件站 | Read the Docs CNAME | **不需要**（有 GitHub Pages） | eco-base 用 GitHub Pages 作文件 |
+| 文件站 | Read the Docs CNAME | **不需要**（有 GitHub Pages） | softwareos-base 用 GitHub Pages 作文件 |
 | Workers 框架 | 獨立 wrangler.toml | **整合至 backend/cloudflare/** | 已有 IM Integration Worker |
 | D1 資料庫 | D1 綁定 | **不使用**（用 Supabase） | 避免雙重資料庫 |
 
@@ -35,20 +35,20 @@
 
 | 項目 | 原因 |
 |------|------|
-| Zone ID `5803b95939d51643e2d38823c65122cd` | 是 19911208.work 的 Zone，不是 autoecoops.io |
-| `username.github.io` CNAME | eco-base 前端用 Cloudflare Pages，不是 GitHub Pages |
-| PlanetScale 相關所有配置 | eco-base 使用 Supabase Pro |
+| Zone ID `5803b95939d51643e2d38823c65122cd` | 是 19911208.work 的 Zone，不是 softwareos.io |
+| `username.github.io` CNAME | softwareos-base 前端用 Cloudflare Pages，不是 GitHub Pages |
+| PlanetScale 相關所有配置 | softwareos-base 使用 Supabase Pro |
 | `app.19911208.work` 所有 hostname | 域名不同 |
 
 ---
 
-## eco-base 完整 Cloudflare 架構設計
+## softwareos-base 完整 Cloudflare 架構設計
 
-### DNS 記錄完整方案（autoecoops.io）
+### DNS 記錄完整方案（softwareos.io）
 
 ```
 # === 根域名 → Cloudflare Pages（前端）===
-CNAME  @                    eco-base-web.pages.dev          Proxied=Yes  TTL=Auto
+CNAME  @                    softwareos-base-web.pages.dev          Proxied=Yes  TTL=Auto
 
 # === API 子域名 → Workers（邊緣代理 → GKE）===
 A      api                  <GKE_INGRESS_IP>                Proxied=Yes  TTL=Auto
@@ -68,13 +68,13 @@ CNAME  docs                 indestructibleorg.github.io     Proxied=No   TTL=360
 
 # === 郵件安全 ===
 TXT    @    "v=spf1 include:_spf.google.com ~all"           TTL=3600
-TXT    _dmarc  "v=DMARC1; p=quarantine; rua=mailto:security@autoecoops.io; pct=100"  TTL=3600
+TXT    _dmarc  "v=DMARC1; p=quarantine; rua=mailto:security@softwareos.io; pct=100"  TTL=3600
 
 # === SSL 控制 ===
 CAA    @    issue "letsencrypt.org"                          TTL=3600
 CAA    @    issue "digicert.com"                             TTL=3600
 CAA    @    issuewild "letsencrypt.org"                      TTL=3600
-CAA    @    iodef "mailto:security@autoecoops.io"            TTL=3600
+CAA    @    iodef "mailto:security@softwareos.io"            TTL=3600
 ```
 
 ### Workers 架構（backend/cloudflare/）
@@ -83,9 +83,9 @@ CAA    @    iodef "mailto:security@autoecoops.io"            TTL=3600
 workers/
   ├── api-gateway/          # API 代理 + 認證驗證（新增）
   │   ├── src/index.ts      # 路由 → GKE eco-api-svc
-  │   └── wrangler.toml     # api.autoecoops.io custom domain
+  │   └── wrangler.toml     # api.softwareos.io custom domain
   ├── im-integration/       # 現有 IM webhook router（已有）
-  │   └── wrangler.toml     # im.autoecoops.io
+  │   └── wrangler.toml     # im.softwareos.io
   └── health-check/         # 健康檢查 Worker（新增）
       └── src/index.ts      # /health → 各服務狀態
 ```
@@ -98,11 +98,11 @@ compatibility_date = "2025-01-01"
 compatibility_flags = ["nodejs_compat"]
 
 [[routes]]
-pattern = "api.autoecoops.io/*"
+pattern = "api.softwareos.io/*"
 custom_domain = true
 
 [vars]
-GKE_API_URL = "https://app.autoecoops.io/api"
+GKE_API_URL = "https://app.softwareos.io/api"
 ENVIRONMENT = "production"
 
 [[kv_namespaces]]
@@ -111,16 +111,16 @@ id = "<ECO_CACHE_KV_ID>"
 
 [[r2_buckets]]
 binding = "ASSETS"
-bucket_name = "eco-base-assets"
+bucket_name = "softwareos-base-assets"
 ```
 
 ### R2 Storage 用途
 
 | Bucket | 用途 | 存取方式 |
 |--------|------|---------|
-| `eco-base-assets` | 前端靜態資源、用戶上傳檔案 | Workers 綁定 |
-| `eco-base-backups` | Supabase 資料庫備份、K8s etcd 備份 | 定時 GitHub Actions |
-| `eco-base-logs` | 審計日誌長期儲存（不可變）| Append-only |
+| `softwareos-base-assets` | 前端靜態資源、用戶上傳檔案 | Workers 綁定 |
+| `softwareos-base-backups` | Supabase 資料庫備份、K8s etcd 備份 | 定時 GitHub Actions |
+| `softwareos-base-logs` | 審計日誌長期儲存（不可變）| Append-only |
 
 ### Workers KV 用途
 
@@ -165,9 +165,9 @@ bucket_name = "eco-base-assets"
 - [ ] `/health` 端點回應 200
 
 ### DNS 層
-- [ ] `autoecoops.io` → Pages（200 OK）
-- [ ] `api.autoecoops.io` → Workers → GKE（200 OK）
-- [ ] `app.autoecoops.io` → GKE Ingress（200 OK）
+- [ ] `softwareos.io` → Pages（200 OK）
+- [ ] `api.softwareos.io` → Workers → GKE（200 OK）
+- [ ] `app.softwareos.io` → GKE Ingress（200 OK）
 
 ### HTTPS 層
 - [ ] TLS 1.3 有效
@@ -179,12 +179,12 @@ bucket_name = "eco-base-assets"
 - [ ] Supabase Auth 端點可達
 
 ### Workers 層
-- [ ] `api.autoecoops.io/health` → 200
+- [ ] `api.softwareos.io/health` → 200
 - [ ] Rate Limiting 生效（第 6 次請求 429）
 - [ ] R2 存取正常
 
 ### GitHub Actions CI
-- [ ] eco-base CI/CD ✅
+- [ ] softwareos-base CI/CD ✅
 - [ ] Deploy to GKE eco-staging ✅
 - [ ] Deploy Web ✅
 - [ ] YAML Governance Lint ✅

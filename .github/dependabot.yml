@@ -1,5 +1,5 @@
-# eco-base — Dependabot Configuration
-# URI: eco-base://github/dependabot
+# softwareos-base — Dependabot Configuration
+# URI: softwareos-base://github/dependabot
 # Covers: npm (monorepo), pip, Docker, GitHub Actions
 # Auto-updates patch versions; minor/major require review.
 

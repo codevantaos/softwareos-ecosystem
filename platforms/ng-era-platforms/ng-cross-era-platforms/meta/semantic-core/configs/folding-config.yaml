@@ -88,8 +88,8 @@ spec:
           - "capability-resource"
           - "resource-label"
         node_labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           - "domain"
           - "capability"
           - "resource"
@@ -158,27 +158,27 @@ spec:
       - name: "semantic_folding_latency"
         type: "histogram"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
         buckets: [0.01, 0.05, 0.1, 0.5, 1.0, 5.0]
         
       - name: "vector_search_qps"
         type: "counter"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
         
       - name: "semantic_cache_hit_ratio"
         type: "gauge"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
         
       - name: "inference_confidence_distribution"
         type: "histogram"
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
         
     logging:
       level: "info"

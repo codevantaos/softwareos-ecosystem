@@ -42,7 +42,7 @@ class TestYAMLToolkitGenerate:
                 json.dump({
                     "name": "eco-pytest-svc",
                     "kind": "Deployment",
-                    "namespace": "eco-base",
+                    "namespace": "softwareos-base",
                     "image": "ghcr.io/indestructibleorg/test:1.0.0",
                     "ports": [8080],
                     "depends_on": ["redis"],

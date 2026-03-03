@@ -15,8 +15,8 @@ metadata:
   name: gov-quantum-policy-enforcer
   namespace: infrastructure
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     gov-version: v10.0.0
     tier: quantum-enforcer
 spec:
@@ -90,8 +90,8 @@ spec:
         patch:
           metadata:
             labels:
-              eco-base/part-of: eco-base
-              eco-base/governance: aligned
+              softwareos-base/part-of: softwareos-base
+              softwareos-base/governance: aligned
               machinenativeops.gl/enforced: "true"
       - name: enforce-security-context
         target:

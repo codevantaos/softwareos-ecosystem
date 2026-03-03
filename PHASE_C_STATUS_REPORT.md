@@ -28,7 +28,7 @@ Phase C (Application Deployment) is currently **IN PROGRESS** with the following
 - **Workflow File**: `.github/workflows/build-images.yaml`
 - **Status**: Created and pushed to main branch
 - **Services**: web, api, ai, gateway
-- **Target Registry**: `asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base`
+- **Target Registry**: `asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base`
 - **Version**: v1.0.0
 - **Trigger**: Manual (GitHub Actions UI or CLI)
 
@@ -40,15 +40,15 @@ Phase C (Application Deployment) is currently **IN PROGRESS** with the following
   - api-service → asia-east1-docker.pkg.dev/.../api:v1.0.0
   - ai-service → asia-east1-docker.pkg.dev/.../ai:v1.0.0
   - api-gateway → asia-east1-docker.pkg.dev/.../gateway:v1.0.0
-- **Ingress**: Configured for autoecoops.io, api.autoecoops.io, ai.autoecoops.io
+- **Ingress**: Configured for softwareos.io, api.softwareos.io, ai.softwareos.io
 - **Converted Manifests**: Prepared in `/tmp/k8s-production/*.yaml`
 
 ### 4. Domain Configuration
-- **Primary Domain**: autoecoops.io
-- **Subdomains**: api.autoecoops.io, ai.autoecoops.io
+- **Primary Domain**: softwareos.io
+- **Subdomains**: api.softwareos.io, ai.softwareos.io
 - **Managed Certificates**: 
-  - eco-web-cert (autoecoops.io)
-  - eco-production-cert (api.autoecoops.io, ai.autoecoops.io)
+  - eco-web-cert (softwareos.io)
+  - eco-production-cert (api.softwareos.io, ai.softwareos.io)
 - **SSL/TLS**: GKE Managed Certificates configured
 
 ### 5. Git Operations
@@ -133,7 +133,7 @@ Phase C (Application Deployment) is currently **IN PROGRESS** with the following
 
 5. **Verify images in Artifact Registry**
    ```bash
-   gcloud artifacts images list --repository=eco-base --location=asia-east1
+   gcloud artifacts images list --repository=softwareos-base --location=asia-east1
    ```
 
 6. **Deploy Kubernetes manifests**

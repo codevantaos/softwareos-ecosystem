@@ -3,19 +3,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/superai-app
-    eco-base/urn: urn:eco-base:k8s:core:deployment:superai-app:sha256-82853160c98f4dd4d138f51543692154681b8f7261a433f733f8840f6756bba4
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/superai-app
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:superai-app:sha256-82853160c98f4dd4d138f51543692154681b8f7261a433f733f8840f6756bba4
   labels:
     app.kubernetes.io/component: app
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: superai-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: superai-app
   namespace: eco-superai
 spec:
@@ -134,19 +134,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/superai-worker
-    eco-base/urn: urn:eco-base:k8s:core:deployment:superai-worker:sha256-7ab7484d28106886a8e8684848f4ea0b4a7fbb32489d43f48ac589ab825a3316
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/superai-worker
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:superai-worker:sha256-7ab7484d28106886a8e8684848f4ea0b4a7fbb32489d43f48ac589ab825a3316
   labels:
     app.kubernetes.io/component: worker
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: superai-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: superai-worker
   namespace: eco-superai
 spec:
@@ -240,19 +240,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/deployment/superai-beat
-    eco-base/urn: urn:eco-base:k8s:core:deployment:superai-beat:sha256-202548d66d448e25515410054b619f8b85106cb71235ddc4505fee0894e20907
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/deployment/superai-beat
+    softwareos-base/urn: urn:softwareos-base:k8s:core:deployment:superai-beat:sha256-202548d66d448e25515410054b619f8b85106cb71235ddc4505fee0894e20907
   labels:
     app.kubernetes.io/component: beat
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: superai-platform
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: superai-beat
   namespace: eco-superai
 spec:

@@ -16,8 +16,8 @@ metadata:
   description: "GL Unified Naming Governance Contract - 統一命名治理契約"
   namespace: gl-platform-ecosystem
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     contract.level: L1
     contract.type: constitutional
     governance.layer: unified
@@ -306,7 +306,7 @@ spec:
         - tests/
         - docs/
         - configs/
-        - contracts/
+        - softwareos-contracts/
         - governance/
       
       examples:
@@ -483,8 +483,8 @@ namespace-governance-framework-baseline:
   namespace:
     name: intelligent-hyperautomation-baseline
     labels:
-      eco-base/part-of: eco-base
-      eco-base/governance: aligned
+      softwareos-base/part-of: softwareos-base
+      softwareos-base/governance: aligned
       baseline.level: L-A
       baseline.version: v1.0.0
       baseline.type: namespace-governance
@@ -511,14 +511,14 @@ namespace-governance-framework-baseline:
 
 ## 18. Mandatory Labels
 mandatory-labels:
-  eco-base/part-of: eco-base
-  eco-base/governance: aligned
+  softwareos-base/part-of: softwareos-base
+  softwareos-base/governance: aligned
   version: v1.0.0
   description: "強制標籤定義"
   
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     - key: baseline.component
       required: true
       regex: "^[a-z0-9-]+$"

@@ -1,6 +1,6 @@
 """Authentication Middleware — API Key lifecycle, JWT, rate limiting.
 
-URI: eco-base://src/middleware/auth
+URI: softwareos-base://src/middleware/auth
 
 Contracts defined by: tests/unit/test_auth.py
 """
@@ -95,7 +95,7 @@ class AuthMiddleware:
             "role": role,
             "iat": now,
             "exp": now + self._JWT_EXPIRY,
-            "iss": "eco-base",
+            "iss": "softwareos-base",
         }
         return self._jwt_encode(payload)
 

@@ -1,4 +1,4 @@
-# GKE Security Hardening Guide - eco-base
+# GKE Security Hardening Guide - softwareos-base
 
 ## Overview
 
@@ -231,7 +231,7 @@ For multiple administrators:
 
 - **Owner**: indestructibleorg
 - **Policy**: zero-trust
-- **Compliance**: eco-base v1.0
+- **Compliance**: softwareos-base v1.0
 - **Audit**: All security changes logged in GCP
 
 ## References

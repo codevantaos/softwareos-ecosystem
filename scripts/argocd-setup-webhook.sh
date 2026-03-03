@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# eco-base v1.0 — Argo CD GitHub Webhook Setup
-# URI: eco-base://scripts/argocd-setup-webhook
+# softwareos-base v1.0 — Argo CD GitHub Webhook Setup
+# URI: softwareos-base://scripts/argocd-setup-webhook
 #
 # This script configures a GitHub webhook to trigger Argo CD sync on push.
 # Closes the GitOps loop: push → webhook → Argo CD sync → cluster updated.
@@ -19,14 +19,14 @@ set -euo pipefail
 
 # ── Configuration ────────────────────────────────────────────
 GITHUB_OWNER="${GITHUB_OWNER:-indestructibleorg}"
-GITHUB_REPO="${GITHUB_REPO:-eco-base}"
+GITHUB_REPO="${GITHUB_REPO:-softwareos-base}"
 GITHUB_TOKEN="${GITHUB_TOKEN:-}"
 ARGOCD_URL="${ARGOCD_URL:-}"
 WEBHOOK_SECRET="${WEBHOOK_SECRET:-}"
 
 # ── Validate prerequisites ───────────────────────────────────
 echo "╔══════════════════════════════════════════════════════════╗"
-echo "║  eco-base — GitHub Webhook Setup for Argo CD   ║"
+echo "║  softwareos-base — GitHub Webhook Setup for Argo CD   ║"
 echo "╚══════════════════════════════════════════════════════════╝"
 echo ""
 

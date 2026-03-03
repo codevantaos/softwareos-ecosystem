@@ -50,7 +50,7 @@ else:
 log("Test 2: GCS storage configured in Loki config")
 out, err, rc = kubectl(["get", "configmap", "loki", "-n", "monitoring",
                         "-o", "jsonpath={.data.config\\.yaml}"])
-if "gcs" in out and "eco-base-loki-chunks-my-project-ops-1991" in out:
+if "gcs" in out and "softwareos-base-loki-chunks-my-project-ops-1991" in out:
     record("loki-gcs-config", "PASS", "GCS bucket configured in Loki config")
 else:
     record("loki-gcs-config", "FAIL", f"GCS not found in config: {out[:200]}")
@@ -72,18 +72,18 @@ else:
 # ── Test 5: GCS bucket exists ──────────────────────────────────────────────
 log("Test 5: GCS bucket accessible")
 result = subprocess.run(
-    ["gcloud", "storage", "buckets", "describe", "gs://eco-base-loki-chunks-my-project-ops-1991"],
+    ["gcloud", "storage", "buckets", "describe", "gs://softwareos-base-loki-chunks-my-project-ops-1991"],
     capture_output=True, text=True, timeout=15
 )
-if result.returncode == 0 and "eco-base-loki-chunks" in result.stdout:
-    record("gcs-bucket-exists", "PASS", "GCS bucket eco-base-loki-chunks-my-project-ops-1991 accessible")
+if result.returncode == 0 and "softwareos-base-loki-chunks" in result.stdout:
+    record("gcs-bucket-exists", "PASS", "GCS bucket softwareos-base-loki-chunks-my-project-ops-1991 accessible")
 else:
     record("gcs-bucket-exists", "FAIL", f"GCS bucket not accessible: {result.stderr[:100]}")
 
 # ── Test 6: GCS Lifecycle policy ───────────────────────────────────────────
 log("Test 6: GCS Lifecycle policy (35d delete rule as safety net)")
 result = subprocess.run(
-    ["gcloud", "storage", "buckets", "describe", "gs://eco-base-loki-chunks-my-project-ops-1991",
+    ["gcloud", "storage", "buckets", "describe", "gs://softwareos-base-loki-chunks-my-project-ops-1991",
      "--format=json"],
     capture_output=True, text=True, timeout=15
 )
@@ -117,7 +117,7 @@ else:
         f.write(lifecycle_json)
         tmp = f.name
     r2 = subprocess.run(
-        ["gcloud", "storage", "buckets", "update", "gs://eco-base-loki-chunks-my-project-ops-1991",
+        ["gcloud", "storage", "buckets", "update", "gs://softwareos-base-loki-chunks-my-project-ops-1991",
          f"--lifecycle-file={tmp}"],
         capture_output=True, text=True, timeout=15
     )
@@ -145,7 +145,7 @@ try:
         payload = json.dumps({
             "streams": [{
                 "stream": {"job": "gate3-load-test", "env": "eco-production"},
-                "values": [[str(ts_ns_i), f"gate3 spike test entry {i} — eco-base load validation"]]
+                "values": [[str(ts_ns_i), f"gate3 spike test entry {i} — softwareos-base load validation"]]
             }]
         }).encode()
         req = urllib.request.Request(

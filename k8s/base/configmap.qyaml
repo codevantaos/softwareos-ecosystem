@@ -1,11 +1,11 @@
-# eco-base v1.0 - ConfigMaps
+# softwareos-base v1.0 - ConfigMaps
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: eco-config
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
-    app.kubernetes.io/name: eco-base-platform
+    app.kubernetes.io/name: softwareos-base-platform
 data:
   ECO_ENVIRONMENT: "production"
   ECO_LOG_LEVEL: "INFO"
@@ -35,7 +35,7 @@ data:
   ECO_REDIS_PORT: "6379"
   ECO_POSTGRES_HOST: "postgres-svc"
   ECO_POSTGRES_PORT: "5432"
-  ECO_POSTGRES_DB: "eco-base"
+  ECO_POSTGRES_DB: "softwareos-base"
   ECO_MODEL_CACHE_DIR: "/models"
   ECO_DEFAULT_MODEL: "meta-llama/Llama-3.1-8B-Instruct"
   ECO_VISION_MODEL: "Qwen/Qwen2.5-VL-7B-Instruct"
@@ -49,13 +49,13 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: eco-secrets
-  namespace: eco-base
+  namespace: softwareos-base
   labels:
-    app.kubernetes.io/name: eco-base-platform
+    app.kubernetes.io/name: softwareos-base-platform
 type: Opaque
 stringData:
   ECO_SECRET_KEY: "INJECT_FROM_K8S_SECRET"
-  ECO_POSTGRES_USER: "eco-base"
+  ECO_POSTGRES_USER: "softwareos-base"
   ECO_POSTGRES_PASSWORD: "INJECT_FROM_K8S_SECRET"
   ECO_REDIS_PASSWORD: ""
   HF_TOKEN: ""
@@ -63,8 +63,8 @@ stringData:
 # YAML Toolkit v8 — Governance Block (auto-generated, manual editing prohibited)
 document_metadata:
   unique_id: "eco-cm-0001-0001-000000000001"
-  uri: "eco-base://k8s/eco-base/configmap/eco-config"
-  urn: "urn:eco-base:k8s:eco-base:configmap:eco-config:eco-cm-0001-0001-000000000001"
+  uri: "softwareos-base://k8s/softwareos-base/configmap/eco-config"
+  urn: "urn:softwareos-base:k8s:softwareos-base:configmap:eco-config:eco-cm-0001-0001-000000000001"
   target_system: gke-production
   cross_layer_binding: [api-gateway, ai-service, vllm, tgi, sglang, ollama]
   schema_version: v8
@@ -76,7 +76,7 @@ governance_info:
   compliance_tags: [zero-trust, soc2, internal]
   lifecycle_policy: active
 registry_binding:
-  service_endpoint: "http://eco-config.eco-base.svc.cluster.local"
+  service_endpoint: "http://eco-config.softwareos-base.svc.cluster.local"
   discovery_protocol: consul
   health_check_path: "/health"
   registry_ttl: 30

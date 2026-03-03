@@ -5,15 +5,15 @@ MANDATORY_LABELS = {
     "app.kubernetes.io/instance": "eco-instance",
     "app.kubernetes.io/version": "1.0.0",
     "app.kubernetes.io/component": "eco-component",
-    "app.kubernetes.io/part-of": "eco-base",
-    "eco-base/platform": "core",
-    "eco-base/environment": "development",
-    "eco-base/owner": "eco-system",
+    "app.kubernetes.io/part-of": "softwareos-base",
+    "softwareos-base/platform": "core",
+    "softwareos-base/environment": "development",
+    "softwareos-base/owner": "eco-system",
 }
 
 MANDATORY_ANNOTATIONS = {
-    "eco-base/governance-policy": "standard-v1",
-    "eco-base/audit-log-level": "minimal",
+    "softwareos-base/governance-policy": "standard-v1",
+    "softwareos-base/audit-log-level": "minimal",
 }
 
 KIND_FILTER = {

@@ -3,8 +3,8 @@
 ## Task List
 
 ### Phase 1: Directory Structure Creation
-- [x] Create main directory structure (platforms, contracts, governance, workflows, observability, artifacts, scripts)
-- [x] Create naming-governance subdirectories (contracts, policies, validators, fixers, observability, registry, workflows, templates, examples, tests)
+- [x] Create main directory structure (platforms, softwareos-contracts, governance, workflows, observability, artifacts, scripts)
+- [x] Create naming-governance subdirectories (softwareos-contracts, policies, validators, fixers, observability, registry, workflows, templates, examples, tests)
 
 ### Phase 2: Governance Specification Files
 - [x] Create GL Semantic Unification Spec

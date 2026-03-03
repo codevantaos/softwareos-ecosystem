@@ -134,9 +134,9 @@ jobs:
             1. Generate new fine-grained PAT at [github.com/settings/personal-access-tokens/new](https://github.com/settings/personal-access-tokens/new)
                - Permissions: \`contents:write\`, \`workflows:write\`, \`issues:write\`, \`pull_requests:read\`, \`metadata:read\`
                - Expiry: today + 90 days
-               - Repository: \`indestructibleorg/eco-base\`
+               - Repository: \`indestructibleorg/softwareos-base\`
 
-            2. Update secrets in [Settings → Secrets → Actions](https://github.com/indestructibleorg/eco-base/settings/secrets/actions):
+            2. Update secrets in [Settings → Secrets → Actions](https://github.com/indestructibleorg/softwareos-base/settings/secrets/actions):
                - \`PAT_TOKEN\` (or equivalent) → new token value
                - \`PAT_EXPIRY_DATE\` → new expiry date (YYYY-MM-DD)
                - \`PAT_TOKEN_ID\` → first 30 chars of new token

@@ -8,12 +8,12 @@ from domain.value_objects.compliance_status import ComplianceScore, ComplianceSt
 
 def test_module_creation():
     m = GovernanceModule(
-        name="auth-service",
+        name="codevantaos-auth",
         path="/platforms/auth",
         gl_layer="GL30-49",
         ng_era="Era-2",
     )
-    assert m.name == "auth-service"
+    assert m.name == "codevantaos-auth"
     assert m.gl_layer == "GL30-49"
     assert m.ng_era == "Era-2"
     assert m.compliance_status == ComplianceStatus.UNKNOWN

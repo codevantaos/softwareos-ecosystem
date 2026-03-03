@@ -3,21 +3,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/trivy-image-scanner
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:trivy-image-scanner:sha256-d55d030e48ad22b5ff0d693664ffc8d5519c0561b5a9a4d1523ae8022f012dab
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/trivy-image-scanner
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:trivy-image-scanner:sha256-d55d030e48ad22b5ff0d693664ffc8d5519c0561b5a9a4d1523ae8022f012dab
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: trivy-image-scanner
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: security-scan
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: trivy-image-scanner
   namespace: default
 spec:
@@ -86,21 +86,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/kube-bench-scanner
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:kube-bench-scanner:sha256-8b6917523b01506ad50fc7d163284a33042a3d9b806f51e77a81853e3a6e1d0c
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/kube-bench-scanner
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:kube-bench-scanner:sha256-8b6917523b01506ad50fc7d163284a33042a3d9b806f51e77a81853e3a6e1d0c
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: kube-bench-scanner
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: security-scan
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: kube-bench-scanner
   namespace: default
 spec:
@@ -198,21 +198,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/kube-hunter-scanner
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:kube-hunter-scanner:sha256-5182984d63ff073570c56c4fb543d72967e443c3002583ed6073c5434aac1df1
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/kube-hunter-scanner
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:kube-hunter-scanner:sha256-5182984d63ff073570c56c4fb543d72967e443c3002583ed6073c5434aac1df1
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: kube-hunter-scanner
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: security-scan
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: kube-hunter-scanner
   namespace: default
 spec:
@@ -281,21 +281,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/code-scanner
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:code-scanner:sha256-b71ac73211066bda3e65a824a5d5b06226e23d5401348e74409f1eb9047765fd
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/code-scanner
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:code-scanner:sha256-b71ac73211066bda3e65a824a5d5b06226e23d5401348e74409f1eb9047765fd
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: code-scanner
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: security-scan
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: code-scanner
   namespace: default
 spec:
@@ -400,21 +400,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/grafana-dashboard-security-scan
-    eco-base/urn: urn:eco-base:k8s:core:configmap:grafana-dashboard-security-scan:sha256-d3f4b5c95bee6ebbc012e17695eb4e7cdf44f457d525c03c1e6ca5d41344a279
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/grafana-dashboard-security-scan
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:grafana-dashboard-security-scan:sha256-d3f4b5c95bee6ebbc012e17695eb4e7cdf44f457d525c03c1e6ca5d41344a279
   labels:
     app: superai-platform
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: grafana-dashboard-security-scan
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
     component: security-scan
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
     grafana_dashboard: '1'
   name: grafana-dashboard-security-scan
   namespace: monitoring

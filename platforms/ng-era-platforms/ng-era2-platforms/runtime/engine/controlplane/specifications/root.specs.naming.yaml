@@ -16,8 +16,8 @@ metadata:
   name: root-naming-specification
   namespace: machinenativeops-specs
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     machinenativeops.io/tier: "specs"
     machinenativeops.io/version: "v1.0.0"
     machinenativeops.io/component: "naming-spec"
@@ -233,13 +233,13 @@ spec:
       examples:
         valid:
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
           spec: {"version": "1.0.0"}
         invalid:
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
           spec: {"version": "2.0.0"}
 
   # === 禁止模式 ===

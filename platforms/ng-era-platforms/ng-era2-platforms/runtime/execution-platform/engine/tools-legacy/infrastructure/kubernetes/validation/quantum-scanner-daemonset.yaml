@@ -3,21 +3,21 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/daemonset/quantum-scanner
-    eco-base/urn: urn:eco-base:k8s:core:daemonset:quantum-scanner:sha256-0b76a23e6d614df87403e602866e64fd1cc43a3cd92aee38645284af43045cda
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/daemonset/quantum-scanner
+    softwareos-base/urn: urn:softwareos-base:k8s:core:daemonset:quantum-scanner:sha256-0b76a23e6d614df87403e602866e64fd1cc43a3cd92aee38645284af43045cda
   labels:
     app.kubernetes.io/component: quantum-scanner
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: validation-system
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     version: v1.0.0
   name: quantum-scanner
   namespace: gl-runtime-verification
@@ -27,8 +27,8 @@ spec:
     prometheus.io/scrape: 'true'
   labels:
     app.kubernetes.io/name: quantum-scanner
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
     spec:
       containers:
       - env:
@@ -131,21 +131,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/quantum-scanner-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:quantum-scanner-config:sha256-4c3620b03cda36f2d044252eda92888ce3550e408cabdc09c56d79e768b25cb6
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/quantum-scanner-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:quantum-scanner-config:sha256-4c3620b03cda36f2d044252eda92888ce3550e408cabdc09c56d79e768b25cb6
   labels:
     app.kubernetes.io/component: quantum-scanner
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: validation-system
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
   name: quantum-scanner-config
   namespace: gl-runtime-verification
 ---
@@ -154,8 +154,8 @@ kind: ServiceAccount
 metadata:
   labels:
     app.kubernetes.io/name: validation-system
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
   name: validation-system-sa
   namespace: gl-runtime-verification
 ---
@@ -164,8 +164,8 @@ kind: ClusterRole
 metadata:
   labels:
     app.kubernetes.io/name: validation-system
-    eco-base/governance: aligned
-    eco-base/part-of: eco-base
+    softwareos-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
   name: quantum-scanner-role
 rules:
 - apiGroups:

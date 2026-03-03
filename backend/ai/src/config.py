@@ -1,6 +1,6 @@
-"""eco-base AI Service configuration — environment-driven, zero hardcoded secrets.
+"""softwareos-base AI Service configuration — environment-driven, zero hardcoded secrets.
 
-URI: eco-base://backend/ai/config
+URI: softwareos-base://backend/ai/config
 All environment variables use the ECO_* prefix for namespace isolation.
 """
 

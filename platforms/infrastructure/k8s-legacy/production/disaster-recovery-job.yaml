@@ -3,21 +3,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/dr-health-check
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:dr-health-check:sha256-aa9aac2987abb810a881e41cea4095a424c712970a69d9dc3fa38775ab762637
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/dr-health-check
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:dr-health-check:sha256-aa9aac2987abb810a881e41cea4095a424c712970a69d9dc3fa38775ab762637
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: disaster-recovery
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
     test-type: health-check
   name: dr-health-check
@@ -90,21 +90,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/dr-backup-verification
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:dr-backup-verification:sha256-0c2a776e6129cecfe9327dbfb2d470afa5094f855eb613bc14f13156db26d147
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/dr-backup-verification
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:dr-backup-verification:sha256-0c2a776e6129cecfe9327dbfb2d470afa5094f855eb613bc14f13156db26d147
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: disaster-recovery
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
     test-type: backup-verification
   name: dr-backup-verification

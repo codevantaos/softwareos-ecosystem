@@ -18,9 +18,9 @@ violation[{"msg": msg}] {
         "app.kubernetes.io/version",
         "app.kubernetes.io/component",
         "app.kubernetes.io/part-of",
-        "eco-base/platform",
-        "eco-base/environment",
-        "eco-base/owner"
+        "softwareos-base/platform",
+        "softwareos-base/environment",
+        "softwareos-base/owner"
     }
     some i
     label := mandatory_labels[i]
@@ -28,28 +28,28 @@ violation[{"msg": msg}] {
     msg := sprintf("Missing mandatory label: %v", [label])
 }
 
-# app.kubernetes.io/part-of 必須是 eco-base
+# app.kubernetes.io/part-of 必須是 softwareos-base
 violation[{"msg": msg}] {
     input.review.object.metadata.labels["app.kubernetes.io/part-of"]
-    input.review.object.metadata.labels["app.kubernetes.io/part-of"] != "eco-base"
-    msg := sprintf("Label 'app.kubernetes.io/part-of' must be 'eco-base', but found '%v'", [input.review.object.metadata.labels["app.kubernetes.io/part-of"]])
+    input.review.object.metadata.labels["app.kubernetes.io/part-of"] != "softwareos-base"
+    msg := sprintf("Label 'app.kubernetes.io/part-of' must be 'softwareos-base', but found '%v'", [input.review.object.metadata.labels["app.kubernetes.io/part-of"]])
 }
 
-# 環境值域：eco-base/environment 只能是 production|staging|development
+# 環境值域：softwareos-base/environment 只能是 production|staging|development
 violation[{"msg": msg}] {
-    env := input.review.object.metadata.labels["eco-base/environment"]
+    env := input.review.object.metadata.labels["softwareos-base/environment"]
     allowed_envs := {"production", "staging", "development"}
     not allowed_envs[env]
-    msg := sprintf("Label 'eco-base/environment' has invalid value '%v'. Must be one of %v", [env, allowed_envs])
+    msg := sprintf("Label 'softwareos-base/environment' has invalid value '%v'. Must be one of %v", [env, allowed_envs])
 }
 
 # 必填 Annotations
 violation[{"msg": msg}] {
     mandatory_annotations := {
-        "eco-base/uri",
-        "eco-base/urn",
-        "eco-base/governance-policy",
-        "eco-base/audit-log-level"
+        "softwareos-base/uri",
+        "softwareos-base/urn",
+        "softwareos-base/governance-policy",
+        "softwareos-base/audit-log-level"
     }
     some i
     annotation := mandatory_annotations[i]
@@ -57,24 +57,24 @@ violation[{"msg": msg}] {
     msg := sprintf("Missing mandatory annotation: %v", [annotation])
 }
 
-# 審計等級值域：eco-base/audit-log-level 只能是 full|minimal
+# 審計等級值域：softwareos-base/audit-log-level 只能是 full|minimal
 violation[{"msg": msg}] {
-    audit_level := input.review.object.metadata.annotations["eco-base/audit-log-level"]
+    audit_level := input.review.object.metadata.annotations["softwareos-base/audit-log-level"]
     allowed_audit_levels := {"full", "minimal"}
     not allowed_audit_levels[audit_level]
-    msg := sprintf("Annotation 'eco-base/audit-log-level' has invalid value '%v'. Must be one of %v", [audit_level, allowed_audit_levels])
+    msg := sprintf("Annotation 'softwareos-base/audit-log-level' has invalid value '%v'. Must be one of %v", [audit_level, allowed_audit_levels])
 }
 
 # URN 格式：必須匹配定義的語法
 violation[{"msg": msg}] {
-    urn := input.review.object.metadata.annotations["eco-base/urn"]
-    not re_match("^urn:eco-base:[a-z0-9-]+:[a-z0-9-]+:[a-z0-9-]+:[a-z0-9-]+:((?:[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12})|(?:sha256-[0-9a-f]{8,}))$", urn)
-    msg := sprintf("Annotation 'eco-base/urn' has invalid format '%v'. Must match ^urn:eco-base:<type>:<platform>:<component>:<resource>:<uuidv1|sha256-...>$", [urn])
+    urn := input.review.object.metadata.annotations["softwareos-base/urn"]
+    not re_match("^urn:softwareos-base:[a-z0-9-]+:[a-z0-9-]+:[a-z0-9-]+:[a-z0-9-]+:((?:[0-9a-f]{8}-[0-9a-f]{4}-1[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12})|(?:sha256-[0-9a-f]{8,}))$", urn)
+    msg := sprintf("Annotation 'softwareos-base/urn' has invalid format '%v'. Must match ^urn:softwareos-base:<type>:<platform>:<component>:<resource>:<uuidv1|sha256-...>$", [urn])
 }
 
 # URI 格式：必須匹配定義的語法
 violation[{"msg": msg}] {
-    uri := input.review.object.metadata.annotations["eco-base/uri"]
-    not re_match("^eco-base://[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+/.+(\\?.*)?$", uri)
-    msg := sprintf("Annotation 'eco-base/uri' has invalid format '%v'. Must match ^eco-base://<type>/<platform>/<component>/<resource>[?...].$", [uri])
+    uri := input.review.object.metadata.annotations["softwareos-base/uri"]
+    not re_match("^softwareos-base://[a-z0-9-]+/[a-z0-9-]+/[a-z0-9-]+/.+(\\?.*)?$", uri)
+    msg := sprintf("Annotation 'softwareos-base/uri' has invalid format '%v'. Must match ^softwareos-base://<type>/<platform>/<component>/<resource>[?...].$", [uri])
 }

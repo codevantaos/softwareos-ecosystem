@@ -41,7 +41,7 @@ class TestOPAPolicies:
 
     def test_qyaml_checks_uri_format(self):
         content = open(QYAML_POLICY, encoding='utf-8').read()
-        assert "eco-base://" in content
+        assert "softwareos-base://" in content
 
     def test_qyaml_checks_image_registry(self):
         content = open(QYAML_POLICY, encoding='utf-8').read()

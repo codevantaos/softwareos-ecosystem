@@ -49,21 +49,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/trace-analysis-dashboard
-    eco-base/urn: urn:eco-base:k8s:core:configmap:trace-analysis-dashboard:sha256-bcd0b7b3ae2c8db8575bfd1229a5db5d4352783e9280bdbcf22bd9cd2ed43903
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/trace-analysis-dashboard
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:trace-analysis-dashboard:sha256-bcd0b7b3ae2c8db8575bfd1229a5db5d4352783e9280bdbcf22bd9cd2ed43903
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: trace-analysis-dashboard
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     grafana_dashboard: '1'
   name: trace-analysis-dashboard
   namespace: istio-system
@@ -73,43 +73,43 @@ data:
   alerts.yaml: "groups:\n- name: trace_analysis\n  rules:\n  # High error rate in\
     \ traces\n  - alert: HighTraceErrorRate\n    expr: |\n      sum(rate(jaeger_spans_total{error=true}[5m]))\
     \ \n      / sum(rate(jaeger_spans_total[5m])) * 100 > 5\n    for: 5m\n    labels:\n\
-    eco-base/part-of: eco-base\neco-base/governance: aligned\n      severity: warning\n\
+    softwareos-base/part-of: softwareos-base\nsoftwareos-base/governance: aligned\n      severity: warning\n\
     \      team: platform\n    annotations:\n      summary: \"High error rate detected\
     \ in traces\"\n      description: \"Trace error rate is {{ $value }}% for the\
     \ last 5 minutes\"\n  \n  # Slow traces detection\n  - alert: SlowTracesDetected\n\
     \    expr: |\n      histogram_quantile(0.95, sum(rate(jaeger_tracer_duration_milliseconds_bucket[5m]))\
-    \ by (le)) > 5000\n    for: 10m\n    labels:\neco-base/part-of: eco-base\neco-base/governance:\
+    \ by (le)) > 5000\n    for: 10m\n    labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance:\
     \ aligned\n      severity: warning\n      team: platform\n    annotations:\n \
     \     summary: \"Slow traces detected\"\n      description: \"95th percentile\
     \ trace duration is {{ $value }}ms for the last 10 minutes\"\n  \n  # Trace sampling\
     \ rate anomaly\n  - alert: TraceSamplingRateAnomaly\n    expr: |\n      abs(\n\
     \        sum(rate(jaeger_spans_total[5m])) / sum(rate(istio_requests_total[5m]))\
-    \ * 100 \n        - 10\n      ) > 50\n    for: 5m\n    labels:\neco-base/part-of:\
-    \ eco-base\neco-base/governance: aligned\n      severity: info\n      team: platform\n\
+    \ * 100 \n        - 10\n      ) > 50\n    for: 5m\n    labels:\nsoftwareos-base/part-of:\
+    \ softwareos-base\nsoftwareos-base/governance: aligned\n      severity: info\n      team: platform\n\
     \    annotations:\n      summary: \"Trace sampling rate anomaly detected\"\n \
     \     description: \"Current sampling rate is {{ $value }}%, expected ~10%\"\n\
     \  \n  # Missing trace context\n  - alert: MissingTraceContext\n    expr: |\n\
     \      sum(rate(istio_requests_total[5m])) - sum(rate(jaeger_traces_started_total[5m]))\
-    \ > 100\n    for: 5m\n    labels:\neco-base/part-of: eco-base\neco-base/governance:\
+    \ > 100\n    for: 5m\n    labels:\nsoftwareos-base/part-of: softwareos-base\nsoftwareos-base/governance:\
     \ aligned\n      severity: warning\n      team: platform\n    annotations:\n \
     \     summary: \"Missing trace context detected\"\n      description: \"{{ $value\
     \ }} requests per second are not being traced\"\n"
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/trace-analysis-alerts
-    eco-base/urn: urn:eco-base:k8s:core:configmap:trace-analysis-alerts:sha256-73a61bff76f41e75b20c977911aec05844eb967fb38efd51f6ffe8189fa2dcd0
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/trace-analysis-alerts
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:trace-analysis-alerts:sha256-73a61bff76f41e75b20c977911aec05844eb967fb38efd51f6ffe8189fa2dcd0
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: trace-analysis-alerts
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: trace-analysis-alerts
   namespace: istio-system
 ---
@@ -117,19 +117,19 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/cronjob/trace-analysis-report
-    eco-base/urn: urn:eco-base:k8s:core:cronjob:trace-analysis-report:sha256-6fc569cab03b838b662fa3e426e1dc3de49945a744fb53a12f1483d81d7ecf15
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/cronjob/trace-analysis-report
+    softwareos-base/urn: urn:softwareos-base:k8s:core:cronjob:trace-analysis-report:sha256-6fc569cab03b838b662fa3e426e1dc3de49945a744fb53a12f1483d81d7ecf15
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: trace-analysis-report
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/owner: eco-system
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/owner: eco-system
+    softwareos-base/platform: core
   name: trace-analysis-report
   namespace: istio-system
 spec:

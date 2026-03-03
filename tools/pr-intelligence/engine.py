@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PR Intelligence Engine — eco-base
+PR Intelligence Engine — softwareos-base
 Scans ALL open PRs, classifies each one, and takes the correct action
 according to industry best practices.
 
@@ -24,7 +24,7 @@ import subprocess
 import sys
 from datetime import datetime, timezone
 
-REPO = os.environ.get("GITHUB_REPOSITORY", "indestructibleorg/eco-base")
+REPO = os.environ.get("GITHUB_REPOSITORY", "indestructibleorg/softwareos-base")
 DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
 
 # Versions known to be non-LTS or beta — should be replaced

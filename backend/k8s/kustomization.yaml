@@ -15,4 +15,4 @@ resources:
   - security/mtls.qyaml
 
 commonLabels:
-  managed-by: eco-base-yaml-toolkit-v8
+  managed-by: softwareos-base-yaml-toolkit-v8

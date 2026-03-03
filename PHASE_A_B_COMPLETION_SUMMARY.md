@@ -1,4 +1,4 @@
-# eco-base Infrastructure - Phase A & B Completion Summary
+# softwareos-base Infrastructure - Phase A & B Completion Summary
 
 ## Executive Summary
 
@@ -23,9 +23,9 @@ Phase A focused on verifying and configuring security measures across GitHub, Cl
 
 #### ✅ A2: Secret Scanning & Push Protection
 - **Repositories Configured**:
-  - `eco-base`
-  - `autoecoops-api`
-  - `autoecoops-v1`
+  - `softwareos-base`
+  - `softwareos-api`
+  - `softwareos-v1`
 - **Features Enabled**:
   - Secret Scanning
   - Push Protection
@@ -48,7 +48,7 @@ Phase A focused on verifying and configuring security measures across GitHub, Cl
 #### ✅ A5: Network Policies
 - **Namespaces with Policies**:
   - `eco-staging`
-  - `eco-base`
+  - `softwareos-base`
   - `monitoring`
 - **Status**: Verified across all namespaces
 - **Configuration**: `/workspace/repo/k8s/base/networkpolicy.qyaml`
@@ -56,7 +56,7 @@ Phase A focused on verifying and configuring security measures across GitHub, Cl
 #### ✅ A6: Resource Quotas & Limit Ranges
 - **Namespaces Configured**:
   - `eco-staging`
-  - `eco-base`
+  - `softwareos-base`
 - **Status**: Configured via Helm charts
 - **Configuration**: `/workspace/repo/helm/templates/`
 
@@ -79,10 +79,10 @@ Phase B focused on setting up core infrastructure components including Artifact 
 ### Completed Tasks (6/6)
 
 #### ✅ B1: Docker Artifact Registry
-- **Registry Name**: `eco-base`
+- **Registry Name**: `softwareos-base`
 - **Location**: `asia-east1`
 - **Format**: Docker
-- **URI**: `asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base`
+- **URI**: `asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base`
 - **IAM Configuration**: `eco-deploy-sa` granted `roles/artifactregistry.writer`
 - **Status**: Created and operational
 - **Documentation**: `/workspace/PHASE_B_COMPLETION_REPORT.md`
@@ -97,9 +97,9 @@ Phase B focused on setting up core infrastructure components including Artifact 
 | AI Service | 2 | 8 | 75% | 85% |
 
 **Files Created**:
-- `hpa-eco-base-web.yaml`
-- `hpa-eco-base-api.yaml`
-- `hpa-eco-base-ai.yaml`
+- `hpa-softwareos-base-web.yaml`
+- `hpa-softwareos-base-api.yaml`
+- `hpa-softwareos-base-ai.yaml`
 
 **Status**: Created and applied to cluster
 
@@ -113,9 +113,9 @@ Phase B focused on setting up core infrastructure components including Artifact 
 | AI Service | 1 |
 
 **Files Created**:
-- `pdb-eco-base-web.yaml`
-- `pdb-eco-base-api.yaml`
-- `pdb-eco-base-ai.yaml`
+- `pdb-softwareos-base-web.yaml`
+- `pdb-softwareos-base-api.yaml`
+- `pdb-softwareos-base-ai.yaml`
 
 **Status**: Created and applied to cluster
 
@@ -147,9 +147,9 @@ Phase B focused on setting up core infrastructure components including Artifact 
 **Location**: `/workspace/k8s/production/gmp-podmonitoring.qyaml`
 
 **Monitoring Resources**:
-- `eco-base-pod-monitoring` - Web service metrics
-- `eco-base-api-monitoring` - API gateway metrics
-- `eco-base-ai-monitoring` - AI service metrics
+- `softwareos-base-pod-monitoring` - Web service metrics
+- `softwareos-base-api-monitoring` - API gateway metrics
+- `softwareos-base-ai-monitoring` - AI service metrics
 
 **Configuration**:
 - Scrape interval: 30s
@@ -177,14 +177,14 @@ Phase B focused on setting up core infrastructure components including Artifact 
 ## Infrastructure Components
 
 ### Google Cloud Platform (GCP)
-- **Artifact Registry**: `asia-east1-docker.pkg.dev/my-project-ops-1991/eco-base`
+- **Artifact Registry**: `asia-east1-docker.pkg.dev/my-project-ops-1991/softwareos-base`
 - **Service Account**: `eco-deploy-sa` with Artifact Registry writer permissions
 - **Monitoring**: Google Managed Prometheus (GMP) configured
 
 ### Kubernetes Clusters
 - **Namespaces**:
   - `eco-staging` - Staging environment
-  - `eco-base` - Production environment
+  - `softwareos-base` - Production environment
   - `monitoring` - Monitoring stack
 - **Autoscaling**: HPAs configured for all production services
 - **High Availability**: PDBs configured for all production services

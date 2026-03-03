@@ -1,11 +1,11 @@
-# Contributing to eco-base
+# Contributing to softwareos-base
 
 ## Getting Started
 
 ```bash
 # Clone the repository
-git clone https://github.com/indestructibleorg/eco-base.git
-cd eco-base
+git clone https://github.com/indestructibleorg/softwareos-base.git
+cd softwareos-base
 
 # Install Python dependencies
 pip install pydantic fastapi httpx pytest pytest-asyncio jsonschema pyyaml numpy
@@ -55,7 +55,7 @@ python3 tools/ci-validator/validate.py
 - All IDs use UUID v1 (`uuid.uuid1()`)
 - All resources have `uri` + `urn` fields
 - Environment variables use `ECO_*` prefix
-- Module docstrings include URI: `eco-base://module/path`
+- Module docstrings include URI: `softwareos-base://module/path`
 
 ### TypeScript (backend/api, packages/, platforms/)
 
@@ -81,7 +81,7 @@ See [.qyaml Governance Specification](docs/QYAML_GOVERNANCE.md) for details.
 |--------|-----------|---------|
 | Container names | `eco-*` | `eco-ai-service` |
 | Image registry | `ghcr.io/indestructibleorg/*` | `ghcr.io/indestructibleorg/ai:1.0.0` |
-| Namespace | `eco-base` | |
+| Namespace | `softwareos-base` | |
 | Config prefix | `ECO_*` | `ECO_AI_HTTP_PORT` |
 
 ## Testing
@@ -130,7 +130,7 @@ Format: `type: description`
 
 - Never commit secrets or API keys
 - Use `ECO_*` environment variables for all configuration
-- Report vulnerabilities via [GitHub Security Advisories](https://github.com/indestructibleorg/eco-base/security/advisories/new)
+- Report vulnerabilities via [GitHub Security Advisories](https://github.com/indestructibleorg/softwareos-base/security/advisories/new)
 - See [SECURITY.md](SECURITY.md) for details
 
 ## Documentation

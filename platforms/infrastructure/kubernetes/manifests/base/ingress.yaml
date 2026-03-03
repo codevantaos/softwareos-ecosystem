@@ -3,10 +3,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/ingress/machine-native-ops-ingress
-    eco-base/urn: urn:eco-base:k8s:core:ingress:machine-native-ops-ingress:sha256-b2fbdef686c0368b866632d840f11c0fc72e861cca627bc55b1cc42520f15e96
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/ingress/machine-native-ops-ingress
+    softwareos-base/urn: urn:softwareos-base:k8s:core:ingress:machine-native-ops-ingress:sha256-b2fbdef686c0368b866632d840f11c0fc72e861cca627bc55b1cc42520f15e96
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: 'true'
   labels:
@@ -14,13 +14,13 @@ metadata:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     governance.machinenativeops.io/charter-version: 2.0.0
   name: machine-native-ops-ingress
   namespace: platform-03

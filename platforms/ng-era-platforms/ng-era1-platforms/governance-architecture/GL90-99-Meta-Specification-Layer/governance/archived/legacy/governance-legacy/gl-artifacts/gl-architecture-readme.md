@@ -32,9 +32,9 @@ GL (Governance Layers) Architecture provides a unified, semantically stable gove
 |-------|-------|-------------|
 | GL00-09 | Strategic Layer | Vision, architecture, decision, risk, compliance, security |
 | GL10-29 | Operational Layer | Policy, culture, metrics, improvement, quality |
-| GL30-49 | Execution Layer | Schemas, templates, contracts, automation, tools |
+| GL30-49 | Execution Layer | Schemas, templates, softwareos-contracts, automation, tools |
 | GL50-59 | Observability Layer | Monitoring, alerting, insights |
-| GL60-80 | Advanced/Feedback Layer | AI, contracts, audit, optimization, feedback |
+| GL60-80 | Advanced/Feedback Layer | AI, softwareos-contracts, audit, optimization, feedback |
 | GL81-83 | Extended Layer | Auto-comment, stakeholder, integration |
 | GL90-99 | Meta-Specification Layer | Naming conventions, meta-governance |
 

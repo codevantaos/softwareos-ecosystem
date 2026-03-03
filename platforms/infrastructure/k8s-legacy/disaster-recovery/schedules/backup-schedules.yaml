@@ -16,8 +16,8 @@ metadata:
   name: daily-full-backup-all
   namespace: velero
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: backup
     type: full
     frequency: daily
@@ -76,8 +76,8 @@ metadata:
   name: hourly-incremental-backup
   namespace: velero
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: backup
     type: incremental
     frequency: hourly
@@ -102,8 +102,8 @@ metadata:
   name: daily-monitoring-backup
   namespace: velero
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: backup
     type: full
     frequency: daily
@@ -125,8 +125,8 @@ metadata:
   name: weekly-full-backup
   namespace: velero
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: backup
     type: full
     frequency: weekly
@@ -150,8 +150,8 @@ metadata:
   name: monthly-archive-backup
   namespace: velero
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: backup
     type: archive
     frequency: monthly
@@ -173,8 +173,8 @@ metadata:
   name: config-backup
   namespace: velero
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: backup
     type: config
     frequency: hourly
@@ -202,8 +202,8 @@ metadata:
   name: pv-snapshot-backup
   namespace: velero
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: backup
     type: snapshot
     frequency: daily
@@ -228,8 +228,8 @@ metadata:
   name: etcd-backup
   namespace: velero
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: backup
     type: etcd
     frequency: hourly
@@ -255,8 +255,8 @@ metadata:
   name: app-data-backup
   namespace: velero
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: backup
     type: data
     frequency: hourly
@@ -283,8 +283,8 @@ metadata:
   name: validate-backups
   namespace: velero
   labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
     app.kubernetes.io/component: validation
     type: validation
     frequency: daily

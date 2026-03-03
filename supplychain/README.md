@@ -1,6 +1,6 @@
 # Supply Chain Evidence (ECO)
 
-本目錄是 eco-base 專案的供應鏈證據專區（可稽核、可重播、不可漂移）。
+本目錄是 softwareos-base 專案的供應鏈證據專區（可稽核、可重播、不可漂移）。
 
 ## 內容
 
@@ -12,7 +12,7 @@
 
 ## 強制規範
 
-1. manifests 內的 `eco-base/urn` / `eco-base/uri` **禁止人工編輯**
+1. manifests 內的 `softwareos-base/urn` / `softwareos-base/uri` **禁止人工編輯**
 2. `hashlock.json` 與 manifests **不可漂移**（main verify 必須為 0）
 3. `hashlock.attestation.intoto.json` 必須與 `hashlock.json` 的 sha256 一致
 4. `hashlock.sig` 必須能被 verify-blob 且 identity 綁定到 main 分支的 attest workflow
@@ -24,7 +24,7 @@
 cosign verify-blob \
   --certificate supplychain/hashlock.pem \
   --signature supplychain/hashlock.sig \
-  --certificate-identity "https://github.com/indestructibleorg/eco-base/.github/workflows/eco-supplychain-attest.yml@refs/heads/main" \
+  --certificate-identity "https://github.com/indestructibleorg/softwareos-base/.github/workflows/eco-supplychain-attest.yml@refs/heads/main" \
   --certificate-oidc-issuer "https://token.actions.githubusercontent.com" \
   supplychain/hashlock.json
 ````

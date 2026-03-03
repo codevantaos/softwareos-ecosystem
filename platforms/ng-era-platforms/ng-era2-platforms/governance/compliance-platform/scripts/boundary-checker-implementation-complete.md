@@ -275,7 +275,7 @@ jobs:
 class RuntimeBoundaryChecker:
     def validate_cross_layer_call(self, layer_from, layer_to, operation):
         # Validate dependency matrix
-        # Check interface contracts
+        # Check interface softwareos-contracts
         # Verify permissions
         pass
 ```

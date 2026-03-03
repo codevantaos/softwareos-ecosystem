@@ -26,11 +26,11 @@ else
     ERRORS=$((ERRORS+1))
 fi
 
-# 檢查 contracts 模組
-if [ -d "workspace/src/contracts" ]; then
-    echo -e "${GREEN}✅${NC} contracts/ 存在"
+# 檢查 softwareos-contracts 模組
+if [ -d "workspace/src/softwareos-contracts" ]; then
+    echo -e "${GREEN}✅${NC} softwareos-contracts/ 存在"
 else
-    echo -e "${YELLOW}⚠️${NC}  contracts/ 不存在"
+    echo -e "${YELLOW}⚠️${NC}  softwareos-contracts/ 不存在"
 fi
 
 # 檢查 services 模組

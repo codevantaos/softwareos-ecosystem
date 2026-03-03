@@ -1,6 +1,6 @@
 /**
- * eco-base — AI Routes
- * URI: eco-base://backend/api/routes/ai
+ * softwareos-base — AI Routes
+ * URI: softwareos-base://backend/api/routes/ai
  *
  * Proxies to backend/ai via ai-proxy service.
  * Persists jobs to Supabase for tracking and WebSocket push.
@@ -38,8 +38,8 @@ aiRouter.post("/generate", async (req: AuthenticatedRequest, res: Response, next
         max_tokens: max_tokens ?? 2048,
         stream: false,
       },
-      uri: `eco-base://ai/job/${jobId}`,
-      urn: `urn:eco-base:ai:job:${jobId}`,
+      uri: `softwareos-base://ai/job/${jobId}`,
+      urn: `urn:softwareos-base:ai:job:${jobId}`,
     });
 
     // Proxy to AI service
@@ -151,8 +151,8 @@ aiRouter.get("/jobs/:jobId", async (req: AuthenticatedRequest, res: Response, ne
       error: job.error,
       usage: job.usage,
       latency_ms: job.latency_ms,
-      uri: job.uri || `eco-base://ai/job/${job.id}`,
-      urn: job.urn || `urn:eco-base:ai:job:${job.id}`,
+      uri: job.uri || `softwareos-base://ai/job/${job.id}`,
+      urn: job.urn || `urn:softwareos-base:ai:job:${job.id}`,
       created_at: job.created_at,
       completed_at: job.completed_at,
     });

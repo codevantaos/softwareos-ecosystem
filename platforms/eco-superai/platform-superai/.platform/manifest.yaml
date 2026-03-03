@@ -55,13 +55,13 @@ spec:
   # ECO Namespace Specification v1.0 Alignment
   eco_namespace:
     k8s_namespace: eco-superai
-    eco_uri: "eco-base://k8s/platform-superai/namespace/eco-superai"
-    eco_urn: "urn:eco-base:k8s:platform-superai:namespace:eco-superai:gl.ai.superai-platform"
+    eco_uri: "softwareos-base://k8s/platform-superai/namespace/eco-superai"
+    eco_urn: "urn:softwareos-base:k8s:platform-superai:namespace:eco-superai:gl.ai.superai-platform"
     eco_env_prefix: "PLATFORM_SUPERAI_"
     mandatory_labels:
-      eco-base/platform: platform-superai
-      eco-base/environment: production
-      eco-base/owner: ai-quantum-team
+      softwareos-base/platform: platform-superai
+      softwareos-base/environment: production
+      softwareos-base/owner: ai-quantum-team
     mandatory_annotations:
-      eco-base/governance-policy: "eco-superai-governance.rego"
-      eco-base/audit-log-level: "full"
+      softwareos-base/governance-policy: "eco-superai-governance.rego"
+      softwareos-base/audit-log-level: "full"

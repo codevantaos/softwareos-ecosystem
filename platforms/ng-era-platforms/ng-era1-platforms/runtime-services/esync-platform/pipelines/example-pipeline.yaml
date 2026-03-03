@@ -8,8 +8,8 @@ pipeline:
   id: example-sync-pipeline
   version: \"1.0\"
 labels:
-    eco-base/part-of: eco-base
-    eco-base/governance: aligned
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/governance: aligned
 
   description: |
     Example pipeline demonstrating multi-source data synchronization

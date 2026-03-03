@@ -7,14 +7,14 @@ GL Platform Enterprise Architecture v1.0.0 has been successfully created as a co
 ## ✅ Completed Components
 
 ### 1. Directory Structure
-- ✅ Root directories: platforms/, contracts/, governance/, workflows/, observability/, artifacts/, scripts/
-- ✅ Naming governance subdirectories: contracts/, policies/, validators/, fixers/, observability/, registry/, workflows/, templates/, examples/, tests/
+- ✅ Root directories: platforms/, softwareos-contracts/, governance/, workflows/, observability/, artifacts/, scripts/
+- ✅ Naming governance subdirectories: softwareos-contracts/, policies/, validators/, fixers/, observability/, registry/, workflows/, templates/, examples/, tests/
 - ✅ Additional governance directories: policies/, validators/, audit-trails/
 
 ### 2. Core Specifications (Contracts Layer)
 
 #### Semantic Unification Specification
-**File**: `contracts/semantic-unification-spec.yaml`
+**File**: `softwareos-contracts/semantic-unification-spec.yaml`
 
 Components:
 - Semantic Taxonomy System (10 domains, 22 capabilities, 19 resources, 8 labels)
@@ -30,7 +30,7 @@ Key Features:
 - Comprehensive validation rules
 
 #### Structural Unification Specification
-**File**: `contracts/structural-unification-spec.yaml`
+**File**: `softwareos-contracts/structural-unification-spec.yaml`
 
 Components:
 - Project Structure (10 root directories with detailed sub-structures)
@@ -47,7 +47,7 @@ Key Features:
 - Path integrity validation
 
 #### Governance Unification Specification
-**File**: `contracts/governance-unification-spec.yaml`
+**File**: `softwareos-contracts/governance-unification-spec.yaml`
 
 Components:
 - Governance Events System (naming, contract, semantic, platform, exception events)
@@ -62,7 +62,7 @@ Key Features:
 - Comprehensive audit trails
 
 #### Unified Naming Governance Contract
-**File**: `contracts/unified-naming-governance-contract.yaml`
+**File**: `softwareos-contracts/unified-naming-governance-contract.yaml`
 
 Components:
 - Integration of all three unification specs
@@ -83,7 +83,7 @@ Components:
 ### 3. Naming Governance Implementation
 
 #### Naming Conventions
-**File**: `governance/naming-governance/contracts/naming-conventions.yaml`
+**File**: `governance/naming-governance/softwareos-contracts/naming-conventions.yaml`
 
 All 16 naming conventions with:
 - Format specifications

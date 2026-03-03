@@ -8,7 +8,7 @@
  * This server can run as a single process handling all 4 channels,
  * or each channel adapter can run independently.
  *
- * URI: eco-base://platforms/im-integration/shared/server
+ * URI: softwareos-base://platforms/im-integration/shared/server
  */
 
 import express from "express";
@@ -321,7 +321,7 @@ app.get("/health", (_req, res) => {
     status: "healthy",
     service: "im-integration",
     version: "2.0.0",
-    uri: "eco-base://platforms/im-integration/health",
+    uri: "softwareos-base://platforms/im-integration/health",
     channels: ["whatsapp", "telegram", "line", "messenger"],
     timestamp: new Date().toISOString(),
   });
@@ -330,7 +330,7 @@ app.get("/health", (_req, res) => {
 app.get("/metrics", (_req, res) => {
   res.status(200).json({
     ...metrics,
-    uri: "eco-base://platforms/im-integration/metrics",
+    uri: "softwareos-base://platforms/im-integration/metrics",
     timestamp: new Date().toISOString(),
   });
 });
@@ -355,7 +355,7 @@ server = app.listen(port, () => {
   logger.info({
     msg: "IM Integration server started",
     port,
-    uri: "eco-base://platforms/im-integration",
+    uri: "softwareos-base://platforms/im-integration",
   });
 });
 

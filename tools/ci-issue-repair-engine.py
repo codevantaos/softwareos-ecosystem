@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 CI Issue Repair Engine v2 - Centralized Batch Repair
-eco-base: 100% autonomous CI failure to centralized report to single batch PR loop.
+softwareos-base: 100% autonomous CI failure to centralized report to single batch PR loop.
 """
 import json
 import os
@@ -11,7 +11,7 @@ import sys
 import time
 from datetime import datetime, timezone
 
-REPO = os.environ.get("REPO", "indestructibleorg/eco-base")
+REPO = os.environ.get("REPO", "indestructibleorg/softwareos-base")
 GH_TOKEN = os.environ.get("GH_TOKEN", "")
 
 def gh_run(args):
@@ -96,7 +96,7 @@ def main():
         return
 
     # --- Git Operations ---
-    repo_path = "/tmp/eco-base-repair"
+    repo_path = "/tmp/softwareos-base-repair"
     # Clean up previous clone if exists
     if os.path.exists(repo_path):
         subprocess.run(["rm", "-rf", repo_path], check=True)
@@ -130,7 +130,7 @@ def main():
 
     print("Committing and pushing batch fixes...")
     git_run(["config", "user.name", "AutoEcoOps-Bot"], cwd=repo_path)
-    git_run(["config", "user.email", "bot@autoecoops.com"], cwd=repo_path)
+    git_run(["config", "user.email", "bot@softwareos.com"], cwd=repo_path)
     git_run(["add", "."], cwd=repo_path)
     commit_message = f"fix(ci): apply batch auto-repairs\n\nAddresses failures reported in #{issue_num}."
     git_run(["commit", "-m", commit_message], cwd=repo_path)

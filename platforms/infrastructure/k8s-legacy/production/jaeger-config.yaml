@@ -16,21 +16,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/jaeger-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:jaeger-config:sha256-733c98be5e9d15a08ae07eaff1b8480ced6fb724387810ce10e6dc03c02b96a7
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/jaeger-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:jaeger-config:sha256-733c98be5e9d15a08ae07eaff1b8480ced6fb724387810ce10e6dc03c02b96a7
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: jaeger
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
   name: jaeger-config
   namespace: production
@@ -48,21 +48,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/tracing-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:tracing-config:sha256-a97d02656b425927dd80c2acf76ed545eeb29a4f54f6467cd47473dd9e680737
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/tracing-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:tracing-config:sha256-a97d02656b425927dd80c2acf76ed545eeb29a4f54f6467cd47473dd9e680737
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: machine-native-ops
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
   name: tracing-config
   namespace: production

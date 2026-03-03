@@ -76,13 +76,13 @@
           "properties": {
             "uri": {
               "type": "string",
-              "pattern": "^eco-base://",
-              "description": "eco-base URI for this skill"
+              "pattern": "^softwareos-base://",
+              "description": "softwareos-base URI for this skill"
             },
             "urn": {
               "type": "string",
-              "pattern": "^urn:eco-base:",
-              "description": "eco-base URN for this skill"
+              "pattern": "^urn:softwareos-base:",
+              "description": "softwareos-base URN for this skill"
             },
             "schema_version": {
               "type": "string",

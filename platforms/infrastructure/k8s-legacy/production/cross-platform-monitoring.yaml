@@ -103,8 +103,8 @@ data:
       loki:
         endpoint: ${LOKI_ENDPOINT:-http://loki:3100/loki/api/v1/push}
         labels:
-          eco-base/part-of: eco-base
-          eco-base/governance: aligned
+          softwareos-base/part-of: softwareos-base
+          softwareos-base/governance: aligned
           environment: production
           service: machine-native-ops
       
@@ -140,8 +140,8 @@ data:
       scrape_interval: 15s
       evaluation_interval: 15s
       external_labels:
-        eco-base/part-of: eco-base
-        eco-base/governance: aligned
+        softwareos-base/part-of: softwareos-base
+        softwareos-base/governance: aligned
         cluster: ${CLUSTER_NAME}
         environment: production
     
@@ -154,21 +154,21 @@ data:
                 - production
         relabel_configs:
           - source_labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             action: keep
             regex: machine-native-ops
           - source_labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             target_label: pod
           - source_labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             target_label: namespace
           - source_labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             target_label: node
       
       - job_name: 'kubernetes-pods'
@@ -176,19 +176,19 @@ data:
           - role: pod
         relabel_configs:
           - source_labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             action: keep
             regex: true
           - source_labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             action: replace
             target_label: __metrics_path__
             regex: (.+)
           - source_labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             action: replace
             regex: ([^:]+)(?::\d+)?;(\d+)
             replacement: $1:$2
@@ -196,13 +196,13 @@ data:
           - action: labelmap
             regex: __meta_kubernetes_pod_label_(.+)
           - source_labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             action: replace
             target_label: namespace
           - source_labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             action: replace
             target_label: pod
     
@@ -299,8 +299,8 @@ data:
           valueType: INT64
           unit: 1
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             - name: operation
               type: STRING
             - name: status
@@ -312,8 +312,8 @@ data:
           valueType: DOUBLE
           unit: ms
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             - name: operation
               type: STRING
             - name: percentile
@@ -325,8 +325,8 @@ data:
           valueType: DOUBLE
           unit: 1
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             - name: error_type
               type: STRING
       
@@ -335,8 +335,8 @@ data:
         resource:
           type: k8s_container
           labels:
-            eco-base/part-of: eco-base
-            eco-base/governance: aligned
+            softwareos-base/part-of: softwareos-base
+            softwareos-base/governance: aligned
             cluster_name: ${CLUSTER_NAME}
             location: ${GCP_ZONE}
             namespace_name: production

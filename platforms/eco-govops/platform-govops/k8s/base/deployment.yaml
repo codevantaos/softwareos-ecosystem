@@ -3,19 +3,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    eco-base/audit-log-level: full
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/platform-govops/deployment/govops-engine
-    eco-base/urn: urn:eco-base:k8s:platform-govops:deployment:govops-engine:sha256-93bd3db5421282af2faa26448b8d33be247a4bcf7a5466c454524b09166d4e26
+    softwareos-base/audit-log-level: full
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/platform-govops/deployment/govops-engine
+    softwareos-base/urn: urn:softwareos-base:k8s:platform-govops:deployment:govops-engine:sha256-93bd3db5421282af2faa26448b8d33be247a4bcf7a5466c454524b09166d4e26
   labels:
     app.kubernetes.io/component: engine
     app.kubernetes.io/instance: govops-engine-prod
     app.kubernetes.io/name: govops-engine
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: production
-    eco-base/owner: governance-operations-team
-    eco-base/platform: platform-govops
+    softwareos-base/environment: production
+    softwareos-base/owner: governance-operations-team
+    softwareos-base/platform: platform-govops
     governance.io/managed: 'true'
   name: govops-engine
   namespace: eco-govops
@@ -41,10 +41,10 @@ spec:
         app.kubernetes.io/component: engine
         app.kubernetes.io/instance: govops-engine-prod
         app.kubernetes.io/name: govops-engine
-        app.kubernetes.io/part-of: eco-base
+        app.kubernetes.io/part-of: softwareos-base
         app.kubernetes.io/version: 1.0.0
-        eco-base/environment: production
-        eco-base/platform: platform-govops
+        softwareos-base/environment: production
+        softwareos-base/platform: platform-govops
         governance.io/managed: 'true'
     spec:
       affinity:

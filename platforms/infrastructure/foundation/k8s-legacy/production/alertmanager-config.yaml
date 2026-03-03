@@ -42,21 +42,21 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    eco-base/audit-log-level: minimal
-    eco-base/governance-policy: standard-v1
-    eco-base/uri: eco-base://k8s/core/configmap/alertmanager-config
-    eco-base/urn: urn:eco-base:k8s:core:configmap:alertmanager-config:sha256-64dd8a997435da29d2e5d1fc7b534165d4d1346ba02f772449c9f1dbbcc8999b
+    softwareos-base/audit-log-level: minimal
+    softwareos-base/governance-policy: standard-v1
+    softwareos-base/uri: softwareos-base://k8s/core/configmap/alertmanager-config
+    softwareos-base/urn: urn:softwareos-base:k8s:core:configmap:alertmanager-config:sha256-64dd8a997435da29d2e5d1fc7b534165d4d1346ba02f772449c9f1dbbcc8999b
   labels:
     app.kubernetes.io/component: eco-component
     app.kubernetes.io/instance: eco-instance
     app.kubernetes.io/name: alertmanager
-    app.kubernetes.io/part-of: eco-base
+    app.kubernetes.io/part-of: softwareos-base
     app.kubernetes.io/version: 1.0.0
-    eco-base/environment: development
-    eco-base/governance: aligned
-    eco-base/owner: eco-system
-    eco-base/part-of: eco-base
-    eco-base/platform: core
+    softwareos-base/environment: development
+    softwareos-base/governance: aligned
+    softwareos-base/owner: eco-system
+    softwareos-base/part-of: softwareos-base
+    softwareos-base/platform: core
     environment: production
   name: alertmanager-config
   namespace: monitoring
